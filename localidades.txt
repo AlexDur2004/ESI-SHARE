@@ -1,0 +1,41 @@
+JER-Jerez de la Frontera
+ALG-Algeciras
+CAD-Cádiz
+SFE-San Fernando
+PSM-Puerto de Sta María
+CHI-Chiclana
+SAN-Sanlúcar
+LIN-La Línea
+PUR-Puerto Real
+SRO-San Roque
+ARC-Arcos de la Frontera
+ROT-Rota
+LBA-Los Barrios
+CON-Conil de la Frontera
+BAR-Barbate
+CHI-Chipiona
+TAR-Tarifa
+UBR-Ubrique
+VEJ-Vejer de la Frontera
+VIL-Villamartín
+MES-Medina Sidonia
+OLV-Olvera
+BOR-Bornos
+BNL-Benalup-Casas Viejas
+TRE-Trebujena
+PSE-Puerto Serrano
+JIM-Jimena
+PRA-Prado del Rey
+AGO-Algodonales
+PAT-Paterna de Rivera
+AGZ-Alcalá Gazules
+AVL-Alcalá del Valle
+SET-Setenil
+BOS-El Bosque
+GRA-Grazalema
+GAS-El Gastor
+ZAH-Zahara de la Sierra
+CAS-Castellar
+BEN-Benaocaz
+VLU-Villaluenga
+ESI-Universidad

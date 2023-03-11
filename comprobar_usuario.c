@@ -7,7 +7,7 @@ void acceso(Estr_Usuario *usuario, int n)
 
     printf("Introduzca sus credenciales de acceso:\nUsuario:\n");
     fflush(stdin);
-    scanf("%5s",usua);
+    pregunta(usua, 6);
 
     printf("Contrasena:\n");
     fflush(stdin);

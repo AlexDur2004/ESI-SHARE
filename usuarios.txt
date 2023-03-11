@@ -1,2 +1,3 @@
 0001-Juan Pérez-San Fernando-administrador-admin-jp123456
-0002-Guillermo Gómez-Cádiz-usuario-1-1
+0002-ALEX DUR-Sanlúcar-usuario-1-1
+0003-ALEX DUR-San Roque-usuario-u 123-re

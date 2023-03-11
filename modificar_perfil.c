@@ -6,7 +6,7 @@ void modificarPerfilNombre(int i)
     int n=0;
     char nomb[21];
 
-    fp=fopen("usuarios.txt","w+");
+    fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -46,7 +46,7 @@ void modificarPerfilLocalidad(int i)
     int n=0;
     char localidad[21];
 
-    fp=fopen("usuarios.txt","w+");
+    fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -80,7 +80,7 @@ void modificarPerfilUsuario(int i)
     int n=0;
     char usua[6];
 
-    fp=fopen("usuarios.txt","w+");
+    fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -120,7 +120,7 @@ void modificarPerfilContrasena(int i)
     int j=0, n=0, encontrado=3, x=0;
     char contra[9], contra2[9], c;
 
-    fp=fopen("usuarios.txt","w+");
+    fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");

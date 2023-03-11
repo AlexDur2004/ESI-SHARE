@@ -7,5 +7,6 @@
 #include "leer.h"
 
 void pregunta_localidad(char *);
+void pregunta(char *, int);
 
 #endif // PREGUNTAR_LOCALIDAD_H_INCLUDED

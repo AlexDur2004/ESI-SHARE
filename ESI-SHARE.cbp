@@ -31,6 +31,46 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="colores.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="colores.h" />
+		<Unit filename="comprobar_usuario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="comprobar_usuario.h" />
+		<Unit filename="escribir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="escribir.h" />
+		<Unit filename="estructuras.h" />
+		<Unit filename="fecha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fecha.h" />
+		<Unit filename="leer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="leer.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menus.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menus.h" />
+		<Unit filename="modificar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modificar.h" />
+		<Unit filename="modificar_perfil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modificar_perfil.h" />
+		<Unit filename="preguntar_localidad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="preguntar_localidad.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

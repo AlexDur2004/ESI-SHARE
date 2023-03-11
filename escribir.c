@@ -6,20 +6,18 @@ void altaUsuario()
     int n=0, idmax=0;
     char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
 
-    fp=fopen("usuarios.txt","w+");
+    fp=fopen("usuarios.txt","r+");
 
     strcpy(perfil, "usuario"); //copia la palabra "usuario" en el vector perfil, sólo habrá 1 administrador.
-    printf("Introduzca sus datos para completar el registro:\nNombre Completo (Máximo de 20 caracteres):\n");
-    fflush(stdin);
-    scanf("%20s", nombre);
+    printf("Introduzca sus datos para completar el registro:\n");
+    printf("Nombre Completo (Máximo de 20 caracteres):\n");
+    pregunta(nombre, 21);
     printf("Localidad de residencia (Siglas de la lista)):\n");
     pregunta_localidad(localidad);
     printf("Nombre de usuario (Máximo de 5 caracteres):\n");
-    fflush(stdin);
-    scanf("%5s", usuario2);
+    pregunta(usuario2, 6);
     printf("Contraseña (Máximo de 8 caracteres):\n");
-    fflush(stdin);
-    scanf("%8s", contrasena);
+    pregunta(contrasena, 9);
 
     if(fp==NULL)
     {
@@ -56,17 +54,14 @@ void altaVehiculo(int i)
     int n=0;
     char mat[8], plazas[2], descrip[51];
 
-    fp=fopen("vehiculos.txt","w+");
+    fp=fopen("vehiculos.txt","r+");
 
     printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
-    fflush(stdin);
-    scanf("%7s", mat);
+    pregunta(mat, 8);
     printf("Número de plazas libres (sin contar el conductor):\n");
-    fflush(stdin);
-    scanf("%1s", plazas);
+    pregunta(plazas, 2);
     printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-    fflush(stdin);
-    scanf("%50s", descrip);
+    pregunta(descrip, 51);
 
     if(fp==NULL)
     {
@@ -75,9 +70,10 @@ void altaVehiculo(int i)
     }
     else
     {
+
         do{
             fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-            n++;
+                n++;
         }while(n<numVehiculos-1);
         fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
         numVehiculos++;
@@ -98,7 +94,7 @@ void escribir_Viaje(int i)
     int n=0;
     char fecha[9];
 
-    fp=fopen("viajes.txt","w+");
+    fp=fopen("viajes.txt","r+");
 
     if(fp==NULL)
     {
@@ -127,7 +123,7 @@ void escribir_Pasos(int i)
     FILE *fp;
     int n=0;
 
-    fp=fopen("pasos.txt","w+");
+    fp=fopen("pasos.txt","r+");
 
     if(fp==NULL)
     {

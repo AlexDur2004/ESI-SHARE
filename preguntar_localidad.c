@@ -1,5 +1,26 @@
 #include "preguntar_localidad.h"
 
+void pregunta(char *x, int i)
+{
+    int encontrado=0;
+
+    while(!encontrado)
+    {
+        fflush(stdin);
+        fgets(x, i, stdin);
+
+        char *lin=strchr(x, '\n');
+        if(strchr(x,'\n')!=NULL)
+        {
+            *lin = '\0';
+        }
+        if(strlen(x)>0)
+        {
+            encontrado=1;
+        }
+    }
+}
+
 void pregunta_localidad(char local[21])
 {
     char vec_loc[4];

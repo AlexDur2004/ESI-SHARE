@@ -6,7 +6,7 @@ void modificarVehiculo(int i)
     int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, *vec=NULL, encontrado=0;
     char mat[8], plazas[2], descrip[51];
 
-    fp=fopen("vehiculos.txt","w+");
+    fp=fopen("vehiculos.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -41,8 +41,7 @@ void modificarVehiculo(int i)
                     case 1:
                         printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
                         printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
-                        fflush(stdin);
-                        fgets(mat, 8, stdin);
+                        pregunta(mat, 8);
 
                         for(k=0; k<numVehiculos&&encontrado==0; k++)
                         {
@@ -54,12 +53,6 @@ void modificarVehiculo(int i)
                         if(encontrado==0)
                         {
                             strcpy(vehiculo[vec[h]].id_mat, mat);
-                            do{
-                                fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                                n++;
-                            }while(n<numVehiculos-1);
-                            fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                            numVehiculos++;
 
                             printf("La matrícula del vehículo se ha actualizado correctamente.\n");
                             system("PAUSE");
@@ -73,16 +66,9 @@ void modificarVehiculo(int i)
                     case 2:
                         printf("Número de plazas libres (sin contar el conductor):\n");
                         printf("Plazas actuales: %s\n", vehiculo[vec[h]].num_plazas);
-                        fflush(stdin);
-                        scanf("%1s", plazas);
+                        pregunta(plazas, 2);
 
                         strcpy(vehiculo[vec[h]].num_plazas, plazas);
-                        do{
-                            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                            n++;
-                        }while(n<numVehiculos-1);
-                        fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                        numVehiculos++;
 
                         printf("El numero de plazas del vehículo se ha actualizado correctamente.\n");
                         system("PAUSE");
@@ -90,22 +76,9 @@ void modificarVehiculo(int i)
                     case 3:
                         printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
                         printf("Descripción actual: %s\n", vehiculo[vec[h]].desc_veh);
-                        fflush(stdin);
-                        fgets(descrip, 51, stdin);
-
-                        char *lin=strchr(descrip, '\n');
-                        if(strchr(descrip,'\n')!=NULL)
-                        {
-                            *lin = '\0';
-                        }
+                        pregunta(descrip, 51);
 
                         strcpy(vehiculo[vec[h]].desc_veh, descrip);
-                        do{
-                            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                            n++;
-                        }while(n<numVehiculos-1);
-                        fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                        numVehiculos++;
 
                         printf("La descripcion del vehiculo se ha actualizado correctamente.\n");
                         system("PAUSE");
@@ -113,8 +86,7 @@ void modificarVehiculo(int i)
                     case 4:
                         printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
                         printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
-                        fflush(stdin);
-                        scanf("%7s", mat);
+                        pregunta(mat, 8);
 
                         for(k=0; k<numVehiculos&&encontrado==0; k++)
                         {
@@ -128,34 +100,22 @@ void modificarVehiculo(int i)
                             printf("Número de plazas libres (sin contar el conductor):\n");
                             printf("Plazas actuales: %s\n", vehiculo[vec[h]].num_plazas);
                             fflush(stdin);
-                            scanf("%1s", plazas);
+                            pregunta(plazas, 2);
 
                             printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
                             printf("Descripción actual: %s\n", vehiculo[vec[h]].desc_veh);
-                            fflush(stdin);
-                            fgets(descrip, 51, stdin);
-
-                            *lin=strchr(descrip, '\n');
-                            if(strchr(descrip,'\n')!=NULL)
-                            {
-                                *lin = '\0';
-                            }
+                            pregunta(descrip, 51);
 
                             strcpy(vehiculo[vec[h]].id_mat, mat);
                             strcpy(vehiculo[vec[h]].num_plazas, plazas);
                             strcpy(vehiculo[vec[h]].desc_veh, descrip);
-                            do{
-                                fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                                n++;
-                            }while(n<numVehiculos-1);
-                            fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                            numVehiculos++;
 
                             printf("Se han actualizado todos los datos del vehículo.\n");
                             system("PAUSE");
                         }
                         else
                         {
+
                             printf("La matrícula introducida ya existe en otro vehículo.\n");
                             system("PAUSE");
                         }
@@ -166,8 +126,16 @@ void modificarVehiculo(int i)
                 break;
             }while(opc2>1&&opc2<4);
 
+
         modificarVehiculo(i);
         }
+
+        do{
+            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
+            n++;
+        }while(n<numVehiculos-1);
+        fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
+        numVehiculos++;
     }
     fclose(fp);
     system("cls");

@@ -89,7 +89,7 @@
 	<stdlib.h>
 	<windows.h>
 
-1678397907 source:c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_usuario.c
+1678464228 source:c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_usuario.c
 	"comprobar_usuario.h"
 
 1678210538 c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_usuario.h
@@ -105,13 +105,13 @@
 	<stdlib.h>
 	<string.h>
 
-1678387814 c:\users\adura\mi unidad\uca\mp\esi-share\leer.h
+1678487846 c:\users\adura\mi unidad\uca\mp\esi-share\leer.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"estructuras.h"
 
-1678400411 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
+1678544476 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
 	"escribir.h"
 
 1678400363 c:\users\adura\mi unidad\uca\mp\esi-share\escribir.h
@@ -122,7 +122,7 @@
 	"leer.h"
 	"preguntar_localidad.h"
 
-1678292148 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.h
+1678543148 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.h
 	<stdio.h>
 	<string.h>
 	"estructuras.h"
@@ -136,15 +136,16 @@
 	<string.h>
 	<time.h>
 
-1678401022 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
+1678487828 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
 	"leer.h"
 
-1678398476 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
+1678545282 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	<wchar.h>
 	<locale.h>
+	<conio.h>
 	"estructuras.h"
 	"menus.h"
 	"colores.h"
@@ -153,6 +154,8 @@
 	"fecha.h"
 	"leer.h"
 	"preguntar_localidad.h"
+	"modificar.h"
+	"modificar_perfil.h"
 
 1678399902 c:\users\adura\mi unidad\uca\mp\esi-share\menus.h
 	<stdio.h>
@@ -161,9 +164,31 @@
 	"comprobar_usuario.h"
 	"leer.h"
 
-1678400485 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
+1678544907 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
-1678400600 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
+1678543148 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
+	"preguntar_localidad.h"
+
+1678545266 c:\users\adura\mi unidad\uca\mp\esi-share\modificar.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+	"preguntar_localidad.h"
+
+1678545266 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
+	"modificar.h"
+
+1678545266 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar_perfil.c
+	"modificar_perfil.h"
+
+1678545266 c:\users\adura\mi unidad\uca\mp\esi-share\modificar_perfil.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
 	"preguntar_localidad.h"
 

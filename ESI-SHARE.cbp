@@ -52,6 +52,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="leer.h" />
+		<Unit filename="listar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listar.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

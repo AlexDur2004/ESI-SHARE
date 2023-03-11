@@ -73,7 +73,7 @@ void altaVehiculo(int i)
 
         do{
             fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                n++;
+            n++;
         }while(n<numVehiculos-1);
         fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
         numVehiculos++;
@@ -88,7 +88,7 @@ void altaVehiculo(int i)
     return;
 }
 
-void escribir_Viaje(int i)
+void altaViaje(int i)
 {
     FILE *fp;
     int n=0;
@@ -145,4 +145,27 @@ void escribir_Pasos(int i)
     leer_pasos(&pasos,&numPasos);
 
     return;
+}
+
+void altaAdminVehiculo()
+{
+    int i, encontrado=0;
+    int id_us[5];
+
+    while(encontrado==0)
+    {
+        printf("Introduzca la ID del usuario al que quiere darle de alta el vehículo.\n");
+        pregunta(id_us, 5);
+        for(i=0; i<numUsuarios&&encontrado==0; i++)
+        {
+            if(strcmp(usuario[i].id_usuario, id_us)==0)
+            {
+                encontrado=1;
+            }
+        }
+        system("cls");
+    }
+    altaVehiculo(i-1);
+    printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[i-1].nomb_usuario, usuario[i-1].id_usuario);
+    system("PAUSE");
 }

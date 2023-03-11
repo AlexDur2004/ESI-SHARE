@@ -184,6 +184,9 @@ void modificarPerfilContrasena(int i)
                 printf("\nQueda(n) %i intentos.\n", encontrado);
                 *contra=NULL;
                 j=0;
+                system("PAUSE");
+                system("cls");
+
             }
         }
     }

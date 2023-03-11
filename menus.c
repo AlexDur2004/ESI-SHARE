@@ -345,7 +345,7 @@ void menuAdminUsuarios(int i)
                 ;
                 break;
             case 4:
-                ;
+                listarUsuarios();
                 break;
             case 5:
                 menuAdmin(i);
@@ -368,7 +368,7 @@ void menuAdminVehiculos(int i)
         switch(opc)
         {
             case 1:
-                ;
+                altaAdminVehiculo();
                 break;
             case 2:
                 ;
@@ -377,7 +377,7 @@ void menuAdminVehiculos(int i)
                 ;
                 break;
             case 4:
-                ;
+                listarVehiculos();
                 break;
             case 5:
                 ;

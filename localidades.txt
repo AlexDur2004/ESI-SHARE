@@ -13,7 +13,7 @@ ROT-Rota
 LBA-Los Barrios
 CON-Conil de la Frontera
 BAR-Barbate
-CHI-Chipiona
+CHP-Chipiona
 TAR-Tarifa
 UBR-Ubrique
 VEJ-Vejer de la Frontera

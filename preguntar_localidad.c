@@ -3,7 +3,7 @@
 void pregunta_localidad(char local[21])
 {
     char vec_loc[4];
-    int i, j, k, maxLoc;
+    int i, j, k, encontrado=0, maxLoc;
 
     leer_localidad(&localidad,&maxLoc);
 
@@ -27,17 +27,21 @@ void pregunta_localidad(char local[21])
 
     printf("\n");
     fflush(stdin);
-    scanf("%3s", vec_loc);
 
-    for(i=0; i<maxLoc; i++)
+    while(encontrado==0)
     {
-        if(strcmp(vec_loc, localidad[i].siglas)==0)
-        {
-            printf("Has seleccionado %s.\n", localidad[i].localidad);
+        scanf("%3s", vec_loc);
 
-            strcpy(local, localidad[i].localidad);
+        for(i=0; i<maxLoc; i++)
+        {
+            if(strcmp(vec_loc, localidad[i].siglas)==0)
+            {
+                encontrado=1;
+                printf("Has seleccionado %s.\n", localidad[i].localidad);
+
+                strcpy(local, localidad[i].localidad);
+            }
         }
     }
-
     return;
 }

@@ -25,7 +25,6 @@ void acceso(Estr_Usuario *usuario, int n)
         }
     }
     contra[j] = '\0';
-    // printf("\nLa contraseña ingresada es: %s\n", contra); esto sería para probar
 
     for(i=0; i<n||encontrado!=0; i++)
     {

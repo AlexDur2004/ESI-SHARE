@@ -26,11 +26,9 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 80, fp))
         {
-            fgets(vec, 80, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *usuario=realloc(*usuario,((*i)+1)*sizeof(Estr_Usuario));
                 if (*usuario==NULL)
@@ -78,11 +76,9 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 70, fp))
         {
-            fgets(vec, 70, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *vehiculo=realloc(*vehiculo,((*i)+1)*sizeof(Estr_Vehiculo));
                 if (*vehiculo==NULL)
@@ -126,11 +122,9 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 65, fp))
         {
-            fgets(vec, 65, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *viaje=realloc(*viaje,((*i)+1)*sizeof(Estr_Viaje));
                 if (*viaje==NULL)
@@ -184,11 +178,9 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 35, fp))
         {
-            fgets(vec, 35, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *pasos=realloc(*pasos,((*i)+1)*sizeof(Estr_Pasos));
                 if (*pasos==NULL)
@@ -228,11 +220,9 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 30, fp))
         {
-            fgets(vec, 30, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *localidad=realloc(*localidad,((*i)+1)*sizeof(Estr_Localidad));
                 if (*localidad==NULL)
@@ -257,10 +247,10 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     return;
 }
 
-void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
+void leer_ruta(Estr_Rutas ***ruta, int *i, int *j) //en codeblocks no hace bien las ciudades máximas por filas, mientras que en dev c++ sí.
 {
     FILE *fp;
-    char vec[100], *token;
+    char vec[60], *token;
     *i=0, *j=0;
 
     fp=fopen("rutas.txt", "r");
@@ -272,11 +262,9 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     }
     else
     {
-        while(!feof(fp))
+        while(fgets(vec, 60, fp))
         {
-            fgets(vec, 100, fp);
-
-            if(strcmp(vec,"\0"))
+            if(strcmp(vec,"\n")!=0)
             {
                 *ruta=(Estr_Rutas **)realloc(*ruta,(*i+1)*sizeof(Estr_Rutas *));
                 if (*ruta==NULL)
@@ -286,31 +274,36 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
                 }
                 (*ruta)[*i]=NULL;
 
+                int k=0;
                 token=strtok(vec, "-");
                 while(token!=NULL)
                 {
-                    (*ruta)[*i]=(Estr_Rutas *)realloc((*ruta)[*i],(*j+1)*sizeof(Estr_Rutas));
+                    (*ruta)[*i]=(Estr_Rutas *)realloc((*ruta)[*i],(k+1)*sizeof(Estr_Rutas));
                     if((*ruta)[*i]==NULL)
                     {
                         printf("Error al asignar memoria.\n");
                         exit(1);
                     }
-
-                    strcpy((*ruta)[*i][*j].localidad, token);
-                    (*j)++;
+                    strcpy((*ruta)[*i][k].localidad, token);
+                    k++;
                     token=strtok(NULL, "-");
                 }
-                token=strtok(vec, "\n");
-                strcpy((*ruta)[*i][*j].localidad, token);
+                if((*j)<k)
+                {
+                    (*j)=k;
+                }
                 (*i)++;
-                *j=0;
+
+
             }
         }
     }
 
     fclose(fp);
 
-    printf("Se han cargado %i rutas.\n", *i);
+    printf("Se han cargado %i rutas, con %i ciudades como máximo.\n", *i, *j);
 
     return;
 }
+
+

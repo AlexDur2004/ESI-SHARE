@@ -14,8 +14,6 @@ int numLocalidades;
 int numRutas;
 int numRutas2;
 
-char id_usuario_act[5];
-
 Estr_Usuario *usuario;
 Estr_Vehiculo *vehiculo;
 Estr_Viaje *viaje;

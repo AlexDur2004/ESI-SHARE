@@ -101,32 +101,29 @@ void menuPasajeroPerfil(int i)
 {
     int opc;
 
-    while(opc!=3)
+    while(opc!=5)
     {
         system("cls");
         printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
-        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar usuario.\n(5)Modificar contrasena.\n(6)Volver\n");
+        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                ;
+                modificarPerfilNombre(i);
                 break;
             case 2:
-                ;
+                modificarPerfilLocalidad(i);
                 break;
             case 3:
-                ;
+                modificarPerfilUsuario(i);
                 break;
             case 4:
-                ;
+                modificarPerfilContrasena(i);
                 break;
             case 5:
-                ;
-                break;
-            case 6:
                 menuPasajero(i);
                 break;
         }
@@ -250,7 +247,7 @@ void menuConductorVehiculo(int i)
                 altaVehiculo(i);
                 break;
             case 2:
-                ;
+                modificarVehiculo(i);
                 break;
             case 3:
                 ;

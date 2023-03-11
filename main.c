@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <wchar.h>
 #include <locale.h>
+#include <conio.h>
 #include "estructuras.h"
 #include "menus.h"
 #include "colores.h"
@@ -11,6 +12,8 @@
 #include "fecha.h"
 #include "leer.h"
 #include "preguntar_localidad.h"
+#include "modificar.h"
+#include "modificar_perfil.h"
 
 int main()
 {
@@ -19,10 +22,6 @@ int main()
     leer();
 
     menuPrincipal();
-
-
-
-
 
 return(0);
 }

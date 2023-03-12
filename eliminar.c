@@ -13,7 +13,7 @@ void eliminarVehiculo(int i)
         return;
     }
     else {
-        encontrar(&vec, &x, i);
+        encontrarVehiculos(&vec, &x, i);
 
         if(x>0){
 
@@ -51,9 +51,7 @@ void eliminarVehiculo(int i)
                                             }
                                             else{
                                                 for(int counter=0; counter<numVehiculos;counter++){
-                                                    printf("%i\n",counter);
                                                     if(counter!=n){
-                                                        printf("Se ha escrito la siguiente linea: %s-%s-%s-%s\n", vehiculo[counter].id_mat, vehiculo[counter].id_usuario, vehiculo[counter].num_plazas, vehiculo[counter].desc_veh);
                                                         fprintf(temp, "%s-%s-%s-%s\n", vehiculo[counter].id_mat, vehiculo[counter].id_usuario, vehiculo[counter].num_plazas, vehiculo[counter].desc_veh);
                                                     }
                                                 }
@@ -70,7 +68,6 @@ void eliminarVehiculo(int i)
                                 remove("vehiculos.txt");
                                 rename("vehiculos_Temp.txt","vehiculos.txt");
                                 leer_vehiculo(&vehiculo, &numVehiculos);
-                                system("PAUSE");
                                 break;
                     }
                 }while((opc2<1)||(opc2>2));

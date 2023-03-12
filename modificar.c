@@ -3,7 +3,7 @@
 void modificarVehiculo(int i)
 {
     FILE *fp;
-    int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, *vec=NULL, encontrado=0;
+    int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, aux=0, y=0, *vec=NULL, encontrado=0, encontrado2=0;
     char mat[8], plazas[2], descrip[51];
 
     fp=fopen("vehiculos.txt","r+");
@@ -14,21 +14,39 @@ void modificarVehiculo(int i)
     }
     else {
         encontrarVehiculos(&vec, &x, i);
-
-        printf("¿Qué vehículo quiere modificar?\n");
-
-        for(m=0; m<x; m++)
+        aux=x;
+        while(encontrado==0)
         {
-            printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
-        }
-        x++;
-        printf("(%i)Salir.\n", x);
-        printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
-        fflush(stdin);
-        scanf("%d", &opc);
-        system("cls");
+            x=aux;
+            y=aux;
+            printf("¿Qué vehículo quiere modificar?\n");
 
-        if((opc>=1&&opc<=x)&&opc!=x) {
+            for(m=0; m<x; m++)
+            {
+                printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
+            }
+            x++;
+            printf("(%i)Salir.\n", x);
+            printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
+            fflush(stdin);
+            scanf("%d", &opc);
+            system("cls");
+
+            if(opc==x)
+            {
+                break;
+            }
+
+            for(m=1; m<y; m++)
+            {
+                if(opc==vec[m-1])
+                {
+                    encontrado=1;
+                }
+            }
+
+        if((opc>=1&&opc<=x)&&opc!=x)
+        {
             h=opc-1;
             do {
                 printf("¿Qué desea modificar?\n");
@@ -130,7 +148,7 @@ void modificarVehiculo(int i)
                 break;
             }while(opc2>1&&opc2<5);
 
-
+        }
         modificarVehiculo(i);
         }
 
@@ -140,6 +158,7 @@ void modificarVehiculo(int i)
         }while(n<numVehiculos-1);
         fprintf(fp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
         numVehiculos++;
+
     }
     fclose(fp);
     leer_vehiculo(&vehiculo, &numVehiculos);

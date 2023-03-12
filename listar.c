@@ -28,7 +28,7 @@ void listarVehiculos()
     }
 }
 
-void listarVehiculoViajes()
+void listarAdminVehiculoViajes()
 {
     FILE *fp;
     int x=0, m=0, z=0, encontrado=0, *vec=NULL;
@@ -67,3 +67,33 @@ void listarVehiculoViajes()
         system("PAUSE");
     }
 }
+
+void listarVehiculoViajes(int i)  //hacer esto
+{
+    FILE *fp;
+    int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, *vec=NULL, encontrado=0;
+
+    fp=fopen("viajes.txt","r+");
+
+    if(fp==NULL) {
+        printf("No se ha podido abrir el fichero viajes.txt.\n");
+        return;
+    }
+    else {
+        encontrarVehiculos(&vec, &x, i);
+
+        printf("¿Qué vehículo quiere modificar?\n");
+
+        for(m=0; m<x; m++)
+        {
+            printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
+        }
+        x++;
+        printf("(%i)Salir.\n", x);
+        printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
+        fflush(stdin);
+        scanf("%d", &opc);
+        system("cls");
+
+        }
+        }

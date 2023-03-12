@@ -1,5 +1,5 @@
-#ifndef ELIMINAR_H_INCLUDED
-#define ELIMINAR_H_INCLUDED
+#ifndef RESERVAR_H_INCLUDED
+#define RESERVAR_H_INCLUDED
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,6 +9,6 @@
 #include "preguntar_localidad.h"
 #include "encontrar.h"
 
-void eliminarVehiculo(int);
+void reservar();
 
-#endif // ELIMINAR_H_INCLUDED
+#endif // RESERVAR_H_INCLUDED

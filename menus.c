@@ -152,7 +152,7 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                ;
+                reservar();
                 break;
             case 2:
                 ;
@@ -247,7 +247,7 @@ void menuConductorVehiculo(int i)
                 modificarVehiculo(i);
                 break;
             case 3:
-                ;
+                eliminarVehiculo(i);
                 break;
             case 4:
                 menuConductor(i);
@@ -382,7 +382,7 @@ void menuAdminVehiculos(int i)
                 system("PAUSE");
                 break;
             case 5:
-                listarVehiculoViajes();
+                listarAdminVehiculoViajes();
                 break;
             case 6:
                 menuAdmin(i);

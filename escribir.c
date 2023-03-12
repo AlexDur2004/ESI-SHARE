@@ -52,8 +52,6 @@ void altaUsuario()
 
             printf("El usuario ha sido agregado correctamente.\n");
             system("PAUSE");
-
-            leer_usuario(&usuario,&numUsuarios);
         }
     }
     else
@@ -63,6 +61,8 @@ void altaUsuario()
     }
 
     fclose(fp);
+
+    leer_usuario(&usuario,&numUsuarios);
 
     return;
 }
@@ -108,10 +108,8 @@ void altaVehiculo(int i)
             }while(n<numVehiculos-1);
             fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
             numVehiculos++;
-            fprintf(fp, "%s-%s-%s-%s", mat, usuario[n].id_usuario, plazas, descrip);
+            fprintf(fp, "%s-%s-%s-%s", mat, usuario[i].id_usuario, plazas, descrip);
             numVehiculos++;
-
-            leer_vehiculo(&vehiculo,&numVehiculos);
         }
     }
     else
@@ -121,6 +119,8 @@ void altaVehiculo(int i)
     }
 
     fclose(fp);
+
+    leer_vehiculo(&vehiculo,&numVehiculos);
 
     return;
 }

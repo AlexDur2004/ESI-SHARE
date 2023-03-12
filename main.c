@@ -13,9 +13,11 @@
 #include "leer.h"
 #include "preguntar_localidad.h"
 #include "modificar.h"
+#include "eliminar.h"
 
 int main()
 {
+    printf("champi%c%cn.\n", 164, 162);
     setlocale(LC_ALL, "spanish");
 
     leer();

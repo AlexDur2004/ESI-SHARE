@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="comprobar_usuario.h" />
+		<Unit filename="eliminar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="eliminar.h" />
 		<Unit filename="encontrar.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -75,6 +79,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="preguntar_localidad.h" />
+		<Unit filename="reservar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="reservar.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

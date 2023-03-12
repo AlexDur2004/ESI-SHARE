@@ -31,12 +31,10 @@ void modificarVehiculo(int i)
             fflush(stdin);
             scanf("%d", &opc);
             system("cls");
-
             if(opc==x)
             {
-                break;
+                return;
             }
-
             for(m=1; m<y; m++)
             {
                 if(opc==vec[m-1])
@@ -290,7 +288,6 @@ void modificarPerfilContrasena(int i)
     int j=0, n=0, encontrado=3, x=0, h=0;
     char contra[9], contra2[9], c, c2;
 
-    printf("%s", usuario[i].contrasena);
     fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {

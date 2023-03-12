@@ -12,7 +12,7 @@ void pregunta(char *x, int i)
         char *lin=strchr(x, '\n');
         if(strchr(x,'\n')!=NULL)
         {
-            *lin = '\0';
+            *lin='\0';
         }
         if(strlen(x)>0)
         {
@@ -115,7 +115,6 @@ void pregunta_ruta(char *rut2)
                 }
             }
         }
-
     }
     return;
 }

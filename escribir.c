@@ -3,7 +3,7 @@
 void altaUsuario()
 {
     FILE *fp;
-    int n=0, idmax=0, k=0, encontrado=0;
+    int n=0, idmax=0, k=0, encontrado=0, preg=0;
     char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
 
     fp=fopen("usuarios.txt","r+");
@@ -52,6 +52,22 @@ void altaUsuario()
 
             printf("El usuario ha sido agregado correctamente.\n");
             system("PAUSE");
+
+            while(preg!=1||preg!=2)
+            {
+                system("cls");
+                printf("¿Que quiere hacer?\n(1)Iniciar sesion.\n(2)Salir.\n");
+                scanf("%1i", &preg);
+                if(preg==1)
+                {
+                    system("cls");
+                    acceso(usuario, numUsuarios);
+                }
+                else
+                {
+                    menuPrincipal();
+                }
+            }
         }
     }
     else
@@ -64,7 +80,6 @@ void altaUsuario()
 
     leer_usuario(&usuario,&numUsuarios);
 
-    return;
 }
 
 void altaVehiculo(int i)

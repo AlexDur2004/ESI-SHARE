@@ -12,8 +12,6 @@ void listarUsuarios()
     {
         printf("%s-%s-%s-%s-%s-%s\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario, usuario[i].contrasena);
     }
-
-system("PAUSE");
 }
 
 void listarVehiculos()
@@ -28,6 +26,44 @@ void listarVehiculos()
     {
         printf("%s-%s-%s-%s\n", vehiculo[i].id_mat, vehiculo[i].id_usuario, vehiculo[i].num_plazas, vehiculo[i].desc_veh);
     }
+}
 
-system("PAUSE");
+void listarVehiculoViajes()
+{
+    FILE *fp;
+    int x=0, m=0, z=0, encontrado=0, *vec=NULL;
+    char mat[8];
+
+    fp=fopen("viajes.txt","r+");
+
+    if(fp==NULL) {
+        printf("No se ha podido abrir el fichero viajes.txt.\n");
+        return;
+    }
+    else
+    {
+        while(encontrado==0)
+        {
+            listarVehiculos();
+            printf("Introduzca la matrícula de un vehículo para obtener los viajes que ha realizado.\n");
+            pregunta(mat, 8);
+
+            for(z=0;z<numVehiculos;z++)
+            {
+               if(strcmp(vehiculo[z].id_mat, mat)==0)
+                {
+                    encontrado=1;
+                }
+            }
+            system("cls");
+        }
+        encontrarViajes(mat, &vec, &x);
+
+        printf("Los viajes realizados por el vehículo con matrícula %s son:\n", mat);
+        for(m=0; m<x; m++)
+        {
+            printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n", m+1, viaje[vec[m]].id_viaje, viaje[vec[m]].id_mat, viaje[vec[m]].f_inic, viaje[vec[m]].h_inic, viaje[vec[m]].h_fin, viaje[vec[m]].plazas_libre, viaje[vec[m]].ida_vuelta, viaje[vec[m]].precio, viaje[vec[m]].estado);
+        }
+        system("PAUSE");
+    }
 }

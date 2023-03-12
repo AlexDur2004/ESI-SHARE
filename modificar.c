@@ -22,7 +22,7 @@ void modificarVehiculo(int i)
             printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
         }
         x++;
-        printf("(%i)Guardar y salir.\n", x);
+        printf("(%i)Salir.\n", x);
         printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
         fflush(stdin);
         scanf("%d", &opc);
@@ -412,7 +412,7 @@ void modificarAdminVehiculo()
 
     while(encontrado==0)
     {
-        printf("Introduzca la ID del usuario al que quiere modificarle el usuario.\n");
+        printf("Introduzca la ID del usuario al que quiere modificarle un vehiculo.\n");
         pregunta(vec_id, 5);
         system("cls");
 

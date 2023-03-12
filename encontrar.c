@@ -21,6 +21,27 @@ void encontrarVehiculos(int **vec, int *x, int i)
     }
 }
 
+void encontrarViajes(char *mat, int **vec, int *x)
+{
+    int j;
+    *x=0;
+
+    for(j=0; j<numViajes; j++) //con esto se puede sacar todos los viajes de un vehiculo.
+    {
+        if(strcmp(viaje[j].id_mat, mat)==0)
+        {
+            *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+            if ((*vec)==NULL)
+            {
+                printf("Error al asignar memoria.\n");
+                exit(1);
+            }
+            (*vec)[*x]=j;
+            (*x)++;
+        }
+    }
+}
+
 void encontrarUsuario(char vec_id[], int *x, int *encontrado)
 {
     int j;

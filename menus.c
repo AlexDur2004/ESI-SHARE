@@ -346,6 +346,7 @@ void menuAdminUsuarios(int i)
                 break;
             case 4:
                 listarUsuarios();
+                system("PAUSE");
                 break;
             case 5:
                 menuAdmin(i);
@@ -378,9 +379,10 @@ void menuAdminVehiculos(int i)
                 break;
             case 4:
                 listarVehiculos();
+                system("PAUSE");
                 break;
             case 5:
-                ;
+                listarVehiculoViajes();
                 break;
             case 6:
                 menuAdmin(i);

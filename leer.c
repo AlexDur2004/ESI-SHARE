@@ -247,7 +247,7 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     return;
 }
 
-void leer_ruta(Estr_Rutas ***ruta, int *i, int *j) //en codeblocks no hace bien las ciudades máximas por filas, mientras que en dev c++ sí.
+void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
 {
     FILE *fp;
     char vec[60], *token;

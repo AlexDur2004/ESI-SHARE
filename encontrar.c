@@ -57,3 +57,37 @@ void encontrarUsuario(char vec_id[], int *x, int *encontrado)
         }
     }
 }
+
+void encontrarRutas(char *loc[4], char ***mat_loc, int *x, int y)
+{
+    int j, i;
+    *x=0;
+    printf("%s", loc);
+
+    for(i=0; i<numRutas; i++) //con esto se puede sacar todos los rutas posibles, que habría de una ciudad a la ESI.
+    {
+        for(j=0; j<numRutas2; j++)
+        {
+           if(strcmp(ruta[i][j].localidad, loc[y])==0)
+            {
+                printf("%s", ruta[i][j].localidad);
+                *mat_loc=(char **)realloc(*mat_loc,((*x)+1)*sizeof(char*));
+                if ((*mat_loc)==NULL)
+                {
+                    printf("Error al asignar memoria.\n");
+                    exit(1);
+                }
+                (*mat_loc)[*x]=(char*)malloc((strlen(ruta[i][j].localidad)+1)*sizeof(char));
+                if ((*mat_loc)[*x]==NULL)
+                {
+                    printf("Error al asignar memoria 2.\n");
+                    exit(1);
+                }
+                strcpy((*mat_loc)[*x], ruta[i][j].localidad);
+                (*x)++;
+                printf("%s", ruta[i][j].localidad);
+                y++;
+            }
+        }
+    }
+}

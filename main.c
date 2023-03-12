@@ -13,6 +13,7 @@
 #include "leer.h"
 #include "preguntar_localidad.h"
 #include "modificar.h"
+#include "eliminar.h"
 
 int main()
 {

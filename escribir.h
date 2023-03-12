@@ -12,5 +12,6 @@ void altaUsuario();
 void altaVehiculo(int);
 void escribir_Viaje(int);
 void escribir_Pasos(int);
+void altaAdminVehiculo();
 
 #endif // ESCRIBIR_H_INCLUDED

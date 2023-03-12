@@ -336,13 +336,13 @@ void menuAdminUsuarios(int i)
         switch(opc)
         {
             case 1:
-                ;
+                altaUsuario();
                 break;
             case 2:
                 ;
                 break;
             case 3:
-                ;
+                modificarAdminUsuario();
                 break;
             case 4:
                 listarUsuarios();
@@ -374,7 +374,7 @@ void menuAdminVehiculos(int i)
                 ;
                 break;
             case 3:
-                ;
+                modificarAdminVehiculo();
                 break;
             case 4:
                 listarVehiculos();

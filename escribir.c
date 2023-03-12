@@ -3,7 +3,7 @@
 void altaUsuario()
 {
     FILE *fp;
-    int n=0, idmax=0;
+    int n=0, idmax=0, k=0, encontrado=0;
     char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
 
     fp=fopen("usuarios.txt","r+");
@@ -12,38 +12,57 @@ void altaUsuario()
     printf("Introduzca sus datos para completar el registro:\n");
     printf("Nombre Completo (Máximo de 20 caracteres):\n");
     pregunta(nombre, 21);
-    printf("Localidad de residencia (Siglas de la lista)):\n");
+    printf("Localidad de residencia (Siglas de la lista):\n");
     pregunta_localidad(localidad);
     printf("Nombre de usuario (Máximo de 5 caracteres):\n");
     pregunta(usuario2, 6);
-    printf("Contraseña (Máximo de 8 caracteres):\n");
-    pregunta(contrasena, 9);
-
-    if(fp==NULL)
+    for(k=0; k<numUsuarios&&encontrado==0; k++)
     {
-        printf("No se ha podido abrir el fichero usuarios.txt.\n");
-        return;
+        if(strcmp(usuario2, usuario[k].usuario)==0)
+        {
+            encontrado=1;
+        }
+    }
+    if(encontrado==0)
+    {
+        printf("El nombre de usuario es válido.\n");
+        printf("Contraseña (Máximo de 8 caracteres):\n");
+        pregunta(contrasena, 9);
+
+        if(fp==NULL)
+        {
+            printf("No se ha podido abrir el fichero usuarios.txt.\n");
+            return;
+        }
+        else
+        {
+            do{
+                fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
+                n++;
+            }while(n<numUsuarios-1);
+            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
+            numUsuarios++;
+
+            idmax=atoi(usuario[n].id_usuario); //convierte la id del último usuario en entero.
+            idmax++; //suma una posición a la id del último usuario, para hacer la nueva id.
+            snprintf(id, sizeof(id), "%04d", idmax); //pasa la id nueva a un vector limitado por 4 espacios.
+
+            fprintf(fp, "%s-%s-%s-%s-%s-%s", id, nombre, localidad, perfil, usuario2, contrasena);
+            numUsuarios++;
+
+            printf("El usuario ha sido agregado correctamente.\n");
+            system("PAUSE");
+
+            leer_usuario(&usuario,&numUsuarios);
+        }
     }
     else
     {
-        do{
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            n++;
-        }while(n<numUsuarios-1);
-        fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-        numUsuarios++;
-
-        idmax=atoi(usuario[n].id_usuario); //convierte la id del último usuario en entero.
-        idmax++; //suma una posición a la id del último usuario, para hacer la nueva id.
-        snprintf(id, sizeof(id), "%04d", idmax); //pasa la id nueva a un vector limitado por 4 espacios.
-
-        fprintf(fp, "%s-%s-%s-%s-%s-%s", id, nombre, localidad, perfil, usuario2, contrasena);
-        numUsuarios++;
+        printf("El nombre de usuario ya está siendo usado.\n");
+        system("PAUSE");
     }
 
     fclose(fp);
-
-    leer_usuario(&usuario,&numUsuarios);
 
     return;
 }
@@ -51,39 +70,57 @@ void altaUsuario()
 void altaVehiculo(int i)
 {
     FILE *fp;
-    int n=0;
+    int n=0, k, encontrado=0;
     char mat[8], plazas[2], descrip[51];
 
     fp=fopen("vehiculos.txt","r+");
 
-    printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
+    printf("Introduzca los datos de su vehículo para completar su registro:\n");
+    printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
     pregunta(mat, 8);
-    printf("Número de plazas libres (sin contar el conductor):\n");
-    pregunta(plazas, 2);
-    printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-    pregunta(descrip, 51);
 
-    if(fp==NULL)
+    for(k=0; k<numVehiculos&&encontrado==0; k++)
     {
-        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-        return;
+        if(strcmp(mat, vehiculo[k].id_mat)==0)
+        {
+            encontrado=1;
+        }
+    }
+
+    if(encontrado==0)
+    {
+        printf("La matrícula es válida.\n");
+        printf("Número de plazas libres (sin contar el conductor):\n");
+        pregunta(plazas, 2);
+        printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
+        pregunta(descrip, 51);
+
+        if(fp==NULL)
+        {
+            printf("No se ha podido abrir el fichero vehiculos.txt.\n");
+            return;
+        }
+        else
+        {
+            do{
+                fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
+                n++;
+            }while(n<numVehiculos-1);
+            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
+            numVehiculos++;
+            fprintf(fp, "%s-%s-%s-%s", mat, usuario[n].id_usuario, plazas, descrip);
+            numVehiculos++;
+
+            leer_vehiculo(&vehiculo,&numVehiculos);
+        }
     }
     else
     {
-
-        do{
-            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-            n++;
-        }while(n<numVehiculos-1);
-        fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-        numVehiculos++;
-        fprintf(fp, "%s-%s-%s-%s", mat, usuario[i].id_usuario, plazas, descrip);
-        numVehiculos++;
+        printf("La matrícula introducida ya existe en otro vehículo.\n");
+        system("PAUSE");
     }
 
     fclose(fp);
-
-    leer_vehiculo(&vehiculo,&numVehiculos);
 
     return;
 }
@@ -104,10 +141,10 @@ void altaViaje(int i)
     else
     {
         do{
-            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%f-%s\n", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
+            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
             n++;
         }while(n<numViajes-1);
-        fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%f-%s", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
+        fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
         numViajes++;
     }
 
@@ -150,7 +187,7 @@ void escribir_Pasos(int i)
 void altaAdminVehiculo()
 {
     int i, encontrado=0;
-    int id_us[5];
+    char id_us[5];
 
     while(encontrado==0)
     {

@@ -7,11 +7,11 @@
 #include "estructuras.h"
 #include "menus.h"
 #include "colores.h"
-#include "comprobar_usuario.h"
+#include "acceso.h"
 #include "escribir.h"
 #include "fecha.h"
 #include "leer.h"
-#include "preguntar_localidad.h"
+#include "preguntar.h"
 #include "modificar.h"
 #include "eliminar.h"
 

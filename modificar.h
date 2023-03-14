@@ -6,7 +6,7 @@
 #include <string.h>
 #include "estructuras.h"
 #include "leer.h"
-#include "preguntar_localidad.h"
+#include "preguntar.h"
 #include "encontrar.h"
 
 void modificarVehiculo(int);

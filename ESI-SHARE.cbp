@@ -31,14 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="acceso.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="acceso.h" />
 		<Unit filename="colores.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colores.h" />
-		<Unit filename="comprobar_usuario.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="comprobar_usuario.h" />
 		<Unit filename="eliminar.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -75,10 +75,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modificar.h" />
-		<Unit filename="preguntar_localidad.c">
+		<Unit filename="preguntar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="preguntar_localidad.h" />
+		<Unit filename="preguntar.h" />
 		<Unit filename="reservar.c">
 			<Option compilerVar="CC" />
 		</Unit>

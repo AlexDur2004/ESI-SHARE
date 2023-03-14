@@ -3,8 +3,8 @@
 void reservarViaje()
 {
     FILE *fp;
-    char rutas[numRutas][100], partida[numLocalidades], **rutas_guard;
-    int num_rutas=0, num_rutas_impresas=0, i=0, encontrado=0, cont=1, encontrado2=0;;
+    char rutas[numRutas][100], partida[numLocalidades], **rutas_guard, rutas_impr[numRutas][100];;
+    int i=0, j=0, num_rutas=0, encontrado=0, encontrado2=0, numGuardados=0, numImpresos=0, repetido=0;
 
     fp=fopen("rutas.txt", "r");
     if(fp==NULL)
@@ -21,7 +21,11 @@ void reservarViaje()
     printf("Ingrese las siglas de la ciudad de partida:\n ");
     pregunta_ruta(partida);
 
-    printf("%s", partida);
+    rutas_guard=(char **)calloc(num_rutas, sizeof(char*));
+    for(i=0; i<num_rutas; i++)
+    {
+        rutas_guard[i]=(char *)calloc(100, sizeof(char));
+    }
 
     for(i=0; i<num_rutas; i++)
     {
@@ -35,34 +39,26 @@ void reservarViaje()
             {
                 if(encontrado==0)
                 {
-                    printf("(%i)", cont-i);
-                    printf("%s", ciudad);
+                    strcat(rutas_guard[numGuardados], ciudad);
                     encontrado=1;
-                }
-                else
-                {
-                    printf("-%s", ciudad);
                 }
                 token=strtok(NULL, "-");
                 while(token!=NULL&&encontrado2==0)
                 {
-                    cont++;
-                    if(strcmp(token, "ESI")==0)
+                    if(strcmp(token, "ESI")==0&&encontrado==0)
                     {
-                        printf("-%s\n", token);
-                        encontrado2=1;
-                    }
-                    if(encontrado==0)
-                    {
-                        printf("-%s", token);
+                        strcat(rutas_guard[numGuardados], "-");
+                        strcat(rutas_guard[numGuardados], token);
                         encontrado=1;
                     }
                     else
                     {
-                        printf("-%s", token);
+                        strcat(rutas_guard[numGuardados], "-");
+                        strcat(rutas_guard[numGuardados], token);
                     }
                     token=strtok(NULL, "-");
                 }
+                numGuardados++;
             }
             else
             {
@@ -71,7 +67,26 @@ void reservarViaje()
         }
     }
 
-    printf("Cantidad de rutas encontradas: %i\n", cont);
+    for(i=0; i<numGuardados; i++)
+    {
+        repetido=0;
+        for(j=0; j<numImpresos&&repetido==0; j++)
+        {
+            if(strcmp(rutas_guard[i], rutas_impr[j])==0)
+            {
+                repetido=1;
+
+            }
+        }
+        if(!repetido)
+        {
+            strcpy(rutas_impr[numImpresos],rutas_guard[i]);
+            printf("%s", rutas_guard[i]);
+            numImpresos++;
+        }
+    }
+
+    printf("Cantidad de rutas encontradas: %i\n", numImpresos);
     system("PAUSE");
     return;
 }

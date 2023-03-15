@@ -78,11 +78,7 @@ void menuPasajero(int i)
     while(opc!=3)
     {
         system("cls");
-        printf("Hola %s,\n", usuario[i].nomb_usuario);
-        printf("¿Que quiere ver?\n");
-        printf("(1)Perfil.\n");
-        printf("(2)Viajes.\n");
-        printf("(3)Volver.\n");
+        printf("Hola %s,\n¿Que quiere ver?\n(1)Perfil.\n(2)Viajes.\n(3)Volver.\n", usuario[i].nomb_usuario);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -108,17 +104,8 @@ void menuPasajeroPerfil(int i)
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\n", usuario[i].id_usuario);
-        printf("Nombre completo: %s.\n", usuario[i].nomb_usuario);
-        printf("Localidad de residencia: %s.\n", usuario[i].localidad);
-        printf("Tipo de perfil: %s.\n", usuario[i].perfil);
-        printf("Usuario: %s.\n", usuario[i].usuario);
-        printf("¿Que quiere hacer?\n");
-        printf("(1)Modificar nombre completo.\n");
-        printf("(2)Modificar localidad de residencia.\n");
-        printf("(3)Modificar usuario.\n");
-        printf("(4)Modificar contrasena.\n");
-        printf("(5)Volver\n");
+        printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
+        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -165,7 +152,7 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                reservarViaje();
+                ;
                 break;
             case 2:
                 ;
@@ -210,29 +197,32 @@ void menuConductorPerfil(int i)
 {
     int opc;
 
-    while(opc!=5)
+    while(opc!=3)
     {
         system("cls");
         printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
-        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
+        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar usuario.\n(5)Modificar contrasena.\n(6)Volver\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                modificarPerfilNombre(i);
+                ;
                 break;
             case 2:
-                modificarPerfilLocalidad(i);
+                ;
                 break;
             case 3:
-                modificarPerfilUsuario(i);
+                ;
                 break;
             case 4:
-                modificarPerfilContrasena(i);
+                ;
                 break;
             case 5:
+                ;
+                break;
+            case 6:
                 menuConductor(i);
                 break;
         }
@@ -241,7 +231,7 @@ void menuConductorPerfil(int i)
 
 void menuConductorVehiculo(int i)
 {
-    int opc;
+    int opc,ID_actual;
     //int numVehiculos;
 
     while(opc!=4)
@@ -261,6 +251,7 @@ void menuConductorVehiculo(int i)
                 break;
             case 3:
                 eliminarVehiculo(i);
+                ;
                 break;
             case 4:
                 menuConductor(i);
@@ -349,17 +340,16 @@ void menuAdminUsuarios(int i)
         switch(opc)
         {
             case 1:
-                altaUsuario();
+                ;
                 break;
             case 2:
                 ;
                 break;
             case 3:
-                modificarAdminUsuario();
+                ;
                 break;
             case 4:
-                listarUsuarios();
-                system("PAUSE");
+                ;
                 break;
             case 5:
                 menuAdmin(i);
@@ -370,7 +360,8 @@ void menuAdminUsuarios(int i)
 
 void menuAdminVehiculos(int i)
 {
-    int opc;
+    int opc,encontrado;
+    char opc2[4];
 
     while(opc!=6)
     {
@@ -382,20 +373,38 @@ void menuAdminVehiculos(int i)
         switch(opc)
         {
             case 1:
-                altaAdminVehiculo();
+                encontrado=0;
+                system("cls");
+                printf("Escriba la ID del usuario a la que se quiera dar de alta el vehículo\n");
+                for(int counter=0;counter<numUsuarios;counter++){
+                    printf("%s\n",usuario[counter].id_usuario);
+                }
+                printf("\n");
+                scanf("%4s",&opc2);
+                for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+                    if(strcmp(opc2,usuario[counter].id_usuario)==0){
+                        encontrado=1;
+                        i=counter;
+                        altaVehiculo(i);
+                    }
+                }
+                if(encontrado==0){
+                    system("cls");
+                    printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+                    system("PAUSE");
+                }
                 break;
             case 2:
                 ;
                 break;
             case 3:
-                modificarAdminVehiculo();
+                ;
                 break;
             case 4:
-                listarVehiculos();
-                system("PAUSE");
+                ;
                 break;
             case 5:
-                listarAdminVehiculoViajes();
+                ;
                 break;
             case 6:
                 menuAdmin(i);

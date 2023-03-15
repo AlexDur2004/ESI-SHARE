@@ -12,7 +12,7 @@ void eliminarVehiculo(int i)
         return;
     }
     else {
-        encontrarVehiculos(&vec, &x, i);
+        encontrar(&vec, &x, i);
         if(x>0){
             printf("¿Qué vehículo quiere eliminar?\n");
 
@@ -72,6 +72,8 @@ void eliminarVehiculo(int i)
                                 remove("vehiculos.txt");
                                 rename("vehiculos_Temp.txt","vehiculos.txt");
                                 leer_vehiculo(&vehiculo, &numVehiculos);
+                                system("cls");
+                                printf("Eliminado con exito\n");
                                 system("PAUSE");
 
                     }

@@ -17,7 +17,7 @@ enum colores //Listado de colores
 	rojo_claro=12,
 	magenta_claro=13,
 	amarillo=14,
-	blanco=15
+	blanco=15,
 };
 
 void color(int fondo, int texto){ // Función para cambiar el color del fondo y/o pantalla

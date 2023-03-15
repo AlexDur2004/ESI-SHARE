@@ -16,16 +16,29 @@ void listarUsuarios()
 
 void listarVehiculos()
 {
-    int i;
+    int contador_veh_usuario;
 
-    printf("Lista de todos los vehiculos existentes en la base de datos:\n");
+    system("cls");
+    printf("LISTADO DE VEHICULOS:\n\n");
+    for(int counter=0;counter<numUsuarios;counter++){
+        contador_veh_usuario=0;
+        color(0,14);
+        printf("> Vehiculos de %s | ID: %s\n",usuario[counter].nomb_usuario,usuario[counter].id_usuario);
+            for(int counter2=0;counter2<numVehiculos;counter2++){
+                if(strcmp(usuario[counter].id_usuario,vehiculo[counter2].id_usuario)==0){
+                    color(0,3);
+                    printf("    Vehiculo %i:    Matricula: %s | Numero de plazas: %s | Descripcion: %s\n",(contador_veh_usuario)+1,vehiculo[counter2].id_mat,vehiculo[counter2].num_plazas,vehiculo[counter2].desc_veh);
+                    contador_veh_usuario++;
+                }
+            }
+            if(contador_veh_usuario==0){
+                color(0,3);
+                printf("    No posee vehiculos registrados\n");
+            }
+        }
 
-    leer_vehiculo(&vehiculo, &numVehiculos);
-
-    for(i=0; i<numVehiculos; i++)
-    {
-        printf("%s-%s-%s-%s\n", vehiculo[i].id_mat, vehiculo[i].id_usuario, vehiculo[i].num_plazas, vehiculo[i].desc_veh);
-    }
+color(0,15);
+system("PAUSE");
 }
 
 void listarAdminVehiculoViajes()

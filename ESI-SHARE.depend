@@ -82,7 +82,7 @@
 1678387647 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
-1678144015 source:c:\users\adura\mi unidad\uca\mp\esi-share\colores.c
+1678903363 source:c:\users\adura\mi unidad\uca\mp\esi-share\colores.c
 	"colores.h"
 
 1678143961 c:\users\adura\mi unidad\uca\mp\esi-share\colores.h
@@ -111,7 +111,7 @@
 	<string.h>
 	"estructuras.h"
 
-1678660737 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
+1678905573 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
 	"escribir.h"
 
 1678818293 c:\users\adura\mi unidad\uca\mp\esi-share\escribir.h
@@ -139,7 +139,7 @@
 1678628824 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
 	"leer.h"
 
-1678818292 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
+1678906248 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -164,7 +164,7 @@
 	"acceso.h"
 	"leer.h"
 
-1678818292 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
+1678906226 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
 1678742083 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
@@ -193,7 +193,7 @@
 	"leer.h"
 	"preguntar_localidad.h"
 
-1678592308 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
+1678903769 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
 	"listar.h"
 
 1678589640 c:\users\adura\mi unidad\uca\mp\esi-share\listar.h
@@ -213,7 +213,7 @@
 1678642355 source:c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.c
 	"encontrar.h"
 
-1678745039 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
+1678830863 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
 	"reservar.h"
 
 1678818293 c:\users\adura\mi unidad\uca\mp\esi-share\reservar.h
@@ -225,7 +225,7 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1678726000 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
+1678906220 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
 	"eliminar.h"
 
 1678818293 c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.h
@@ -247,16 +247,16 @@
 	"estructuras.h"
 	"leer.h"
 
-1678645962 source:c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_localidad_viaje.c
+1678905475 source:c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_localidad_viaje.c
 	"comprobar_localidad_viaje.h"
 
-1678645980 c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_localidad_viaje.h
+1678905471 c:\users\adura\mi unidad\uca\mp\esi-share\comprobar_localidad_viaje.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"estructuras.h"
 	"leer.h"
-	"comprobar_estado_viaje.h"
+	"fecha.h"
 
 1678818168 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
 	"preguntar.h"
@@ -275,6 +275,6 @@
 	"estructuras.h"
 	"leer.h"
 
-1678818293 source:c:\users\adura\mi unidad\uca\mp\esi-share\acceso.c
+1678904648 source:c:\users\adura\mi unidad\uca\mp\esi-share\acceso.c
 	"acceso.h"
 

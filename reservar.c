@@ -10,7 +10,7 @@ void reservarViaje()
     if(fp==NULL)
     {
         printf("No se pudo abrir el archivo rutas.txt.\n");
-        return 1;
+        exit(1);
     }
     while(fgets(rutas[num_rutas], 100, fp)!=NULL)
     {

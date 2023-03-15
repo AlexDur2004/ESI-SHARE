@@ -63,26 +63,5 @@ void acceso(Estr_Usuario *usuario, int n)
     {
         printf("Usuario no encontrado en nuestra base de datos.\n");
         system("PAUSE");
-
-        while(preg!=1||preg!=2||preg!=3)
-        {
-            system("cls");
-            printf("¿Que quiere hacer?\n(1)Reintentar.\n(2)Registrarse.\n(3)Salir.\n");
-            scanf("%1i", &preg);
-            if(preg==1)
-            {
-                system("cls");
-                acceso(usuario, numUsuarios);
-            }
-            else if(preg==2)
-            {
-                system("cls");
-                altaUsuario(usuario,&numUsuarios);
-            }
-            else if(preg==3)
-            {
-                menuPrincipal();
-            }
-        }
     }
 }

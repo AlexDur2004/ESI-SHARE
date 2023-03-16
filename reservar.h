@@ -9,6 +9,7 @@
 #include "preguntar.h"
 #include "encontrar.h"
 
-void reservarViaje();
+void buscadorRutasPartida();
+void imprimirPasos(char *, char *, char *);
 
 #endif // RESERVAR_H_INCLUDED

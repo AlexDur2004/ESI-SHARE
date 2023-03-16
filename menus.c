@@ -158,7 +158,7 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                reservarViaje();
+                buscadorRutas();
                 break;
             case 2:
                 ;

@@ -6,7 +6,8 @@
 #include "estructuras.h"
 #include "leer.h"
 
-void pregunta_localidad(char *);
 void pregunta(char *, int);
+void pregunta_localidad(char *);
+void pregunta_ruta(char *);
 
 #endif // PREGUNTAR_LOCALIDAD_H_INCLUDED

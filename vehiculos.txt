@@ -1,6 +1,4 @@
-1111FGE-0002-4-Dacia Sandero Gris
-123123-0004-4-5454
-1234-0003-4-Dacia Sandero Gris
-12345-0003-4-Dacia Sandero Gris
-12-0003-4-Dacia Sandero Gris
-123-0003-4-Dacia Sandero Gris
+1234XXX-0003-4-Dacia Sandero Gris
+1234WER-0003-6-MAZDA
+AWDE123-0003-4-Dacia Sandero Gris
+AWDE123-0004-6-MAZDA

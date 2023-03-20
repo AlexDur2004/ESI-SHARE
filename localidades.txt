@@ -1,11 +1,11 @@
 JER-Jerez de la Frontera
 ALG-Algeciras
-CAD-Cádiz
+CAD-Cadiz
 SFE-San Fernando
-PSM-Puerto de Sta María
+PSM-Puerto de Sta Maria
 CHI-Chiclana
-SAN-Sanlúcar
-LIN-La Línea
+SAN-Sanlucar
+LIN-La Linea
 PUR-Puerto Real
 SRO-San Roque
 ARC-Arcos de la Frontera
@@ -17,7 +17,7 @@ CHP-Chipiona
 TAR-Tarifa
 UBR-Ubrique
 VEJ-Vejer de la Frontera
-VIL-Villamartín
+VIL-Villamartin
 MES-Medina Sidonia
 OLV-Olvera
 BOR-Bornos
@@ -28,8 +28,8 @@ JIM-Jimena
 PRA-Prado del Rey
 AGO-Algodonales
 PAT-Paterna de Rivera
-AGZ-Alcalá Gazules
-AVL-Alcalá del Valle
+AGZ-Alcala Gazules
+AVL-Alcala del Valle
 SET-Setenil
 BOS-El Bosque
 GRA-Grazalema

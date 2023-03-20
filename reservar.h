@@ -6,9 +6,10 @@
 #include <string.h>
 #include "estructuras.h"
 #include "leer.h"
-#include "preguntar_localidad.h"
+#include "preguntar.h"
 #include "encontrar.h"
 
-void reservar();
+void buscadorRutasPartida();
+void imprimirPasos(char *, char *, char *);
 
 #endif // RESERVAR_H_INCLUDED

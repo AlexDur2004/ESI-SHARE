@@ -30,6 +30,7 @@ void menuPrincipal()
                 altaUsuario(usuario, &numUsuarios);
                 break;
             case 3:
+                exit(1);
                 break;
         }
     }
@@ -78,7 +79,11 @@ void menuPasajero(int i)
     while(opc!=3)
     {
         system("cls");
-        printf("Hola %s,\n¿Que quiere ver?\n(1)Perfil.\n(2)Viajes.\n(3)Volver.\n", usuario[i].nomb_usuario);
+        printf("Hola %s,\n", usuario[i].nomb_usuario);
+        printf("¿Que quiere ver?\n");
+        printf("(1)Perfil.\n");
+        printf("(2)Viajes.\n");
+        printf("(3)Volver.\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -104,8 +109,17 @@ void menuPasajeroPerfil(int i)
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
-        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
+        printf("ID de usuario: %s.\n", usuario[i].id_usuario);
+        printf("Nombre completo: %s.\n", usuario[i].nomb_usuario);
+        printf("Localidad de residencia: %s.\n", usuario[i].localidad);
+        printf("Tipo de perfil: %s.\n", usuario[i].perfil);
+        printf("Usuario: %s.\n", usuario[i].usuario);
+        printf("¿Que quiere hacer?\n");
+        printf("(1)Modificar nombre completo.\n");
+        printf("(2)Modificar localidad de residencia.\n");
+        printf("(3)Modificar usuario.\n");
+        printf("(4)Modificar contrasena.\n");
+        printf("(5)Volver\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -137,14 +151,6 @@ void menuPasajeroViajes(int i)
     while(opc!=3)
     {
         system("cls");
-        //int numViajes;
-
-        //llamar a función que nos entrege la info de los viajes activos al momento
-        //for(x=0;x<max;x++)
-        //{
-        //    if(strcmp(usuario[i].id_usuario, viaje[i]))
-        //}
-
         printf("¿Que quiere hacer?\n(1)Reservar viaje.\n(2)Cancelar viaje.\n(3)Volver\n");
         fflush(stdin);
         scanf("%i", &opc);
@@ -152,7 +158,7 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                reservar();
+                buscadorRutas();
                 break;
             case 2:
                 ;
@@ -346,7 +352,6 @@ void menuAdminUsuarios(int i)
                 break;
             case 4:
                 listarUsuarios();
-                system("PAUSE");
                 break;
             case 5:
                 menuAdmin(i);
@@ -372,17 +377,16 @@ void menuAdminVehiculos(int i)
                 altaAdminVehiculo();
                 break;
             case 2:
-                ;
+                eliminarAdminVehiculo();
                 break;
             case 3:
                 modificarAdminVehiculo();
                 break;
             case 4:
                 listarVehiculos();
-                system("PAUSE");
                 break;
             case 5:
-                listarAdminVehiculoViajes();
+                ;
                 break;
             case 6:
                 menuAdmin(i);

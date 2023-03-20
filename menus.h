@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "comprobar_usuario.h"
+#include "acceso.h"
 #include "leer.h"
 
 void menuPrincipal();

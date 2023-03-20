@@ -6,7 +6,7 @@
 #include <string.h>
 #include "estructuras.h"
 #include "leer.h"
-#include "preguntar_localidad.h"
+#include "preguntar.h"
 #include "encontrar.h"
 
 void modificarVehiculo(int);
@@ -16,6 +16,6 @@ void modificarPerfilNombre(int);
 void modificarPerfilUsuario(int);
 void modificarPerfilContrasena(int);
 void modificarAdminUsuario();
-void modificarAdminUsuario();
+void modificarAdminVehiculo();
 
 #endif // MODIFICAR_H_INCLUDED

@@ -8,11 +8,13 @@ void modificarVehiculo(int i)
 
     fp=fopen("vehiculos.txt","r+");
 
-    if(fp==NULL) {
+    if(fp==NULL)
+    {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
         return;
     }
-    else {
+    else
+    {
         encontrarVehiculos(&vec, &x, i);
         aux=x;
         while(encontrado==0)
@@ -421,22 +423,24 @@ void modificarAdminUsuario()
 
 void modificarAdminVehiculo()
 {
-    int i=0, j, encontrado=0;
-    char vec_id[5];
+    char opc2[4];
+    int encontrado=0, i=0;
 
+    system("cls");
     listarVehiculos();
-
-    while(encontrado==0)
-    {
-        printf("Introduzca la ID del usuario al que quiere modificarle un vehiculo.\n");
-        pregunta(vec_id, 5);
-        system("cls");
-
-        encontrarUsuario(vec_id, &j, &encontrado);
-
-        if(encontrado==1)
-        {
-            modificarVehiculo(j);
+    printf("Escriba la ID del usuario a la que se quiera modificar el vehículo\n");
+    scanf("%4s",&opc2);
+    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            system("cls");
+            modificarVehiculo(i);
         }
+    }
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
     }
 }

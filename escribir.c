@@ -52,22 +52,6 @@ void altaUsuario()
 
             printf("El usuario ha sido agregado correctamente.\n");
             system("PAUSE");
-
-            while(preg!=1||preg!=2)
-            {
-                system("cls");
-                printf("¿Que quiere hacer?\n(1)Iniciar sesion.\n(2)Salir.\n");
-                scanf("%1i", &preg);
-                if(preg==1)
-                {
-                    system("cls");
-                    acceso(usuario, numUsuarios);
-                }
-                else
-                {
-                    menuPrincipal();
-                }
-            }
         }
     }
     else
@@ -85,52 +69,68 @@ void altaUsuario()
 void altaVehiculo(int i)
 {
     FILE *fp;
-    int n=0, k, encontrado=0;
+    int n=0,error_mat, counter2=0;
     char mat[8], plazas[2], descrip[51];
 
-    fp=fopen("vehiculos.txt","r+");
+    fp=fopen("vehiculos.txt","a+");
 
-    printf("Introduzca los datos de su vehículo para completar su registro:\n");
-    printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
-    pregunta(mat, 8);
-
-    for(k=0; k<numVehiculos&&encontrado==0; k++)
-    {
-        if(strcmp(mat, vehiculo[k].id_mat)==0)
-        {
-            encontrado=1;
+    do{
+        error_mat=0;
+        system("cls");
+        printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
+        fflush(stdin);
+        scanf("%7s", mat);
+        for(int counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
+            if(strcmp(mat,vehiculo[counter].id_mat)==0){
+                error_mat=1;
+                system("cls");
+                printf("La matricula %s esta actualmente registrada.\n",mat);
+                system("PAUSE");
+            }
         }
-    }
-
-    if(encontrado==0)
-    {
-        printf("La matrícula es válida.\n");
+        if(strlen(mat)<7){
+            system("cls");
+            printf("La matricula debe poseer una longitud total de 7 caracteres.\n",mat);
+            system("PAUSE");
+        }
+        for(int counter=0;(counter<4)&&(error_mat==0);counter++){
+            if((mat[counter]<48)||(mat[counter]>57)){
+                error_mat=1;
+                printf("Los 4 primeros caracteres de la matricula tienen que ser numeros.\n");
+                system("PAUSE");
+            }
+        }
+        for(int counter=4;(counter<7)&&(error_mat==0);counter++){
+            if((mat[counter]<65)||(mat[counter]>90)){
+                error_mat=1;
+                printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas.\n");
+                system("PAUSE");
+            }
+        }
+    }while((error_mat==1)||(strlen(mat)<7));
+    do{
         printf("Número de plazas libres (sin contar el conductor):\n");
-        pregunta(plazas, 2);
-        printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-        pregunta(descrip, 51);
+        fflush(stdin);
+        scanf("%1s", plazas);
+        system("cls");
+        printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
+        printf("%s\n", mat);
+    }while((plazas[counter2]<48)||(plazas[counter2]>57));
 
-        if(fp==NULL)
-        {
-            printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-            return;
-        }
-        else
-        {
-            do{
-                fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                n++;
-            }while(n<numVehiculos-1);
-            fprintf(fp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-            numVehiculos++;
-            fprintf(fp, "%s-%s-%s-%s", mat, usuario[i].id_usuario, plazas, descrip);
-            numVehiculos++;
-        }
+    printf("Número de plazas libres (sin contar el conductor):\n");
+    pregunta(plazas, 2);
+    printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
+    pregunta(descrip, 51);
+
+    if(fp==NULL)
+    {
+        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
+        return;
     }
     else
     {
-        printf("La matrícula introducida ya existe en otro vehículo.\n");
-        system("PAUSE");
+        fprintf(fp, "%s-%s-%s-%s\n", mat, usuario[i].id_usuario, plazas, descrip);
+        numVehiculos++;
     }
 
     fclose(fp);
@@ -201,23 +201,25 @@ void escribir_Pasos(int i)
 
 void altaAdminVehiculo()
 {
-    int i, encontrado=0;
-    char id_us[5];
+    char opc2[4];
+    int encontrado=0, i=0;
 
-    while(encontrado==0)
-    {
-        printf("Introduzca la ID del usuario al que quiere darle de alta el vehículo.\n");
-        pregunta(id_us, 5);
-        for(i=0; i<numUsuarios&&encontrado==0; i++)
-        {
-            if(strcmp(usuario[i].id_usuario, id_us)==0)
-            {
-                encontrado=1;
-            }
+    system("cls");
+    listarUsuarios();
+    printf("Escriba la ID del usuario a la que se quiera dar de alta el vehículo\n");
+    scanf("%4s",&opc2);
+    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            altaVehiculo(i);
+            printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
+            system("PAUSE");
         }
-        system("cls");
     }
-    altaVehiculo(i-1);
-    printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[i-1].nomb_usuario, usuario[i-1].id_usuario);
-    system("PAUSE");
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
+    }
 }

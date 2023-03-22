@@ -3,10 +3,10 @@
 void altaUsuario()
 {
     FILE *fp;
-    int n=0, idmax=0, k=0, encontrado=0, preg=0;
+    int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0, preg=0;
     char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("usuarios.txt","a+");
 
     strcpy(perfil, "usuario"); //copia la palabra "usuario" en el vector perfil, sólo habrá 1 administrador.
     printf("Introduzca sus datos para completar el registro:\n");
@@ -36,18 +36,28 @@ void altaUsuario()
         }
         else
         {
-            do{
-                fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-                n++;
-            }while(n<numUsuarios-1);
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            numUsuarios++;
+            while(encontrado2==0)
+            {
+                for(i=0;i<numViajes && encontrado3==0;i++)
+                {
+                    idmax=atoi(viaje[i].id_viaje);
+                    if(n==idmax)
+                        encontrado3=1;
+                }
+                if(encontrado3==1)
+                {
+                    n++;
+                    encontrado3=0;
+                }
+                else
+                {
+                    encontrado2=1;
+                }
+            }
 
-            idmax=atoi(usuario[n].id_usuario); //convierte la id del último usuario en entero.
-            idmax++; //suma una posición a la id del último usuario, para hacer la nueva id.
-            snprintf(id, sizeof(id), "%04d", idmax); //pasa la id nueva a un vector limitado por 4 espacios.
+            snprintf(id, sizeof(id), "%04d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
-            fprintf(fp, "%s-%s-%s-%s-%s-%s", id, nombre, localidad, perfil, usuario2, contrasena);
+            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", id, nombre, localidad, perfil, usuario2, contrasena);
             numUsuarios++;
 
             printf("El usuario ha sido agregado correctamente.\n");

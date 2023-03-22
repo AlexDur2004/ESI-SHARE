@@ -139,3 +139,24 @@ void pregunta_ruta(char *rut2)
     }
     return;
 }
+
+void preguntar_veh(char *opc, int *encontrado)
+{
+    int i;
+
+    pregunta(opc, 8);
+    for(int counter=0;(counter<numUsuarios)&&((*encontrado)==0);counter++)
+    {
+        if(strcmp(opc,vehiculo[counter].id_mat)==0)
+        {
+            (*encontrado)=1;
+            printf("Has seleccionado el vehiculo con matricula %s", opc);
+        }
+    }
+    if((*encontrado)==0)
+    {
+        system("cls");
+        printf("No se ha encontrado ningun vehiculo con la siguiente matricula: %s\n", opc);
+        system("PAUSE");
+    }
+}

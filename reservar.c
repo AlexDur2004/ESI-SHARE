@@ -1,9 +1,9 @@
 #include "reservar.h"
 
-void buscadorRutas() //necesita un char de id_viaje
+void buscadorRutas(char id_viaje[7])
 {
     FILE *fp;
-    char rutas[numRutas][100], partida[numLocalidades], **rutas_guard, **rutas_impr, *token, id_viaje[7];
+    char rutas[numRutas][100], partida[numLocalidades], **rutas_guard, **rutas_impr, *token;
     int i=0, j=0, num_rutas=0, encontrado=0, encontrado2=0, numGuardados=0, numImpresos=0, repetido=0, opc=0;
 
     fp=fopen("rutas.txt", "r");
@@ -18,7 +18,7 @@ void buscadorRutas() //necesita un char de id_viaje
     }
     fclose(fp);
 
-    printf("Ingrese las siglas de la ciudad de partida:\n");
+    printf("Ingrese las siglas de la ciudad de partida/salida:\n");
     pregunta_ruta(partida);
 
     rutas_guard=(char **)calloc(num_rutas, sizeof(char*));
@@ -77,6 +77,22 @@ void buscadorRutas() //necesita un char de id_viaje
         }
     }
 
+    rutas_impr=(char **)calloc(numRutas, sizeof(char*));
+    if (rutas_impr==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
+    for(i=0; i<numRutas2; i++)
+    {
+        rutas_impr[i]=(char *)calloc(50, sizeof(char));
+        if (rutas_impr[i]==NULL)
+        {
+            printf("Error al asignar memoria.\n");
+            exit(1);
+        }
+    }
+
     for(i=0; i<numGuardados; i++)
     {
         repetido=0;
@@ -100,10 +116,15 @@ void buscadorRutas() //necesita un char de id_viaje
     printf("Cantidad de rutas encontradas: %i\n", numImpresos);
 
     do{
-        printf("Seleccione el número de la ruta que quiere escoger.\n");
+        printf("Seleccione el número de la ruta que quiere escoger: ");
+        printf("\nEscriba %i para personalizar su ruta.", numImpresos+1);
         scanf("%1i", &opc);
-    }while(opc<1||opc>numImpresos);
-    scanf("%s", id_viaje);
+    }while(opc<1||opc>numImpresos+1);
+
+    if(opc==numImpresos+1)
+    {
+        printf("Aquí va funcion personalizar");
+    }
 
     imprimirPasos(id_viaje, token, rutas_impr[opc-1]);
 
@@ -122,7 +143,6 @@ void imprimirPasos(char *id_viaje, char *token, char *ruta)
     {
         ciudades[j]=(char *)malloc(4*sizeof(char));
         strcpy(ciudades[j], ciudad);
-        printf("%s", ciudades[j]);
         j++;
         ciudad=strtok(NULL, "-");
     }

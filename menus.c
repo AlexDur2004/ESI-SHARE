@@ -235,7 +235,6 @@ void menuConductorPerfil(int i)
 void menuConductorVehiculo(int i)
 {
     int opc;
-    //int numVehiculos;
 
     while(opc!=4)
     {
@@ -265,16 +264,10 @@ void menuConductorVehiculo(int i)
 void menuConductorViajes(int i)
 {
     int opc, x;
-    //int numViajes;
 
     while(opc!=3)
     {
         system("cls");
-        //llamar a función que nos entrege la info de los viajes activos al momento
-        //for(x=0;x<max;x++)
-        //{
-        //    if(strcmp(usuario[i].id_usuario, viaje[i]))
-        //}
 
         printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular viaje.\n(4)Salir.\n");
         fflush(stdin);
@@ -283,13 +276,13 @@ void menuConductorViajes(int i)
         switch(opc)
         {
             case 1:
-                ;
+                crear_viaje(i);
                 break;
             case 2:
-                ;
+                buscadorRutas();
                 break;
             case 3:
-                ;
+                eliminar_viaje(i);
                 break;
             case 4:
                 menuConductor(i);

@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colores.h" />
+		<Unit filename="crear_viaje.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crear_viaje.h" />
 		<Unit filename="eliminar.c">
 			<Option compilerVar="CC" />
 		</Unit>

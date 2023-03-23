@@ -145,7 +145,7 @@ void preguntar_veh(char *opc, int *encontrado)
     int i;
 
     pregunta(opc, 8);
-    for(int counter=0;(counter<numUsuarios)&&((*encontrado)==0);counter++)
+    for(int counter=0;(counter<numVehiculos)&&((*encontrado)==0);counter++)
     {
         if(strcmp(opc,vehiculo[counter].id_mat)==0)
         {

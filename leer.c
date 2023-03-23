@@ -306,4 +306,45 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     return;
 }
 
+void leer_reservas(Estr_Reservas **reservas, int *i)
+{
+    FILE *fp;
+    char vec[30], *token;
+    *i=0;
+
+    fp=fopen("reservas.txt", "r");
+
+    if(fp==NULL)
+    {
+        printf("No se ha podido abrir el fichero reservas.txt.\n");
+        return;
+    }
+    else
+    {
+        while(fgets(vec, 30, fp))
+        {
+            if(strcmp(vec,"\n")!=0)
+            {
+                *reservas=realloc(*reservas,((*i)+1)*sizeof(Estr_Reservas));
+                if (*reservas==NULL)
+                {
+                    printf("Error al asignar memoria.\n");
+                    exit(1);
+                }
+                token=strtok(vec,"-");
+                strcpy((*reservas)[*i].id_viaje,token);
+                token=strtok(NULL,"\n");
+                strcpy((*reservas)[*i].id_usuario,token);
+
+                (*i)++;
+            }
+        }
+    }
+
+    fclose(fp);
+
+    printf("Se han cargado %i reservas.\n", *i);
+
+    return;
+}
 

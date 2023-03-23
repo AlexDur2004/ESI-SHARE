@@ -118,14 +118,6 @@ void altaVehiculo(int i)
             }
         }
     }while((error_mat==1)||(strlen(mat)<7));
-    do{
-        printf("Número de plazas libres (sin contar el conductor):\n");
-        fflush(stdin);
-        scanf("%1s", plazas);
-        system("cls");
-        printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
-        printf("%s\n", mat);
-    }while((plazas[counter2]<48)||(plazas[counter2]>57));
 
     printf("Número de plazas libres (sin contar el conductor):\n");
     pregunta(plazas, 2);

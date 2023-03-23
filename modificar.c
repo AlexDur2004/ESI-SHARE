@@ -297,7 +297,7 @@ void modificarPerfilContrasena(int i)
         return;
     }
     else {
-        while(encontrado>=0&&x==0)
+        while(encontrado>0&&x==0)
         {
             printf("Introduzca su antigua contrasena (Máximo de 8 caracteres):\n");
             fflush(stdin);
@@ -318,8 +318,9 @@ void modificarPerfilContrasena(int i)
 
             if(strcmp(usuario[i].contrasena,contra)==0)
             {
+                system("cls");
                 x=1;
-                printf("\nIntroduzca su nueva contrasena (Máximo de 8 caracteres):\n");
+                printf("Introduzca su nueva contrasena (Máximo de 8 caracteres):\n");
                 fflush(stdin);
                 while ((c2=getch())!='\r'&&h<8)
                 {
@@ -350,11 +351,19 @@ void modificarPerfilContrasena(int i)
             else
             {
                 encontrado--;
-                printf("\nQueda(n) %i intentos.\n", encontrado);
-                *contra=NULL;
-                j=0;
-                system("PAUSE");
-                system("cls");
+                if(encontrado==0)
+                {
+                    printf("\n¡Intentos agotados! :(\n");
+                    system("PAUSE");
+                }
+                else
+                {
+                    *contra=NULL;
+                    j=0;
+                    printf("\nQueda(n) %i intentos.\n", encontrado);
+                    system("PAUSE");
+                    system("cls");
+                }
 
             }
         }

@@ -2,24 +2,55 @@
 
 void listarUsuarios()
 {
-    int i;
-
-    printf("Lista de todos los usuarios existentes en la base de datos:\n");
+    int contador_usuario=0;
 
     leer_usuario(&usuario, &numUsuarios);
 
-    for(i=0; i<numUsuarios; i++)
-    {
-        printf("%s-%s-%s-%s-%s-%s\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario, usuario[i].contrasena);
+    system("cls");
+    printf("LISTADO DE USUARIOS:\n");
+    for(int counter=0;counter<numUsuarios;counter++){
+        color(0,14);
+        printf("    Usuario %i:\n", (contador_usuario)+1);
+        color(0,3);
+        printf("    ID: ");
+        color(0,15);
+        printf("%s", usuario[contador_usuario].id_usuario);
+        color(0,3);
+        printf(" | Nombre de usuario: ");
+        color(0,15);
+        printf("%s", usuario[contador_usuario].nomb_usuario);
+        color(0,3);
+        printf(" | Localidad: ");
+        color(0,15);
+        printf("%s", usuario[contador_usuario].localidad);
+        color(0,3);
+        printf(" | Perfil: ");
+        color(0,15);
+        printf("%s", usuario[contador_usuario].perfil);
+        color(0,3);
+        printf(" | Usuario: ");
+        color(0,15);
+        printf("%s\n", usuario[contador_usuario].usuario);
+        contador_usuario++;
     }
+    if(contador_usuario==0)
+    {
+        color(0,3);
+        printf("    No hay usuarios registrados.\n");
+    }
+
+color(0,15);
+system("PAUSE");
 }
 
 void listarVehiculos()
 {
     int contador_veh_usuario;
 
+    leer_vehiculo(&vehiculo, &numVehiculos);
+
     system("cls");
-    printf("LISTADO DE VEHICULOS:\n\n");
+    printf("LISTADO DE VEHICULOS:\n");
     for(int counter=0;counter<numUsuarios;counter++){
         contador_veh_usuario=0;
         color(0,14);
@@ -33,7 +64,7 @@ void listarVehiculos()
             }
             if(contador_veh_usuario==0){
                 color(0,3);
-                printf("    No posee vehiculos registrados\n");
+                printf("    No posee vehiculos registrados.\n");
             }
         }
 

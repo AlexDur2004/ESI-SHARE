@@ -7,7 +7,9 @@
 #include "leer.h"
 
 void pregunta(char *, int);
+void preguntar_id();
 void pregunta_localidad(char *);
 void pregunta_ruta(char *);
+void preguntar_veh(char *,int *);
 
 #endif // PREGUNTAR_LOCALIDAD_H_INCLUDED

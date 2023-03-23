@@ -7,8 +7,14 @@ void menuPrincipal()
     while(opc!=3)
     {
         system("cls");
-        color(15, 1);
-        printf("Bienvenid@ a ESI-SHARE\n");
+        color(0, 6);
+        printf("   ______   ______   _____            ______   _    _   _____   ______   ______     \n");
+        printf("  |  ____| |  ____| |_   _|          |  ____| | |  | | |  _  | |  __  | |  ____|    \n");
+        printf("  | |__    | (____    | |    ______  | (____  | |__| | | |_| | | |__) | | |__       \n");
+        printf("  |  __|   |____  |   | |   |______| |____  | |  __  | |  _  | |  _ __| |  __|      \n");
+        printf("  | |____   ____) |  _| |_            ____) | | |  | | | | | | | ||_|_  | |____     \n");
+        printf("  |______| |______| |_____|          |______| |_|  |_| |_| |_| |_|  |_| |______|    \n");
+        printf("                                                                                    \n");
         color(0,15);
         printf("¿Que le gustaria hacer?\n");
         color(0,4);
@@ -235,7 +241,6 @@ void menuConductorPerfil(int i)
 void menuConductorVehiculo(int i)
 {
     int opc;
-    //int numVehiculos;
 
     while(opc!=4)
     {
@@ -265,16 +270,10 @@ void menuConductorVehiculo(int i)
 void menuConductorViajes(int i)
 {
     int opc, x;
-    //int numViajes;
 
     while(opc!=3)
     {
         system("cls");
-        //llamar a función que nos entrege la info de los viajes activos al momento
-        //for(x=0;x<max;x++)
-        //{
-        //    if(strcmp(usuario[i].id_usuario, viaje[i]))
-        //}
 
         printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular viaje.\n(4)Salir.\n");
         fflush(stdin);
@@ -283,13 +282,13 @@ void menuConductorViajes(int i)
         switch(opc)
         {
             case 1:
-                ;
+                crear_viaje(i);
                 break;
             case 2:
-                ;
+                buscadorRutas();
                 break;
             case 3:
-                ;
+                eliminar_viaje(i);
                 break;
             case 4:
                 menuConductor(i);
@@ -352,7 +351,6 @@ void menuAdminUsuarios(int i)
                 break;
             case 4:
                 listarUsuarios();
-                system("PAUSE");
                 break;
             case 5:
                 menuAdmin(i);
@@ -363,8 +361,7 @@ void menuAdminUsuarios(int i)
 
 void menuAdminVehiculos(int i)
 {
-    int opc,encontrado, contador_veh_usuario;
-    char opc2[4];
+    int opc;
 
     while(opc!=6)
     {
@@ -376,59 +373,13 @@ void menuAdminVehiculos(int i)
         switch(opc)
         {
             case 1:
-                encontrado=0;
-                system("cls");
-                listarUsuarios();
-                printf("Escriba la ID del usuario a la que se quiera dar de alta el vehículo\n");
-                scanf("%4s",&opc2);
-                for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
-                    if(strcmp(opc2,usuario[counter].id_usuario)==0){
-                        encontrado=1;
-                        i=counter;
-                        altaVehiculo(i);
-                    }
-                }
-                if(encontrado==0){
-                    system("cls");
-                    printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
-                    system("PAUSE");
-                }
+                altaAdminVehiculo();
                 break;
             case 2:
-                encontrado=0;
-                system("cls");
-                listarUsuarios();
-                printf("Escriba la ID del usuario a la que se quiera eliminar un vehículo\n");
-                scanf("%4s",&opc2);
-                for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
-                    if(strcmp(opc2,usuario[counter].id_usuario)==0){
-                        encontrado=1;
-                        i=counter;
-                        system("cls");
-                        eliminarVehiculo(i);
-                    }
-                }
+                eliminarAdminVehiculo();
                 break;
             case 3:
-                encontrado=0;
-                system("cls");
-                listarUsuarios();
-                printf("Escriba la ID del usuario a la que se quiera modificar el vehículo\n");
-                printf("\n");
-                scanf("%4s",&opc2);
-                for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
-                    if(strcmp(opc2,usuario[counter].id_usuario)==0){
-                        encontrado=1;
-                        i=counter;
-                        system("cls");
-                        modificarVehiculo(i);
-                    }
-                }
-                if(encontrado==0){
-                    system("cls");
-                    printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
-                    system("PAUSE");
-                }
+                modificarAdminVehiculo();
                 break;
             case 4:
                 listarVehiculos();

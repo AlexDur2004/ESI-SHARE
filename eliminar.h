@@ -10,5 +10,6 @@
 #include "encontrar.h"
 
 void eliminarVehiculo(int);
+void eliminarAdminVehiculo();
 
 #endif // ELIMINAR_H_INCLUDED

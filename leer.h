@@ -13,12 +13,14 @@ int numPasos;
 int numLocalidades;
 int numRutas;
 int numRutas2;
+int numReservas;
 
 Estr_Usuario *usuario;
 Estr_Vehiculo *vehiculo;
 Estr_Viaje *viaje;
 Estr_Pasos *pasos;
 Estr_Localidad *localidad;
+Estr_Reservas *reservas;
 Estr_Rutas **ruta;
 
 void leer();
@@ -28,5 +30,6 @@ void leer_viaje(Estr_Viaje **, int *);
 void leer_pasos(Estr_Pasos **, int *);
 void leer_localidad(Estr_Localidad **, int *);
 void leer_ruta(Estr_Rutas ***, int *, int *);
+void leer_reservas(Estr_Reservas **, int *);
 
 #endif // LEER_H_INCLUDED

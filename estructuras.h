@@ -47,4 +47,9 @@ typedef struct{
     char localidad[21];
 } Estr_Rutas;
 
+typedef struct{
+    char id_viaje[7];
+    char id_usuario[5];
+} Estr_Reservas;
+
 #endif // ESTRUCTURAS_H_INCLUDED

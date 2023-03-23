@@ -3,10 +3,10 @@
 void altaUsuario()
 {
     FILE *fp;
-    int n=0, idmax=0, k=0, encontrado=0, preg=0;
+    int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0, preg=0;
     char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("usuarios.txt","a+");
 
     strcpy(perfil, "usuario"); //copia la palabra "usuario" en el vector perfil, sólo habrá 1 administrador.
     printf("Introduzca sus datos para completar el registro:\n");
@@ -36,18 +36,28 @@ void altaUsuario()
         }
         else
         {
-            do{
-                fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-                n++;
-            }while(n<numUsuarios-1);
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            numUsuarios++;
+            while(encontrado2==0)
+            {
+                for(i=0;i<numViajes && encontrado3==0;i++)
+                {
+                    idmax=atoi(viaje[i].id_viaje);
+                    if(n==idmax)
+                        encontrado3=1;
+                }
+                if(encontrado3==1)
+                {
+                    n++;
+                    encontrado3=0;
+                }
+                else
+                {
+                    encontrado2=1;
+                }
+            }
 
-            idmax=atoi(usuario[n].id_usuario); //convierte la id del último usuario en entero.
-            idmax++; //suma una posición a la id del último usuario, para hacer la nueva id.
-            snprintf(id, sizeof(id), "%04d", idmax); //pasa la id nueva a un vector limitado por 4 espacios.
+            snprintf(id, sizeof(id), "%04d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
-            fprintf(fp, "%s-%s-%s-%s-%s-%s", id, nombre, localidad, perfil, usuario2, contrasena);
+            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", id, nombre, localidad, perfil, usuario2, contrasena);
             numUsuarios++;
 
             printf("El usuario ha sido agregado correctamente.\n");
@@ -84,26 +94,26 @@ void altaVehiculo(int i)
             if(strcmp(mat,vehiculo[counter].id_mat)==0){
                 error_mat=1;
                 system("cls");
-                printf("Esta matricula esta actualmente registrada: %s\n",mat);
+                printf("La matricula %s esta actualmente registrada.\n",mat);
                 system("PAUSE");
             }
         }
         if(strlen(mat)<7){
             system("cls");
-            printf("La matricula debe poseer una longitud total de 7 caracteres\n",mat);
+            printf("La matricula debe poseer una longitud total de 7 caracteres.\n",mat);
             system("PAUSE");
         }
         for(int counter=0;(counter<4)&&(error_mat==0);counter++){
             if((mat[counter]<48)||(mat[counter]>57)){
                 error_mat=1;
-                printf("Los 4 primeros caracteres de la matricula tienen que ser numeros\n");
+                printf("Los 4 primeros caracteres de la matricula tienen que ser numeros.\n");
                 system("PAUSE");
             }
         }
         for(int counter=4;(counter<7)&&(error_mat==0);counter++){
             if((mat[counter]<65)||(mat[counter]>90)){
                 error_mat=1;
-                printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas\n");
+                printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas.\n");
                 system("PAUSE");
             }
         }
@@ -118,12 +128,9 @@ void altaVehiculo(int i)
     }while((plazas[counter2]<48)||(plazas[counter2]>57));
 
     printf("Número de plazas libres (sin contar el conductor):\n");
-    printf("%s\n", plazas);
+    pregunta(plazas, 2);
     printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-    fflush(stdin);
-    fgets(descrip,50,stdin);
-    descrip[(strlen(descrip))-1]='\0';
-    fflush(stdin);
+    pregunta(descrip, 51);
 
     if(fp==NULL)
     {
@@ -204,23 +211,25 @@ void escribir_Pasos(int i)
 
 void altaAdminVehiculo()
 {
-    int i, encontrado=0;
-    char id_us[5];
+    char opc2[4];
+    int encontrado=0, i=0;
 
-    while(encontrado==0)
-    {
-        printf("Introduzca la ID del usuario al que quiere darle de alta el vehículo.\n");
-        pregunta(id_us, 5);
-        for(i=0; i<numUsuarios&&encontrado==0; i++)
-        {
-            if(strcmp(usuario[i].id_usuario, id_us)==0)
-            {
-                encontrado=1;
-            }
+    system("cls");
+    listarUsuarios();
+    printf("Escriba la ID del usuario a la que se quiera dar de alta el vehículo\n");
+    scanf("%4s",&opc2);
+    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            altaVehiculo(i);
+            printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
+            system("PAUSE");
         }
-        system("cls");
     }
-    altaVehiculo(i-1);
-    printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[i-1].nomb_usuario, usuario[i-1].id_usuario);
-    system("PAUSE");
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
+    }
 }

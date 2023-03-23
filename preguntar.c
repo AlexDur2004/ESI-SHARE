@@ -21,6 +21,27 @@ void pregunta(char *x, int i)
     }
 }
 
+void preguntar_id_alta()
+{
+    char opc2[4];
+    int encontrado=0, i;
+
+    pregunta(opc2, 5);
+    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            altaVehiculo(i);
+        }
+    }
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
+    }
+}
+
+
 void pregunta_localidad(char *local)
 {
     char vec_loc[4];
@@ -117,4 +138,25 @@ void pregunta_ruta(char *rut2)
         }
     }
     return;
+}
+
+void preguntar_veh(char *opc, int *encontrado)
+{
+    int i;
+
+    pregunta(opc, 8);
+    for(int counter=0;(counter<numUsuarios)&&((*encontrado)==0);counter++)
+    {
+        if(strcmp(opc,vehiculo[counter].id_mat)==0)
+        {
+            (*encontrado)=1;
+            printf("Has seleccionado el vehiculo con matricula %s", opc);
+        }
+    }
+    if((*encontrado)==0)
+    {
+        system("cls");
+        printf("No se ha encontrado ningun vehiculo con la siguiente matricula: %s\n", opc);
+        system("PAUSE");
+    }
 }

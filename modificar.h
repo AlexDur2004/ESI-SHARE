@@ -16,6 +16,6 @@ void modificarPerfilNombre(int);
 void modificarPerfilUsuario(int);
 void modificarPerfilContrasena(int);
 void modificarAdminUsuario();
-void modificarAdminUsuario();
+void modificarAdminVehiculo();
 
 #endif // MODIFICAR_H_INCLUDED

@@ -4,8 +4,10 @@ void acceso(Estr_Usuario *usuario, int n)
 {
     int i, j=0, k=0, encontrado=0, encontrado2=0, preg=0;
     char usua[6], contra[9], c;
-
-    printf("Introduzca sus credenciales de acceso:\nUsuario:\n");
+    color(0,6);
+    printf("Introduzca sus credenciales de acceso:\n");
+    color(0,14);
+    printf("Usuario:\n");
     pregunta(usua, 6);
     for(k=0; k<numUsuarios&&encontrado2==0; k++)
     {

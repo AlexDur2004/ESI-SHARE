@@ -116,7 +116,7 @@
 	<string.h>
 	"estructuras.h"
 
-1679510294 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
+1678905573 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
 	"escribir.h"
 
 1678818293 c:\users\adura\mi unidad\uca\mp\esi-share\escribir.h
@@ -133,10 +133,10 @@
 	"estructuras.h"
 	"leer.h"
 
-1679412614 source:c:\users\adura\mi unidad\uca\mp\esi-share\fecha.c
+1678733409 source:c:\users\adura\mi unidad\uca\mp\esi-share\fecha.c
 	"fecha.h"
 
-1679412715 c:\users\adura\mi unidad\uca\mp\esi-share\fecha.h
+1678229557 c:\users\adura\mi unidad\uca\mp\esi-share\fecha.h
 	<stdio.h>
 	<string.h>
 	<time.h>
@@ -144,7 +144,7 @@
 1678628824 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
 	"leer.h"
 
-1679412842 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
+1678906248 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -169,13 +169,13 @@
 	"acceso.h"
 	"leer.h"
 
-1679515778 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
+1678967027 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
 1678742083 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
 	"preguntar_localidad.h"
 
-1679353919 c:\users\adura\mi unidad\uca\mp\esi-share\modificar.h
+1678818292 c:\users\adura\mi unidad\uca\mp\esi-share\modificar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -184,7 +184,7 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1679354007 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
+1678662839 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
 	"modificar.h"
 
 1678554026 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar_perfil.c
@@ -198,7 +198,7 @@
 	"leer.h"
 	"preguntar_localidad.h"
 
-1679326931 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
+1678903769 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
 	"listar.h"
 
 1678589640 c:\users\adura\mi unidad\uca\mp\esi-share\listar.h
@@ -218,10 +218,10 @@
 1678642355 source:c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.c
 	"encontrar.h"
 
-1679526031 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
+1678975059 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
 	"reservar.h"
 
-1679516332 c:\users\adura\mi unidad\uca\mp\esi-share\reservar.h
+1678966371 c:\users\adura\mi unidad\uca\mp\esi-share\reservar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -230,10 +230,10 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1679512132 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
+1678906220 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
 	"eliminar.h"
 
-1679353919 c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.h
+1678818293 c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -263,10 +263,10 @@
 	"leer.h"
 	"fecha.h"
 
-1679438778 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
+1678818168 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
 	"preguntar.h"
 
-1679437357 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.h
+1678970412 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.h
 	<stdio.h>
 	<string.h>
 	"estructuras.h"
@@ -359,13 +359,149 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1679516332 source:c:\users\adura\mi unidad\uca\mp\esi-share\crear_viaje.c
-	"crear_viaje.h"
+1679386897 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\acceso.c
+	"acceso.h"
 
-1679514372 c:\users\adura\mi unidad\uca\mp\esi-share\crear_viaje.h
+1678818314 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\acceso.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"estructuras.h"
+	"leer.h"
+
+1678392597 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\estructuras.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1678487846 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\leer.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+
+1678987978 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\colores.c
+	"colores.h"
+
+1678143961 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\colores.h
+	<stdlib.h>
+	<windows.h>
+
+1678906220 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\eliminar.c
+	"eliminar.h"
+
+1678818293 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"estructuras.h"
 	"leer.h"
+	"preguntar.h"
+	"encontrar.h"
+
+1678970412 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\preguntar.h
+	<stdio.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+
+1678642219 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\encontrar.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+
+1678642355 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\encontrar.c
+	"encontrar.h"
+
+1678905573 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\escribir.c
+	"escribir.h"
+
+1678818293 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\escribir.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+	"preguntar.h"
+
+1678733409 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\fecha.c
+	"fecha.h"
+
+1678229557 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\fecha.h
+	<stdio.h>
+	<string.h>
+	<time.h>
+
+1678628824 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\leer.c
+	"leer.h"
+
+1678903769 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\listar.c
+	"listar.h"
+
+1678589640 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\listar.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+
+1678906248 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<wchar.h>
+	<locale.h>
+	<conio.h>
+	"estructuras.h"
+	"menus.h"
+	"colores.h"
+	"acceso.h"
+	"escribir.h"
+	"fecha.h"
+	"leer.h"
+	"preguntar.h"
+	"modificar.h"
+	"eliminar.h"
+
+1678818335 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\menus.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"acceso.h"
+	"leer.h"
+
+1678818292 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\modificar.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+	"preguntar.h"
+	"encontrar.h"
+
+1679428185 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\menus.c
+	"menus.h"
+	<stdio.h>
+	<conio.h>
+
+1678662839 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\modificar.c
+	"modificar.h"
+
+1678818168 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\preguntar.c
+	"preguntar.h"
+
+1678975365 source:c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\reservar.c
+	"reservar.h"
+
+1678975365 c:\users\abadd\onedrive\escritorio\antonio\universidad\1∫ curso\2∫ cuatrimestre\mp\dise—o modular\esi-share\reservar.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estructuras.h"
+	"leer.h"
+	"preguntar.h"
+	"encontrar.h"
 

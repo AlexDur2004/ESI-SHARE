@@ -6,7 +6,6 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 
     while(encontrado2==0)
     {
-        system("cls");
         printf("Introduzca la fecha (DD/MM/AAAA) en la que quiere realizar su viaje:\n");
 
         encontrado=0;
@@ -71,10 +70,10 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
         {
             time_t now=time(NULL);
 
-            struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-            user_time.tm_year=ano-1900;
-            user_time.tm_mon=mes-1;
-            user_time.tm_mday=dia+1;
+            struct tm user_time = {0}; //definimos estructura para poner años desde 2023, meses y días.
+            user_time.tm_year = ano - 1900;
+            user_time.tm_mon = mes - 1;
+            user_time.tm_mday = dia;
 
             time_t user_time_seconds=mktime(&user_time);
 
@@ -181,12 +180,12 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
             {
                 time_t now=time(NULL);
 
-                struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-                user_time.tm_year=ano-1900;
-                user_time.tm_mon=mes-1;
-                user_time.tm_mday=dia;
-                user_time.tm_hour=hora_inic;
-                user_time.tm_min=min_inic;
+                struct tm user_time = {0}; //definimos estructura para poner años desde 2023, meses y días.
+                user_time.tm_year = ano - 1900;
+                user_time.tm_mon = mes - 1;
+                user_time.tm_mday = dia;
+                user_time.tm_hour = hora_inic;
+                user_time.tm_min = min_inic;
 
                 time_t user_time_seconds=mktime(&user_time);
 
@@ -202,7 +201,6 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
                     printf("La fecha introducida es: %s\n", fecha);
                     printf("La hora de inicio introducida es: %s\n", h_inic);
                     printf("La hora de llegada es: %s\n", h_fin);
-                    system("PAUSE");
                     encontrado3=1;
                 }
             }
@@ -212,99 +210,6 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
                 system("PAUSE");
                 system("cls");
 
-            }
-        }
-    }
-}
-
-
-void leer_dia(char fecha[11])  //DD/MM/AAAA
-{
-    int dia=0, mes=0, ano=0, maxdia=0, encontrado=0, encontrado2=0;
-
-    while(encontrado2==0)
-    {
-        system("cls");
-        printf("Introduzca la fecha (DD/MM/AAAA) en la que quiere realizar su viaje:\n");
-
-        encontrado=0;
-        while(encontrado==0)
-        {
-            printf("Día:");
-            fflush(stdin);
-            scanf("%2d", &dia);
-
-            if(dia<1||dia>31)
-            {
-                while(getchar()!='\n');
-            }
-            else
-            {
-                encontrado=1;
-            }
-        }
-
-        encontrado=0;
-        while(encontrado==0)
-        {
-            printf("Mes:");
-            fflush(stdin);
-            scanf("%2d", &mes);
-
-            if(mes<1||mes>12)
-            {
-                while(getchar()!='\n');
-            }
-            else
-            {
-                encontrado=1;
-            }
-        }
-
-        encontrado=0;
-        while(encontrado==0)
-        {
-            printf("Año:");
-            fflush(stdin);
-            scanf("%4d",&ano);
-
-            if(ano<2023)
-            {
-                while(getchar()!='\n');
-            }
-            else
-            {
-                encontrado=1;
-            }
-        }
-        maxdia=dias_meses(mes,ano);
-
-        if(dia<1||dia>maxdia||mes<1||mes>12||ano<1)
-        {
-            printf("La fecha no es válida.\n");
-            system("PAUSE");
-            system("cls");
-        }
-        else
-        {
-            time_t now=time(NULL);
-
-            struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-            user_time.tm_year=ano-1900;
-            user_time.tm_mon=mes-1;
-            user_time.tm_mday=dia+1;
-
-            time_t user_time_seconds=mktime(&user_time);
-
-            if(user_time_seconds<now)
-            {
-                printf("La fecha ingresada es anterior a la fecha actual.\n");
-                system("PAUSE");
-                system("cls");
-            }
-            else
-            {
-                encontrado2=1;
             }
         }
     }

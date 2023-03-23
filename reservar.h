@@ -9,7 +9,7 @@
 #include "preguntar.h"
 #include "encontrar.h"
 
-void buscadorRutas(char *);
+void buscadorRutasPartida();
 void imprimirPasos(char *, char *, char *);
 
 #endif // RESERVAR_H_INCLUDED

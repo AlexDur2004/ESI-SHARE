@@ -1,6 +1,98 @@
 #include "fecha.h"
 
-void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
+void actualizarViajes()
+{
+    FILE *fp;
+    char *token=NULL, vec_fecha[11], vec_h_inic[6], vec_h_fin[6];
+    int n=0, i=0, min_inic=0, hora_inic=0, min_fin=0, hora_fin=0, dia=0, mes=0, ano=0, encontrado=0;
+
+    fp=fopen("viajes.txt","r+");
+
+    if(fp==NULL)
+    {
+        printf("No se ha podido abrir el fichero viajes.txt.\n");
+        return;
+    }
+    else
+    {
+        for(i=0; i<numViajes; i++)
+        {
+            strcpy(vec_fecha, viaje[i].f_inic);
+            token=strtok(vec_fecha, "/");
+            dia=atoi(token);
+            token=strtok(NULL, "/");
+            mes=atoi(token);
+            token=strtok(NULL, "\n");
+            ano=atoi(token);
+
+            strcpy(vec_h_inic, viaje[i].h_inic);
+            token=strtok(vec_h_inic, ":");
+            hora_inic=atoi(token);
+            token=strtok(NULL, "\n");
+            min_inic=atoi(token);
+
+            time_t ahora=time(NULL);
+
+            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+            tiempo_introducido.tm_year=ano-1900;
+            tiempo_introducido.tm_mon=mes-1;
+            tiempo_introducido.tm_mday=dia;
+            tiempo_introducido.tm_hour=hora_inic;
+            tiempo_introducido.tm_min=min_inic;
+
+            time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
+
+            if(tiempo_introducido_segundos<ahora)
+            {
+                if(strcmp(viaje[i].estado, "abierto")==0||strcmp(viaje[i].estado, "cerrado")==0)
+                {
+                    strcpy(viaje[i].estado, "iniciado");
+                    encontrado=1;
+                }
+
+                if(strcmp(viaje[i].estado, "iniciado")==0)
+                {
+                    strcpy(vec_h_fin, viaje[i].h_fin);
+                    token=strtok(vec_h_fin, ":");
+                    hora_fin=atoi(token);
+                    token=strtok(NULL, "\n");
+                    hora_inic=atoi(token);
+
+                    struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+                    tiempo_introducido.tm_year=ano-1900;
+                    tiempo_introducido.tm_mon=mes-1;
+                    tiempo_introducido.tm_mday=dia;
+                    tiempo_introducido.tm_hour=hora_fin+1;
+                    tiempo_introducido.tm_min=min_fin;
+
+                    time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
+
+                    if(tiempo_introducido_segundos<ahora)
+                    {
+                        strcpy(viaje[i].estado, "finalizado");
+                        encontrado=1;
+                        eliminarReservas(viaje[i].id_viaje);
+                    }
+                }
+            }
+        }
+
+        if(encontrado==1)
+        {
+            do{
+            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
+            n++;
+            }while(n<numViajes-1);
+            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
+        }
+    }
+
+    fclose(fp);
+
+    leer_viaje(&viaje,&numViajes);
+}
+
+void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 {
     int min_inic=0, hora_inic=0, min_fin=0, hora_fin=0, dia=0, mes=0, ano=0, maxdia=0, encontrado=0, encontrado2=0, encontrado3=0;
 
@@ -69,16 +161,16 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
         }
         else
         {
-            time_t now=time(NULL);
+            time_t ahora=time(NULL);
 
-            struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-            user_time.tm_year=ano-1900;
-            user_time.tm_mon=mes-1;
-            user_time.tm_mday=dia+1;
+            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+            tiempo_introducido.tm_year=ano-1900;
+            tiempo_introducido.tm_mon=mes-1;
+            tiempo_introducido.tm_mday=dia+1;
 
-            time_t user_time_seconds=mktime(&user_time);
+            time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
 
-            if(user_time_seconds<now)
+            if(tiempo_introducido_segundos<ahora)
             {
                 printf("La fecha ingresada es anterior a la fecha actual.\n");
                 system("PAUSE");
@@ -179,20 +271,20 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 
             if(hora_fin>hora_inic||min_fin>min_inic)
             {
-                time_t now=time(NULL);
+                time_t ahora=time(NULL);
 
-                struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-                user_time.tm_year=ano-1900;
-                user_time.tm_mon=mes-1;
-                user_time.tm_mday=dia;
-                user_time.tm_hour=hora_inic;
-                user_time.tm_min=min_inic;
+                struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+                tiempo_introducido.tm_year=ano-1900;
+                tiempo_introducido.tm_mon=mes-1;
+                tiempo_introducido.tm_mday=dia;
+                tiempo_introducido.tm_hour=hora_inic;
+                tiempo_introducido.tm_min=min_inic;
 
-                time_t user_time_seconds=mktime(&user_time);
+                time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
 
-                if(user_time_seconds<now)
+                if(tiempo_introducido_segundos<ahora)
                 {
-                    printf("La fecha y la hora de inicio ingresadas es anterior a la fecha y hora actual.\n");
+                    printf("La fecha y hora de inicio ingresada es anterior a la fecha y hora actual.\n");
                     system("PAUSE");
                     system("cls");
                 }
@@ -201,7 +293,7 @@ void leer_fecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
                     system("cls");
                     printf("La fecha introducida es: %s\n", fecha);
                     printf("La hora de inicio introducida es: %s\n", h_inic);
-                    printf("La hora de llegada es: %s\n", h_fin);
+                    printf("La hora de llegada introducida es: %s\n", h_fin);
                     system("PAUSE");
                     encontrado3=1;
                 }
@@ -287,16 +379,16 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
         }
         else
         {
-            time_t now=time(NULL);
+            time_t ahora=time(NULL);
 
-            struct tm user_time={0}; //definimos estructura para poner años desde 2023, meses y días.
-            user_time.tm_year=ano-1900;
-            user_time.tm_mon=mes-1;
-            user_time.tm_mday=dia+1;
+            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+            tiempo_introducido.tm_year=ano-1900;
+            tiempo_introducido.tm_mon=mes-1;
+            tiempo_introducido.tm_mday=dia+1;
 
-            time_t user_time_seconds=mktime(&user_time);
+            time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
 
-            if(user_time_seconds<now)
+            if(tiempo_introducido_segundos<ahora)
             {
                 printf("La fecha ingresada es anterior a la fecha actual.\n");
                 system("PAUSE");

@@ -20,6 +20,7 @@ int main()
     setlocale(LC_ALL, "spanish");
 
     leer();
+    actualizarViajes();
 
     menuPrincipal();
 

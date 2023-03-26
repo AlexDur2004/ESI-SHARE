@@ -288,7 +288,7 @@ void menuConductorViajes(int i)
                 buscadorRutas();
                 break;
             case 3:
-                eliminar_viaje(i);
+                eliminarViaje(i);
                 break;
             case 4:
                 menuConductor(i);

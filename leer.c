@@ -8,6 +8,7 @@ void leer()
     leer_pasos(&pasos, &numPasos);
     leer_localidad(&localidad, &numLocalidades);
     leer_ruta(&ruta, &numRutas, &numRutas2);
+    leer_reservas(&reservas, &numReservas);
     system("PAUSE");
 }
 

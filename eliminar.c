@@ -96,7 +96,7 @@ void eliminarVehiculo(int i)
     return;
 }
 
-void eliminar_viaje(int i)
+void eliminarViaje(int i)
 {
     FILE *fp, *temp;
     int n=0, j=0, x=0, w=0, h=0, m=0, k=0, num_v=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, encontrado=0, encontrado2=0;
@@ -200,7 +200,7 @@ void eliminar_viaje(int i)
             }
             else {
                 system("cls");
-                eliminar_viaje(i);
+                eliminarViaje(i);
             }
         }
         else{
@@ -208,6 +208,52 @@ void eliminar_viaje(int i)
             printf("No tiene viajes registrados.\n");
             system("PAUSE");
         }
+    }
+    fclose(fp);
+    return;
+}
+
+void eliminarReservas(char *id)
+{
+    FILE *fp, *temp;
+    int n=0;
+
+    fp=fopen("reservas.txt","r+");
+
+    if(fp==NULL)
+    {
+        printf("No se ha podido abrir el fichero reservas.txt.\n");
+        return;
+    }
+    else
+    {
+        for(n=0; n<numReservas; n++)
+        {
+            if(strcmp(reservas[n].id_viaje, id)==0)
+            {
+                temp=fopen("reservas_Temp.txt","w+");
+                if(temp==NULL)
+                {
+                printf("No se ha podido abrir el fichero reservas_Temp.txt.\n");
+                }
+                else
+                {
+                    for(int counter=0; counter<numReservas;counter++)
+                    {
+                        if(strcmp(reservas[counter].id_viaje, id)!=0)
+                        {
+                            fprintf(temp, "%s-%s\n", reservas[counter].id_viaje, reservas[counter].id_usuario);
+                        }
+                    }
+                }
+                fclose(temp);
+                fclose(fp);
+            }
+        }
+        remove("reservas.txt");
+        rename("reservas_Temp.txt","reservas.txt");
+        leer_reservas(&reservas, &numReservas);
+        system("cls");
     }
     fclose(fp);
     return;

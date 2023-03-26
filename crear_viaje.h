@@ -7,6 +7,6 @@
 #include "estructuras.h"
 #include "leer.h"
 
-void crear_viaje(int);
+void altaViaje(int, int);
 
 #endif

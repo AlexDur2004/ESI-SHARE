@@ -1,18 +1,5 @@
 000004-Jerez de la Frontera
 000004-Puerto de Sta Maria
-000003-Puerto Real
-000005-Algeciras
-000005-Los Barrios
-000005-Alcala Gazules
-000005-Paterna de Rivera
-000007-Algeciras
-000007-Los Barrios
-000007-Alcala Gazules
-000007-Paterna de Rivera
-000007-Medina Sidonia
-000007-Chiclana
-000007-San Fernando
-000007-Puerto Real
 000008-Jerez de la Frontera
 000008-Puerto Real
 000009-Algeciras
@@ -34,6 +21,4 @@
 000012-Puerto Real
 000013-Jerez de la Frontera
 000013-Puerto Real
-000007-Sanlucar
-000007-Jerez de la Frontera
-000007-Puerto de Sta Maria
+000005-Puerto Real

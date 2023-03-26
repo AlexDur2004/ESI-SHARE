@@ -282,13 +282,13 @@ void menuConductorViajes(int i)
         switch(opc)
         {
             case 1:
-                crear_viaje(i);
+                altaViaje(i, 0);
                 break;
             case 2:
-                buscadorRutas();
+
                 break;
             case 3:
-                eliminarViaje(i);
+                eliminarViaje(i, 0);
                 break;
             case 4:
                 menuConductor(i);
@@ -408,16 +408,16 @@ void menuAdminViajes(int i)
         switch(opc)
         {
             case 1:
-                ;
+                altaAdminViaje();
                 break;
             case 2:
-                ;
+                eliminarAdminViaje();
                 break;
             case 3:
                 ;
                 break;
             case 4:
-                ;
+                listarAdminViajes();
                 break;
             case 5:
                 menuAdmin(i);

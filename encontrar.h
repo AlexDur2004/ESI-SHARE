@@ -9,6 +9,6 @@
 
 void encontrarVehiculos(int **, int *, int);
 void encontrarUsuario(char *, int *, int *);
-void encontrarViajes(char *, int **, int *);
+void encontrarViajes(char *, int **, int *, int);
 
 #endif // ENCONTRAR_H_INCLUDED

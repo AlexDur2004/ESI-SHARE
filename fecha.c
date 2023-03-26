@@ -37,7 +37,7 @@ void actualizarViajes()
             tiempo_introducido.tm_year=ano-1900;
             tiempo_introducido.tm_mon=mes-1;
             tiempo_introducido.tm_mday=dia;
-            tiempo_introducido.tm_hour=hora_inic;
+            tiempo_introducido.tm_hour=hora_inic-1;
             tiempo_introducido.tm_min=min_inic;
 
             time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
@@ -62,7 +62,7 @@ void actualizarViajes()
                     tiempo_introducido.tm_year=ano-1900;
                     tiempo_introducido.tm_mon=mes-1;
                     tiempo_introducido.tm_mday=dia;
-                    tiempo_introducido.tm_hour=hora_fin+1;
+                    tiempo_introducido.tm_hour=hora_fin;
                     tiempo_introducido.tm_min=min_fin;
 
                     time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);
@@ -277,7 +277,7 @@ void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
                 tiempo_introducido.tm_year=ano-1900;
                 tiempo_introducido.tm_mon=mes-1;
                 tiempo_introducido.tm_mday=dia;
-                tiempo_introducido.tm_hour=hora_inic;
+                tiempo_introducido.tm_hour=hora_inic-1;
                 tiempo_introducido.tm_min=min_inic;
 
                 time_t tiempo_introducido_segundos=mktime(&tiempo_introducido);

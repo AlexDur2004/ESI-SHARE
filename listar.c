@@ -72,6 +72,48 @@ color(0,15);
 system("PAUSE");
 }
 
+void listarAdminViajes()
+{
+    int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id;
+
+    leer_viaje(&viaje, &numViajes);
+
+    system("cls");
+    printf("LISTADO DE VIAJES:\n");
+    for(int counter=0;counter<numUsuarios;counter++){
+        color(0,14);
+        printf("> Viajes de %s | ID: %s\n",usuario[counter].nomb_usuario,usuario[counter].id_usuario);
+        id=atoi(usuario[counter].id_usuario);
+        id--;
+        encontrarVehiculos(&vec, &num_v, id);
+        if(num_v!=0)
+        {
+            for(j=0;j<num_v;j++)
+            {
+                encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, 0);
+            }
+            for(m=0; m<contador_viaje; m++)
+            {
+                color(0,3);
+                printf("    Viaje %i:    ID: %s | Matricula: %s | Fecha de partida: %s | Hora de partida: %s |\n                Hora de llegada: %s | Plazas libres: %s | Ida/Vuelta: %s | Precio: %s | Estado: %s\n\n",m+1,viaje[vec_viaje[m]].id_viaje,viaje[vec_viaje[m]].id_mat,viaje[vec_viaje[m]].f_inic,viaje[vec_viaje[m]].h_inic,viaje[vec_viaje[m]].h_fin,viaje[vec_viaje[m]].plazas_libre,viaje[vec_viaje[m]].ida_vuelta,viaje[vec_viaje[m]].precio,viaje[vec_viaje[m]].estado);
+            }
+            if(contador_viaje==0)
+            {
+                color(0,3);
+                printf("    No posee viajes registrados.\n");
+            }
+        }
+        else
+        {
+            color(0,3);
+            printf("    No posee vehiculos ni viajes registrados.\n");
+        }
+    }
+
+color(0,15);
+system("PAUSE");
+}
+
 void listarAdminVehiculoViajes()
 {
     FILE *fp;
@@ -101,7 +143,7 @@ void listarAdminVehiculoViajes()
             }
             system("cls");
         }
-        encontrarViajes(mat, &vec, &x);
+        encontrarViajes(mat, &vec, &x, 0);
 
         printf("Los viajes realizados por el vehículo con matrícula %s son:\n", mat);
         for(m=0; m<x; m++)
@@ -111,33 +153,3 @@ void listarAdminVehiculoViajes()
         system("PAUSE");
     }
 }
-
-void listarVehiculoViajes(int i)  //hacer esto
-{
-    FILE *fp;
-    int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, *vec=NULL, encontrado=0;
-
-    fp=fopen("viajes.txt","r+");
-
-    if(fp==NULL) {
-        printf("No se ha podido abrir el fichero viajes.txt.\n");
-        return;
-    }
-    else {
-        encontrarVehiculos(&vec, &x, i);
-
-        printf("¿Qué vehículo quiere modificar?\n");
-
-        for(m=0; m<x; m++)
-        {
-            printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
-        }
-        x++;
-        printf("(%i)Salir.\n", x);
-        printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
-        fflush(stdin);
-        scanf("%d", &opc);
-        system("cls");
-
-        }
-        }

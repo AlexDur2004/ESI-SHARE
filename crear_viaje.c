@@ -1,6 +1,6 @@
 #include "crear_viaje.h"
 
-void crear_viaje(int num_usuario)
+void altaViaje(int num_usuario, int num)
 {
     FILE *fv;
     int n=1, i, idmax=0, num_viaje, breakp=0, enc=0, precio=0;
@@ -8,7 +8,7 @@ void crear_viaje(int num_usuario)
 
     fv=fopen("viajes.txt","a+");
 
-    elegir_coche(num_usuario, id_vehiculo);
+    elegir_coche(num_usuario, id_vehiculo, num);
     asignar_plazas(id_vehiculo, plazas);
 
     leerFecha(fecha, hora_inic, hora_fin);
@@ -67,7 +67,7 @@ void crear_viaje(int num_usuario)
     leer_viaje(&viaje, &numViajes);
 }
 
-void elegir_coche(int num_usuario, char *id_vehiculo)
+void elegir_coche(int num_usuario, char *id_vehiculo, int num) //0 para usuario, y 1 para admin
 {
         int i,*vec_vehiculo=NULL, coches, encontrado=0, opc=0, breakp=0;
 
@@ -75,27 +75,54 @@ void elegir_coche(int num_usuario, char *id_vehiculo)
 
         if(coches==0)
         {
-            do
+            if(num==0)
             {
-                system("cls");
-                printf("No tiene ningun vehiculo registrado.\n\n");
-                printf("¿Qué quiere hacer?\n");
-                printf("(1)Registrar un vehiculo.\n");
-                printf("(2)Volver al menu.\n");
-                scanf("%d",&opc);
-                switch(opc)
+                do
                 {
-                    case 1:
-                        breakp=1;
-                        altaVehiculo(num_usuario);
-                        menuConductorViajes(num_usuario);
-                        break;
-                    case 2:
-                        breakp=1;
-                        menuConductorViajes(num_usuario);
-                        break;
-                }
-            }while(breakp==0);
+                    system("cls");
+                    printf("No tiene ningun vehiculo registrado.\n\n");
+                    printf("¿Qué quiere hacer?\n");
+                    printf("(1)Registrar un vehiculo.\n");
+                    printf("(2)Volver al menu.\n");
+                    scanf("%d",&opc);
+                    switch(opc)
+                    {
+                        case 1:
+                            breakp=1;
+                            altaVehiculo(num_usuario);
+                            menuConductorViajes(num_usuario);
+                            break;
+                        case 2:
+                            breakp=1;
+                            menuConductorViajes(num_usuario);
+                            break;
+                    }
+                }while(breakp==0);
+            }
+            if(num==1)
+            {
+                do
+                {
+                    system("cls");
+                    printf("El usuario %s, con ID %s no tiene ningun vehiculo registrado.\n\n", usuario[num_usuario].nomb_usuario, usuario[num_usuario].id_usuario);
+                    printf("¿Qué quiere hacer?\n");
+                    printf("(1)Registrar un vehiculo.\n");
+                    printf("(2)Volver al menu.\n");
+                    scanf("%d",&opc);
+                    switch(opc)
+                    {
+                        case 1:
+                            breakp=1;
+                            altaVehiculo(num_usuario);
+                            menuAdminViajes();
+                            break;
+                        case 2:
+                            breakp=1;
+                            menuAdminViajes();
+                            break;
+                    }
+                }while(breakp==0);
+            }
         }
 
         do

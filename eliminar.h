@@ -10,8 +10,10 @@
 #include "encontrar.h"
 
 void eliminarVehiculo(int);
-void eliminarViaje(int);
+void eliminarViaje(int, int);
+void eliminarPasos(char *);
 void eliminarReservas(char *);
 void eliminarAdminVehiculo();
+void eliminarAdminViaje();
 
 #endif // ELIMINAR_H_INCLUDED

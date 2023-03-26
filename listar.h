@@ -9,6 +9,7 @@
 
 void listarUsuarios();
 void listarVehiculos();
+void listarAdminViajes();
 void listarAdminVehiculoViajes();
 
 #endif // LISTAR_H_INCLUDED

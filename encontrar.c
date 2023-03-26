@@ -21,7 +21,7 @@ void encontrarVehiculos(int **vec, int *x, int i)
     }
 }
 
-void encontrarViajes(char *mat, int **vec, int *x)
+void encontrarViajes(char *mat, int **vec, int *x, int num) //Si num=0, encuentra todos los viajes de un vehiculo, si num=1, encuentra los abiertos, para anularlos, y si num=2, se encuentran los abiertos y los iniciados.
 {
     int j;
     *x=0;
@@ -30,14 +30,45 @@ void encontrarViajes(char *mat, int **vec, int *x)
     {
         if(strcmp(viaje[j].id_mat, mat)==0)
         {
-            *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
-            if ((*vec)==NULL)
+            if(num==0)
             {
-                printf("Error al asignar memoria.\n");
-                exit(1);
+                *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                if ((*vec)==NULL)
+                {
+                    printf("Error al asignar memoria.\n");
+                    exit(1);
+                }
+                (*vec)[*x]=j;
+                (*x)++;
             }
-            (*vec)[*x]=j;
-            (*x)++;
+            if(num==1)
+            {
+                if(strcmp(viaje[j].estado, "abierto")==0)
+                {
+                    *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                    if ((*vec)==NULL)
+                    {
+                        printf("Error al asignar memoria.\n");
+                        exit(1);
+                    }
+                    (*vec)[*x]=j;
+                    (*x)++;
+                }
+            }
+            if(num==2)
+            {
+                if(strcmp(viaje[j].estado, "abierto")==0||strcmp(viaje[j].estado, "iniciado")==0)
+                {
+                    *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                    if ((*vec)==NULL)
+                    {
+                        printf("Error al asignar memoria.\n");
+                        exit(1);
+                    }
+                    (*vec)[*x]=j;
+                    (*x)++;
+                }
+            }
         }
     }
 }

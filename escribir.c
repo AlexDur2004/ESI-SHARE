@@ -142,36 +142,6 @@ void altaVehiculo(int i)
     return;
 }
 
-void altaViaje(int i)
-{
-    FILE *fp;
-    int n=0;
-    char fecha[9];
-
-    fp=fopen("viajes.txt","r+");
-
-    if(fp==NULL)
-    {
-        printf("No se ha podido abrir el fichero viajes.txt.\n");
-        return;
-    }
-    else
-    {
-        do{
-            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
-            n++;
-        }while(n<numViajes-1);
-        fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
-        numViajes++;
-    }
-
-    fclose(fp);
-
-    leer_viaje(&viaje,&numViajes);
-
-    return;
-}
-
 void escribir_Pasos(int i)
 {
     FILE *fp;
@@ -208,7 +178,7 @@ void altaAdminVehiculo()
 
     system("cls");
     listarUsuarios();
-    printf("Escriba la ID del usuario a la que se quiera dar de alta el vehículo\n");
+    printf("Escriba la ID del usuario al que quiera dar de alta el vehiculo.\n");
     scanf("%4s",&opc2);
     for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
         if(strcmp(opc2,usuario[counter].id_usuario)==0){
@@ -216,6 +186,31 @@ void altaAdminVehiculo()
             i=counter;
             altaVehiculo(i);
             printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
+            system("PAUSE");
+        }
+    }
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
+    }
+}
+
+void altaAdminViaje()
+{
+    char opc2[4];
+    int encontrado=0, i=0;
+
+    system("cls");
+    listarUsuarios();
+    printf("Escriba la ID del usuario al que quiera dar de alta el viaje.\n");
+    scanf("%4s",&opc2);
+    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            altaViaje(i, 1);
+            printf("El viaje se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
             system("PAUSE");
         }
     }

@@ -285,7 +285,7 @@ void menuConductorViajes(int i)
                 altaViaje(i, 0);
                 break;
             case 2:
-
+                modificarViaje(i);
                 break;
             case 3:
                 eliminarViaje(i, 0);
@@ -385,7 +385,7 @@ void menuAdminVehiculos(int i)
                 listarVehiculos();
                 break;
             case 5:
-                ;
+                listarAdminVehiculoViajes();
                 break;
             case 6:
                 menuAdmin(i);

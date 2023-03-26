@@ -171,7 +171,7 @@
 	"acceso.h"
 	"leer.h"
 
-1679842465 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
+1679864134 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
 1678742083 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
@@ -186,7 +186,7 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1679614310 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
+1679863786 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
 	"modificar.h"
 
 1678554026 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar_perfil.c
@@ -265,10 +265,10 @@
 	"leer.h"
 	"fecha.h"
 
-1679616119 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
+1679857684 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
 	"preguntar.h"
 
-1679440957 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.h
+1679857684 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.h
 	<stdio.h>
 	<string.h>
 	"estructuras.h"

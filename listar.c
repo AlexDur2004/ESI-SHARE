@@ -141,6 +141,8 @@ void listarAdminVehiculoViajes()
                     encontrado=1;
                 }
             }
+            printf("El vehiculo con matricula %s no existe.\n", mat);
+            system("PAUSE");
             system("cls");
         }
         encontrarViajes(mat, &vec, &x, 0);

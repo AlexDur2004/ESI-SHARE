@@ -9,8 +9,11 @@
 #include "preguntar.h"
 #include "encontrar.h"
 
+void eliminarAdminUsuario();
 void eliminarVehiculo(int);
+void eliminarVehiculoViajes(char *, int);
 void eliminarViaje(int, int);
+void eliminarSoloViaje(char *);
 void eliminarPasos(char *);
 void eliminarReservas(char *);
 void eliminarAdminVehiculo();

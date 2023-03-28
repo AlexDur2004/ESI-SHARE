@@ -288,7 +288,7 @@ void menuConductorViajes(int i)
                 modificarViaje(i);
                 break;
             case 3:
-                eliminarViaje(i, 0);
+                eliminarViaje(i, 1);
                 break;
             case 4:
                 menuConductor(i);
@@ -344,7 +344,7 @@ void menuAdminUsuarios(int i)
                 altaUsuario();
                 break;
             case 2:
-                ;
+                eliminarAdminUsuario();
                 break;
             case 3:
                 modificarAdminUsuario();

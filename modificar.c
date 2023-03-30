@@ -3,7 +3,7 @@
 void modificarVehiculo(int i)
 {
     FILE *fp, *temp;
-    int n=0, x=0, h=0, m=0, opc=0, k=0, opc2=0, aux=0, y=0, *vec=NULL, encontrado=0, encontrado2=0, error_mat;
+    int n=0, x=0, h=0, m=0, opc=0, opc2=0, aux=0, y=0, *vec=NULL, encontrado=0, error_mat, counter;
     char mat[8], plazas[2], descrip[51];
 
     fp=fopen("vehiculos.txt","r+");
@@ -67,7 +67,7 @@ void modificarVehiculo(int i)
                             printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
                             pregunta(mat, 8);
 
-                            for(int counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
+                            for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
                                 if(strcmp(mat,vehiculo[counter].id_mat)==0){
                                     error_mat=1;
                                     printf("La matricula %s esta actualmente registrada.\n",mat);
@@ -78,14 +78,14 @@ void modificarVehiculo(int i)
                                 printf("La matricula debe poseer una longitud total de 7 caracteres.\n",mat);
                                 system("PAUSE");
                             }
-                            for(int counter=0;(counter<4)&&(error_mat==0);counter++){
+                            for(counter=0;(counter<4)&&(error_mat==0);counter++){
                                 if((mat[counter]<48)||(mat[counter]>57)){
                                     error_mat=1;
                                     printf("Los 4 primeros caracteres de la matricula tienen que ser numeros.\n");
                                     system("PAUSE");
                                 }
                             }
-                            for(int counter=4;(counter<7)&&(error_mat==0);counter++){
+                            for(counter=4;(counter<7)&&(error_mat==0);counter++){
                                 if((mat[counter]<65)||(mat[counter]>90)){
                                     error_mat=1;
                                     printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas.\n");
@@ -127,7 +127,7 @@ void modificarVehiculo(int i)
                             printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
                             pregunta(mat, 8);
 
-                            for(int counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
+                            for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
                                 if(strcmp(mat,vehiculo[counter].id_mat)==0){
                                     error_mat=1;
                                     printf("La matricula %s esta actualmente registrada.\n",mat);
@@ -138,14 +138,14 @@ void modificarVehiculo(int i)
                                 printf("La matricula debe poseer una longitud total de 7 caracteres.\n",mat);
                                 system("PAUSE");
                             }
-                            for(int counter=0;(counter<4)&&(error_mat==0);counter++){
+                            for(counter=0;(counter<4)&&(error_mat==0);counter++){
                                 if((mat[counter]<48)||(mat[counter]>57)){
                                     error_mat=1;
                                     printf("Los 4 primeros caracteres de la matricula tienen que ser numeros.\n");
                                     system("PAUSE");
                                 }
                             }
-                            for(int counter=4;(counter<7)&&(error_mat==0);counter++){
+                            for(counter=4;(counter<7)&&(error_mat==0);counter++){
                                 if((mat[counter]<65)||(mat[counter]>90)){
                                     error_mat=1;
                                     printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas.\n");
@@ -212,7 +212,7 @@ void modificarVehiculo(int i)
 void modificarViaje(int i)
 {
     FILE *fp, *temp;
-    int n=0, h=0, x=0, m=0, j=0, opc=0, k=0, opc2=0, *vec=NULL, *vec_viaje=NULL, cont=0, prec=0, encontrado=0, encontrado2=0;
+    int n=0, h=0, x=0, m=0, j=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, cont=0, prec=0, encontrado=0, encontrado2=0;
     char mat[8], fecha[11], hora_in[6], hora_fin[6], coste[2];
 
     fp=fopen("viajes.txt","r+");
@@ -408,7 +408,7 @@ void modificarViaje(int i)
 
 void modificarRuta(int num_user)
 {
-    int num=1, *vec=NULL, *vec_viaje=NULL, x, num_v, i, j, opc, h;
+    int *vec=NULL, *vec_viaje=NULL, x, num_v, i, j, opc, h;
     char *mat;
 
     encontrarVehiculos(&vec,&x, num_user);
@@ -696,13 +696,13 @@ void modificarAdminUsuario()
 void modificarAdminVehiculo()
 {
     char opc2[4];
-    int encontrado=0, i=0;
+    int encontrado=0, i=0, counter;
 
     system("cls");
     listarVehiculos();
     printf("Escriba la ID del usuario a la que se quiera modificar el vehículo\n");
     scanf("%4s",&opc2);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
         if(strcmp(opc2,usuario[counter].id_usuario)==0){
             encontrado=1;
             i=counter;

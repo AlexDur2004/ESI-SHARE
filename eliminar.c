@@ -3,7 +3,7 @@
 void eliminarAdminUsuario()
 {
     FILE *fp, *temp;
-    int n=0, o=0, h=0, m=0, j=0, k=0, opc=0, opc2=0, c=0, num_v=0, id=0, *vec=NULL, encontrado=0, encontrado2=0;
+    int n=0, o=0, j=0, opc2=0, c=0, *vec=NULL, encontrado=0, encontrado2=0, id2, counter;
     char vec_id[5];
 
     fp=fopen("usuarios.txt","r+");
@@ -13,11 +13,15 @@ void eliminarAdminUsuario()
         return;
     }
     else {
-        listarUsuarios();
         if(numUsuarios>1){
-            printf("¿Qué usuario quiere eliminar?\n");
-            printf("Introduzca la ID del usuario que quiere eliminar.\n");
-            pregunta(vec_id, 5);
+            do{
+                listarUsuarios();
+                printf("¿Qué usuario quiere eliminar?\n");
+                printf("Introduzca la ID del usuario que quiere eliminar.\n");
+                scanf("%i", &id2);
+                sprintf(vec_id, "%04i", id2);
+            }while(id2<2||id2>numUsuarios);
+
             encontrarUsuario(vec_id, &j, &encontrado);
             if(encontrado==1){
                 do{
@@ -41,7 +45,7 @@ void eliminarAdminUsuario()
                                     printf("No se ha podido abrir el fichero usuarios_Temp.txt.\n");
                                 }
                                 else{
-                                    for(int counter=0; counter<numUsuarios;counter++){
+                                    for(counter=0; counter<numUsuarios;counter++){
                                         if(strcmp(usuario[counter].id_usuario, vec_id)!=0){
                                             fprintf(temp, "%s-%s-%s-%s-%s-%s\n", usuario[counter].id_usuario, usuario[counter].nomb_usuario, usuario[counter].localidad, usuario[counter].perfil, usuario[counter].usuario, usuario[counter].contrasena);
                                         }
@@ -87,8 +91,7 @@ void eliminarAdminUsuario()
 
 void eliminarVehiculo(int i)
 {
-    FILE *fp, *temp;
-    int n=0, x=0, h=0, m=0, j=0, k=0, opc=0, opc2=0, num_v=0,*vec=NULL, *vec_viaje=NULL, encontrado=0;
+    int x=0, h=0, m=0, opc=0, opc2=0,*vec=NULL;
 
     encontrarVehiculos(&vec, &x, i);
     if(x>0){
@@ -139,7 +142,7 @@ void eliminarVehiculo(int i)
 void eliminarVehiculoViajes(char *mat, int x)
 {
     FILE *fp, *temp;
-    int n=0, j=0, k=0, num_v=0, *vec_viaje=NULL;
+    int n=0, j=0, k=0, num_v=0, *vec_viaje=NULL, counter;
 
     fp=fopen("vehiculos.txt","r+");
 
@@ -161,7 +164,7 @@ void eliminarVehiculoViajes(char *mat, int x)
                 }
                 else
                 {
-                    for(int counter=0; counter<numVehiculos; counter++)
+                    for(counter=0; counter<numVehiculos; counter++)
                     {
                         if(strcmp(vehiculo[counter].id_mat, mat)!=0)
                         {
@@ -193,7 +196,7 @@ void eliminarVehiculoViajes(char *mat, int x)
 
 void eliminarViaje(int i, int num) //0 para admin, y 1 para conductor.
 {
-    int n=0, j=0, x=0, w=0, h=0, m=0, num_v=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, encontrado=0;
+    int j=0, x=0, h=0, m=0, num_v=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL;
 
     encontrarVehiculos(&vec, &num_v, i);
 
@@ -256,7 +259,7 @@ void eliminarViaje(int i, int num) //0 para admin, y 1 para conductor.
 void eliminarSoloViaje(char *id)
 {
     FILE *fp, *temp;
-    int n=0;
+    int n=0, counter;
 
     fp=fopen("viajes.txt","r+");
 
@@ -278,7 +281,7 @@ void eliminarSoloViaje(char *id)
                 }
                 else
                 {
-                    for(int counter=0; counter<numViajes;counter++)
+                    for(counter=0; counter<numViajes;counter++)
                     {
                         if(counter!=n)
                         {
@@ -303,7 +306,7 @@ void eliminarSoloViaje(char *id)
 void eliminarPasos(char *id)
 {
     FILE *fp, *temp;
-    int n=0;
+    int n=0, counter;
 
     fp=fopen("pasos.txt","r+");
 
@@ -325,7 +328,7 @@ void eliminarPasos(char *id)
                 }
                 else
                 {
-                    for(int counter=0; counter<numPasos;counter++)
+                    for(counter=0; counter<numPasos;counter++)
                     {
                         if(strcmp(pasos[counter].id_viaje, id)!=0)
                         {
@@ -349,7 +352,7 @@ void eliminarPasos(char *id)
 void eliminarReservas(char *id)
 {
     FILE *fp, *temp;
-    int n=0;
+    int n=0, counter;
 
     fp=fopen("reservas.txt","r+");
 
@@ -371,7 +374,7 @@ void eliminarReservas(char *id)
                 }
                 else
                 {
-                    for(int counter=0; counter<numReservas;counter++)
+                    for(counter=0; counter<numReservas;counter++)
                     {
                         if(strcmp(reservas[counter].id_viaje, id)!=0)
                         {
@@ -395,13 +398,13 @@ void eliminarReservas(char *id)
 void eliminarAdminVehiculo()
 {
     char opc2[4];
-    int encontrado=0, i=0;
+    int encontrado=0, i=0, counter;
 
     system("cls");
     listarVehiculos();
     printf("Escriba la ID del usuario a la que se quiera eliminar un vehículo\n");
     scanf("%4s",&opc2);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
     {
         if(strcmp(opc2,usuario[counter].id_usuario)==0)
         {
@@ -422,13 +425,13 @@ void eliminarAdminVehiculo()
 void eliminarAdminViaje()
 {
     char opc2[4];
-    int encontrado=0, i=0;
+    int encontrado=0, i=0, counter;
 
     system("cls");
     listarAdminViajes();
     printf("Escriba la ID del usuario al que quiere eliminar un viaje.\n");
     scanf("%4s",&opc2);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
     {
         if(strcmp(opc2,usuario[counter].id_usuario)==0)
         {

@@ -2,13 +2,13 @@
 
 void listarUsuarios()
 {
-    int contador_usuario=0;
+    int contador_usuario=0, counter;
 
     leer_usuario(&usuario, &numUsuarios);
 
     system("cls");
     printf("LISTADO DE USUARIOS:\n");
-    for(int counter=0;counter<numUsuarios;counter++){
+    for(counter=0;counter<numUsuarios;counter++){
         color(0,14);
         printf("    Usuario %i:\n", (contador_usuario)+1);
         color(0,3);
@@ -45,17 +45,17 @@ system("PAUSE");
 
 void listarVehiculos()
 {
-    int contador_veh_usuario;
+    int contador_veh_usuario, counter, counter2;
 
     leer_vehiculo(&vehiculo, &numVehiculos);
 
     system("cls");
     printf("LISTADO DE VEHICULOS:\n");
-    for(int counter=0;counter<numUsuarios;counter++){
+    for(counter=0;counter<numUsuarios;counter++){
         contador_veh_usuario=0;
         color(0,14);
         printf("> Vehiculos de %s | ID: %s\n",usuario[counter].nomb_usuario,usuario[counter].id_usuario);
-            for(int counter2=0;counter2<numVehiculos;counter2++){
+            for(counter2=0;counter2<numVehiculos;counter2++){
                 if(strcmp(usuario[counter].id_usuario,vehiculo[counter2].id_usuario)==0){
                     color(0,3);
                     printf("    Vehiculo %i:    Matricula: %s | Numero de plazas: %s | Descripcion: %s\n",(contador_veh_usuario)+1,vehiculo[counter2].id_mat,vehiculo[counter2].num_plazas,vehiculo[counter2].desc_veh);
@@ -74,13 +74,13 @@ system("PAUSE");
 
 void listarAdminViajes()
 {
-    int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id;
+    int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter;
 
     leer_viaje(&viaje, &numViajes);
 
     system("cls");
     printf("LISTADO DE VIAJES:\n");
-    for(int counter=0;counter<numUsuarios;counter++){
+    for(counter=0;counter<numUsuarios;counter++){
         color(0,14);
         printf("> Viajes de %s | ID: %s\n",usuario[counter].nomb_usuario,usuario[counter].id_usuario);
         id=atoi(usuario[counter].id_usuario);

@@ -24,10 +24,10 @@ void pregunta(char *x, int i)
 void preguntar_id_alta()
 {
     char opc2[4];
-    int encontrado=0, i;
+    int encontrado=0, i, counter;
 
     pregunta(opc2, 5);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
         if(strcmp(opc2,usuario[counter].id_usuario)==0){
             encontrado=1;
             i=counter;
@@ -142,10 +142,10 @@ void pregunta_ruta(char *rut2)
 
 void preguntar_veh(char *opc, int *encontrado)
 {
-    int i;
+    int counter;
 
     pregunta(opc, 8);
-    for(int counter=0;(counter<numVehiculos)&&((*encontrado)==0);counter++)
+    for(counter=0;(counter<numVehiculos)&&((*encontrado)==0);counter++)
     {
         if(strcmp(opc,vehiculo[counter].id_mat)==0)
         {

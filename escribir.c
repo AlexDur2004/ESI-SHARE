@@ -38,9 +38,9 @@ void altaUsuario()
         {
             while(encontrado2==0)
             {
-                for(i=0;i<numViajes && encontrado3==0;i++)
+                for(i=0;i<numUsuarios && encontrado3==0;i++)
                 {
-                    idmax=atoi(viaje[i].id_viaje);
+                    idmax=atoi(usuario[i].id_usuario);
                     if(n==idmax)
                         encontrado3=1;
                 }
@@ -58,7 +58,6 @@ void altaUsuario()
             snprintf(id, sizeof(id), "%04d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
             fprintf(fp, "%s-%s-%s-%s-%s-%s\n", id, nombre, localidad, perfil, usuario2, contrasena);
-            numUsuarios++;
 
             printf("El usuario ha sido agregado correctamente.\n");
             system("PAUSE");
@@ -79,7 +78,7 @@ void altaUsuario()
 void altaVehiculo(int i)
 {
     FILE *fp;
-    int n=0,error_mat, counter2=0;
+    int n=0,error_mat, counter2=0, counter;
     char mat[8], plazas[2], descrip[51];
 
     fp=fopen("vehiculos.txt","a+");
@@ -90,7 +89,7 @@ void altaVehiculo(int i)
         printf("Introduzca los datos de su vehículo para completar su registro:\nMatrícula del vehículo (Máximo de 7 caracteres):\n");
         fflush(stdin);
         scanf("%7s", mat);
-        for(int counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
+        for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
             if(strcmp(mat,vehiculo[counter].id_mat)==0){
                 error_mat=1;
                 system("cls");
@@ -103,14 +102,14 @@ void altaVehiculo(int i)
             printf("La matricula debe poseer una longitud total de 7 caracteres.\n",mat);
             system("PAUSE");
         }
-        for(int counter=0;(counter<4)&&(error_mat==0);counter++){
+        for(counter=0;(counter<4)&&(error_mat==0);counter++){
             if((mat[counter]<48)||(mat[counter]>57)){
                 error_mat=1;
                 printf("Los 4 primeros caracteres de la matricula tienen que ser numeros.\n");
                 system("PAUSE");
             }
         }
-        for(int counter=4;(counter<7)&&(error_mat==0);counter++){
+        for(counter=4;(counter<7)&&(error_mat==0);counter++){
             if((mat[counter]<65)||(mat[counter]>90)){
                 error_mat=1;
                 printf("Los 3 ultimos caracteres de la matricula tienen que ser letras mayusculas.\n");
@@ -174,13 +173,13 @@ void escribir_Pasos(int i)
 void altaAdminVehiculo()
 {
     char opc2[4];
-    int encontrado=0, i=0;
+    int encontrado=0, i=0, counter;
 
     system("cls");
     listarUsuarios();
     printf("Escriba la ID del usuario al que quiera dar de alta el vehiculo.\n");
     scanf("%4s",&opc2);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
         if(strcmp(opc2,usuario[counter].id_usuario)==0){
             encontrado=1;
             i=counter;
@@ -199,13 +198,13 @@ void altaAdminVehiculo()
 void altaAdminViaje()
 {
     char opc2[4];
-    int encontrado=0, i=0;
+    int encontrado=0, i=0, counter;
 
     system("cls");
     listarUsuarios();
     printf("Escriba la ID del usuario al que quiera dar de alta el viaje.\n");
     scanf("%4s",&opc2);
-    for(int counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
         if(strcmp(opc2,usuario[counter].id_usuario)==0){
             encontrado=1;
             i=counter;

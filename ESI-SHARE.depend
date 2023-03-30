@@ -28,7 +28,7 @@
 	<string.h>
 	"estructuras.h"
 
-1679842518 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\escribir.c
+1680195655 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\escribir.c
 	"escribir.h"
 
 1679842518 c:\users\alejandro durán\mi unidad\uca\mp\esi-share\escribir.h
@@ -298,10 +298,10 @@
 	"estructuras.h"
 	"leer.h"
 
-1680023993 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\eliminar.c
+1680195118 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\eliminar.c
 	"eliminar.h"
 
-1679841484 c:\users\alejandro durán\mi unidad\uca\mp\esi-share\eliminar.h
+1680027389 c:\users\alejandro durán\mi unidad\uca\mp\esi-share\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -326,7 +326,7 @@
 1679831511 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\encontrar.c
 	"encontrar.h"
 
-1679864264 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\listar.c
+1680194921 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\listar.c
 	"listar.h"
 
 1679839343 c:\users\alejandro durán\mi unidad\uca\mp\esi-share\listar.h
@@ -345,10 +345,10 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1679863786 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\modificar.c
+1680195108 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\modificar.c
 	"modificar.h"
 
-1679857684 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\preguntar.c
+1680195107 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\preguntar.c
 	"preguntar.h"
 
 1679598329 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\reservar.c

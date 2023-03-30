@@ -23,7 +23,7 @@ void encontrarVehiculos(int **vec, int *x, int i)
 
 void encontrarViajes(char *mat, int **vec, int *x, int num) //Si num=0, encuentra todos los viajes de un vehiculo, si num=1, encuentra los abiertos, para anularlos, y si num=2, se encuentran los abiertos y los iniciados.
 {
-    int j;
+    int i,j;
     *x=0;
 
     for(j=0; j<numViajes; j++) //con esto se puede sacar todos los viajes de un vehiculo.
@@ -69,9 +69,78 @@ void encontrarViajes(char *mat, int **vec, int *x, int num) //Si num=0, encuentr
                     (*x)++;
                 }
             }
+        if(num==3)
+            {
+                if(strcmp(viaje[j].estado, "iniciado")==0)
+                {
+                    *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                    if ((*vec)==NULL)
+                    {
+                        printf("Error al asignar memoria.\n");
+                        exit(1);
+                    }
+                    (*vec)[*x]=j;
+                    (*x)++;
+                }
+            }
+         if(num==4)
+            {
+                for(i=0;i<numVehiculos;i++){
+                    if(strcmp(mat,vehiculo[i].id_mat)==0){
+                       for(j=0;j<numViajes;j++){
+                            if(strcmp(viaje[j].estado,"abierto")==0){
+                                if(strcmp(viaje[j].plazas_libre,vehiculo[i].num_plazas)==0){
+                                    *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                                    if ((*vec)==NULL)
+                                        {
+                                            printf("Error al asignar memoria.\n");
+                                            exit(1);
+                                        }
+                                        (*vec)[*x]=j;
+                                        (*x)++;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+    }
+
+}
+
+void encontrarResevas(int num_user,int **vec,int *x){
+    int i,j;
+    (*x)=0;
+    for(j=0;j<numViajes;j++){
+        for(i=0;i<numReservas;i++){
+            if(strcmp(reservas[i].id_usuario,usuario[num_user].id_usuario)==0){
+
+                if(strcmp(viaje[j].id_viaje,reservas[i].id_viaje)==0){
+                    if(strcmp(viaje[j].estado,"abierto")==0){
+                    *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                    if ((*vec)==NULL)
+                    {
+                        printf("Error al asignar memoria.\n");
+                        exit(1);
+                    }
+                    (*vec)[*x]=i;
+                    (*x)++;
+                }
+                }
+
+              }
+
+
         }
     }
 }
+
 
 void encontrarUsuario(char vec_id[], int *x, int *encontrado)
 {

@@ -8,5 +8,5 @@
 #include "leer.h"
 
 void altaViaje(int, int);
-
+void finalizar_viaje(int,int );
 #endif

@@ -114,13 +114,12 @@ void encontrarViajes(char *mat, int **vec, int *x, int num) //Si num=0, encuentr
 
 }
 
-void encontrarResevas(int num_user,int **vec,int *x){
+void encontrarResevas(int num_user,int **vec,int **vec_viaje,int *x){
     int i,j;
     (*x)=0;
-    for(j=0;j<numViajes;j++){
-        for(i=0;i<numReservas;i++){
-            if(strcmp(reservas[i].id_usuario,usuario[num_user].id_usuario)==0){
-
+    for(i=0;i<numReservas;i++){
+       if(strcmp(reservas[i].id_usuario,usuario[num_user].id_usuario)==0){
+        for(j=0;j<numViajes;j++){
                 if(strcmp(viaje[j].id_viaje,reservas[i].id_viaje)==0){
                     if(strcmp(viaje[j].estado,"abierto")==0){
                     *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
@@ -129,8 +128,17 @@ void encontrarResevas(int num_user,int **vec,int *x){
                         printf("Error al asignar memoria.\n");
                         exit(1);
                     }
+                    *vec_viaje=(int*)realloc(*vec_viaje,((*x)+1)*sizeof(int));
+                     if ((*vec_viaje)==NULL)
+                        {
+                        printf("Error al asignar memoria.\n");
+                        exit(1);
+                        }
+
+                    (*vec_viaje)[*x]=j;
                     (*vec)[*x]=i;
                     (*x)++;
+
                 }
                 }
 
@@ -188,6 +196,39 @@ void encontrarRutas(char *loc[4], char ***mat_loc, int *x, int y)
                 printf("%s", ruta[i][j].localidad);
                 y++;
             }
+        }
+    }
+}
+
+void encontrarViajesReservas(int num_user,char *fecha,int **vec,int *x,int *loc){
+     int i,j;
+    *x=0;
+    *loc=0;
+    for(i=0; i<numPasos; i++) {
+
+        if(strcmp(usuario[num_user].localidad,pasos[i].poblacion)==0){
+                (*loc)++;
+            for(j=0;j<numViajes;j++){
+                if(strcmp(pasos[i].id_viaje,viaje[j].id_viaje)==0){
+
+                    if(strcmp(fecha,viaje[j].f_inic)==0){
+
+                        if(strcmp(viaje[j].estado,"abierto")==0||strcmp(viaje[j].estado,"iniciado")==0){
+
+                          *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                        if ((*vec)==NULL)
+                        {
+                            printf("Error al asignar memoria.\n");
+                            exit(1);
+                        }
+                        (*vec)[*x]=j;
+                        (*x)++;
+                        }
+
+                    }
+                }
+            }
+
         }
     }
 }

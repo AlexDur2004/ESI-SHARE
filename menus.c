@@ -30,10 +30,10 @@ void menuPrincipal()
         switch(opc)
         {
             case 1:
-                acceso(usuario, numUsuarios);
+                acceso();
                 break;
             case 2:
-                altaUsuario(usuario, &numUsuarios);
+                altaUsuario();
                 break;
             case 3:
                 exit(1);
@@ -164,10 +164,10 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                ;
+                mostrar_reservar(i);
                 break;
             case 2:
-                ;
+                cancelarReserva(i);
                 break;
             case 3:
                 menuPasajero(i);
@@ -275,7 +275,7 @@ void menuConductorViajes(int i)
     {
         system("cls");
 
-        printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular viaje.\n(4)Salir.\n");
+        printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular/Finalizar viaje.\n(4)Salir.\n");
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -288,7 +288,7 @@ void menuConductorViajes(int i)
                 modificarViaje(i);
                 break;
             case 3:
-                eliminarViaje(i, 1);
+                finalizar_viaje(i);
                 break;
             case 4:
                 menuConductor(i);
@@ -296,7 +296,6 @@ void menuConductorViajes(int i)
         }
     }
 }
-
 
 void menuAdmin(int i)
 {
@@ -373,16 +372,16 @@ void menuAdminVehiculos(int i)
         switch(opc)
         {
             case 1:
-                altaAdminVehiculo();
+                altaAdmin(0);
                 break;
             case 2:
                 eliminarAdminVehiculo();
                 break;
             case 3:
-                modificarAdminVehiculo();
+                modificarAdminVehiculo(i);
                 break;
             case 4:
-                listarVehiculos();
+                listarVehiculos(i,1);
                 break;
             case 5:
                 listarAdminVehiculoViajes();
@@ -398,28 +397,31 @@ void menuAdminViajes(int i)
 {
     int opc;
 
-    while(opc!=5)
+    while(opc!=6)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de viaje.\n(2)Baja de viaje.\n(3)Modificar viaje.\n(4)Listar viajes.\n(5)Salir.\n", usuario[i].nomb_usuario);
+        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Crear viaje.\n(2)Anular/Finalizar viaje.\n(3)Eliminar viaje.\n(4)Modificar viaje.\n(5)Listar viajes.\n(6)Salir.\n", usuario[i].nomb_usuario);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                altaAdminViaje();
+                altaAdmin(1);
                 break;
             case 2:
-                eliminarAdminViaje();
+                eliminarAdminViaje(i, 1);
                 break;
             case 3:
-                ;
+                eliminarAdminViaje(i, 0);
                 break;
             case 4:
-                listarAdminViajes();
+                modificarAdminViaje(i);
                 break;
             case 5:
+                listarAdminViajes(i, 0);
+                break;
+            case 6:
                 menuAdmin(i);
                 break;
         }

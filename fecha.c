@@ -400,6 +400,10 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
             }
         }
     }
+    sprintf(fecha, "%02i/%02i/%04i", dia, mes, ano);
+    system("cls");
+    printf("La fecha introducida es: %s\n", fecha);
+    system("PAUSE");
 }
 
 int dias_meses(int mes, int ano)

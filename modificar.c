@@ -693,13 +693,13 @@ void modificarAdminUsuario()
     }
 }
 
-void modificarAdminVehiculo()
+void modificarAdminVehiculo(int x)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
 
     system("cls");
-    listarVehiculos();
+    listarVehiculos(x,1);
     printf("Escriba la ID del usuario a la que se quiera modificar el vehículo\n");
     scanf("%4s",&opc2);
     for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
@@ -708,6 +708,30 @@ void modificarAdminVehiculo()
             i=counter;
             system("cls");
             modificarVehiculo(i);
+        }
+    }
+    if(encontrado==0){
+        system("cls");
+        printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
+        system("PAUSE");
+    }
+}
+
+void modificarAdminViaje(int x)
+{
+    char opc2[4];
+    int encontrado=0, i=0, counter;
+
+    system("cls");
+    listarAdminViajes(x,2);
+    printf("Escriba la ID del usuario a la que se quiera modificar el viaje\n");
+    scanf("%4s",&opc2);
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
+        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+            encontrado=1;
+            i=counter;
+            system("cls");
+            modificarViaje(i);
         }
     }
     if(encontrado==0){

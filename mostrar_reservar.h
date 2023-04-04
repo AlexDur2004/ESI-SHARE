@@ -5,6 +5,8 @@
 #include "leer.h"
 #include "fecha.h"
 #include "eliminar.h"
+
 void mostrar_reservar(int );
 void cancelarReserva(int );
+
 #endif // MOSTRAR_RESERVAR_H_INCLUDED

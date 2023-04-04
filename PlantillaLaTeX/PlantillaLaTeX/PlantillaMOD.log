@@ -1,0 +1,1267 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  3 APR 2023 17:12
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/PlantillaLaTeX/PlantillaLaTeX/PlantillaMOD.tex"
+(c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/PlantillaLaTeX/PlantillaLaTeX/PlantillaMOD.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28> (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2022/10/04 3.81 The Babel package
+\babel@savecnt=\count194
+\U@D=\dimen139
+\l@unhyphenated=\language79
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count195
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks16
+\es@quotdepth=\count196
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+Package babel Info: Making ' an active character on input line 740.
+)) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip49
+\bibsep=\skip50
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count197
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen140
+\stockheight=\dimen141
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count198
+\lst@gtempboxa=\box51
+\lst@token=\toks18
+\lst@length=\count199
+\lst@currlwidth=\dimen144
+\lst@column=\count266
+\lst@pos=\count267
+\lst@lostspace=\dimen145
+\lst@width=\dimen146
+\lst@newlines=\count268
+\lst@lineno=\count269
+\lst@maxwidth=\dimen147
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count270
+\lst@skipnumbers=\count271
+\lst@framebox=\box52
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+))) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count272
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count275
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count276
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen149
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count277
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count281
+\c@bookmark@seq@number=\count282
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip51
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/tocbibind\tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count283
+\l__pdf_internal_box=\box53
+) (PlantillaMOD.aux)
+\openout1 = `PlantillaMOD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count284
+\scratchdimen=\dimen152
+\scratchbox=\box54
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen153
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks20
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+\c@lstlisting=\count290
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+)
+Package hyperref Info: Link coloring OFF on input line 36.
+\@outlinefile=\write3
+\openout3 = `PlantillaMOD.out'.
+
+ (Portada1.tex
+<uca.jpg, id=3, 597.432pt x 235.8411pt>
+File: uca.jpg Graphic file (type jpg)
+<use uca.jpg>
+Package pdftex.def Info: uca.jpg  used on input line 24.
+(pdftex.def)             Requested size: 170.71657pt x 85.35974pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+
+ []
+
+[1
+
+{C:/Users/adura/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./uca.jpg>])
+No file PlantillaMOD.toc.
+\tf@toc=\write4
+\openout4 = `PlantillaMOD.toc'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \newpage
+              [1
+
+]
+\openout2 = `Introduc.aux'.
+
+ (Introduc.tex (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 16.
+ (acceso.c
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 //Precondición:
+                    Tener inicializada la variable "numUsuarios", con el núm...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...a la variable "numUsuarios", con el número 
+                                                  de usuarios máximos del fi...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...uarios", con el número de usuarios máximos 
+                                                  del fichero, y la estructu...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (í\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...y la estructura "usuario", con datos leídos
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:5: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...uarios.txt", y haber introducido el número 
+                                                  correspondiente en el menú.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:5: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...ucido el número correspondiente en el menú.
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:6: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 //Postcondición:
+                     Autenticación de las credenciales introducidas, si coin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:6: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:6: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:6: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 //Si el usuario es "usuario", accederá 
+                                           al menú de usuario, y si es "admi...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ... el usuario es "usuario", accederá al menú 
+                                                  de usuario, y si es "admin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...usuario, y si es "administrador", accederá 
+                                                  al menú de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ... y si es "administrador", accederá al menú 
+                                                  de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
+(C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 17.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 17.
+ [2
+
+]
+
+acceso.c:19: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...uario)==0) //Comprueba si el usuario está 
+                                                  en la base de datos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:25: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     if(encontrado2==1) //Si el usuario está 
+                                                 en la base de datos, salta ...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:25: LaTeX Error: Invalid UTF-8 byte sequence (í\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...ario está en la base de datos, salta aquí.
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:27: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:27: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:27: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:46: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:46: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:46: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+I'm ignoring this; it doesn't match any \if.
+
+[3]
+
+acceso.c:52: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ... tiene perfil de "usuario", salta al menú 
+                                                  de usuario.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:57: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ... perfil de "administrador", salta al menú 
+                                                  de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:65: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:65: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:65: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:69: LaTeX Error: Invalid UTF-8 byte "A1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...                        printf("¡Intentos 
+                                                  agotados! :(\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 76.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 76.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 76.
+
+acceso.c:76: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ... contador de intentos, para saber cuántos 
+                                                  quedan.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[4]
+
+acceso.c:89: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...se de datos.\n"); //Si el usuario no está 
+                                                  en la base de datos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)) [5]
+c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/PlantillaLaTeX/PlantillaLaTeX/PlantillaMOD.tex:72: Extra \else.
+\@include ...ediate \closeout \@partaux \fi \else 
+                                                  \deadcycles \z@ \@nameuse ...
+l.72 \include{Introduc}
+                       
+I'm ignoring this; it doesn't match any \if.
+
+c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/PlantillaLaTeX/PlantillaLaTeX/PlantillaMOD.tex:72: Extra \else.
+\@include ...ed}\fi \let \@auxout \@mainaux \else 
+                                                  \@latex@warning {\noexpand...
+l.72 \include{Introduc}
+                       
+I'm ignoring this; it doesn't match any \if.
+
+
+LaTeX Warning: \include should only be used after \begin{document} on input line 72.
+
+(Introduc.tex (acceso.c
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 //Precondición:
+                    Tener inicializada la variable "numUsuarios", con el núm...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...a la variable "numUsuarios", con el número 
+                                                  de usuarios máximos del fi...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...uarios", con el número de usuarios máximos 
+                                                  del fichero, y la estructu...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:4: LaTeX Error: Invalid UTF-8 byte sequence (í\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...y la estructura "usuario", con datos leídos
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:5: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...uarios.txt", y haber introducido el número 
+                                                  correspondiente en el menú.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:5: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...ucido el número correspondiente en el menú.
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:6: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 //Postcondición:
+                     Autenticación de las credenciales introducidas, si coin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:6: LaTeX Error: Invalid UTF-8 byte sequence (ó\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:6: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:6: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.6 //Postcondición: Autenticación 
+                                   de las credenciales introducidas, si coin...
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 //Si el usuario es "usuario", accederá 
+                                           al menú de usuario, y si es "admi...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ... el usuario es "usuario", accederá al menú 
+                                                  de usuario, y si es "admin...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...usuario, y si es "administrador", accederá 
+                                                  al menú de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:7: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ... y si es "administrador", accederá al menú 
+                                                  de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[6
+
+
+]
+
+acceso.c:19: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...uario)==0) //Comprueba si el usuario está 
+                                                  en la base de datos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:25: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     if(encontrado2==1) //Si el usuario está 
+                                                 en la base de datos, salta ...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:25: LaTeX Error: Invalid UTF-8 byte sequence (í\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...ario está en la base de datos, salta aquí.
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:27: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:27: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:27: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.27 ... 3 intentos para introducir la contraseña 
+                                                  correctamente.
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:46: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:46: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:46: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.46 ...//Comprueba si el usuario y la contraseña 
+                                                  son correctos.
+I'm ignoring this; it doesn't match any \if.
+
+[7]
+
+acceso.c:52: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 ... tiene perfil de "usuario", salta al menú 
+                                                  de usuario.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:57: LaTeX Error: Invalid UTF-8 byte "FA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ... perfil de "administrador", salta al menú 
+                                                  de admin.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:65: LaTeX Error: Invalid UTF-8 byte sequence (ñ\expandafter\lst@FillFixed@\fi).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+acceso.c:65: Extra \else.
+\lst@PrintToken ...@Output \lst@letterfalse \else 
+                                                  \lst@OutputOther \let \lst...
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+I'm ignoring this; it doesn't match any \if.
+
+acceso.c:65: Extra \else.
+\lst@ProcessSpace ...lst@AppendSpecialSpace \else 
+                                                  \ifnum \lst@length =\z@ \g...
+l.65 ...da es incorrecta.\n"); //Si la contraseña 
+                                                  no es correcta, se imprime...
+I'm ignoring this; it doesn't match any \if.
+
+
+acceso.c:69: LaTeX Error: Invalid UTF-8 byte "A1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...                        printf("¡Intentos 
+                                                  agotados! :(\n");
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+acceso.c:76: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ... contador de intentos, para saber cuántos 
+                                                  quedan.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[8]
+
+acceso.c:89: LaTeX Error: Invalid UTF-8 byte sequence (á\expandafter\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...se de datos.\n"); //Si el usuario no está 
+                                                  en la base de datos.
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)) [9]
+\openout2 = `DocUsuario.aux'.
+
+ (DocUsuario.tex
+
+Package natbib Warning: Citation `Ejemplo1' on page 10 undefined on input line 26.
+
+
+Package natbib Warning: Citation `Ejemplo2' on page 10 undefined on input line 26.
+
+[10
+
+]) [11]
+\openout2 = `DocSistema.aux'.
+
+ (DocSistema.tex
+
+Package natbib Warning: Citation `Ejemplo3' on page 12 undefined on input line 40.
+
+) [12
+
+
+
+] [13]
+\openout2 = `DocCode.aux'.
+
+ (DocCode.tex) [14
+
+
+
+]
+No file PlantillaMOD.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+(PlantillaMOD.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
+
+Package rerunfilecheck Warning: File `PlantillaMOD.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `PlantillaMOD.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  12A2C625CE9D54A53CBA2E8CA2ED9514;2326.
+ )
+(\end occurred when \iffalse on line 27 was incomplete)
+(\end occurred when \iffalse on line 6 was incomplete)
+(\end occurred when \iftrue on line 6 was incomplete)
+(\end occurred when \iftrue on line 4 was incomplete)
+(\end occurred when \iffalse on line 46 was incomplete)
+(\end occurred when \iffalse on line 27 was incomplete)
+(\end occurred when \iffalse on line 6 was incomplete)
+(\end occurred when \iftrue on line 6 was incomplete)
+(\end occurred when \iftrue on line 4 was incomplete)
+(\end occurred when \iftrue on line 72 was incomplete)
+(\end occurred when \ifx on line 72 was incomplete)
+(\end occurred when \ifnum on line 72 was incomplete) 
+Here is how much of TeX's memory you used:
+ 12845 strings out of 475385
+ 203678 string characters out of 2776908
+ 865883 words of memory out of 3000000
+ 33827 multiletter control sequences out of 15000+600000
+ 475497 words of font info for 48 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,6n,77p,505b,2073s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on PlantillaMOD.pdf (15 pages, 504017 bytes).
+PDF statistics:
+ 352 PDF objects out of 1000 (max. 8388607)
+ 219 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

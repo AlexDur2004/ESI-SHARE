@@ -43,9 +43,9 @@ color(0,15);
 system("PAUSE");
 }
 
-void listarVehiculos()
+void listarVehiculos(int i, int n)
 {
-    int contador_veh_usuario, counter, counter2;
+    int contador_veh_usuario, counter, counter2, num=0;
 
     leer_vehiculo(&vehiculo, &numVehiculos);
 
@@ -60,6 +60,7 @@ void listarVehiculos()
                     color(0,3);
                     printf("    Vehiculo %i:    Matricula: %s | Numero de plazas: %s | Descripcion: %s\n",(contador_veh_usuario)+1,vehiculo[counter2].id_mat,vehiculo[counter2].num_plazas,vehiculo[counter2].desc_veh);
                     contador_veh_usuario++;
+                    num=1;
                 }
             }
             if(contador_veh_usuario==0){
@@ -68,13 +69,30 @@ void listarVehiculos()
             }
         }
 
-color(0,15);
-system("PAUSE");
+    if(num==0)
+    {
+        color(0, 15);
+        printf("Ningún usuario del sistema tiene un viaje, con las características requeridas.\n");
+        system("PAUSE");
+        if(n==0)
+        {
+            menuConductorVehiculo(i);
+        }
+        else
+        {
+            menuAdminVehiculos(i);
+        }
+    }
+    else
+    {
+        color(0,15);
+        system("PAUSE");
+    }
 }
 
-void listarAdminViajes()
+void listarAdminViajes(int i, int n)
 {
-    int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter;
+    int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter, num=0;
 
     leer_viaje(&viaje, &numViajes);
 
@@ -90,12 +108,14 @@ void listarAdminViajes()
         {
             for(j=0;j<num_v;j++)
             {
-                encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, 0);
+                encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, n);
             }
+
             for(m=0; m<contador_viaje; m++)
             {
                 color(0,3);
                 printf("    Viaje %i:    ID: %s | Matricula: %s | Fecha de partida: %s | Hora de partida: %s |\n                Hora de llegada: %s | Plazas libres: %s | Ida/Vuelta: %s | Precio: %s | Estado: %s\n\n",m+1,viaje[vec_viaje[m]].id_viaje,viaje[vec_viaje[m]].id_mat,viaje[vec_viaje[m]].f_inic,viaje[vec_viaje[m]].h_inic,viaje[vec_viaje[m]].h_fin,viaje[vec_viaje[m]].plazas_libre,viaje[vec_viaje[m]].ida_vuelta,viaje[vec_viaje[m]].precio,viaje[vec_viaje[m]].estado);
+                num=1;
             }
             if(contador_viaje==0)
             {
@@ -110,11 +130,21 @@ void listarAdminViajes()
         }
     }
 
-color(0,15);
-system("PAUSE");
+    if(num==0)
+    {
+        color(0, 15);
+        printf("Ningún usuario del sistema tiene un viaje, con las características requeridas.\n");
+        system("PAUSE");
+        menuAdminViajes(i);
+    }
+    else
+    {
+        color(0,15);
+        system("PAUSE");
+    }
 }
 
-void listarAdminVehiculoViajes()
+void listarAdminVehiculoViajes(int i)
 {
     FILE *fp;
     int x=0, m=0, z=0, encontrado=0, *vec=NULL;
@@ -130,7 +160,7 @@ void listarAdminVehiculoViajes()
     {
         while(encontrado==0)
         {
-            listarVehiculos();
+            listarVehiculos(i, 1);
             printf("Introduzca la matrícula de un vehículo para obtener los viajes que ha realizado.\n");
             pregunta(mat, 8);
 

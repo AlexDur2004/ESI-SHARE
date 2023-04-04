@@ -8,8 +8,8 @@
 #include "leer.h"
 
 void listarUsuarios();
-void listarVehiculos();
-void listarAdminViajes();
-void listarAdminVehiculoViajes();
+void listarVehiculos(int, int);
+void listarAdminViajes(int, int);
+void listarAdminVehiculoViajes(int);
 
 #endif // LISTAR_H_INCLUDED

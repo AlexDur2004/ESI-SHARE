@@ -117,14 +117,8 @@ void buscadorRutas(char id_viaje[7])
 
     do{
         printf("Seleccione el número de la ruta que quiere escoger: ");
-        printf("\nEscriba %i para personalizar su ruta.", numImpresos+1);
         scanf("%1i", &opc);
-    }while(opc<1||opc>numImpresos+1);
-
-    if(opc==numImpresos+1)
-    {
-        printf("Aquí va funcion personalizar");
-    }
+    }while(opc<1||opc>numImpresos);
 
     imprimirPasos(id_viaje, token, rutas_impr[opc-1]);
 

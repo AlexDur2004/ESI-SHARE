@@ -1,10 +1,13 @@
 #include "modificar.h"
 
-void modificarVehiculo(int i)
+void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
     FILE *fp, *temp;
     int n=0, x=0, h=0, m=0, opc=0, opc2=0, aux=0, y=0, *vec=NULL, encontrado=0, error_mat, counter;
     char mat[8], plazas[2], descrip[51];
+
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    system("cls");
 
     fp=fopen("vehiculos.txt","r+");
 
@@ -15,7 +18,7 @@ void modificarVehiculo(int i)
     }
     else
     {
-        encontrarVehiculos(&vec, &x, i);
+        encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i);
         aux=x;
         while(encontrado==0)
         {
@@ -209,11 +212,14 @@ void modificarVehiculo(int i)
     system("cls");
 }
 
-void modificarViaje(int i)
+void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     FILE *fp, *temp;
     int n=0, h=0, x=0, m=0, j=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, cont=0, prec=0, encontrado=0, encontrado2=0;
     char mat[8], fecha[11], hora_in[6], hora_fin[6], coste[2];
+
+    leer_viaje(&viaje, &numViajes);
+    system("cls");
 
     fp=fopen("viajes.txt","r+");
 
@@ -224,10 +230,10 @@ void modificarViaje(int i)
     }
     else
     {
-        encontrarVehiculos(&vec, &x, i);
+        encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i);
         for(j=0;j<x;j++)
         {
-            encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &cont, 1);
+            encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &cont, 1);
         }
         if(cont==0)
         {
@@ -325,7 +331,7 @@ void modificarViaje(int i)
                         break;
 
                     case 4:
-                        modificarRuta(i);
+                        modificarRuta(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                         break;
                     case 5:
                         do
@@ -370,7 +376,7 @@ void modificarViaje(int i)
 
                             strcpy(viaje[vec_viaje[h]].precio, coste);
 
-                            modificarRuta(i);
+                            modificarRuta(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
 
                             printf("Se han actualizado todos los datos ingresados del viaje.\n");
                             system("PAUSE");
@@ -406,16 +412,16 @@ void modificarViaje(int i)
     system("cls");
 }
 
-void modificarRuta(int num_user)
+void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_user)
 {
     int *vec=NULL, *vec_viaje=NULL, x, num_v, i, j, opc, h;
     char *mat;
 
-    encontrarVehiculos(&vec,&x, num_user);
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec,&x, num_user);
 
     for(j=0;j<x;j++)
     {
-        encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &num_v, 0);
+        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &num_v, 0);
     }
     printf("LISTADO DE VIAJES:\n");
     for(i=0;i<num_v;i++){
@@ -426,11 +432,11 @@ void modificarRuta(int num_user)
         scanf("%i",&opc);
     }while(opc>=1&&opc<=num_v);
     h=opc-1;
-    eliminarPasos(viaje[vec[h]].id_viaje);
-    buscadorRutas(viaje[vec[h]].id_viaje);
+    eliminarPasos(pasos, numPasos, reservas, numReservas, viaje[vec[h]].id_viaje);
+    buscadorRutas(ruta, numRutas, numRutas2, localidad, numLocalidades, pasos, numPasos, viaje[vec[h]].id_viaje);
 }
 
-void modificarPerfilNombre(int i)
+void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
 {
     FILE *fp;
     int n=0;
@@ -464,11 +470,11 @@ void modificarPerfilNombre(int i)
 return;
 }
 
-void modificarPerfilLocalidad(int i)
+void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     FILE *fp;
     int n=0;
-    char localidad[21];
+    char loc[21];
 
     fp=fopen("usuarios.txt","r+");
 
@@ -479,9 +485,9 @@ void modificarPerfilLocalidad(int i)
     else {
         printf("Introduzca su nueva localidad de residencia (3 siglas):\n");
         fflush(stdin);
-        pregunta_localidad(localidad);
+        pregunta_localidad(localidad, numLocalidades, loc);
 
-        strcpy(usuario[i].localidad, localidad);
+        strcpy(usuario[i].localidad, loc);
         do{
             fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
             n++;
@@ -499,7 +505,7 @@ void modificarPerfilLocalidad(int i)
 return;
 }
 
-void modificarPerfilUsuario(int i)
+void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
 {
     FILE *fp;
     int n=0, k=0, encontrado=0;
@@ -547,7 +553,7 @@ void modificarPerfilUsuario(int i)
     system("cls");
 }
 
-void modificarPerfilContrasena(int i)
+void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
 {
     FILE *fp;
     int j=0, n=0, encontrado=3, x=0, h=0;
@@ -638,7 +644,7 @@ void modificarPerfilContrasena(int i)
 return;
 }
 
-void modificarAdminUsuario()
+void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
 {
     int i=0, j, opc=0, encontrado=0;
     char vec_id[5];
@@ -650,7 +656,7 @@ void modificarAdminUsuario()
         printf("Introduzca la ID del usuario al que quiere modificarle el usuario.\n");
         pregunta(vec_id, 5);
 
-        encontrarUsuario(vec_id, &j, &encontrado);
+        encontrarUsuario(usuario, numUsuarios, vec_id, &j, &encontrado);
 
         if(encontrado==1)
         {
@@ -668,22 +674,22 @@ void modificarAdminUsuario()
                 switch(opc)
                     {
                         case 1:
-                            modificarPerfilNombre(j);
+                            modificarPerfilNombre(usuario, numUsuarios, j);
                             break;
                         case 2:
-                            modificarPerfilLocalidad(j);
+                            modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, j);
                             break;
                         case 3:
-                            modificarPerfilUsuario(j);
+                            modificarPerfilUsuario(usuario, numUsuarios, j);
                             break;
                         case 4:
-                            modificarPerfilContrasena(j);
+                            modificarPerfilContrasena(usuario, numUsuarios, j);
                             break;
                         case 5:
-                            modificarPerfilNombre(j);
-                            modificarPerfilLocalidad(j);
-                            modificarPerfilUsuario(j);
-                            modificarPerfilContrasena(j);
+                            modificarPerfilNombre(usuario, numUsuarios, j);
+                            modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, j);
+                            modificarPerfilUsuario(usuario, numUsuarios, j);
+                            modificarPerfilContrasena(usuario, numUsuarios, j);
                             break;
                         case 6:
                             break;
@@ -693,7 +699,7 @@ void modificarAdminUsuario()
     }
 }
 
-void modificarAdminVehiculo(int x)
+void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int x)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
@@ -707,7 +713,7 @@ void modificarAdminVehiculo(int x)
             encontrado=1;
             i=counter;
             system("cls");
-            modificarVehiculo(i);
+            modificarVehiculo(usuario, vehiculo, numVehiculos, i);
         }
     }
     if(encontrado==0){
@@ -717,7 +723,7 @@ void modificarAdminVehiculo(int x)
     }
 }
 
-void modificarAdminViaje(int x)
+void modificarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int x)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
@@ -731,7 +737,7 @@ void modificarAdminViaje(int x)
             encontrado=1;
             i=counter;
             system("cls");
-            modificarViaje(i);
+            modificarViaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
         }
     }
     if(encontrado==0){

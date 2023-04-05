@@ -6,7 +6,7 @@
 //en la estructura de "usuario". Además, se necesitan las estructuras "usuario" y "vehiculo" inicializadas, con sus contadores "numVehiculos" y "numUsuarios".
 //Postcondición: Busca todos los vehículos de un usuario mediante su id, e introduce las posiciones en la estructura de dichos vehículos en un vector de enteros.
 
-void encontrarVehiculos(int **vec, int *x, int i)
+void encontrarVehiculos(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int **vec, int *x, int i)
 {
     int j;
     *x=0;
@@ -33,7 +33,7 @@ void encontrarVehiculos(int **vec, int *x, int i)
 //dependiendo de para qué queramos usar la función. Además, se necesita la estructura "viaje" inicializada, con su contador "numViajes".
 //Postcondición: Busca todos los viajes de un vehículo mediante su matrícula, e introduce las posiciones en la estructura de dichos viajes en un vector de enteros.
 
-void encontrarViajes(char *mat, int **vec, int *x, int num)
+void encontrarViajes(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, char *mat, int **vec, int *x, int num)
 {
     int j, i;
     *x=0;
@@ -126,7 +126,7 @@ void encontrarViajes(char *mat, int **vec, int *x, int num)
 //Postcondición: Busca al usuario en la base de datos mediante su id, e introduce su posición en la estructura en una variable "x",
 //y "encontrado" pasa a ser 1, si se encuentra el usuario.
 
-void encontrarUsuario(char vec_id[], int *x, int *encontrado)
+void encontrarUsuario(Estr_Usuario *usuario, int numUsuarios, char vec_id[], int *x, int *encontrado)
 {
     int j;
     *x=0;
@@ -142,7 +142,7 @@ void encontrarUsuario(char vec_id[], int *x, int *encontrado)
     }
 }
 
-void encontrarReservas(int num_user, int **vec,int **vec_viaje,int *x)
+void encontrarReservas(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user, int **vec,int **vec_viaje, int *x)
 {
     int i,j;
     (*x)=0;
@@ -180,35 +180,36 @@ void encontrarReservas(int num_user, int **vec,int **vec_viaje,int *x)
     }
 }
 
-void encontrarViajesReservas(int num_user,char *fecha,int **vec,int *x,int *loc){
+void encontrarViajesReservas(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos,int num_user, char *fecha, int **vec, int *x, int *loc)
+{
      int i,j;
     *x=0;
     *loc=0;
-    for(i=0; i<numPasos; i++) {
-
-        if(strcmp(usuario[num_user].localidad,pasos[i].poblacion)==0){
-                (*loc)++;
-            for(j=0;j<numViajes;j++){
-                if(strcmp(pasos[i].id_viaje,viaje[j].id_viaje)==0){
-
-                    if(strcmp(fecha,viaje[j].f_inic)==0){
-
-                        if(strcmp(viaje[j].estado,"abierto")==0||strcmp(viaje[j].estado,"iniciado")==0){
-
-                          *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
-                        if ((*vec)==NULL)
+    for(i=0; i<numPasos; i++)
+    {
+        if(strcmp(usuario[num_user].localidad,pasos[i].poblacion)==0)
+        {
+            (*loc)++;
+            for(j=0;j<numViajes;j++)
+            {
+                if(strcmp(pasos[i].id_viaje,viaje[j].id_viaje)==0)
+                {
+                    if(strcmp(fecha,viaje[j].f_inic)==0)
+                    {
+                        if(strcmp(viaje[j].estado,"abierto")==0||strcmp(viaje[j].estado,"iniciado")==0)
                         {
-                            printf("Error al asignar memoria.\n");
-                            exit(1);
+                            *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int));
+                            if ((*vec)==NULL)
+                            {
+                                printf("Error al asignar memoria.\n");
+                                exit(1);
+                            }
+                            (*vec)[*x]=j;
+                            (*x)++;
                         }
-                        (*vec)[*x]=j;
-                        (*x)++;
-                        }
-
                     }
                 }
             }
-
         }
     }
 }

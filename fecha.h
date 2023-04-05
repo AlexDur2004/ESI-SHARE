@@ -4,11 +4,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "estructuras.h"
 #include "leer.h"
 
+void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas);
 void leerFecha(char *, char *, char *); //para leer fecha, hora inic, hora fin.
-void actualizarViaje();
 void leer_dia(char *); //para leer fecha.
 
 #endif // FECHA_H_INCLUDED

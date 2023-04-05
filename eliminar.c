@@ -6,11 +6,13 @@
 //Postcondición: Eliminar el vehículo que seleccione el usuario de la lista de sus vehículos, si hace esto
 //se eliminarán todos los viajes, pasos y reservas de dicho vehículo.
 
-void eliminarVehiculo(int i)
+void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int i)
 {
     int x=0, h=0, m=0, opc=0, opc2=0, *vec=NULL;
 
-    encontrarVehiculos(&vec, &x, i); //Encontramos todos los vehículos del usuario, y los colocamos en un vector de enteros,
+    leer_vehiculo(&vehiculo, &numVehiculos);
+
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehículos del usuario, y los colocamos en un vector de enteros,
     //con las posiciones en la estructura "vehiculo" de sus vehículos.
 
     if(x>0){ //Si tiene algún vehículo, le pregunta el coche que quiere eliminar, si no tiene vehículo, se imprime un aviso.
@@ -42,14 +44,14 @@ void eliminarVehiculo(int i)
                 scanf("%d", &opc2);
                 if(opc2==1){ //Al escoger 1, nos lleva a otra función, que eliminará los viajes, pasos y reservas del vehículo seleccionado.
                     system("cls");
-                    eliminarVehiculoViajes(vehiculo[vec[h]].id_mat, x);
+                    eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[h]].id_mat, x);
                     system("PAUSE");
                 }
             }while((opc2<1)||(opc2>2));
         }
         else {
             system("cls");
-            eliminarVehiculo(i); //Vuelva a entrar en la función.
+            eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i); //Vuelva a entrar en la función.
         }
     }
     else{ //Se imprime un aviso, si no tiene vehículos asignados.
@@ -65,7 +67,7 @@ void eliminarVehiculo(int i)
 //que representa el número de vehículos que tiene el usuario, también necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas".
 //Postcondición: Eliminar el vehículo, a partir de la matrícula, además de todos sus viajes, pasos y reservas.
 
-void eliminarVehiculoViajes(char *mat, int x)
+void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, char *mat, int x)
 {
     FILE *fp, *temp;
     int n=0, j=0, k=0, num_v=0, *vec_viaje=NULL, counter, encontrado=0;
@@ -102,13 +104,13 @@ void eliminarVehiculoViajes(char *mat, int x)
                 fclose(fp);
                 for(j=0; j<x; j++)
                 {
-                    encontrarViajes(vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehículo, para eliminarlos.
+                    encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehículo, para eliminarlos.
                 }
                 for(k=0; k<num_v; k++) //Eliminamos todos los viajes, pasos y reservas.
                 {
-                    eliminarSoloViaje(viaje[vec_viaje[k]].id_viaje);
-                    eliminarPasos(viaje[vec_viaje[k]].id_viaje);
-                    eliminarReservas(viaje[vec_viaje[k]].id_viaje);
+                    eliminarSoloViaje(viaje, numViajes, pasos, numPasos, reservas, numReservas, viaje[vec_viaje[k]].id_viaje);
+                    eliminarPasos(pasos, numPasos, reservas, numReservas, viaje[vec_viaje[k]].id_viaje);
+                    eliminarReservas(reservas, numReservas, viaje[vec_viaje[k]].id_viaje);
                 }
                 encontrado=1;
             }
@@ -127,15 +129,18 @@ void eliminarVehiculoViajes(char *mat, int x)
 //Postcondición: Eliminar el viaje que seleccione el usuario de la lista de sus viajes, si hace esto
 //se eliminarán todos los pasos y reservas de dicho viaje.
 
-void eliminarViaje(int i)
+void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int i)
 {
     int j=0, x=0, h=0, m=0, num_v=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL;
 
-    encontrarVehiculos(&vec, &num_v, i);  //Busca los vehículos que tiene dicho usuario, para luego encontrar los viajes que tiene.
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje, &numViajes);
+
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, i);  //Busca los vehículos que tiene dicho usuario, para luego encontrar los viajes que tiene.
 
     for(j=0;j<num_v;j++)
     {
-        encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &x, 2);
+        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &x, 2);
     }
 
     if(x>0){
@@ -169,7 +174,7 @@ void eliminarViaje(int i)
                 scanf("%d", &opc2);
                 if(opc2==1){ //Si seleccionamos 1, se va a la función, que elimina viajes, pasos y reservas, por la id del viaje.
                     system("cls");
-                    eliminarSoloViaje(viaje[vec_viaje[h]].id_viaje);
+                    eliminarSoloViaje(viaje, numViajes, pasos, numPasos, reservas, numReservas, viaje[vec_viaje[h]].id_viaje);
                 }
             }while((opc2<1)||(opc2>2));
             system("cls");
@@ -179,7 +184,7 @@ void eliminarViaje(int i)
         else
         {
             system("cls");
-            eliminarViaje(i);
+            eliminarViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
         }
     }
     else{ //Se imprime un aviso, si no tiene viajes creados.
@@ -195,7 +200,7 @@ void eliminarViaje(int i)
 //al igual que las estructura "viaje", "pasos" y "reservas", y su contador "numViajes".
 //Postcondición: Eliminar un viaje, junto a todos sus pasos y reservas.
 
-void eliminarSoloViaje(char *id)
+void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, char *id)
 {
     FILE *fp, *temp;
     int n=0, counter, encontrado=0;
@@ -230,8 +235,8 @@ void eliminarSoloViaje(char *id)
                 }
                 fclose(temp); //Cerramos los ficheros.
                 fclose(fp);
-                eliminarPasos(viaje[n].id_viaje); //Eliminamos los pasos y reservas de dicho viaje.
-                eliminarReservas(viaje[n].id_viaje);
+                eliminarPasos(pasos, numPasos, reservas, numReservas, viaje[n].id_viaje); //Eliminamos los pasos y reservas de dicho viaje.
+                eliminarReservas(reservas, numReservas, viaje[n].id_viaje);
                 encontrado=1;
             }
         }
@@ -247,7 +252,7 @@ void eliminarSoloViaje(char *id)
 //Precondición: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "pasos", y su contador "numPasos".
 //Postcondición: Eliminar los pasos de un viaje.
 
-void eliminarPasos(char *id)
+void eliminarPasos(Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, char *id)
 {
     FILE *fp, *temp;
     int n=0, counter;
@@ -298,7 +303,7 @@ void eliminarPasos(char *id)
 //Precondición: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "reservas", y su contador "numReservas".
 //Postcondición: Eliminar las reservas de un viaje.
 
-void eliminarReservas(char *id)
+void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
 {
     FILE *fp, *temp;
     int n=0, counter;
@@ -351,7 +356,7 @@ void eliminarReservas(char *id)
 //Postcondición: Preguntar al admin, la id del usuario que quiere eliminar, y eliminar el usuario,
 //y todos sus vehículos, viajes, pasos y reservas.
 
-void eliminarAdminUsuario()
+void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas)
 {
     FILE *fp, *temp;
     int n=0, o=0, j=0, opc2=0, c=0, *vec=NULL, encontrado=0, encontrado2=0, id2, counter;
@@ -371,7 +376,7 @@ void eliminarAdminUsuario()
                 printf("Introduzca la ID del usuario que quiere eliminar.\n");
                 scanf("%i", &id2);
                 sprintf(vec_id, "%04i", id2);
-                encontrarUsuario(vec_id, &j, &encontrado); //Si la id está en la base de datos, encontrado=1, y sale del bucle.
+                encontrarUsuario(usuario, numUsuarios, vec_id, &j, &encontrado); //Si la id está en la base de datos, encontrado=1, y sale del bucle.
             }while(encontrado==0);
 
             do{
@@ -408,10 +413,10 @@ void eliminarAdminUsuario()
                             }
                             fclose(temp); //Cerramos los ficheros.
                             fclose(fp);
-                            encontrarVehiculos(&vec, &o, n); //Buscamos todos los vehículos del usuario, para eliminarlos.
+                            encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &o, n); //Buscamos todos los vehículos del usuario, para eliminarlos.
                             for(c=0; c<o; c++)
                             {
-                                eliminarVehiculoViajes(vehiculo[vec[c]].id_mat, o); //Eliminamos los vehículos, viajes, pasos y reservas del usuario seleccionado.
+                                eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[c]].id_mat, o); //Eliminamos los vehículos, viajes, pasos y reservas del usuario seleccionado.
                             }
                             encontrado2=1;
                         }
@@ -440,13 +445,13 @@ void eliminarAdminUsuario()
 //Postcondición: Preguntar al admin, la id del usuario para saber sus vehículos, y eliminar
 //el vehículo, y todos sus viajes, pasos y reservas.
 
-void eliminarAdminVehiculo(int x)
+void eliminarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int x)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
 
     system("cls");
-    listarVehiculos(x,1); //Obtenemos una lista de todos los vehiculos del sistema.
+    listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, x, 1); //Obtenemos una lista de todos los vehiculos del sistema.
     printf("Escriba la ID del usuario a la que se quiera eliminar un vehículo\n");
     scanf("%4s",&opc2); //Se pregunta la id del usuario al que quiere eliminar el vehículo.
     for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
@@ -457,7 +462,7 @@ void eliminarAdminVehiculo(int x)
             encontrado=1;
             i=counter;
             system("cls");
-            eliminarVehiculo(i);
+            eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
         }
     }
     if(encontrado==0) //Si la id del usuario es incorrecta, se imprime este aviso.
@@ -475,7 +480,7 @@ void eliminarAdminVehiculo(int x)
 //localizar sus viajes. Si num=0, elimina un viaje, y si num=1, anula/finaliza un viaje, depende de su estado.
 //Todo esto eliminando todos sus pasos y reservas.
 
-void eliminarAdminViaje(int x, int num)
+void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int x, int num)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
@@ -494,7 +499,7 @@ void eliminarAdminViaje(int x, int num)
             system("cls");
             if(num==0)
             {
-                eliminarViaje(i);
+                eliminarViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
             }
             if(num==1)
             {

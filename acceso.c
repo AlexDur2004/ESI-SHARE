@@ -6,7 +6,7 @@
 //Postcondición: Autenticación de las credenciales introducidas, si coinciden con alguna de la base de datos, pues se accede al programa.
 //Si el usuario es "usuario", accederá al menú de usuario, y si es "administrador", accederá al menú de admin.
 
-void acceso()
+void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2)
 {
     int i, j=0, k=0, encontrado=0, encontrado2=0, encontrado3=3, preg=0;
     char usua[6], contra[9], c;
@@ -52,12 +52,12 @@ void acceso()
                         if(strcmp(usuario[i].perfil,"usuario")==0) //Si el usuario, tiene perfil de "usuario", salta al menú de usuario.
                         {
                             encontrado=1;
-                            menuUsuario(i);
+                            menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                         }
                         else if(strcmp(usuario[i].perfil,"administrador")==0) //Si el usuario, tiene perfil de "administrador", salta al menú de admin.
                         {
                             encontrado=1;
-                            menuAdmin(i);
+                            menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                         }
                     }
                     else

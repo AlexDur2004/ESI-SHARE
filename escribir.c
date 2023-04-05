@@ -4,11 +4,11 @@
 //Precondición: Tener la estructura "usuario" inicializada, con su contador "numUsuarios".
 //Postcondición: Dar de alta/Registrar un usuario, comprobando que el nombre del usuario no está repetido.
 
-void altaUsuario()
+void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
 {
     FILE *fp;
     int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0, preg=0;
-    char id[5], nombre[21], localidad[21], perfil[14], usuario2[6], contrasena[9];
+    char id[5], nombre[21], loc[21], perfil[14], usuario2[6], contrasena[9];
 
     fp=fopen("usuarios.txt","a+");
 
@@ -17,7 +17,7 @@ void altaUsuario()
     printf("Nombre Completo (Máximo de 20 caracteres):\n");
     pregunta(nombre, 21); //Función similar a un scanf o un fgets, pero con la eliminación del vector nulo incorporada.
     printf("Localidad de residencia (Siglas de la lista):\n");
-    pregunta_localidad(localidad); //Pregunta de la localidad, impriendo una lista con los acrónimos de las ciudades.
+    pregunta_localidad(localidad, numLocalidades, loc); //Pregunta de la localidad, impriendo una lista con los acrónimos de las ciudades.
     printf("Nombre de usuario (Máximo de 5 caracteres):\n");
     pregunta(usuario2, 6);
 
@@ -63,7 +63,7 @@ void altaUsuario()
 
             snprintf(id, sizeof(id), "%04d", n); //Pasa la nueva id a una cadena de 4 caracteres.
 
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", id, nombre, localidad, perfil, usuario2, contrasena); //Se imprimen todos los datos del registro en el fichero "usuarios.txt".
+            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", id, nombre, loc, perfil, usuario2, contrasena); //Se imprimen todos los datos del registro en el fichero "usuarios.txt".
 
             printf("El usuario ha sido agregado correctamente.\n");
             system("PAUSE");
@@ -87,7 +87,7 @@ void altaUsuario()
 //las estructuras "vehiculo" y "usuario" inicializadas, con sus contadores "numVehiculos".
 //Postcondición: Dar de alta/Registrar un vehículo, comprobando que la matrícula es válida, y no está en uso.
 
-void altaVehiculo(int i)
+void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
     FILE *fp;
     int n=0,error_mat, counter2=0, counter;
@@ -167,13 +167,13 @@ void altaVehiculo(int i)
 //Postcondición: Si n=0, dar de alta/registrar un vehículo, comprobando que la matrícula es válida, y no está en uso,
 //y si n=1, dar de alta/registrar un viaje. Ambos, introduciendo la id del usuario al que se quiere crear.
 
-void altaAdmin(int n)
+void altaAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int n)
 {
     char opc2[4];
     int encontrado=0, i=0, counter;
 
     system("cls");
-    listarUsuarios();
+    listarUsuarios(usuario, numUsuarios);
     printf("Escriba la ID del usuario al que quiera dar de alta el vehiculo.\n");
     scanf("%4s",&opc2);
     for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++) //Nos desplazamos por la estructura "usuario", hasta saber que la id introducida es válida.
@@ -184,13 +184,13 @@ void altaAdmin(int n)
             i=counter;
             if(n==0)
             {
-                altaVehiculo(i); //Usamos la función altaVehiculo, para reusar código.
+                altaVehiculo(usuario, vehiculo, numVehiculos, i); //Usamos la función altaVehiculo, para reusar código.
                 printf("El vehículo se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
                 system("PAUSE");
             }
             if(n==1)
             {
-                altaViaje(i, 1); //Usamos la función altaViaje, para reusar código.
+                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i, 1); //Usamos la función altaViaje, para reusar código.
                 printf("El viaje se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
                 system("PAUSE");
             }

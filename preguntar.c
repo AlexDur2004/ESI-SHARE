@@ -21,20 +21,23 @@ void pregunta(char *x, int i)
     }
 }
 
-void preguntar_id_alta()
+void preguntar_id_alta(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos)
 {
     char opc2[4];
     int encontrado=0, i, counter;
 
     pregunta(opc2, 5);
-    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++){
-        if(strcmp(opc2,usuario[counter].id_usuario)==0){
+    for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
+    {
+        if(strcmp(opc2,usuario[counter].id_usuario)==0)
+        {
             encontrado=1;
             i=counter;
-            altaVehiculo(i);
+            altaVehiculo(usuario, vehiculo, numVehiculos, i);
         }
     }
-    if(encontrado==0){
+    if(encontrado==0)
+    {
         system("cls");
         printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
         system("PAUSE");
@@ -42,7 +45,7 @@ void preguntar_id_alta()
 }
 
 
-void pregunta_localidad(char *local)
+void pregunta_localidad(Estr_Localidad *localidad, int numLocalidades, char *local)
 {
     char vec_loc[4];
     int i, j, k, encontrado=0, maxLoc;
@@ -85,7 +88,7 @@ void pregunta_localidad(char *local)
     return;
 }
 
-void pregunta_ruta(char *rut2)
+void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, char *rut2)
 {
     int i, h, j, k, x, encontrado=0;
     char rut[4];
@@ -140,7 +143,7 @@ void pregunta_ruta(char *rut2)
     return;
 }
 
-void preguntar_veh(char *opc, int *encontrado)
+void preguntar_veh(Estr_Vehiculo *vehiculo, int numVehiculos, char *opc, int *encontrado)
 {
     int counter;
 

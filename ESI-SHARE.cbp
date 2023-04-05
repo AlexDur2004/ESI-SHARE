@@ -79,6 +79,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modificar.h" />
+		<Unit filename="mostrar_reservar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mostrar_reservar.h" />
 		<Unit filename="preguntar.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -1,6 +1,6 @@
 #include "listar.h"
 
-void listarUsuarios()
+void listarUsuarios(Estr_Usuario *usuario, int numUsuarios)
 {
     int contador_usuario=0, counter;
 
@@ -43,7 +43,7 @@ color(0,15);
 system("PAUSE");
 }
 
-void listarVehiculos(int i, int n)
+void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int i, int n)
 {
     int contador_veh_usuario, counter, counter2, num=0;
 
@@ -74,14 +74,7 @@ void listarVehiculos(int i, int n)
         color(0, 15);
         printf("Ningún usuario del sistema tiene un viaje, con las características requeridas.\n");
         system("PAUSE");
-        if(n==0)
-        {
-            menuConductorVehiculo(i);
-        }
-        else
-        {
-            menuAdminVehiculos(i);
-        }
+        return;
     }
     else
     {
@@ -90,7 +83,7 @@ void listarVehiculos(int i, int n)
     }
 }
 
-void listarAdminViajes(int i, int n)
+void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i, int n)
 {
     int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter, num=0;
 
@@ -103,12 +96,12 @@ void listarAdminViajes(int i, int n)
         printf("> Viajes de %s | ID: %s\n",usuario[counter].nomb_usuario,usuario[counter].id_usuario);
         id=atoi(usuario[counter].id_usuario);
         id--;
-        encontrarVehiculos(&vec, &num_v, id);
+        encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, id);
         if(num_v!=0)
         {
             for(j=0;j<num_v;j++)
             {
-                encontrarViajes(vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, n);
+                encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, n);
             }
 
             for(m=0; m<contador_viaje; m++)
@@ -135,7 +128,7 @@ void listarAdminViajes(int i, int n)
         color(0, 15);
         printf("Ningún usuario del sistema tiene un viaje, con las características requeridas.\n");
         system("PAUSE");
-        menuAdminViajes(i);
+        return;
     }
     else
     {
@@ -144,7 +137,7 @@ void listarAdminViajes(int i, int n)
     }
 }
 
-void listarAdminVehiculoViajes(int i)
+void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i)
 {
     FILE *fp;
     int x=0, m=0, z=0, encontrado=0, *vec=NULL;
@@ -160,7 +153,7 @@ void listarAdminVehiculoViajes(int i)
     {
         while(encontrado==0)
         {
-            listarVehiculos(i, 1);
+            listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, i, 1);
             printf("Introduzca la matrícula de un vehículo para obtener los viajes que ha realizado.\n");
             pregunta(mat, 8);
 
@@ -175,7 +168,7 @@ void listarAdminVehiculoViajes(int i)
             system("PAUSE");
             system("cls");
         }
-        encontrarViajes(mat, &vec, &x, 0);
+        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, mat, &vec, &x, 0);
 
         printf("Los viajes realizados por el vehículo con matrícula %s son:\n", mat);
         for(m=0; m<x; m++)

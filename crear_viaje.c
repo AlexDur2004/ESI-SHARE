@@ -1,6 +1,6 @@
 #include "crear_viaje.h"
 
-void altaViaje(int num_usuario, int num)
+void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_usuario, int num)
 {
     FILE *fv;
     int n=1, i, idmax=0, num_viaje, breakp=0, enc=0, precio=0, rp;
@@ -9,8 +9,8 @@ void altaViaje(int num_usuario, int num)
     fv=fopen("viajes.txt","a+");
     do{
         rp=0;
-        elegir_coche(num_usuario, id_vehiculo, num);
-        asignar_plazas(id_vehiculo, plazas);
+        elegir_coche(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario, id_vehiculo, num);
+        asignar_plazas(vehiculo, numVehiculos, id_vehiculo, plazas);
 
         leerFecha(fecha, hora_inic, hora_fin);
 
@@ -55,16 +55,15 @@ void altaViaje(int num_usuario, int num)
                 }
             }
 
-
             snprintf(viaje_id, sizeof(viaje_id), "%06d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
-            verificar_viaje(viaje_id,id_vehiculo,fecha,hora_inic,hora_fin,&rp);
+            verificar_viaje(viaje, numViajes, viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, &rp);
             if(rp==0)
             {
                 fprintf(fv, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, plazas, idavuelta, coste, estado);
                 fclose(fv);
                 leer_viaje(&viaje, &numViajes);
-                buscadorRutas(viaje_id);
+                buscadorRutas(ruta, numRutas, numRutas2, localidad, numLocalidades, pasos, numPasos, viaje_id);
             }
             else
             {
@@ -76,11 +75,11 @@ void altaViaje(int num_usuario, int num)
     fclose(fv);
 }
 
-void elegir_coche(int num_usuario, char *id_vehiculo, int num) //0 para usuario, y 1 para admin
+void elegir_coche(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_usuario, char *id_vehiculo, int num) //0 para usuario, y 1 para admin
 {
     int i,*vec_vehiculo=NULL, coches, encontrado=0, opc=0, breakp=0;
 
-    encontrarVehiculos(&vec_vehiculo, &coches, num_usuario);
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec_vehiculo, &coches, num_usuario);
 
     if(coches==0)
     {
@@ -98,12 +97,12 @@ void elegir_coche(int num_usuario, char *id_vehiculo, int num) //0 para usuario,
                 {
                     case 1:
                         breakp=1;
-                        altaVehiculo(num_usuario);
-                        menuConductorViajes(num_usuario);
+                        altaVehiculo(usuario, vehiculo, numVehiculos, num_usuario);
+                        menuConductorViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);
                         break;
                     case 2:
                         breakp=1;
-                        menuConductorViajes(num_usuario);
+                        menuConductorViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);
                         break;
                 }
             }while(breakp==0);
@@ -122,12 +121,12 @@ void elegir_coche(int num_usuario, char *id_vehiculo, int num) //0 para usuario,
                 {
                     case 1:
                         breakp=1;
-                        altaVehiculo(num_usuario);
-                        menuAdminViajes();
+                        altaVehiculo(usuario, vehiculo, numVehiculos, num_usuario);
+                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);
                         break;
                     case 2:
                         breakp=1;
-                        menuAdminViajes();
+                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);
                         break;
                 }
             }while(breakp==0);
@@ -146,12 +145,12 @@ void elegir_coche(int num_usuario, char *id_vehiculo, int num) //0 para usuario,
         }
 
         printf("Introduzca la matrícula del vehiculo que desea usar para el viaje:\n");
-        preguntar_veh(id_vehiculo,&encontrado);
+        preguntar_veh(vehiculo, numVehiculos, id_vehiculo,&encontrado);
 
     }while(encontrado==0);
 }
 
-void asignar_plazas(char *id_vehiculo,char *plazas)
+void asignar_plazas(Estr_Vehiculo *vehiculo, int numVehiculos, char *id_vehiculo,char *plazas)
 {
     int i,breakp=0;
 
@@ -191,16 +190,16 @@ void ida_vuelta(char *idavuelta)
     }while(breakp==0);
 }
 
-void finalizar_viaje(int num_user)
+void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
 {
     int*vec=NULL,x=0,*vec_viaje=NULL,max_viaje=0,i=0,j;
 
-    encontrarVehiculos(&vec,&x,num_user);
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, num_user);
     if(vec!=NULL)
     {
         for(j=0;j<x;j++)
         {
-            encontrarViajes(vehiculo[vec[j]].id_mat,&vec_viaje,&max_viaje,1);
+            encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat,&vec_viaje,&max_viaje,1);
         }
         if(vec_viaje!=NULL){
             printf("LISTADO DE SUS VIAJES:\n");
@@ -226,29 +225,31 @@ void finalizar_viaje(int num_user)
                 printf("El viaje ha sido finalizado\n");
             }
             system("PAUSE");
-            actualizar();
-            eliminarPasos(viaje[vec_viaje[i-1]].id_viaje);
-            eliminarReservas(viaje[vec_viaje[i-1]].id_viaje);
-
+            actualizar(viaje, numViajes);
+            eliminarPasos(pasos, numPasos, reservas, numReservas, viaje[vec_viaje[i-1]].id_viaje);
+            eliminarReservas(reservas, numReservas, viaje[vec_viaje[i-1]].id_viaje);
         }
         else
         {
             system("cls");
             printf("No tiene viajes registrados\n");
+            system("PAUSE");
         }
     }
     else
     {
         system("cls");
         printf("No tiene coches registrados\n");
+        system("PAUSE");
     }
 }
 
-void actualizar(){
+void actualizar(Estr_Viaje *viaje, int numViajes){
     int counter=0;
 
     FILE *fp;
     fp=fopen("viajes_replace.txt","w+");
+
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero");
@@ -256,8 +257,8 @@ void actualizar(){
     else
     {
 
-        for(counter=0;counter<numViajes;counter++){
-
+        for(counter=0;counter<numViajes;counter++)
+        {
             fprintf(fp , "%s-%s-%s-%s-%s-%s-%s-%s-%s\n" ,viaje[counter].id_viaje,viaje[counter].id_mat,viaje[counter].f_inic,viaje[counter].h_inic,viaje[counter].h_fin,viaje[counter].plazas_libre,viaje[counter].ida_vuelta,viaje[counter].precio,viaje[counter].estado);
         }
     }
@@ -268,7 +269,7 @@ void actualizar(){
     rename("viajes_replace.txt","viajes.txt");
 }
 
-void verificar_viaje(char *id, char *mat, char *fecha, char *hor_i,char *hor_f,int *rp)
+void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *id, char *mat, char *fecha, char *hor_i,char *hor_f,int *rp)
 {
     int i,brkp=0;
 

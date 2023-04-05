@@ -1,15 +1,14 @@
 #include "mostrar_reservar.h"
 
-void mostrar_reservar(int num_user)
+void mostrar_reservar(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
 {
     int *vec=NULL, x, loc, i,seleccion=0,conf1=0,conf=0,plazas;
     char fecha[11],num_plazas[2];
 
-
     do
     {
         leer_dia(fecha);
-        encontrarViajesReservas(num_user,fecha,&vec,&x,&loc);
+        encontrarViajesReservas(usuario, viaje, numViajes, pasos, numPasos, num_user, fecha, &vec, &x, &loc);
 
         if(loc==0)
         {
@@ -50,11 +49,11 @@ void mostrar_reservar(int num_user)
 
             }while(seleccion>x || seleccion<1);
 
-            verificar_reserva(vec,seleccion-1,&conf1,num_user);
+            verificar_reserva(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, reservas, numReservas, vec, seleccion-1, &conf1, num_user);
 
             if(conf1==0)
             {
-                mostrar_poblaciones(vec,seleccion-1,&conf);
+                mostrar_poblaciones(viaje, numViajes, pasos, numPasos, vec, seleccion-1, &conf);
 
                 if(conf==2)
                 {
@@ -66,15 +65,15 @@ void mostrar_reservar(int num_user)
                     {
                         strcpy(viaje[vec[seleccion-1]].estado,"cerrado");
                     }
-                    actualizarFichero();
-                    guardarPasajero(vec,seleccion-1,num_user);
+                    actualizarFichero(viaje, numViajes);
+                    guardarPasajero(usuario, viaje, reservas, numReservas, vec, seleccion-1, num_user);
                 }
             }
        }
    }while(conf==0);
 }
 
-void mostrar_poblaciones(int *vec,int reserva,int *conf)
+void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, int *vec,int reserva, int *conf)
 {
     int i,opc;
 
@@ -102,7 +101,7 @@ void mostrar_poblaciones(int *vec,int reserva,int *conf)
     }while(opc!=1 && opc!=2);
 }
 
-void actualizarFichero()
+void actualizarFichero(Estr_Viaje *viaje, int numViajes)
 {
     int i;
 
@@ -128,7 +127,7 @@ void actualizarFichero()
     leer_viaje(&viaje,&numViajes);
 }
 
-void guardarPasajero(int *vec,int reserva,int num_user)
+void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *reservas, int numReservas, int *vec, int reserva, int num_user)
 {
         // crear nuevo fichero que guarde para guardar la reserva
     FILE *fp;
@@ -147,11 +146,11 @@ void guardarPasajero(int *vec,int reserva,int num_user)
     leer_reservas(&reservas,&numReservas); // escribe en la estructura reservas la id del viaje y del usuario
 }
 
-void cancelarReserva(int num_user)
+void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user)
 {
     int *vec=NULL,*vec_viaje=NULL,x,j=0,i,sel,cont=0, plazas=0;
 
-    encontrarReservas(num_user,&vec,&vec_viaje,&x);
+    encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x);
 
     if(vec!=NULL){
         do{
@@ -166,20 +165,22 @@ void cancelarReserva(int num_user)
             system("cls");
         }while(sel>x || sel<1);
 
-        eliminarReservas(reservas[vec[sel-1]].id_viaje);
+        eliminarReservas(reservas, numReservas, reservas[vec[sel-1]].id_viaje);
         leer_reservas(&reservas,&numReservas);
         plazas=atoi(viaje[vec_viaje[sel-1]].plazas_libre);
         plazas++;
         sprintf(viaje[vec_viaje[sel-1]].plazas_libre,"%01d",plazas);
-        actualizarFichero();
+        actualizarFichero(viaje, numViajes);
     }
     else
     {
         printf("No tiene viajes reservados\n");
-        system("pause");
+        system("PAUSE");
     }
 }
-void verificar_reserva(int *vec,int reserva,int *n,int num_user){
+
+void verificar_reserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int *vec,int reserva,int *n,int num_user)
+{
     int i,j;
     for(i=0;i<numVehiculos && *n==0;i++)
     {

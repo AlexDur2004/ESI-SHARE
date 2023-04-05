@@ -1,6 +1,6 @@
 #include "reservar.h"
 
-void buscadorRutas(char id_viaje[7])
+void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localidad *localidad, int numLocalidades, Estr_Pasos *pasos, int numPasos, char id_viaje[7])
 {
     FILE *fp;
     char rutas[numRutas][100], partida[numLocalidades], **rutas_guard, **rutas_impr, *token;
@@ -19,7 +19,7 @@ void buscadorRutas(char id_viaje[7])
     fclose(fp);
 
     printf("Ingrese las siglas de la ciudad de partida/salida:\n");
-    pregunta_ruta(partida);
+    pregunta_ruta(localidad, numLocalidades, ruta, numRutas, numRutas2, partida);
 
     rutas_guard=(char **)calloc(num_rutas, sizeof(char*));
     if (rutas_guard==NULL)
@@ -120,13 +120,13 @@ void buscadorRutas(char id_viaje[7])
         scanf("%1i", &opc);
     }while(opc<1||opc>numImpresos);
 
-    imprimirPasos(id_viaje, token, rutas_impr[opc-1]);
+    imprimirPasos(pasos, numPasos, localidad, numLocalidades, id_viaje, token, rutas_impr[opc-1]);
 
     system("PAUSE");
     return;
 }
 
-void imprimirPasos(char *id_viaje, char *token, char *ruta)
+void imprimirPasos(Estr_Pasos *pasos, int numPasos, Estr_Localidad *localidad, int numLocalidades, char *id_viaje, char *token, char *ruta)
 {
     FILE *fp;
     int j=0, i=0, x=0, n=0;

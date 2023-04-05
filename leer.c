@@ -1,14 +1,14 @@
 #include "leer.h"
 
-void leer()
+void leer(Estr_Usuario **usuario, int *numUsuarios, Estr_Vehiculo **vehiculo, int *numVehiculos, Estr_Viaje **viaje, int *numViajes, Estr_Pasos **pasos, int *numPasos, Estr_Reservas **reservas, int *numReservas, Estr_Rutas ***ruta, int *numRutas, int *numRutas2, Estr_Localidad **localidad, int *numLocalidades)
 {
-    leer_usuario(&usuario, &numUsuarios);
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    leer_viaje(&viaje, &numViajes);
-    leer_pasos(&pasos, &numPasos);
-    leer_localidad(&localidad, &numLocalidades);
-    leer_ruta(&ruta, &numRutas, &numRutas2);
-    leer_reservas(&reservas, &numReservas);
+    leer_usuario(usuario, numUsuarios);
+    leer_vehiculo(vehiculo, numVehiculos);
+    leer_viaje(viaje, numViajes);
+    leer_pasos(pasos, numPasos);
+    leer_localidad(localidad, numLocalidades);
+    leer_ruta(ruta, numRutas, numRutas2);
+    leer_reservas(reservas, numReservas);
     system("PAUSE");
 }
 
@@ -19,6 +19,13 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
     *i=0;
 
     fp=fopen("usuarios.txt", "r");
+
+    (*usuario)=malloc((*i)*sizeof(Estr_Usuario));
+    if ((*usuario)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
 
     if(fp==NULL)
     {
@@ -70,6 +77,13 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
 
     fp=fopen("vehiculos.txt", "r");
 
+    (*vehiculo)=malloc((*i)*sizeof(Estr_Vehiculo));
+    if ((*vehiculo)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
+
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -115,6 +129,13 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
     *i=0;
 
     fp=fopen("viajes.txt", "r");
+
+    (*viaje)=malloc((*i)*sizeof(Estr_Viaje));
+    if ((*viaje)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
 
     if(fp==NULL)
     {
@@ -172,6 +193,13 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
 
     fp=fopen("pasos.txt", "r");
 
+    (*pasos)=malloc((*i)*sizeof(Estr_Pasos));
+    if ((*pasos)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
+
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero pasos.txt.\n");
@@ -214,6 +242,13 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
 
     fp=fopen("localidades.txt", "r");
 
+    (*localidad)=malloc((*i)*sizeof(Estr_Localidad));
+    if ((*localidad)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
+
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero localidades.txt.\n");
@@ -255,6 +290,19 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     *i=0, *j=0;
 
     fp=fopen("rutas.txt", "r");
+
+    (*ruta)=malloc((*i)*sizeof(Estr_Rutas));
+    if ((*ruta)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
+    (*ruta)[*i]=malloc((*i)*sizeof(Estr_Rutas));
+    if((*ruta)[*i]==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
 
     if(fp==NULL)
     {
@@ -314,6 +362,13 @@ void leer_reservas(Estr_Reservas **reservas, int *i)
     *i=0;
 
     fp=fopen("reservas.txt", "r");
+
+    (*reservas)=malloc((*i)*sizeof(Estr_Reservas));
+    if ((*reservas)==NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        exit(1);
+    }
 
     if(fp==NULL)
     {

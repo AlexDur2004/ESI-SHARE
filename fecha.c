@@ -1,6 +1,6 @@
 #include "fecha.h"
 
-void actualizarViajes()
+void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas)
 {
     FILE *fp;
     char *token=NULL, vec_fecha[11], vec_h_inic[6], vec_h_fin[6];
@@ -71,7 +71,7 @@ void actualizarViajes()
                     {
                         strcpy(viaje[i].estado, "finalizado");
                         encontrado=1;
-                        eliminarReservas(viaje[i].id_viaje);
+                        eliminarReservas(reservas, numReservas, viaje[i].id_viaje);
                     }
                 }
             }

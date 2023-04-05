@@ -1,6 +1,6 @@
 #include "menus.h"
 
-void menuPrincipal()
+void menuPrincipal(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2)
 {
     int opc;
 
@@ -30,10 +30,10 @@ void menuPrincipal()
         switch(opc)
         {
             case 1:
-                acceso();
+                acceso(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
             case 2:
-                altaUsuario();
+                altaUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 3:
                 exit(1);
@@ -42,7 +42,7 @@ void menuPrincipal()
     }
 }
 
-void menuUsuario(int i)
+void menuUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -66,19 +66,19 @@ void menuUsuario(int i)
         switch(opc)
         {
             case 1:
-                menuPasajero(i);
+                menuPasajero(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 2:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuPrincipal();
+                menuPrincipal(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
         }
     }
 }
 
-void menuPasajero(int i)
+void menuPasajero(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -96,19 +96,19 @@ void menuPasajero(int i)
         switch(opc)
         {
             case 1:
-                menuPasajeroPerfil(i);
+                menuPasajeroPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 2:
-                menuPasajeroViajes(i);
+                menuPasajeroViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuUsuario(i);
+                menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuPasajeroPerfil(int i)
+void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
@@ -132,25 +132,25 @@ void menuPasajeroPerfil(int i)
         switch(opc)
         {
             case 1:
-                modificarPerfilNombre(i);
+                modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(i);
+                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 3:
-                modificarPerfilUsuario(i);
+                modificarPerfilUsuario(usuario, numUsuarios, i);
                 break;
             case 4:
-                modificarPerfilContrasena(i);
+                modificarPerfilContrasena(usuario, numUsuarios, i);
                 break;
             case 5:
-                menuPasajero(i);
+                return;
                 break;
         }
     }
 }
 
-void menuPasajeroViajes(int i)
+void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc, x;
 
@@ -164,19 +164,19 @@ void menuPasajeroViajes(int i)
         switch(opc)
         {
             case 1:
-                mostrar_reservar(i);
+                mostrar_reservar(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 2:
-                cancelarReserva(i);
+                cancelarReserva(usuario, viaje, numViajes, reservas, numReservas, i);
                 break;
             case 3:
-                menuPasajero(i);
+                menuPasajero(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductor(int i)
+void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2,  int i)
 {
     int opc;
 
@@ -190,22 +190,22 @@ void menuConductor(int i)
         switch(opc)
         {
             case 1:
-                menuConductorPerfil(i);
+                menuConductorPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 2:
-                menuConductorVehiculo(i);
+                menuConductorVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuConductorViajes(i);
+                menuConductorViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 4:
-                menuUsuario(i);
+                menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductorPerfil(int i)
+void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
@@ -220,25 +220,25 @@ void menuConductorPerfil(int i)
         switch(opc)
         {
             case 1:
-                modificarPerfilNombre(i);
+                modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(i);
+                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 3:
-                modificarPerfilUsuario(i);
+                modificarPerfilUsuario(usuario, numUsuarios, i);
                 break;
             case 4:
-                modificarPerfilContrasena(i);
+                modificarPerfilContrasena(usuario, numUsuarios, i);
                 break;
             case 5:
-                menuConductor(i);
+                return;
                 break;
         }
     }
 }
 
-void menuConductorVehiculo(int i)
+void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -252,22 +252,22 @@ void menuConductorVehiculo(int i)
         switch(opc)
         {
             case 1:
-                altaVehiculo(i);
+                altaVehiculo(usuario, vehiculo, numVehiculos, i);
                 break;
             case 2:
-                modificarVehiculo(i);
+                modificarVehiculo(usuario, vehiculo, numVehiculos, i);
                 break;
             case 3:
-                eliminarVehiculo(i);
+                eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 4:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductorViajes(int i)
+void menuConductorViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc, x;
 
@@ -282,22 +282,22 @@ void menuConductorViajes(int i)
         switch(opc)
         {
             case 1:
-                altaViaje(i, 0);
+                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i, 0);
                 break;
             case 2:
-                modificarViaje(i);
+                modificarViaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                finalizar_viaje(i);
+                finalizar_viaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 4:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuAdmin(int i)
+void menuAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -311,22 +311,22 @@ void menuAdmin(int i)
         switch(opc)
         {
             case 1:
-                menuAdminUsuarios(i);
+                menuAdminUsuarios(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 2:
-                menuAdminVehiculos(i);
+                menuAdminVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuAdminViajes(i);
+                menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 4:
-                menuPrincipal();
+                menuPrincipal(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
         }
     }
 }
 
-void menuAdminUsuarios(int i)
+void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -340,25 +340,25 @@ void menuAdminUsuarios(int i)
         switch(opc)
         {
             case 1:
-                altaUsuario();
+                altaUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 2:
-                eliminarAdminUsuario();
+                eliminarAdminUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas);
                 break;
             case 3:
-                modificarAdminUsuario();
+                modificarAdminUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 4:
-                listarUsuarios();
+                listarUsuarios(usuario, numUsuarios);
                 break;
             case 5:
-                menuAdmin(i);
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuAdminVehiculos(int i)
+void menuAdminVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -372,28 +372,28 @@ void menuAdminVehiculos(int i)
         switch(opc)
         {
             case 1:
-                altaAdmin(0);
+                altaAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas, 0);
                 break;
             case 2:
-                eliminarAdminVehiculo();
+                eliminarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 3:
-                modificarAdminVehiculo(i);
+                modificarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, i);
                 break;
             case 4:
-                listarVehiculos(i,1);
+                listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, i, 1);
                 break;
             case 5:
-                listarAdminVehiculoViajes();
+                listarAdminVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i);
                 break;
             case 6:
-                menuAdmin(i);
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuAdminViajes(int i)
+void menuAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
@@ -407,22 +407,22 @@ void menuAdminViajes(int i)
         switch(opc)
         {
             case 1:
-                altaAdmin(1);
+                altaAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas, 1);
                 break;
             case 2:
-                eliminarAdminViaje(i, 1);
+                eliminarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i, 1);
                 break;
             case 3:
-                eliminarAdminViaje(i, 0);
+                eliminarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i, 0);
                 break;
             case 4:
-                modificarAdminViaje(i);
+                modificarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 5:
-                listarAdminViajes(i, 0);
+                listarAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i, 0);
                 break;
             case 6:
-                menuAdmin(i);
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }

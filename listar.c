@@ -99,9 +99,10 @@ void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
         encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, id);
         if(num_v!=0)
         {
+            contador_viaje=0;
             for(j=0;j<num_v;j++)
             {
-                encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, n);
+                encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &contador_viaje, n);
             }
 
             for(m=0; m<contador_viaje; m++)
@@ -164,11 +165,14 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
                     encontrado=1;
                 }
             }
-            printf("El vehiculo con matricula %s no existe.\n", mat);
-            system("PAUSE");
+            if(encontrado==0)
+            {
+                printf("El vehiculo con matricula %s no existe.\n", mat);
+                system("PAUSE");
+            }
             system("cls");
         }
-        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, mat, &vec, &x, 0);
+        encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, mat, &vec, &x, 0);
 
         printf("Los viajes realizados por el vehículo con matrícula %s son:\n", mat);
         for(m=0; m<x; m++)

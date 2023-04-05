@@ -104,7 +104,7 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
                 fclose(fp);
                 for(j=0; j<x; j++)
                 {
-                    encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehículo, para eliminarlos.
+                    encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehículo, para eliminarlos.
                 }
                 for(k=0; k<num_v; k++) //Eliminamos todos los viajes, pasos y reservas.
                 {
@@ -140,7 +140,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 
     for(j=0;j<num_v;j++)
     {
-        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &x, 2);
+        encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &x, 2);
     }
 
     if(x>0){
@@ -503,7 +503,7 @@ void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
             }
             if(num==1)
             {
-                finalizar_viaje(i);
+                finalizar_viaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
             }
         }
     }

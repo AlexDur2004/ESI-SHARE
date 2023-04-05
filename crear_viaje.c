@@ -184,7 +184,7 @@ void ida_vuelta(char *idavuelta)
                 break;
             case 2:
                 breakp=1;
-                strcpy(idavuelta,"vuelta");
+                strcpy(idavuelta,"vuelt");
                 break;
         }
     }while(breakp==0);
@@ -192,16 +192,18 @@ void ida_vuelta(char *idavuelta)
 
 void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
 {
-    int*vec=NULL,x=0,*vec_viaje=NULL,max_viaje=0,i=0,j;
+    int *vec=NULL, x=0, *vec_viaje=NULL, max_viaje=0, i=0, j;
 
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, num_user);
+
     if(vec!=NULL)
     {
         for(j=0;j<x;j++)
         {
-            encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat,&vec_viaje,&max_viaje,1);
+            encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &max_viaje, 1);
         }
-        if(vec_viaje!=NULL){
+        if(vec_viaje!=NULL)
+        {
             printf("LISTADO DE SUS VIAJES:\n");
             for(j=0;j<max_viaje;j++)
             {

@@ -148,13 +148,13 @@ void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *re
 
 void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user)
 {
-    int *vec=NULL,*vec_viaje=NULL,x,j=0,i,sel,cont=0, plazas=0;
+    int *vec=NULL, *vec_viaje=NULL, x, j=0, i, sel, cont=0, plazas=0;
 
     encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x);
 
     if(vec!=NULL){
         do{
-            printf("Tus reservas:\n");
+            printf("LISTADO DE SUS VIAJES:\n");
             for(i=0;i<x;i++)
             {
                 printf("(%i)%s-%s-%s-%s-%s\n",i+1,viaje[vec_viaje[i]].id_viaje,viaje[vec_viaje[i]].f_inic,viaje[vec_viaje[i]].h_inic,viaje[vec_viaje[i]].h_fin,viaje[vec_viaje[i]].ida_vuelta,viaje[vec_viaje[i]].precio);

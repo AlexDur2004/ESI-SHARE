@@ -42,6 +42,7 @@ void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localid
         }
         else
         {
+            rewind(fp);
             while(encontrado2==0) //Bucle para encontrar la id más baja, y ocuparla.
             {
                 for(i=0;i<numUsuarios&&encontrado3==0;i++) //Nos desplazamos por la estructura "usuario", hasta que se encuentra la id más baja.

@@ -208,8 +208,6 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
         }
     }
     fclose(fp);
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    system("cls");
 }
 
 void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
@@ -233,27 +231,28 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
         encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i);
         for(j=0;j<x;j++)
         {
-            encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &cont, 1);
+            encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &cont, 2);
         }
-        if(cont==0)
+        if(vec_viaje==NULL)
         {
             printf("No posee viajes registrados.\n");
             system("PAUSE");
         }
-        while(cont!=0&&encontrado==0)
+        else
+        {
+            while(vec_viaje!=NULL&&encontrado==0)
         {
             printf("¿Que viaje quiere modificar?\n");
 
             for(m=0; m<cont; m++)
             {
-                printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s\n", m+1, viaje[vec_viaje[m]].id_viaje,viaje[vec_viaje[m]].id_mat,viaje[vec_viaje[m]].f_inic,viaje[vec_viaje[m]].h_inic,viaje[vec_viaje[m]].h_fin,viaje[vec_viaje[m]].plazas_libre,viaje[vec_viaje[m]].ida_vuelta,viaje[vec_viaje[m]].precio,viaje[vec_viaje[m]].estado);
+                printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n", m+1, viaje[vec_viaje[m]].id_viaje,viaje[vec_viaje[m]].id_mat,viaje[vec_viaje[m]].f_inic,viaje[vec_viaje[m]].h_inic,viaje[vec_viaje[m]].h_fin,viaje[vec_viaje[m]].plazas_libre,viaje[vec_viaje[m]].ida_vuelta,viaje[vec_viaje[m]].precio,viaje[vec_viaje[m]].estado);
             }
             m++;
             printf("(%i)Salir.\n", m);
             printf("Ingrese el número correspondiente al viaje que desea modificar: ");
             fflush(stdin);
             scanf("%d", &opc);
-            system("cls");
             if(opc>=1&&opc<=cont)
             {
                 encontrado=1;
@@ -275,8 +274,9 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
             printf("(5)TODO.\n");
             printf("(6)Salir.\n");
             scanf("%d", &opc2);
-                switch(opc2)
-                {
+            system("cls");
+            switch(opc2)
+            {
                     case 1:
                         do
                         {
@@ -406,10 +406,9 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                 remove("viajes.txt");
                 rename("viajes_Temp.txt","viajes.txt");
             }
+        }
     }
     fclose(fp);
-    leer_viaje(&viaje, &numViajes);
-    system("cls");
 }
 
 void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_user)
@@ -421,7 +420,7 @@ void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicu
 
     for(j=0;j<x;j++)
     {
-        encontrarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &num_v, 0);
+        encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &num_v, 0);
     }
     printf("LISTADO DE VIAJES:\n");
     for(i=0;i<num_v;i++){
@@ -441,6 +440,9 @@ void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
     FILE *fp;
     int n=0;
     char nomb[21];
+
+    leer_usuario(&usuario, &numUsuarios);
+    system("cls");
 
     fp=fopen("usuarios.txt","r+");
 
@@ -464,8 +466,6 @@ void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
         system("PAUSE");
     }
     fclose(fp);
-    leer_usuario(&usuario, &numUsuarios);
-    system("cls");
 
 return;
 }
@@ -475,6 +475,9 @@ void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Local
     FILE *fp;
     int n=0;
     char loc[21];
+
+    leer_usuario(&usuario, &numUsuarios);
+    system("cls");
 
     fp=fopen("usuarios.txt","r+");
 
@@ -499,8 +502,6 @@ void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Local
         system("PAUSE");
     }
     fclose(fp);
-    leer_usuario(&usuario, &numUsuarios);
-    system("cls");
 
 return;
 }
@@ -510,6 +511,9 @@ void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
     FILE *fp;
     int n=0, k=0, encontrado=0;
     char usua[6];
+
+    leer_usuario(&usuario, &numUsuarios);
+    system("cls");
 
     fp=fopen("usuarios.txt","r+");
 
@@ -541,7 +545,6 @@ void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
 
             printf("Su nombre de usuario se ha actualizado correctamente.\n");
             system("PAUSE");
-            leer_usuario(&usuario, &numUsuarios);
         }
         else
         {
@@ -550,7 +553,6 @@ void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
         }
     }
     fclose(fp);
-    system("cls");
 }
 
 void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
@@ -559,13 +561,17 @@ void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
     int j=0, n=0, encontrado=3, x=0, h=0;
     char contra[9], contra2[9], c, c2;
 
+    leer_usuario(&usuario, &numUsuarios);
+    system("cls");
+
     fp=fopen("usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
         return;
     }
-    else {
+    else
+    {
         while(encontrado>0&&x==0)
         {
             printf("Introduzca su antigua contrasena (Máximo de 8 caracteres):\n");
@@ -638,8 +644,6 @@ void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
         }
     }
     fclose(fp);
-    leer_usuario(&usuario, &numUsuarios);
-    system("cls");
 
 return;
 }
@@ -671,6 +675,7 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
                 printf("(5)TODO.\n");
                 printf("(6)Salir.\n");
                 scanf("%d", &opc);
+                system("cls");
                 switch(opc)
                     {
                         case 1:

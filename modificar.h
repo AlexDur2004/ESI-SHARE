@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "leer.h"
-#include "preguntar.h"
-#include "encontrar.h"
 
 void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i);
 void modificarPerfil(int);

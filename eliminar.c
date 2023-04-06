@@ -11,6 +11,7 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
     int x=0, h=0, m=0, opc=0, opc2=0, *vec=NULL;
 
     leer_vehiculo(&vehiculo, &numVehiculos);
+    system("cls");
 
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehículos del usuario, y los colocamos en un vector de enteros,
     //con las posiciones en la estructura "vehiculo" de sus vehículos.
@@ -72,7 +73,11 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
     FILE *fp, *temp;
     int n=0, j=0, k=0, num_v=0, *vec_viaje=NULL, counter, encontrado=0;
 
-    fp=fopen("vehiculos.txt","r+");
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje, &numViajes);
+    system("cls");
+
+    fp=fopen("DATA/vehiculos.txt","r+");
 
     if(fp==NULL)
     {
@@ -85,7 +90,7 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
         {
             if(strcmp(vehiculo[n].id_mat, mat)==0) //Si coincide la matrícula de la posición actual en la estructura con la matrícula deseada.
             {
-                temp=fopen("vehiculos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los vehículos que hay, menos el vehículo que se quiere eliminar.
+                temp=fopen("DATA/vehiculos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los vehículos que hay, menos el vehículo que se quiere eliminar.
                 if(temp==NULL)
                 {
                 printf("No se ha podido abrir el fichero vehiculos_Temp.txt.\n");
@@ -115,8 +120,8 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
                 encontrado=1;
             }
         }
-        remove("vehiculos.txt"); //Borramos el fichero original.
-        rename("vehiculos_Temp.txt","vehiculos.txt"); //Cambiamos de nombre el fichero temporal por el original.
+        remove("DATA/vehiculos.txt"); //Borramos el fichero original.
+        rename("DATA/vehiculos_Temp.txt","DATA/vehiculos.txt"); //Cambiamos de nombre el fichero temporal por el original.
         leer_vehiculo(&vehiculo, &numVehiculos); //Volvemos a leer el fichero "vehiculos.txt", para actualizar la estructura, y el contador "numVehiculos".
     }
     fclose(fp);
@@ -135,6 +140,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 
     leer_vehiculo(&vehiculo, &numVehiculos);
     leer_viaje(&viaje, &numViajes);
+    system("cls");
 
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, i);  //Busca los vehículos que tiene dicho usuario, para luego encontrar los viajes que tiene.
 
@@ -205,7 +211,10 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
     FILE *fp, *temp;
     int n=0, counter, encontrado=0;
 
-    fp=fopen("viajes.txt","r+");
+    leer_viaje(&viaje, &numViajes);
+    system("cls");
+
+    fp=fopen("DATA/viajes.txt","r+");
 
     if(fp==NULL)
     {
@@ -218,7 +227,7 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
         {
             if(strcmp(viaje[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
             {
-                temp=fopen("viajes_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los viajes que hay, menos el viaje que se quiere eliminar.
+                temp=fopen("DATA/viajes_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los viajes que hay, menos el viaje que se quiere eliminar.
                 if(temp==NULL)
                 {
                 printf("No se ha podido abrir el fichero viajes_Temp.txt.\n");
@@ -240,8 +249,8 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
                 encontrado=1;
             }
         }
-        remove("viajes.txt"); //Borramos el fichero original.
-        rename("viajes_Temp.txt","viajes.txt"); //Cambiamos de nombre el fichero temporal por el original.
+        remove("DATA/viajes.txt"); //Borramos el fichero original.
+        rename("DATA/viajes_Temp.txt","DATA/viajes.txt"); //Cambiamos de nombre el fichero temporal por el original.
         leer_viaje(&viaje, &numViajes); //Volvemos a leer el fichero "viajes.txt", para actualizar la estructura, y el contador "numViajes".
     }
     fclose(fp);
@@ -257,7 +266,10 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int
     FILE *fp, *temp;
     int n=0, counter;
 
-    fp=fopen("pasos.txt","r+");
+    leer_pasos(&pasos, &numPasos);
+        system("cls");
+
+    fp=fopen("DATA/pasos.txt","r+");
 
     if(fp==NULL)
     {
@@ -270,7 +282,7 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int
         {
             if(strcmp(pasos[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
             {
-                temp=fopen("pasos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los pasos que hay, menos los pasos que se quieren eliminar.
+                temp=fopen("DATA/pasos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los pasos que hay, menos los pasos que se quieren eliminar.
                 if(temp==NULL)
                 {
                 printf("No se ha podido abrir el fichero pasos_Temp.txt.\n");
@@ -290,8 +302,8 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int
                 fclose(fp);
             }
         }
-        remove("pasos.txt"); //Borramos el fichero original.
-        rename("pasos_Temp.txt","pasos.txt"); //Cambiamos de nombre el fichero temporal por el original.
+        remove("DATA/pasos.txt"); //Borramos el fichero original.
+        rename("DATA/pasos_Temp.txt","DATA/pasos.txt"); //Cambiamos de nombre el fichero temporal por el original.
         leer_pasos(&pasos, &numPasos); //Volvemos a leer el fichero "pasos.txt", para actualizar la estructura, y el contador "numPasos".
         system("cls");
     }
@@ -308,7 +320,10 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
     FILE *fp, *temp;
     int n=0, counter;
 
-    fp=fopen("reservas.txt","r+");
+    leer_reservas(&reservas, &numReservas);
+    system("cls");
+
+    fp=fopen("DATA/reservas.txt","r+");
 
     if(fp==NULL)
     {
@@ -321,7 +336,7 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
         {
             if(strcmp(reservas[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
             {
-                temp=fopen("reservas_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los reservas que hay, menos las reservas que se quieren eliminar.
+                temp=fopen("DATA/reservas_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los reservas que hay, menos las reservas que se quieren eliminar.
                 if(temp==NULL)
                 {
                 printf("No se ha podido abrir el fichero reservas_Temp.txt.\n");
@@ -341,8 +356,8 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
                 fclose(fp);
             }
         }
-        remove("reservas.txt"); //Borramos el fichero original.
-        rename("reservas_Temp.txt","reservas.txt"); //Cambiamos de nombre el fichero temporal por el original.
+        remove("DATA/reservas.txt"); //Borramos el fichero original.
+        rename("DATA/reservas_Temp.txt","DATA/reservas.txt"); //Cambiamos de nombre el fichero temporal por el original.
         leer_reservas(&reservas, &numReservas); //Volvemos a leer el fichero "reservas.txt", para actualizar la estructura, y el contador "numReservas".
         system("cls");
     }
@@ -362,7 +377,7 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
     int n=0, o=0, j=0, opc2=0, c=0, *vec=NULL, encontrado=0, encontrado2=0, id2, counter;
     char vec_id[5];
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("DATA/usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero usuarios.txt.\n");
@@ -396,7 +411,7 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                         if(strcmp(usuario[n].id_usuario, usuario[j].id_usuario)==0) //Si la id del usuario de la posición actual
                             //en la estructura coincide con la id deseada.
                         {
-                            temp=fopen("usuarios_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los usuarios que hay,
+                            temp=fopen("DATA/usuarios_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los usuarios que hay,
                             //menos el usuario que se quiere eliminar.
                             if(temp==NULL) {
                                 printf("No se ha podido abrir el fichero usuarios_Temp.txt.\n");
@@ -421,8 +436,8 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                             encontrado2=1;
                         }
                     }
-                    remove("usuarios.txt"); //Borramos el fichero original.
-                    rename("usuarios_Temp.txt","usuarios.txt"); //Cambiamos de nombre el fichero temporal por el original.
+                    remove("DATA/usuarios.txt"); //Borramos el fichero original.
+                    rename("DATA/usuarios_Temp.txt","DATA/usuarios.txt"); //Cambiamos de nombre el fichero temporal por el original.
                     leer_usuario(&usuario, &numUsuarios); //Volvemos a leer el fichero "usuarios.txt", para actualizar la estructura, y el contador "numUsuarios".
                     system("cls");
                     printf("Eliminado con exito\n");

@@ -12,8 +12,12 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
     char usua[6], contra[9], c;
 
     leer_usuario(&usuario, &numUsuarios);
+    system("cls");
 
-    printf("Introduzca sus credenciales de acceso:\nUsuario:\n");
+    printf("Introduzca sus credenciales de acceso:\n");
+    color(0, 2);
+    printf("Usuario:\n");
+    color(0, 15);
     pregunta(usua, 6);
 
     for(k=0; k<numUsuarios&&encontrado2==0; k++)
@@ -28,16 +32,18 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
     {
         while(encontrado3>0&&encontrado==0) //Sistema de 3 intentos para introducir la contraseña correctamente.
         {
+            color(0, 3);
             printf("Contrasena:\n");
+            color(0, 15);
             fflush(stdin);
-            while ((c=getch())!='\r'&&j<8)
+            while ((c=getch())!='\r'&&j<8) //Lee el carácter, hasta 8.
             {
-                if (c=='\b'&&j>0)
+                if (c=='\b'&&j>0) //Si se borra algo, se borra un *, y se resta una posición del vector.
                 {
                     j--;
                     printf("\b \b");
                 }
-                else if (c != '\b')
+                else if (c != '\b') //Si se escribe algo, se imprime *, y se introduce en vector contra.
                 {
                     contra[j++] = c;
                     printf("*");
@@ -62,26 +68,35 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
                             menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                         }
                     }
-                    else
-                    {
-                        printf("\nLa contrasena introducida es incorrecta.\n"); //Si la contraseña no es correcta, se imprime esta frase.
-                        encontrado3--; //Se resta 1 intento, hasta llegar a 0.
-                        if(encontrado3==0)
-                        {
-                            printf("¡Intentos agotados! :(\n");
-                            system("PAUSE");
-                        }
-                        else
-                        {
-                            *contra=NULL;
-                            j=0;
-                            printf("Queda(n) %i intentos.\n", encontrado3); //Imprime un contador de intentos, para saber cuántos quedan.
-                            system("PAUSE");
-                            system("cls");
-                            printf("Introduzca sus credenciales de acceso:\nUsuario:\n");
-                            printf("%s\n", usua);
-                        }
-                    }
+                }
+            }
+
+            if(encontrado==0)
+            {
+                color(0, 4);
+                printf("\nLa contrasena introducida es incorrecta.\n"); //Si la contraseña no es correcta, se imprime esta frase.
+                encontrado3--; //Se resta 1 intento, hasta llegar a 0.
+                if(encontrado3==0)
+                {
+                    color(15, 0);
+                    printf("¡Intentos agotados! :(\n");
+                    color(0, 15);
+                    system("PAUSE");
+                }
+                else if(encontrado3>0)
+                {
+                    *contra=NULL;
+                    j=0;
+                    color(15, 0);
+                    printf("Queda(n) %i intentos.\n", encontrado3); //Imprime un contador de intentos, para saber cuántos quedan.
+                    color(0, 15);
+                    system("PAUSE");
+                    system("cls");
+                    printf("Introduzca sus credenciales de acceso:\n");
+                    color(0, 2);
+                    printf("Usuario:\n");
+                    color(0, 15);
+                    printf("%s\n", usua);
                 }
             }
         }

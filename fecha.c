@@ -6,7 +6,7 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
     char *token=NULL, vec_fecha[11], vec_h_inic[6], vec_h_fin[6];
     int n=0, i=0, min_inic=0, hora_inic=0, min_fin=0, hora_fin=0, dia=0, mes=0, ano=0, encontrado=0;
 
-    fp=fopen("viajes.txt","r+");
+    fp=fopen("DATA/viajes.txt","r+");
 
     if(fp==NULL)
     {

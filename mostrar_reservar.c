@@ -42,7 +42,36 @@ void mostrar_reservar(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
                 printf("Viajes disponibles para el %s\n",fecha);
                 for(i=0;i<x;i++)
                 {
-                   printf("(%i)%s-%s-%s-%s-%s-%s-%s\n",i+1,viaje[vec[i]].id_viaje,viaje[vec[i]].h_inic,viaje[vec[i]].h_fin,viaje[vec[i]].ida_vuelta,viaje[vec[i]].estado,viaje[vec[i]].plazas_libre,viaje[vec[i]].precio);
+                    color(15, 0);
+                    printf("VIAJE %i:\n",i+1);
+                    color(0, 3);
+                    printf("ID del viaje: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].id_viaje);
+                    color(0, 3);
+                    printf("Hora de partida: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].h_inic);
+                    color(0, 3);
+                    printf("Hora de llegada: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].h_fin);
+                    color(0, 3);
+                    printf("Tipo: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].ida_vuelta);
+                    color(0, 3);
+                    printf("Estado: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].estado);
+                    color(0, 3);
+                    printf("Nº de plazas: ");
+                    color(0, 15);
+                    printf("%s\n", viaje[vec[i]].plazas_libre);
+                    color(0, 3);
+                    printf("Precio: ");
+                    color(0, 15);
+                    printf("%s euros\n\n", viaje[vec[i]].precio);
                 }
                 printf("Elija un viaje:\n");
                 scanf("%i",&seleccion);
@@ -106,7 +135,7 @@ void actualizarFichero(Estr_Viaje *viaje, int numViajes)
     int i;
 
     FILE *fp;
-    fp=fopen("viajes_replace.txt","w+");
+    fp=fopen("DATA/viajes_replace.txt","w+");
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero");
@@ -122,8 +151,8 @@ void actualizarFichero(Estr_Viaje *viaje, int numViajes)
 
     fclose(fp);
 
-    remove("viajes.txt");
-    rename("viajes_replace.txt","viajes.txt");
+    remove("DATA/viajes.txt");
+    rename("DATA/viajes_replace.txt","DATA/viajes.txt");
     leer_viaje(&viaje,&numViajes);
 }
 
@@ -132,7 +161,7 @@ void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *re
         // crear nuevo fichero que guarde para guardar la reserva
     FILE *fp;
 
-    fp=fopen("reservas.txt","a+");
+    fp=fopen("DATA/reservas.txt","a+");
     if(fp==NULL)
     {
         printf("No se ha podido abrir el fichero reservas.txt.\n");
@@ -157,10 +186,35 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
             printf("LISTADO DE SUS VIAJES:\n");
             for(i=0;i<x;i++)
             {
-                printf("(%i)%s-%s-%s-%s-%s\n",i+1,viaje[vec_viaje[i]].id_viaje,viaje[vec_viaje[i]].f_inic,viaje[vec_viaje[i]].h_inic,viaje[vec_viaje[i]].h_fin,viaje[vec_viaje[i]].ida_vuelta,viaje[vec_viaje[i]].precio);
+                color(15, 0);
+                printf("VIAJE %i:\n",i+1);
+                color(0, 3);
+                printf("ID del viaje: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].id_viaje);
+                color(0, 3);
+                printf("Fecha de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].f_inic);
+                color(0, 3);
+                printf("Hora de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].h_inic);
+                color(0, 3);
+                printf("Hora de llegada: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].h_fin);
+                color(0, 3);
+                printf("Tipo: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].ida_vuelta);
+                color(0, 3);
+                printf("Precio: ");
+                color(0, 15);
+                printf("%s euros\n\n", viaje[vec[i]].precio);
             }
 
-            printf("Seleccione el viaje q desea cancelar:\n");
+            printf("Seleccione el viaje que desea cancelar:\n");
             scanf("%i",&sel);
             system("cls");
         }while(sel>x || sel<1);

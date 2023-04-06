@@ -5,6 +5,7 @@ void listarUsuarios(Estr_Usuario *usuario, int numUsuarios)
     int contador_usuario=0, counter;
 
     leer_usuario(&usuario, &numUsuarios);
+    system("cls");
 
     system("cls");
     printf("LISTADO DE USUARIOS:\n");
@@ -48,8 +49,8 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
     int contador_veh_usuario, counter, counter2, num=0;
 
     leer_vehiculo(&vehiculo, &numVehiculos);
-
     system("cls");
+
     printf("LISTADO DE VEHICULOS:\n");
     for(counter=0;counter<numUsuarios;counter++){
         contador_veh_usuario=0;
@@ -88,8 +89,8 @@ void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
     int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter, num=0;
 
     leer_viaje(&viaje, &numViajes);
-
     system("cls");
+
     printf("LISTADO DE VIAJES:\n");
     for(counter=0;counter<numUsuarios;counter++){
         color(0,14);
@@ -144,7 +145,7 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
     int x=0, m=0, z=0, encontrado=0, *vec=NULL;
     char mat[8];
 
-    fp=fopen("viajes.txt","r+");
+    fp=fopen("DATA/viajes.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero viajes.txt.\n");

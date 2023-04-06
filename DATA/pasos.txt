@@ -1,0 +1,12 @@
+000080-Puerto Real
+000080-Jerez de la Frontera
+000013-Puerto Real
+000082-Cadiz
+000008-San Fernando
+000008-Puerto Real
+000032-San Fernando
+000008-Jerez de la Frontera
+000008-San Fernando
+000008-Puerto Real
+000032-San Fernando
+000032-Jerez de la Frontera

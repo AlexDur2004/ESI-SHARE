@@ -6,7 +6,7 @@ void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localida
     char rutas[numRutas][100], partida[numLocalidades], **rutas_guard, **rutas_impr, *token;
     int i=0, j=0, num_rutas=0, encontrado=0, encontrado2=0, numGuardados=0, numImpresos=0, repetido=0, opc=0;
 
-    fp=fopen("rutas.txt", "r");
+    fp=fopen("DATA/rutas.txt", "r");
     if(fp==NULL)
     {
         printf("No se pudo abrir el archivo rutas.txt.\n");
@@ -141,7 +141,7 @@ void imprimirPasos(Estr_Pasos *pasos, int numPasos, Estr_Localidad *localidad, i
         ciudad=strtok(NULL, "-");
     }
 
-    fp=fopen("pasos.txt","a+");
+    fp=fopen("DATA/pasos.txt","a+");
 
     if(fp==NULL)
     {

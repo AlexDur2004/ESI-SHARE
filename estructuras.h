@@ -1,10 +1,6 @@
 #ifndef ESTRUCTURAS_H_INCLUDED
 #define ESTRUCTURAS_H_INCLUDED
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 typedef struct{
     char id_usuario[5];
     char nomb_usuario[21];

@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "leer.h"
-#include "preguntar.h"
 
 //Prototipo: void altaUsuario();
 //Precondición: Tener la estructura "usuario" inicializada, con su contador "numUsuarios".

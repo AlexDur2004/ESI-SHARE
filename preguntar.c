@@ -65,7 +65,10 @@ void pregunta_localidad(Estr_Localidad *localidad, int numLocalidades, char *loc
     {
         for (j=i; j<maxLoc; j=j+k)
         {
-            printf("%s-%-20s\t", localidad[j].siglas, localidad[j].localidad);
+            color(0, 3);
+            printf("%s", localidad[j].siglas);
+            color(0, 15);
+            printf("-%-20s\t", localidad[j].localidad);
         }
         printf("\n");
     }
@@ -109,7 +112,10 @@ void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **r
     {
         for (j=i; j<numLocalidades; j=j+k)
         {
-            printf("%s-%-20s\t", localidad[j].siglas, localidad[j].localidad);
+            color(0, 3);
+            printf("%s", localidad[j].siglas);
+            color(0, 15);
+            printf("-%-20s\t", localidad[j].localidad);
         }
         printf("\n");
     }

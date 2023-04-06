@@ -18,7 +18,7 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
     char vec[80], *token;
     *i=0;
 
-    fp=fopen("usuarios.txt", "r");
+    fp=fopen("DATA/usuarios.txt", "r");
 
     (*usuario)=malloc((*i)*sizeof(Estr_Usuario));
     if ((*usuario)==NULL)
@@ -75,7 +75,7 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
     char vec[70], *token;
     *i=0;
 
-    fp=fopen("vehiculos.txt", "r");
+    fp=fopen("DATA/vehiculos.txt", "r");
 
     (*vehiculo)=malloc((*i)*sizeof(Estr_Vehiculo));
     if ((*vehiculo)==NULL)
@@ -128,7 +128,7 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
     char vec[65], *token;
     *i=0;
 
-    fp=fopen("viajes.txt", "r");
+    fp=fopen("DATA/viajes.txt", "r");
 
     (*viaje)=malloc((*i)*sizeof(Estr_Viaje));
     if ((*viaje)==NULL)
@@ -191,7 +191,7 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
     char vec[35], *token;
     *i=0;
 
-    fp=fopen("pasos.txt", "r");
+    fp=fopen("DATA/pasos.txt", "r");
 
     (*pasos)=malloc((*i)*sizeof(Estr_Pasos));
     if ((*pasos)==NULL)
@@ -240,7 +240,7 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     char vec[30], *token;
     *i=0;
 
-    fp=fopen("localidades.txt", "r");
+    fp=fopen("DATA/localidades.txt", "r");
 
     (*localidad)=malloc((*i)*sizeof(Estr_Localidad));
     if ((*localidad)==NULL)
@@ -289,7 +289,7 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     char vec[60], *token;
     *i=0, *j=0;
 
-    fp=fopen("rutas.txt", "r");
+    fp=fopen("DATA/rutas.txt", "r");
 
     (*ruta)=malloc((*i)*sizeof(Estr_Rutas));
     if ((*ruta)==NULL)
@@ -361,7 +361,7 @@ void leer_reservas(Estr_Reservas **reservas, int *i)
     char vec[30], *token;
     *i=0;
 
-    fp=fopen("reservas.txt", "r");
+    fp=fopen("DATA/reservas.txt", "r");
 
     (*reservas)=malloc((*i)*sizeof(Estr_Reservas));
     if ((*reservas)==NULL)

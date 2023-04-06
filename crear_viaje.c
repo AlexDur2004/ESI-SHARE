@@ -6,7 +6,10 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
     int n=1, i, idmax=0, num_viaje, breakp=0, enc=0, precio=0, rp;
     char viaje_id[7], id_vehiculo[8], fecha[11], hora_inic[6], hora_fin[6], plazas[2], idavuelta[7], coste[5], estado[8];
 
-    fv=fopen("viajes.txt","a+");
+    leer_viaje(&viaje,&numViajes);
+    system("cls");
+
+    fv=fopen("DATA/viajes.txt","a+");
     do{
         rp=0;
         elegir_coche(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario, id_vehiculo, num);
@@ -26,8 +29,6 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
         sprintf(coste, "%i", precio);
 
         strcpy(estado, "abierto");
-
-        leer_viaje(&viaje,&numViajes);
 
         if(fv==NULL)
         {
@@ -137,11 +138,22 @@ void elegir_coche(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
     {
         system("cls");
         printf("Introduzca sus datos para completar el registro del viaje:\n");
-        printf("Elija el vehiculo que desea usar:\n");
+        printf("Elija el vehiculo que desea usar:\n\n");
 
         for(i=0;i<coches;i++)
         {
-            printf("%s-%s-%s\n", vehiculo[vec_vehiculo[i]].id_mat,vehiculo[vec_vehiculo[i]].num_plazas,vehiculo[vec_vehiculo[i]].desc_veh);
+            color(0, 3);
+            printf("Matricula: ");
+            color(0, 15);
+            printf("%s\n", vehiculo[vec_vehiculo[i]].id_mat);
+            color(0, 2);
+            printf("Nº de plazas: ");
+            color(0, 15);
+            printf("%s\n",vehiculo[vec_vehiculo[i]].num_plazas);
+            color(0, 4);
+            printf("Descripcion: ");
+            color(0, 15);
+            printf("%s\n\n",vehiculo[vec_vehiculo[i]].desc_veh);
         }
 
         printf("Introduzca la matrícula del vehiculo que desea usar para el viaje:\n");
@@ -250,7 +262,7 @@ void actualizar(Estr_Viaje *viaje, int numViajes){
     int counter=0;
 
     FILE *fp;
-    fp=fopen("viajes_replace.txt","w+");
+    fp=fopen("DATA/viajes_replace.txt","w+");
 
     if(fp==NULL)
     {
@@ -267,8 +279,8 @@ void actualizar(Estr_Viaje *viaje, int numViajes){
 
     fclose(fp);
 
-    remove("viajes.txt");
-    rename("viajes_replace.txt","viajes.txt");
+    remove("DATA/viajes.txt");
+    rename("DATA/viajes_replace.txt","DATA/viajes.txt");
 }
 
 void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *id, char *mat, char *fecha, char *hor_i,char *hor_f,int *rp)

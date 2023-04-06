@@ -8,13 +8,13 @@ void menuPrincipal(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
     {
         system("cls");
         color(0, 6);
-        printf("   ______   ______   _____            ______   _    _   _____   ______   ______     \n");
-        printf("  |  ____| |  ____| |_   _|          |  ____| | |  | | |  _  | |  __  | |  ____|    \n");
-        printf("  | |__    | (____    | |    ______  | (____  | |__| | | |_| | | |__) | | |__       \n");
-        printf("  |  __|   |____  |   | |   |______| |____  | |  __  | |  _  | |  _ __| |  __|      \n");
-        printf("  | |____   ____) |  _| |_            ____) | | |  | | | | | | | ||_|_  | |____     \n");
-        printf("  |______| |______| |_____|          |______| |_|  |_| |_| |_| |_|  |_| |______|    \n");
-        printf("                                                                                    \n");
+        printf("   ______   ______   _____            ______   _    _   _____   ______   ______ \n");
+        printf("  |  ____| |  ____| |_   _|          |  ____| | |  | | |  _  | |  __  | |  ____|\n");
+        printf("  | |__    | (____    | |    ______  | (____  | |__| | | |_| | | |__) | | |__   \n");
+        printf("  |  __|   |____  |   | |   |______| |____  | |  __  | |  _  | |  _ __| |  __|  \n");
+        printf("  | |____   ____) |  _| |_            ____) | | |  | | | | | | | ||_|_  | |____ \n");
+        printf("  |______| |______| |_____|          |______| |_|  |_| |_| |_| |_|  |_| |______|\n");
+        printf("                                                                                \n");
         color(0,15);
         printf("¿Que le gustaria hacer?\n");
         color(0,4);
@@ -49,8 +49,8 @@ void menuUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo
     while(opc!=3)
     {
         system("cls");
-        color(15, 1);
-        printf("Hola %s,\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s\n", usuario[i].nomb_usuario);
         color(0,15);
         printf("¿Que quiere ser?\n");
         color(0, 4);
@@ -85,11 +85,17 @@ void menuPasajero(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
     while(opc!=3)
     {
         system("cls");
+        color(15, 0);
         printf("Hola %s,\n", usuario[i].nomb_usuario);
+        color(0,15);
         printf("¿Que quiere ver?\n");
+        color(0, 4);
         printf("(1)Perfil.\n");
+        color(0, 3);
         printf("(2)Viajes.\n");
+        color(0,14);
         printf("(3)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -115,17 +121,39 @@ void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\n", usuario[i].id_usuario);
-        printf("Nombre completo: %s.\n", usuario[i].nomb_usuario);
-        printf("Localidad de residencia: %s.\n", usuario[i].localidad);
-        printf("Tipo de perfil: %s.\n", usuario[i].perfil);
-        printf("Usuario: %s.\n", usuario[i].usuario);
+        color(0, 3);
+        printf("ID de usuario: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].id_usuario);
+        color(0, 3);
+        printf("Nombre completo: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].nomb_usuario);
+        color(0, 3);
+        printf("Localidad de residencia: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].localidad);
+        color(0, 3);
+        printf("Tipo de perfil: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].perfil);
+        color(0, 3);
+        printf("Usuario: ");
+        color(0, 15);
+        printf("%s\n\n", usuario[i].usuario);
+        color(0,15);
         printf("¿Que quiere hacer?\n");
+        color(0, 2);
         printf("(1)Modificar nombre completo.\n");
+        color(0, 4);
         printf("(2)Modificar localidad de residencia.\n");
+        color(0, 11);
         printf("(3)Modificar usuario.\n");
+        color(0, 6);
         printf("(4)Modificar contrasena.\n");
-        printf("(5)Volver\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -157,7 +185,15 @@ void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
     while(opc!=3)
     {
         system("cls");
-        printf("¿Que quiere hacer?\n(1)Reservar viaje.\n(2)Cancelar viaje.\n(3)Volver\n");
+        color(0,15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Reservar viaje.\n");
+        color(0, 3);
+        printf("(2)Cancelar viaje.\n");
+        color(0,14);
+        printf("(3)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -183,7 +219,19 @@ void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
     while(opc!=4)
     {
         system("cls");
-        printf("Hola %s,\n¿Que quiere ver?\n(1)Perfil.\n(2)Vehiculos.\n(3)Viajes.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere ver?\n");
+        color(0, 4);
+        printf("(1)Perfil.\n");
+        color(0, 3);
+        printf("(2)Vehiculos.\n");
+        color(0, 2);
+        printf("(3)Viajes.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -212,8 +260,39 @@ void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad 
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
-        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
+        color(0, 3);
+        printf("ID de usuario: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].id_usuario);
+        color(0, 3);
+        printf("Nombre completo: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].nomb_usuario);
+        color(0, 3);
+        printf("Localidad de residencia: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].localidad);
+        color(0, 3);
+        printf("Tipo de perfil: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].perfil);
+        color(0, 3);
+        printf("Usuario: ");
+        color(0, 15);
+        printf("%s\n\n", usuario[i].usuario);
+        color(0,15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 2);
+        printf("(1)Modificar nombre completo.\n");
+        color(0, 4);
+        printf("(2)Modificar localidad de residencia.\n");
+        color(0, 11);
+        printf("(3)Modificar usuario.\n");
+        color(0, 6);
+        printf("(4)Modificar contrasena.\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -245,7 +324,17 @@ void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo
     while(opc!=4)
     {
         system("cls");
-        printf("¿Que quiere hacer?\n(1)Alta de vehículo.\n(2)Modificar vehículo.\n(3)Eliminar vehículo.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Alta de vehiculo.\n");
+        color(0, 3);
+        printf("(2)Modificar vehiculo.\n");
+        color(0, 2);
+        printf("(3)Eliminar vehículo.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -274,15 +363,24 @@ void menuConductorViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *
     while(opc!=3)
     {
         system("cls");
-
-        printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular/Finalizar viaje.\n(4)Salir.\n");
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Crear viaje.\n");
+        color(0, 3);
+        printf("(2)Modificar viaje.\n");
+        color(0, 2);
+        printf("(3)Anular/Finalizar viaje.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i, 0);
+                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i, 0);
                 break;
             case 2:
                 modificarViaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
@@ -304,7 +402,19 @@ void menuAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
     while(opc!=4)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere ver?\n(1)Usuarios.\n(2)Vehiculos.\n(3)Viajes.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere ver?\n");
+        color(0, 4);
+        printf("(1)Usuarios.\n");
+        color(0, 3);
+        printf("(2)Vehiculos.\n");
+        color(0, 2);
+        printf("(3)Viajes.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
@@ -333,7 +443,21 @@ void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
     while(opc!=5)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de usuario.\n(2)Baja de usuario.\n(3)Modificar usuario.\n(4)Listar usuarios.\n(5)Salir.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 2);
+        printf("(1)Alta de usuario.\n");
+        color(0, 4);
+        printf("(2)Baja de usuario.\n");
+        color(0, 11);
+        printf("(3)Modificar usuario.\n");
+        color(0, 6);
+        printf("(4)Listar usuarios.\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");

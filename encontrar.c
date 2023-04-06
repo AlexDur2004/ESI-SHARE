@@ -8,7 +8,7 @@
 
 void encontrarVehiculos(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int **vec, int *x, int i)
 {
-    int j;
+    int j, h;
     *x=0;
 
     for(j=0; j<numVehiculos; j++) //Nos desplazamos por toda la estructura "vehiculo".
@@ -139,21 +139,6 @@ void encontrarReservas(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, 
 {
     int i,j;
     (*x)=0;
-
-    (*vec)=malloc((*x)*sizeof(int));
-    if ((*vec)==NULL)
-    {
-        printf("Error al asignar memoria.\n");
-        exit(1);
-    }
-
-    (*vec_viaje)=malloc((*x)*sizeof(int));
-    if ((*vec_viaje)==NULL)
-    {
-        printf("Error al asignar memoria.\n");
-        exit(1);
-    }
-
 
     for(i=0;i<numReservas;i++)
     {

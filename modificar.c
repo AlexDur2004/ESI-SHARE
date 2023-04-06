@@ -9,7 +9,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
     leer_vehiculo(&vehiculo, &numVehiculos);
     system("cls");
 
-    fp=fopen("vehiculos.txt","r+");
+    fp=fopen("DATA/vehiculos.txt","r+");
 
     if(fp==NULL)
     {
@@ -187,7 +187,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
             }while((opc2>1&&opc2<5)&&encontrado==0);
             if(opc2!=5)
             {
-                temp=fopen("vehiculos_Temp.txt","w+");
+                temp=fopen("DATA/vehiculos_Temp.txt","w+");
                 if(temp==NULL) {
                     printf("No se ha podido abrir el fichero vehiculos_Temp.txt.\n");
                 }
@@ -201,8 +201,8 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                 }
                 fclose(temp);
                 fclose(fp);
-                remove("vehiculos.txt");
-                rename("vehiculos_Temp.txt","vehiculos.txt");
+                remove("DATA/vehiculos.txt");
+                rename("DATA/vehiculos_Temp.txt","DATA/vehiculos.txt");
             }
         }
         }
@@ -219,7 +219,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
     leer_viaje(&viaje, &numViajes);
     system("cls");
 
-    fp=fopen("viajes.txt","r+");
+    fp=fopen("DATA/viajes.txt","r+");
 
     if(fp==NULL)
     {
@@ -389,7 +389,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
             }while((opc2>1&&opc2<6)&&encontrado==0);
             if(opc2!=6)
             {
-                temp=fopen("viajes_Temp.txt","w+");
+                temp=fopen("DATA/viajes_Temp.txt","w+");
                 if(temp==NULL) {
                     printf("No se ha podido abrir el fichero viajes_Temp.txt.\n");
                 }
@@ -403,8 +403,8 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                 }
                 fclose(temp);
                 fclose(fp);
-                remove("viajes.txt");
-                rename("viajes_Temp.txt","viajes.txt");
+                remove("DATA/viajes.txt");
+                rename("DATA/viajes_Temp.txt","DATA/viajes.txt");
             }
         }
     }
@@ -444,7 +444,7 @@ void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
     leer_usuario(&usuario, &numUsuarios);
     system("cls");
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("DATA/usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -479,7 +479,7 @@ void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Local
     leer_usuario(&usuario, &numUsuarios);
     system("cls");
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("DATA/usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -515,7 +515,7 @@ void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
     leer_usuario(&usuario, &numUsuarios);
     system("cls");
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("DATA/usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");
@@ -564,7 +564,7 @@ void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
     leer_usuario(&usuario, &numUsuarios);
     system("cls");
 
-    fp=fopen("usuarios.txt","r+");
+    fp=fopen("DATA/usuarios.txt","r+");
 
     if(fp==NULL) {
         printf("No se ha podido abrir el fichero vehiculos.txt.\n");

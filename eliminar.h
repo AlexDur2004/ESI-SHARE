@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "leer.h"
-#include "preguntar.h"
-#include "encontrar.h"
 
 //Prototipo: void eliminarVehiculo(int);
 //Precondición: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",

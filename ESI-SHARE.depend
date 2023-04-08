@@ -89,7 +89,7 @@
 1679989532 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
-1680740543 source:c:\users\adura\mi unidad\uca\mp\esi-share\colores.c
+1680871585 source:c:\users\adura\mi unidad\uca\mp\esi-share\colores.c
 	"colores.h"
 
 1680734797 c:\users\adura\mi unidad\uca\mp\esi-share\colores.h
@@ -108,16 +108,16 @@
 
 1680734066 c:\users\adura\mi unidad\uca\mp\esi-share\estructuras.h
 
-1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\leer.h
+1680885495 c:\users\adura\mi unidad\uca\mp\esi-share\leer.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"estructuras.h"
 
-1680733407 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
+1680908520 source:c:\users\adura\mi unidad\uca\mp\esi-share\escribir.c
 	"escribir.h"
 
-1680734816 c:\users\adura\mi unidad\uca\mp\esi-share\escribir.h
+1680873130 c:\users\adura\mi unidad\uca\mp\esi-share\escribir.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -129,17 +129,17 @@
 	"estructuras.h"
 	"leer.h"
 
-1680733407 source:c:\users\adura\mi unidad\uca\mp\esi-share\fecha.c
+1680883438 source:c:\users\adura\mi unidad\uca\mp\esi-share\fecha.c
 	"fecha.h"
 
-1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\fecha.h
+1680883503 c:\users\adura\mi unidad\uca\mp\esi-share\fecha.h
 	<time.h>
 	"leer.h"
 
-1680733177 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
+1680908520 source:c:\users\adura\mi unidad\uca\mp\esi-share\leer.c
 	"leer.h"
 
-1680698219 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
+1680873130 source:c:\users\adura\mi unidad\uca\mp\esi-share\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -164,25 +164,25 @@
 	"preguntar.h"
 	"reservar.h"
 
-1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\menus.h
+1680911009 c:\users\adura\mi unidad\uca\mp\esi-share\menus.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"leer.h"
 
-1680739018 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
+1680911483 source:c:\users\adura\mi unidad\uca\mp\esi-share\menus.c
 	"menus.h"
 
 1678742083 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar_localidad.c
 	"preguntar_localidad.h"
 
-1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\modificar.h
+1680920423 c:\users\adura\mi unidad\uca\mp\esi-share\modificar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"leer.h"
 
-1680733534 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
+1680920501 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar.c
 	"modificar.h"
 
 1678554026 source:c:\users\adura\mi unidad\uca\mp\esi-share\modificar_perfil.c
@@ -196,25 +196,25 @@
 	"leer.h"
 	"preguntar_localidad.h"
 
-1680735893 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
+1680920423 source:c:\users\adura\mi unidad\uca\mp\esi-share\listar.c
 	"listar.h"
 
-1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\listar.h
+1680911511 c:\users\adura\mi unidad\uca\mp\esi-share\listar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"leer.h"
 
-1680734816 c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.h
+1680871585 c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"leer.h"
 
-1680732555 source:c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.c
+1680871585 source:c:\users\adura\mi unidad\uca\mp\esi-share\encontrar.c
 	"encontrar.h"
 
-1680733407 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
+1680908520 source:c:\users\adura\mi unidad\uca\mp\esi-share\reservar.c
 	"reservar.h"
 
 1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\reservar.h
@@ -223,10 +223,10 @@
 	<string.h>
 	"leer.h"
 
-1680735893 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
+1680912694 source:c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.c
 	"eliminar.h"
 
-1680734816 c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.h
+1680871585 c:\users\adura\mi unidad\uca\mp\esi-share\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -253,7 +253,7 @@
 	"leer.h"
 	"fecha.h"
 
-1680738802 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
+1680908520 source:c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.c
 	"preguntar.h"
 
 1680734861 c:\users\adura\mi unidad\uca\mp\esi-share\preguntar.h
@@ -262,13 +262,13 @@
 	<stdlib.h>
 	"leer.h"
 
-1680735488 c:\users\adura\mi unidad\uca\mp\esi-share\acceso.h
+1680871585 c:\users\adura\mi unidad\uca\mp\esi-share\acceso.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"leer.h"
 
-1680739057 source:c:\users\adura\mi unidad\uca\mp\esi-share\acceso.c
+1680871585 source:c:\users\adura\mi unidad\uca\mp\esi-share\acceso.c
 	"acceso.h"
 
 1679614168 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\acceso.c
@@ -347,7 +347,7 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1680736721 source:c:\users\adura\mi unidad\uca\mp\esi-share\crear_viaje.c
+1680871585 source:c:\users\adura\mi unidad\uca\mp\esi-share\crear_viaje.c
 	"crear_viaje.h"
 
 1680734797 c:\users\adura\mi unidad\uca\mp\esi-share\crear_viaje.h
@@ -522,7 +522,7 @@
 	"preguntar.h"
 	"encontrar.h"
 
-1680738307 source:c:\users\adura\mi unidad\uca\mp\esi-share\mostrar_reservar.c
+1680913150 source:c:\users\adura\mi unidad\uca\mp\esi-share\mostrar_reservar.c
 	"mostrar_reservar.h"
 
 1680734134 c:\users\adura\mi unidad\uca\mp\esi-share\mostrar_reservar.h

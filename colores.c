@@ -24,8 +24,8 @@ enum colores //Listado de colores
 //Precondición: Necesita dos números asociado al color que se quiere colocar, uno para el fondo, y otro para el cuerpo del texto.
 //Postcondición: Cambia de color, el fondo y el cuerpo del texto.
 
-void color(int fondo, int texto){
-
+void color(int fondo, int texto)
+{
 	HANDLE consola=GetStdHandle(STD_OUTPUT_HANDLE); //Accedemos a la consola.
 
 	//Para cambiar el color, se utilizan números desde el 0 hasta el 255, pero para convertir los colores a un valor adecuado, se realiza el siguiente cálculo.

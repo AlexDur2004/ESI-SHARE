@@ -240,7 +240,7 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
             }
             system("PAUSE");
             actualizar(viaje, numViajes);
-            eliminarPasos(pasos, numPasos, reservas, numReservas, viaje[vec_viaje[i-1]].id_viaje);
+            eliminarPasos(pasos, numPasos, viaje[vec_viaje[i-1]].id_viaje);
             eliminarReservas(reservas, numReservas, viaje[vec_viaje[i-1]].id_viaje);
         }
         else

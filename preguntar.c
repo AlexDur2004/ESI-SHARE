@@ -88,7 +88,6 @@ void pregunta_localidad(Estr_Localidad *localidad, int numLocalidades, char *loc
             }
         }
     }
-    return;
 }
 
 void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, char *rut2)
@@ -146,7 +145,6 @@ void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **r
             }
         }
     }
-    return;
 }
 
 void preguntar_veh(Estr_Vehiculo *vehiculo, int numVehiculos, char *opc, int *encontrado)

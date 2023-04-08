@@ -1,7 +1,7 @@
 #include "escribir.h"
 
-//Prototipo: void altaUsuario();
-//Precondición: Tener la estructura "usuario" inicializada, con su contador "numUsuarios".
+//Prototipo: void altaUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
+//Precondición: Tener las estructuras "usuario" y "localidad" inicializada, con sus contadores "numUsuarios" y "numLocalidades".
 //Postcondición: Dar de alta/Registrar un usuario, comprobando que el nombre del usuario no está repetido.
 
 void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
@@ -79,14 +79,11 @@ void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localid
     fclose(fp);
 
     leer_usuario(&usuario,&numUsuarios); //Volvemos a leer el fichero, para actualizar la estructura "usuario", y el contador de usuarios, "numUsuarios".
-
-    return;
 }
 
-//Prototipo: void altaVehiculo(int);
-//Precondición: Tener la variable "i", con la posición del usuario en la estructura "usuario", y
-//las estructuras "vehiculo" y "usuario" inicializadas, con sus contadores "numVehiculos".
-//Postcondición: Dar de alta/Registrar un vehículo, comprobando que la matrícula es válida, y no está en uso.
+//Prototipo: void altaVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Precondición: Tener la variable "i", con la posicion del usuario en la estructura "usuario", y las estructuras "vehiculo" y "usuario" inicializadas, con su contador "numVehiculos".
+//Postcondición: Dar de alta/Registrar un vehiculo, comprobando que la matrícula es valida, y no esta en uso.
 
 void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
@@ -158,13 +155,10 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
     fclose(fp);
 
     leer_vehiculo(&vehiculo,&numVehiculos); //Volvemos a leer el fichero, para actualizar la estructura "vehiculo", y el contador de vehiculos, "numVehiculos".
-
-    return;
 }
 
-//Prototipo: void altaAdmin(int);
-//Precondición: Necesario la introducción de un entero, para saber si queremos registrar un vehiculo o un viaje.
-//Tener las estructuras "vehiculo", "viajes" y "usuario" inicializadas, con sus contadores "numVehiculos", "numViajes" y "numUsuarios".
+//Prototipo: void altaAdmin(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondición: Necesario la introducción de un entero, para saber si queremos registrar un vehiculo o un viaje. Tener las estructuras inicializadas, con sus contadores.
 //Postcondición: Si n=0, dar de alta/registrar un vehículo, comprobando que la matrícula es válida, y no está en uso,
 //y si n=1, dar de alta/registrar un viaje. Ambos, introduciendo la id del usuario al que se quiere crear.
 
@@ -191,7 +185,8 @@ void altaAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
             }
             if(n==1)
             {
-                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i, 1); //Usamos la función altaViaje, para reusar código.
+                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i, 1);
+                //Usamos la función altaViaje, para reusar código.
                 printf("El viaje se ha agregado correctamente al usuario %s, con ID %s.\n", usuario[counter].nomb_usuario, usuario[counter].id_usuario);
                 system("PAUSE");
             }

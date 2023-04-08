@@ -189,27 +189,27 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
                 color(15, 0);
                 printf("VIAJE %i:\n",i+1);
                 color(0, 3);
-                printf("ID del viaje: ");
+                printf("   ID del viaje: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].id_viaje);
                 color(0, 3);
-                printf("Fecha de partida: ");
+                printf("   Fecha de partida: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].f_inic);
                 color(0, 3);
-                printf("Hora de partida: ");
+                printf("   Hora de partida: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].h_inic);
                 color(0, 3);
-                printf("Hora de llegada: ");
+                printf("   Hora de llegada: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].h_fin);
                 color(0, 3);
-                printf("Tipo: ");
+                printf("   Tipo: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].ida_vuelta);
                 color(0, 3);
-                printf("Precio: ");
+                printf("   Precio: ");
                 color(0, 15);
                 printf("%s euros\n\n", viaje[vec[i]].precio);
             }
@@ -259,5 +259,5 @@ void verificar_reserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
     }
 
     }
-    system("pause");
+    system("PAUSE");
 }

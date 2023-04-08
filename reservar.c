@@ -123,7 +123,6 @@ void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localida
     imprimirPasos(pasos, numPasos, localidad, numLocalidades, id_viaje, token, rutas_impr[opc-1]);
 
     system("PAUSE");
-    return;
 }
 
 void imprimirPasos(Estr_Pasos *pasos, int numPasos, Estr_Localidad *localidad, int numLocalidades, char *id_viaje, char *token, char *ruta)
@@ -166,6 +165,4 @@ void imprimirPasos(Estr_Pasos *pasos, int numPasos, Estr_Localidad *localidad, i
     fclose(fp);
 
     leer_pasos(&pasos,&numPasos);
-
-    return;
 }

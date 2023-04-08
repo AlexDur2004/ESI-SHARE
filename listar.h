@@ -6,9 +6,24 @@
 #include <string.h>
 #include "leer.h"
 
-void listarUsuarios();
-void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int i, int n);
-void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i, int n);
-void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i);
+//Prototipo: void listarUsuarios(Estr_Usuario *, int);
+//Precondición: Tener la estructura "usuario" inicializada, junto a su contador.
+//Postcondición: Dar una lista de todos los usuarios, que hay en la base de datos.
+void listarUsuarios(Estr_Usuario *, int);
+
+//Prototipo: void listarVehiculos(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+//Precondición: Tener las estructuras "usuario" y "vehiculo" inicializadas, junto a sus contadores.
+//Postcondición: Dar una lista de todos los vehiculos, de cada usuario, que hay en la base de datos.
+void listarVehiculos(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+
+//Prototipo: void listarAdminViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int, int, int *);
+//Precondición: Tener las estructuras "usuario", "vehiculo" y "viaje" inicializadas, junto a sus contadores.
+//Postcondición: Dar una lista de todos los viajes, de cada usuario, que hay en la base de datos.
+void listarAdminViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int, int, int *);
+
+//Prototipo: void listarAdminVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
+//Precondición: Tener las estructuras "usuario", "vehiculo" y "viaje" inicializadas, junto a sus contadores.
+//Postcondición: Dar una lista de todos los viajes que ha realizado un vehiculo.
+void listarAdminVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 
 #endif // LISTAR_H_INCLUDED

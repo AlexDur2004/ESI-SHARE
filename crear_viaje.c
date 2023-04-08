@@ -3,7 +3,7 @@
 void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_usuario, int num)
 {
     FILE *fv;
-    int n=1, i, idmax=0, num_viaje, breakp=0, enc=0, precio=0, rp;
+    int n=1, i, idmax=0, num_viaje, breakp=0, enc=0, precio=0, rp, encontrado=0;
     char viaje_id[7], id_vehiculo[8], fecha[11], hora_inic[6], hora_fin[6], plazas[2], idavuelta[7], coste[5], estado[8];
 
     leer_viaje(&viaje,&numViajes);
@@ -19,11 +19,16 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
 
         ida_vuelta(idavuelta);
 
-        while(precio<=0)
+        while(encontrado==0)
         {
             system("cls");
             printf("Establezca el coste de su viaje:\n");
+            fflush(stdin);
             scanf("%i", &precio);
+            if(precio>0&&precio<10)
+            {
+                encontrado=1;
+            }
         }
 
         sprintf(coste, "%i", precio);
@@ -64,6 +69,7 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
                 fprintf(fv, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, plazas, idavuelta, coste, estado);
                 fclose(fv);
                 leer_viaje(&viaje, &numViajes);
+                system("cls");
                 buscadorRutas(ruta, numRutas, numRutas2, localidad, numLocalidades, pasos, numPasos, viaje_id);
             }
             else

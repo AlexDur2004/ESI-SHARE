@@ -4,3 +4,21 @@
 000008-Jerez de la Frontera
 000008-San Fernando
 000008-Puerto Real
+000001-Chiclana
+000001-Rota
+000001-Jerez de la Frontera
+000001-Puerto de Sta Maria
+000004-Los Barrios
+000004-Alcala Gazules
+000004-Paterna de Rivera
+000004-Medina Sidonia
+000004-Chiclana
+000004-San Fernando
+000004-Puerto Real
+000019-San Fernando
+000019-Puerto Real
+000027-Algeciras
+000027-Los Barrios
+000027-Alcala Gazules
+000027-Paterna de Rivera
+000027-Puerto Real

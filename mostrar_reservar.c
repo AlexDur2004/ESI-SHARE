@@ -102,7 +102,7 @@ void mostrar_reservar(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
    }while(conf==0);
 }
 
-void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, int *vec,int reserva, int *conf)
+void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, int *vec, int reserva, int *conf)
 {
     int i,opc;
 
@@ -115,7 +115,7 @@ void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, in
     }
 
     do{
-        printf("Desea reservar este viaje :\n(1)SI (2)NO\n");
+        printf("Desea reservar este viaje :\n(1)SI\n(2)NO\n");
         scanf("%i",&opc);
         switch (opc)
         {
@@ -125,7 +125,7 @@ void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, in
             case 2:
                 (*conf)=0;
                 break;
-            default: printf("Introduzca la opcion correcta.\n");
+            default: printf("Introduzca la opción correcta.\n");
         }
     }while(opc!=1 && opc!=2);
 }
@@ -177,7 +177,7 @@ void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *re
 
 void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user)
 {
-    int *vec=NULL, *vec_viaje=NULL, x, j=0, i, sel, cont=0, plazas=0;
+    int *vec=NULL, *vec_viaje=NULL, x, i, sel, plazas=0;
 
     encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x);
 
@@ -235,14 +235,14 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
 
 void verificar_reserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int *vec,int reserva,int *n,int num_user)
 {
-    int i,j;
+    int i;
     for(i=0;i<numVehiculos && *n==0;i++)
     {
         if(strcmp(viaje[vec[reserva]].id_mat,vehiculo[i].id_mat)==0)
         {
             if(strcmp(vehiculo[i].id_usuario,usuario[num_user].id_usuario)==0)
             {
-                printf("Error/No puede reservar un viaje creado por usted\n");
+                printf("ERROR/No puede reservar un viaje creado por usted\n");
                 *n=1;
             }
         }
@@ -254,7 +254,7 @@ void verificar_reserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
         if(strcmp(reservas[i].id_usuario,usuario[num_user].id_usuario)==0)
         {
             *n=1;
-            printf("Error/No puede reservar un viaje ya reservado previamente\n");
+            printf("ERROR/No puede reservar un viaje ya reservado previamente\n");
         }
     }
 

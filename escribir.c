@@ -7,7 +7,7 @@
 void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
 {
     FILE *fp;
-    int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0, preg=0;
+    int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0;
     char id[5], nombre[21], loc[21], perfil[14], usuario2[6], contrasena[9];
 
     fp=fopen("DATA/usuarios.txt","a+");

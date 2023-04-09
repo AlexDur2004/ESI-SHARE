@@ -1,14 +1,14 @@
 #include "modificar.h"
 
 //Prototipo: void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario",
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario",
 //y las estructuras "usuario" y "vehiculo" inicializadas, con sus contadores.
-//Postcondición: Modificar cualquier dato de un vehiculo que tenga el usuario.
+//Postcondicion: Modificar cualquier dato de un vehiculo que tenga el usuario.
 
 void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
-    FILE *fp, *temp;
-    int n=0, x=0, h=0, m=0, aux=0, y=0, opc=0, opc2=0, *vec=NULL, encontrado=0, error_mat, counter;
+    FILE *fp;
+    int x=0, h=0, m=0, aux=0, y=0, opc=0, opc2=0, *vec=NULL, encontrado=0, error_mat, counter;
     char mat[8], plazas[2], descrip[51];
 
     leer_vehiculo(&vehiculo, &numVehiculos); //Vuelve a leer la estructura "vehiculo", por si hay cambios.
@@ -27,11 +27,11 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
         {
             encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encuentra todos los vehiculos del usuario.
             aux=x;
-            while(encontrado==0) //Hasta que no se introduzca un vehiculo que esté en el vector de enteros, es decir, un vehiculo que él tenga.
+            while(encontrado==0) //Hasta que no se introduzca un vehiculo que este en el vector de enteros, es decir, un vehiculo que el tenga.
             {
                 x=aux;
                 y=aux;
-                printf("¿Qué vehículo quiere modificar?\n");
+                printf("¿Que vehiculo quiere modificar?\n");
 
                 for(m=0; m<x; m++)
                 {
@@ -42,7 +42,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                     color(0,4);
                     printf(":\t");
                     color(0,3);
-                    printf("    Matrícula: ");
+                    printf("    Matricula: ");
                     color(0,15);
                     printf("%s", vehiculo[vec[m]].id_mat);
                     color(0,3);
@@ -58,17 +58,17 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                 color(0,14);
                 printf("(%i)Salir.\n", x);
                 color(0,15);
-                printf("Ingrese el número correspondiente al vehículo que desea modificar: ");
+                printf("Ingrese el numero correspondiente al vehiculo que desea modificar: ");
                 fflush(stdin);
                 scanf("%d", &opc);
                 system("cls");
-                if(opc==x) //Si introduce lo mismo que vale la variable máxima "x".
+                if(opc==x) //Si introduce lo mismo que vale la variable maxima "x".
                 {
-                    return; //Vuelve al menú.
+                    return; //Vuelve al menu.
                 }
                 for(m=1; m<y; m++) //Vamos recorriendo el vector de enteros, con los vehiculos del usuario.
                 {
-                    if(opc==vec[m-1]) //Si el vehiculo seleccionado está en este vector.
+                    if(opc==vec[m-1]) //Si el vehiculo seleccionado esta en este vector.
                     {
                         encontrado=1;
                     }
@@ -78,7 +78,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                     h=opc-1;
                     do
                     {
-                        printf("¿Qué desea modificar?\n");
+                        printf("¿Que desea modificar?\n");
                         printf("(1)Matricula.\n");
                         printf("(2)Numero de plazas.\n");
                         printf("(3)Descripcion.\n");
@@ -91,13 +91,13 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                             case 1:
                                 do{ //Hasta que la matricula no sea correcta.
                                     error_mat=0;
-                                    printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
-                                    printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
+                                    printf("Matricula del vehiculo (Maximo de 7 caracteres):\n");
+                                    printf("Matricula actual: %s\n", vehiculo[vec[h]].id_mat);
                                     pregunta(mat, 8); //Pedimos la nueva matricula.
 
-                                    for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++) //Comprobamos que la matricula no está registrada.
+                                    for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++) //Comprobamos que la matricula no esta registrada.
                                     {
-                                        if(strcmp(mat,vehiculo[counter].id_mat)==0){ //Si se encuentra la matricula en las que hay ahora, pues está usada.
+                                        if(strcmp(mat,vehiculo[counter].id_mat)==0){ //Si se encuentra la matricula en las que hay ahora, pues esta usada.
                                             error_mat=1;
                                             printf("La matricula %s esta actualmente registrada.\n",mat);
                                             system("PAUSE");
@@ -131,22 +131,22 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
 
                                 strcpy(vehiculo[vec[h]].id_mat, mat); //Copiamos la nueva matricula en la posicion de la estructura correspondiente.
 
-                                printf("La matrícula del vehículo se ha actualizado correctamente.\n");
+                                printf("La matricula del vehiculo se ha actualizado correctamente.\n");
                                 system("PAUSE");
                                 break;
                             case 2:
-                                printf("Número de plazas libres (sin contar el conductor):\n");
+                                printf("Numero de plazas libres (sin contar el conductor):\n");
                                 printf("Plazas actuales: %s\n", vehiculo[vec[h]].num_plazas);
                                 pregunta(plazas, 2); //Pedimos el nuevo numero de plazas.
 
                                 strcpy(vehiculo[vec[h]].num_plazas, plazas); //Copiamos el nuevo numero de plazas en la posicion de la estructura correspondiente.
 
-                                printf("El numero de plazas del vehículo se ha actualizado correctamente.\n");
+                                printf("El numero de plazas del vehiculo se ha actualizado correctamente.\n");
                                 system("PAUSE");
                                 break;
                             case 3:
-                                printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-                                printf("Descripción actual: %s\n", vehiculo[vec[h]].desc_veh);
+                                printf("Descripcion del vehiculo (Marca, modelo, color, etc) (Maximo de 50 caracteres):\n");
+                                printf("Descripcion actual: %s\n", vehiculo[vec[h]].desc_veh);
                                 pregunta(descrip, 51); //Pedimos la nueva descripcion.
 
                                 strcpy(vehiculo[vec[h]].desc_veh, descrip); //Copiamos la nueva descripcion en la posicion de la estructura correspondiente.
@@ -157,8 +157,8 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                             case 4: //Volvemos a hacer todo lo anterior.
                                 do{
                                     error_mat=0;
-                                    printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
-                                    printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
+                                    printf("Matricula del vehiculo (Maximo de 7 caracteres):\n");
+                                    printf("Matricula actual: %s\n", vehiculo[vec[h]].id_mat);
                                     pregunta(mat, 8);
 
                                     for(counter=0;(counter<numVehiculos)&&(error_mat==0);counter++){
@@ -189,26 +189,26 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                                     system("cls");
                                 }while((error_mat==1)||(strlen(mat)<7));
 
-                                printf("Matrícula del vehículo (Máximo de 7 caracteres):\n");
-                                printf("Matrícula actual: %s\n", vehiculo[vec[h]].id_mat);
+                                printf("Matricula del vehiculo (Maximo de 7 caracteres):\n");
+                                printf("Matricula actual: %s\n", vehiculo[vec[h]].id_mat);
                                 printf("%s\n", mat);
 
                                 strcpy(vehiculo[vec[h]].id_mat, mat);
 
-                                printf("Número de plazas libres (sin contar el conductor):\n");
+                                printf("Numero de plazas libres (sin contar el conductor):\n");
                                 printf("Plazas actuales: %s\n", vehiculo[vec[h]].num_plazas);
                                 fflush(stdin);
                                 pregunta(plazas, 2);
 
-                                printf("Descripción del vehículo (Marca, modelo, color, etc) (Máximo de 50 caracteres):\n");
-                                printf("Descripción actual: %s\n", vehiculo[vec[h]].desc_veh);
+                                printf("Descripcion del vehiculo (Marca, modelo, color, etc) (Maximo de 50 caracteres):\n");
+                                printf("Descripcion actual: %s\n", vehiculo[vec[h]].desc_veh);
                                 pregunta(descrip, 51);
 
                                 strcpy(vehiculo[vec[h]].id_mat, mat);
                                 strcpy(vehiculo[vec[h]].num_plazas, plazas);
                                 strcpy(vehiculo[vec[h]].desc_veh, descrip);
 
-                                printf("Se han actualizado todos los datos del vehículo.\n");
+                                printf("Se han actualizado todos los datos del vehiculo.\n");
                                 system("PAUSE");
                                 break;
                             case 5: //Salimos
@@ -218,22 +218,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                     }while((opc2>1&&opc2<5)&&encontrado==0);
                     if(opc2!=5)
                     {
-                        temp=fopen("DATA/vehiculos_Temp.txt","w+"); //Creamos un archivo temporal.
-                        if(temp==NULL) {
-                            printf("No se ha podido abrir el fichero vehiculos_Temp.txt.\n");
-                        }
-                        else
-                        {
-                            do{ //Escribimos toda la estructura vehiculo en el archivo temporal.
-                                fprintf(temp, "%s-%s-%s-%s\n", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                                n++;
-                            }while(n<(numVehiculos-1));
-                            fprintf(temp, "%s-%s-%s-%s", vehiculo[n].id_mat, vehiculo[n].id_usuario, vehiculo[n].num_plazas, vehiculo[n].desc_veh);
-                        }
-                        fclose(temp); //Cerramos los ficheros.
-                        fclose(fp);
-                        remove("DATA/vehiculos.txt"); //Borramos el fichero original.
-                        rename("DATA/vehiculos_Temp.txt","DATA/vehiculos.txt"); //Renombramos el fichero temporal por el original.
+                        actualizarVehiculo(vehiculo, numVehiculos);
                     }
                 }
             }
@@ -248,13 +233,13 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
 }
 
 //Prototipo: void modificarViaje(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondición: Modificar cualquier dato de un viaje, que esté abierto y sin plazas reservadas, que tenga el usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
+//Postcondicion: Modificar cualquier dato de un viaje, que este abierto y sin plazas reservadas, que tenga el usuario.
 
 void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
-    FILE *fp, *temp;
-    int n=0, h=0, x=0, m=0, j=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, cont=0, prec=0, encontrado=0, encontrado2=0;
+    FILE *fp;
+    int h=0, x=0, m=0, j=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL, cont=0, prec=0, encontrado=0, encontrado2=0;
     char mat[8], fecha[11], hora_in[6], hora_fin[6], coste[2];
 
     leer_viaje(&viaje, &numViajes); //Vuelve a leer la estructura "viaje", por si hay cambios.
@@ -276,7 +261,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
             {
                 encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &cont, 2); //Encuentra todos los viajes abiertos, que no tienen plazas ocupadas, del usuario.
             }
-            if(vec_viaje==NULL) //Si el vector está vacio, significa que no hay viajes.
+            if(vec_viaje==NULL) //Si el vector esta vacio, significa que no hay viajes.
             {
                 printf("No posee viajes abiertos, que no hayan sido reservados.\n");
                 system("PAUSE");
@@ -332,24 +317,24 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                     color(0,14);
                     printf("(%i)Salir.\n", m);
                     color(0,15);
-                    printf("Ingrese el número correspondiente al viaje que desea modificar: ");
+                    printf("Ingrese el numero correspondiente al viaje que desea modificar: ");
                     fflush(stdin);
                     scanf("%d", &opc);
                     system("cls");
-                    if(opc>=1&&opc<=cont) //Si la opción está entre 1 y la variable máxima.
+                    if(opc>=1&&opc<=cont) //Si la opcion esta entre 1 y la variable maxima.
                     {
                         encontrado=1;
                     }
-                    if(opc==m) //Si introduce lo mismo que vale la variable máxima "x".
+                    if(opc==m) //Si introduce lo mismo que vale la variable maxima "x".
                     {
-                        return; //Vuelve al menú.
+                        return; //Vuelve al menu.
                     }
                 }
                 encontrado=0;
                 h=opc-1;
                 do
                 {
-                    printf("¿Qué desea modificar?\n");
+                    printf("¿Que desea modificar?\n");
                     printf("(1)Vehiculo.\n");
                     printf("(2)Fecha.\n");
                     printf("(3)Coste.\n");
@@ -369,12 +354,12 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                     {
                                         printf("%s-%s-%s\n", vehiculo[vec[i]].id_mat, vehiculo[vec[i]].num_plazas, vehiculo[vec[i]].desc_veh);
                                     }
-                                    printf("Matrícula del vehículo (Máximo de 7 caracteres) para asignarle al viaje %s:\n", viaje[vec_viaje[h]].id_viaje);
-                                    printf("Matrícula actual: %s\n", viaje[vec_viaje[h]].id_mat);
+                                    printf("Matricula del vehiculo (Maximo de 7 caracteres) para asignarle al viaje %s:\n", viaje[vec_viaje[h]].id_viaje);
+                                    printf("Matricula actual: %s\n", viaje[vec_viaje[h]].id_mat);
                                     pregunta(mat, 8); //Pedimos la nueva matricula que va a llevar el viaje.
                                     for(j=0;j<x;j++)
                                     {
-                                        if(strcmp(vehiculo[vec[j]].id_mat, mat)==0) //Si la matricula introducida está entre sus vehículos.
+                                        if(strcmp(vehiculo[vec[j]].id_mat, mat)==0) //Si la matricula introducida esta entre sus vehiculos.
                                         {
                                             encontrado2=1;
                                         }
@@ -383,7 +368,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
 
                                 strcpy(viaje[vec_viaje[h]].id_mat, mat); //Copiamos la nueva matricula en la posicion de la estructura correspondiente.
 
-                                printf("El vehículo del viaje se ha actualizado correctamente.\n");
+                                printf("El vehiculo del viaje se ha actualizado correctamente.\n");
                                 system("PAUSE");
                                 break;
                             case 2:
@@ -400,7 +385,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                 while(prec<=0) //Mientras que el precio sea menor o igual a 0.
                                 {
                                     system("cls");
-                                    printf("Coste del viaje (Máximo de 1 digito):\n");
+                                    printf("Coste del viaje (Maximo de 1 digito):\n");
                                     printf("Coste actual: %s\n", viaje[vec_viaje[h]].precio);
                                     scanf("%1i", &prec); //Pedimos el nuevo precio.
                                 }
@@ -414,7 +399,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                 break;
                             case 4:
                                 modificarRuta(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
-                                //Empleamos la función "modificarRuta"
+                                //Empleamos la funcion "modificarRuta"
                                 break;
                             case 5: //Volvemos a hacer todo lo anterior.
                                 do
@@ -425,8 +410,8 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                     {
                                         printf("%s-%s-%s\n", vehiculo[vec[i]].id_mat, vehiculo[vec[i]].num_plazas, vehiculo[vec[i]].desc_veh);
                                     }
-                                    printf("Matrícula del vehículo (Máximo de 7 caracteres) para asignarle al viaje %s:\n", viaje[vec_viaje[h]].id_viaje);
-                                    printf("Matrícula actual: %s\n", viaje[vec_viaje[h]].id_mat);
+                                    printf("Matricula del vehiculo (Maximo de 7 caracteres) para asignarle al viaje %s:\n", viaje[vec_viaje[h]].id_viaje);
+                                    printf("Matricula actual: %s\n", viaje[vec_viaje[h]].id_mat);
                                     pregunta(mat, 8);
                                     for(j=0;j<x;j++)
                                     {
@@ -450,7 +435,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                     while(prec<=0)
                                     {
                                         system("cls");
-                                        printf("Coste del viaje (Máximo de 1 digito):\n");
+                                        printf("Coste del viaje (Maximo de 1 digito):\n");
                                         printf("Coste actual: %s\n", viaje[vec_viaje[h]].precio);
                                         scanf("%1i", &prec);
                                     }
@@ -472,22 +457,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                     }while((opc2>1&&opc2<6)&&encontrado==0);
                     if(opc2!=6)
                     {
-                        temp=fopen("DATA/viajes_Temp.txt","w+"); //Creamos un archivo temporal.
-                        if(temp==NULL) {
-                            printf("No se ha podido abrir el fichero viajes_Temp.txt.\n");
-                        }
-                        else
-                        {
-                            do{ //Escribimos toda la estructura viaje en el archivo temporal.
-                                fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n",viaje[n].id_viaje,viaje[n].id_mat,viaje[n].f_inic,viaje[n].h_inic,viaje[n].h_fin,viaje[n].plazas_libre,viaje[n].ida_vuelta,viaje[n].precio,viaje[n].estado);
-                                n++;
-                            }while(n<numViajes-1);
-                            fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s",viaje[n].id_viaje,viaje[n].id_mat,viaje[n].f_inic,viaje[n].h_inic,viaje[n].h_fin,viaje[n].plazas_libre,viaje[n].ida_vuelta,viaje[n].precio,viaje[n].estado);
-                        }
-                        fclose(temp); //Cerramos los ficheros.
-                        fclose(fp);
-                        remove("DATA/viajes.txt"); //Borramos el fichero original.
-                        rename("DATA/viajes_Temp.txt","DATA/viajes.txt"); //Renombramos el fichero temporal por el original.
+                        actualizarViaje(viaje, numViajes);
                     }
             }
         }
@@ -502,8 +472,8 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
 }
 
 //Prototipo: void modificarRuta(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
-//Precondición: Tener el entero "num_user", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondición: Modificar la ruta de un viaje, que esté abierto y sin plazas reservadas, que tenga el usuario.
+//Precondicion: Tener el entero "num_user", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
+//Postcondicion: Modificar la ruta de un viaje, que este abierto y sin plazas reservadas, que tenga el usuario.
 
 void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_user)
 {
@@ -562,14 +532,14 @@ void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicu
             do{
                 printf("Seleccione el viaje que desee modificar:\n");
                 scanf("%i",&opc);
-            }while(opc<0&&opc<num_v); //Repetir hasta que el viaje no esté entre 1 y el número máximo de viajes.
+            }while(opc<0&&opc<num_v); //Repetir hasta que el viaje no este entre 1 y el numero maximo de viajes.
             h=opc-1;
             eliminarPasos(pasos, numPasos, viaje[vec[h]].id_viaje); //Elimina los pasos del viaje.
             buscadorRutas(ruta, numRutas, numRutas2, localidad, numLocalidades, pasos, numPasos, viaje[vec[h]].id_viaje); //Pide la nueva ruta por donde va a ir, e imprime los pasos.
         }
         else
         {
-            printf("No tiene ningún viaje abierto y sin plazas reservadas.\n");
+            printf("No tiene ningun viaje abierto y sin plazas reservadas.\n");
             system("PAUSE");
         }
     }
@@ -581,232 +551,127 @@ void modificarRuta(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicu
 }
 
 //Prototipo: void modificarPerfilNombre(Estr_Usuario *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondición: Modificar el nombre del usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
+//Postcondicion: Modificar el nombre del usuario.
 
 void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
 {
-    FILE *fp;
-    int n=0;
     char nomb[21];
 
-    leer_usuario(&usuario, &numUsuarios); //Leemos el fichero, por si hay cambios.
-    system("cls");
+    printf("Introduzca su nuevo nombre completo (Maximo de 20 caracteres):\n");
+    pregunta(nomb, 21); //Pedimos el nuevo nombre.
 
-    fp=fopen("DATA/usuarios.txt","r+");
+    strcpy(usuario[i].nomb_usuario, nomb); //Copiamos el nuevo nombre en la posicion de la estructura correspondiente.
+    actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
 
-    if(fp==NULL) {
-        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-        return;
-    }
-    else {
-        printf("Introduzca su nuevo nombre completo (Máximo de 20 caracteres):\n");
-        pregunta(nomb, 21); //Pedimos el nuevo nombre.
-
-        strcpy(usuario[i].nomb_usuario, nomb); //Copiamos el nuevo nombre en la posicion de la estructura correspondiente.
-        do{ //Escribimos toda la estructura usuario en el archivo temporal.
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            n++;
-        }while(n<numUsuarios-1);
-        fprintf(fp, "%s-%s-%s-%s-%s-%s", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-        numUsuarios++;
-
-        printf("Su nombre completo se ha actualizado correctamente.\n");
-        system("PAUSE");
-    }
-    fclose(fp);
+    printf("Su nombre completo se ha actualizado correctamente.\n");
+    system("PAUSE");
 }
 
 //Prototipo: void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Localidad *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondición: Modificar la localidad del usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
+//Postcondicion: Modificar la localidad del usuario.
 
 void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
-    FILE *fp;
-    int n=0;
     char loc[21];
 
-    leer_usuario(&usuario, &numUsuarios); //Leemos el fichero, por si hay cambios.
-    system("cls");
+    printf("Introduzca su nueva localidad de residencia (3 siglas):\n");
+    fflush(stdin);
+    pregunta_localidad(localidad, numLocalidades, loc); //Pedimos la nueva localidad.
 
-    fp=fopen("DATA/usuarios.txt","r+");
+    strcpy(usuario[i].localidad, loc); //Copiamos la nueva localidad en la posicion de la estructura correspondiente.
+    actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
 
-    if(fp==NULL) {
-        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-        return;
-    }
-    else {
-        printf("Introduzca su nueva localidad de residencia (3 siglas):\n");
-        fflush(stdin);
-        pregunta_localidad(localidad, numLocalidades, loc); //Pedimos la nueva localidad.
-
-        strcpy(usuario[i].localidad, loc); //Copiamos la nueva localidad en la posicion de la estructura correspondiente.
-        do{ //Escribimos toda la estructura usuario en el fichero.
-            fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            n++;
-        }while(n<numUsuarios-1);
-        fprintf(fp, "%s-%s-%s-%s-%s-%s", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-        numUsuarios++;
-
-        printf("Su localidad de residencia se ha actualizado correctamente.\n");
-        system("PAUSE");
-    }
-    fclose(fp);
+    printf("Su localidad de residencia se ha actualizado correctamente.\n");
+    system("PAUSE");
 }
 
 //Prototipo: void modificarPerfilUsuario(Estr_Usuario *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondición: Modificar el username del usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
+//Postcondicion: Modificar el username del usuario.
 
 void modificarPerfilUsuario(Estr_Usuario *usuario, int numUsuarios, int i)
 {
-    FILE *fp;
-    int n=0, k=0, encontrado=0;
+    int k=0, encontrado=0;
     char usua[6];
 
-    leer_usuario(&usuario, &numUsuarios); //Leemos el fichero, por si hay cambios.
-    system("cls");
+    printf("Introduzca su nuevo nombre de usuario (Maximo de 5 caracteres):\n");
+    pregunta(usua, 6); //Pedimos el nuevo username.
 
-    fp=fopen("DATA/usuarios.txt","r+");
-
-    if(fp==NULL) {
-        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-        return;
-    }
-    else {
-        printf("Introduzca su nuevo nombre de usuario (Máximo de 5 caracteres):\n");
-        pregunta(usua, 6); //Pedimos el nuevo username.
-
-        for(k=0; k<numUsuarios&&encontrado==0; k++) //Comprobamos que no está usado.
+    for(k=0; k<numUsuarios&&encontrado==0; k++) //Comprobamos que no esta usado.
+    {
+        if(strcmp(usua, usuario[k].usuario)==0)
         {
-            if(strcmp(usua, usuario[k].usuario)==0)
-            {
-                encontrado=1;
-            }
-        }
-
-        if(encontrado==0) //Si no está usado
-        {
-            printf("El nombre de usuario es válido.\n");
-            strcpy(usuario[i].usuario, usua); //Copiamos el nuevo username en la posicion de la estructura correspondiente.
-            do{ //Escribimos toda la estructura usuario en el fichero.
-                fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-                n++;
-            }while(n<numUsuarios-1);
-            fprintf(fp, "%s-%s-%s-%s-%s-%s", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-            numUsuarios++;
-
-            printf("Su nombre de usuario se ha actualizado correctamente.\n");
-            system("PAUSE");
-        }
-        else
-        {
-            printf("El nombre de usuario ya está siendo usado.\n");
-            system("PAUSE");
+            encontrado=1;
         }
     }
-    fclose(fp);
-}
 
-//Prototipo: void modificarPerfilContrasena(Estr_Usuario *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondición: Modificar la contraseña del usuario.
+    if(encontrado==0) //Si no esta usado
+    {
+        printf("El nombre de usuario es valido.\n");
+        strcpy(usuario[i].usuario, usua); //Copiamos el nuevo username en la posicion de la estructura correspondiente.
+        actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
 
-void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
-{
-    FILE *fp;
-    int j=0, n=0, encontrado=3, x=0, h=0;
-    char contra[9], contra2[9], c, c2;
-
-    leer_usuario(&usuario, &numUsuarios); //Leemos el fichero, por si hay cambios.
-    system("cls");
-
-    fp=fopen("DATA/usuarios.txt","r+");
-
-    if(fp==NULL) {
-        printf("No se ha podido abrir el fichero vehiculos.txt.\n");
-        return;
+        printf("Su nombre de usuario se ha actualizado correctamente.\n");
+        system("PAUSE");
     }
     else
     {
-        while(encontrado>0&&x==0)
+        printf("El nombre de usuario ya esta siendo usado.\n");
+        system("PAUSE");
+    }
+}
+
+//Prototipo: void modificarPerfilContrasena(Estr_Usuario *, int, int);
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
+//Postcondicion: Modificar la contraseña del usuario.
+
+void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
+{
+    int encontrado=3, x=0;
+    char contra[9], contra2[9];
+
+    while(encontrado>0&&x==0)
+    {
+        printf("Introduzca su antigua contrasena (Maximo de 8 caracteres):\n");
+        preguntar_contrasena(contra);
+
+        if(strcmp(usuario[i].contrasena,contra)==0) //Si la contrasena introducida es igual a la que tiene.
         {
-            printf("Introduzca su antigua contrasena (Máximo de 8 caracteres):\n");
-            fflush(stdin); //Pedimos la antigua contrasena.
-            while ((c=getch())!='\r'&&j<8)
+            system("cls");
+            x=1;
+            printf("Introduzca su nueva contrasena (Maximo de 8 caracteres):\n");
+            preguntar_contrasena(contra2);
+
+            strcpy(usuario[i].contrasena, contra2); //Copiamos la nueva contraseña en la posicion de la estructura correspondiente.
+            actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
+
+            printf("\nSu contraseña se ha actualizado correctamente.\n");
+            system("PAUSE");
+        }
+        else //Si no es correcta
+        {
+            encontrado--;
+            if(encontrado==0) //Cuando no tiene intentos
             {
-                if (c=='\b'&&j>0)
-                {
-                    j--;
-                    printf("\b \b");
-                }
-                else if (c != '\b')
-                {
-                    contra[j++] = c;
-                    printf("*");
-                }
-            }
-            contra[j] = '\0';
-
-            if(strcmp(usuario[i].contrasena,contra)==0) //Si la contrasena introducida es igual a la que tiene.
-            {
-                system("cls");
-                x=1;
-                printf("Introduzca su nueva contrasena (Máximo de 8 caracteres):\n");
-                fflush(stdin);
-                while ((c2=getch())!='\r'&&h<8)
-                {
-                    if (c2=='\b'&&h>0)
-                    {
-                        h--;
-                        printf("\b \b");
-                    }
-                    else if (c2!='\b')
-                    {
-                        contra2[h++] = c2;
-                        printf("*");
-                    }
-                }
-                contra2[h] = '\0';
-
-                strcpy(usuario[i].contrasena, contra2); //Copiamos la nueva contraseña en la posicion de la estructura correspondiente.
-                do{ //Escribimos toda la estructura usuario en el fichero.
-                    fprintf(fp, "%s-%s-%s-%s-%s-%s\n", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-                    n++;
-                }while(n<numUsuarios-1);
-                fprintf(fp, "%s-%s-%s-%s-%s-%s", usuario[n].id_usuario, usuario[n].nomb_usuario, usuario[n].localidad, usuario[n].perfil, usuario[n].usuario, usuario[n].contrasena);
-                numUsuarios++;
-
-                printf("\nSu contraseña se ha actualizado correctamente.\n");
+                printf("\n¡Intentos agotados! :(\n");
                 system("PAUSE");
             }
-            else //Si no es correcta
+            else //Si tiene intentos, se van restando.
             {
-                encontrado--;
-                if(encontrado==0) //Cuando no tiene intentos
-                {
-                    printf("\n¡Intentos agotados! :(\n");
-                    system("PAUSE");
-                }
-                else //Si tiene intentos, se van restando.
-                {
-                    *contra=NULL;
-                    j=0;
-                    printf("\nQueda(n) %i intentos.\n", encontrado);
-                    system("PAUSE");
-                    system("cls");
-                }
-
+                *contra=NULL;
+                printf("\nQueda(n) %i intentos.\n", encontrado);
+                system("PAUSE");
+                system("cls");
             }
         }
     }
-    fclose(fp);
 }
 
 //Prototipo: void modificarAdminUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondición: Modificar los datos de cualquier usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
+//Postcondicion: Modificar los datos de cualquier usuario.
 
 void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
 {
@@ -830,7 +695,7 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
                 while(opc<1||opc>6) //Elegimos una de las opciones.
                 {
                     system("cls");
-                    printf("¿Qué desea modificar?\n");
+                    printf("¿Que desea modificar?\n");
                     printf("(1)Nombre completo.\n");
                     printf("(2)Localidad.\n");
                     printf("(3)Nombre de usuario.\n");
@@ -869,8 +734,8 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
 }
 
 //Prototipo: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondición: Modificar los datos de un vehiculo de cualquier usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
+//Postcondicion: Modificar los datos de un vehiculo de cualquier usuario.
 
 void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int x)
 {
@@ -881,7 +746,7 @@ void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
     if(numVehiculos!=0) //Si hay vehiculos en el sistema.
     {
         listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, x); //Listamos todos los vehiculos.
-        printf("Escriba la ID del usuario a la que se quiera modificar el vehículo\n");
+        printf("Escriba la ID del usuario a la que se quiera modificar el vehiculo\n");
         scanf("%i",&id); //Pedimos la id del usuario, del vehiculo que queremos modificar.
         sprintf(opc2, "%04i", id); //Introducimos el entero introducido en la cadena con formato XXXX.
 
@@ -891,7 +756,7 @@ void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
             {
                 encontrado=1;
                 system("cls");
-                modificarVehiculo(usuario, vehiculo, numVehiculos, counter); //Vamos a la función "modificarVehiculo".
+                modificarVehiculo(usuario, vehiculo, numVehiculos, counter); //Vamos a la funcion "modificarVehiculo".
             }
         }
         if(encontrado==0) //Si no existe el usuario introducido.
@@ -904,8 +769,8 @@ void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
 }
 
 //Prototipo: void modificarAdminViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
-//Precondición: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondición: Modificar los datos de un viaje de cualquier usuario.
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
+//Postcondicion: Modificar los datos de un viaje de cualquier usuario.
 
 void modificarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int x)
 {

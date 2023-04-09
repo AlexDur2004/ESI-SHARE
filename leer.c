@@ -1,8 +1,8 @@
 #include "leer.h"
 
 //Prototipo: void leer(Estr_Usuario **, int *, Estr_Vehiculo **, int *, Estr_Viaje **, int *, Estr_Pasos **, int *, Estr_Reservas **, int *, Estr_Rutas ***, int *, int *, Estr_Localidad **, int *);
-//Precondición: Tener todas las estructuras inicializadas, con sus respectivos contadores. Además todas tienen que pasarse por puntero, para introducir valores en las mismas.
-//Postcondición: Leer todos los ficheros, e introducir la información en su estructura, con sus contadores.
+//Precondicion: Tener todas las estructuras inicializadas, con sus respectivos contadores. Ademas todas tienen que pasarse por puntero, para introducir valores en las mismas.
+//Postcondicion: Leer todos los ficheros, e introducir la informacion en su estructura, con sus contadores.
 
 void leer(Estr_Usuario **usuario, int *numUsuarios, Estr_Vehiculo **vehiculo, int *numVehiculos, Estr_Viaje **viaje, int *numViajes, Estr_Pasos **pasos, int *numPasos, Estr_Reservas **reservas, int *numReservas, Estr_Rutas ***ruta, int *numRutas, int *numRutas2, Estr_Localidad **localidad, int *numLocalidades)
 {
@@ -17,8 +17,8 @@ void leer(Estr_Usuario **usuario, int *numUsuarios, Estr_Vehiculo **vehiculo, in
 }
 
 //Prototipo: void leer_usuario(Estr_Usuario **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "usuarios.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "usuarios.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_usuario(Estr_Usuario **usuario, int *i)
 {
@@ -42,11 +42,11 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
     }
     else
     {
-        while(fgets(vec, 80, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 80, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *usuario=realloc(*usuario,((*i)+1)*sizeof(Estr_Usuario)); //Vamos ampliando la memoria dinámica de la estructura.
+                *usuario=realloc(*usuario,((*i)+1)*sizeof(Estr_Usuario)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*usuario==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -62,10 +62,10 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
                 strcpy((*usuario)[*i].perfil,token);
                 token=strtok(NULL,"-");
                 strcpy((*usuario)[*i].usuario,token);
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*usuario)[*i].contrasena,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de usuarios que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de usuarios que hay en la base de datos.
             }
         }
     }
@@ -76,8 +76,8 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
 }
 
 //Prototipo: void leer_vehiculo(Estr_Vehiculo **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "vehiculos.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "vehiculos.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
 {
@@ -101,11 +101,11 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
     }
     else
     {
-        while(fgets(vec, 70, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 70, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *vehiculo=realloc(*vehiculo,((*i)+1)*sizeof(Estr_Vehiculo)); //Vamos ampliando la memoria dinámica de la estructura.
+                *vehiculo=realloc(*vehiculo,((*i)+1)*sizeof(Estr_Vehiculo)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*vehiculo==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -117,10 +117,10 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
                 strcpy((*vehiculo)[*i].id_usuario,token);
                 token=strtok(NULL,"-");
                 strcpy((*vehiculo)[*i].num_plazas,token);
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*vehiculo)[*i].desc_veh,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de vehiculos que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de vehiculos que hay en la base de datos.
             }
         }
     }
@@ -131,8 +131,8 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
 }
 
 //Prototipo: void leer_viaje(Estr_Viaje **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "viajes.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "viajes.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_viaje(Estr_Viaje **viaje, int *i)
 {
@@ -156,11 +156,11 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
     }
     else
     {
-        while(fgets(vec, 65, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 65, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *viaje=realloc(*viaje,((*i)+1)*sizeof(Estr_Viaje)); //Vamos ampliando la memoria dinámica de la estructura.
+                *viaje=realloc(*viaje,((*i)+1)*sizeof(Estr_Viaje)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*viaje==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -182,10 +182,10 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
                 strcpy((*viaje)[*i].ida_vuelta,token);
                 token=strtok(NULL,"-");
                 strcpy((*viaje)[*i].precio,token);
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*viaje)[*i].estado,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de viajes que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de viajes que hay en la base de datos.
             }
         }
     }
@@ -196,8 +196,8 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
 }
 
 //Prototipo: void leer_pasos(Estr_Pasos **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "pasos.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "pasos.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_pasos(Estr_Pasos **pasos, int *i)
 {
@@ -221,11 +221,11 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
     }
     else
     {
-        while(fgets(vec, 35, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 35, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *pasos=realloc(*pasos,((*i)+1)*sizeof(Estr_Pasos)); //Vamos ampliando la memoria dinámica de la estructura.
+                *pasos=realloc(*pasos,((*i)+1)*sizeof(Estr_Pasos)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*pasos==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -233,10 +233,10 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
                 }
                 token=strtok(vec,"-"); //Leemos "vec", y lo cortamos cuando tenemos "-".
                 strcpy((*pasos)[*i].id_viaje,token); //Copiamos lo que hemos "cortado", en la cadena correspondiente de la estructura.
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*pasos)[*i].poblacion,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de pasos que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de pasos que hay en la base de datos.
             }
         }
     }
@@ -247,8 +247,8 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
 }
 
 //Prototipo: void leer_localidad(Estr_Localidad **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "localidades.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "localidades.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_localidad(Estr_Localidad **localidad, int *i)
 {
@@ -272,11 +272,11 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     }
     else
     {
-        while(fgets(vec, 30, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 30, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *localidad=realloc(*localidad,((*i)+1)*sizeof(Estr_Localidad)); //Vamos ampliando la memoria dinámica de la estructura.
+                *localidad=realloc(*localidad,((*i)+1)*sizeof(Estr_Localidad)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*localidad==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -284,10 +284,10 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
                 }
                 token=strtok(vec,"-"); //Leemos "vec", y lo cortamos cuando tenemos "-".
                 strcpy((*localidad)[*i].siglas,token); //Copiamos lo que hemos "cortado", en la cadena correspondiente de la estructura.
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*localidad)[*i].localidad,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de localidades que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de localidades que hay en la base de datos.
             }
         }
     }
@@ -298,9 +298,9 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
 }
 
 //Prototipo: void leer_ruta(Estr_Rutas ***, int *, int *);
-//Precondición: Tener la estructura inicializada, con sus contadores.
-//Postcondición: Leer el fichero "rutas.txt" e introducir la información en su estructura, aumentando el contador
-//cada vez que se encuentra una ruta nueva, y otro que nos indique el número de localidades máximas que hay en todas las rutas.
+//Precondicion: Tener la estructura inicializada, con sus contadores.
+//Postcondicion: Leer el fichero "rutas.txt" e introducir la informacion en su estructura, aumentando el contador
+//cada vez que se encuentra una ruta nueva, y otro que nos indique el numero de localidades maximas que hay en todas las rutas.
 
 void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
 {
@@ -330,11 +330,11 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     }
     else
     {
-        while(fgets(vec, 60, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 60, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *ruta=(Estr_Rutas **)realloc(*ruta,(*i+1)*sizeof(Estr_Rutas *)); //Vamos ampliando la memoria dinámica de la estructura.
+                *ruta=(Estr_Rutas **)realloc(*ruta,(*i+1)*sizeof(Estr_Rutas *)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*ruta==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -346,21 +346,21 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
                 token=strtok(vec, "-"); //Leemos "vec", y lo cortamos cuando tenemos "-".
                 while(token!=NULL) //Hasta que la cadena que recibe el corte, no es nula, no saltamos de linea.
                 {
-                    (*ruta)[*i]=(Estr_Rutas *)realloc((*ruta)[*i],(k+1)*sizeof(Estr_Rutas)); //Vamos ampliando la memoria dinámica de la estructura, para añadir más elementos en una fila.
+                    (*ruta)[*i]=(Estr_Rutas *)realloc((*ruta)[*i],(k+1)*sizeof(Estr_Rutas)); //Vamos ampliando la memoria dinamica de la estructura, para añadir mas elementos en una fila.
                     if((*ruta)[*i]==NULL)
                     {
                         printf("Error al asignar memoria.\n");
                         exit(1);
                     }
-                    strcpy((*ruta)[*i][k].localidad, token); //Copiamos en la posición de la matriz, la localidad que hemos cortado con strtok.
+                    strcpy((*ruta)[*i][k].localidad, token); //Copiamos en la posicion de la matriz, la localidad que hemos cortado con strtok.
                     k++;
                     token=strtok(NULL, "-"); //Vamos leyendo hasta que en token no haya nada.
                 }
-                if((*j)<k) //Comparamos si el número de localidades en la fila leída, es mayor a j.
+                if((*j)<k) //Comparamos si el numero de localidades en la fila leida, es mayor a j.
                 {
-                    (*j)=k; //Guardamos la cantidad máxima de localidades que hay en una misma ruta/línea.
+                    (*j)=k; //Guardamos la cantidad maxima de localidades que hay en una misma ruta/linea.
                 }
-                (*i)++; //Aumentamos en 1, para agregar una fila más.
+                (*i)++; //Aumentamos en 1, para agregar una fila mas.
 
 
             }
@@ -369,12 +369,12 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
 
     fclose(fp);
 
-    printf("Se han cargado %i rutas, con %i ciudades como máximo.\n", *i, *j);
+    printf("Se han cargado %i rutas, con %i ciudades como maximo.\n", *i, *j);
 }
 
 //Prototipo: void leer_reservas(Estr_Reservas **, int *);
-//Precondición: Tener la estructura inicializada, con su contador.
-//Postcondición: Leer el fichero "reservas.txt" e introducir la información en su estructura, aumentando el contador cada vez que se encuentra uno.
+//Precondicion: Tener la estructura inicializada, con su contador.
+//Postcondicion: Leer el fichero "reservas.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
 void leer_reservas(Estr_Reservas **reservas, int *i)
 {
@@ -398,11 +398,11 @@ void leer_reservas(Estr_Reservas **reservas, int *i)
     }
     else
     {
-        while(fgets(vec, 30, fp)) //Obtenemos la primera línea, y la introducimos en "vec".
+        while(fgets(vec, 30, fp)) //Obtenemos la primera linea, y la introducimos en "vec".
         {
-            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de línea, pasamos a la siguiente.
+            if(strcmp(vec,"\n")!=0) //Cuando haya un salto de linea, pasamos a la siguiente.
             {
-                *reservas=realloc(*reservas,((*i)+1)*sizeof(Estr_Reservas)); //Vamos ampliando la memoria dinámica de la estructura.
+                *reservas=realloc(*reservas,((*i)+1)*sizeof(Estr_Reservas)); //Vamos ampliando la memoria dinamica de la estructura.
                 if (*reservas==NULL)
                 {
                     printf("Error al asignar memoria.\n");
@@ -410,10 +410,10 @@ void leer_reservas(Estr_Reservas **reservas, int *i)
                 }
                 token=strtok(vec,"-"); //Leemos "vec", y lo cortamos cuando tenemos "-".
                 strcpy((*reservas)[*i].id_viaje,token); //Copiamos lo que hemos "cortado", en la cadena correspondiente de la estructura.
-                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de línea.
+                token=strtok(NULL,"\n"); //Vamos leyendo hasta que haya un salto de linea.
                 strcpy((*reservas)[*i].id_usuario,token);
 
-                (*i)++; //Vamos aumentando el contador, para saber el número máximo de reservas que hay en la base de datos.
+                (*i)++; //Vamos aumentando el contador, para saber el numero maximo de reservas que hay en la base de datos.
             }
         }
     }

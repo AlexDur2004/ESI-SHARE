@@ -1,15 +1,15 @@
 #include "acceso.h"
 
 //Prototipo: void acceso(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int);
-//Precondición: Tener inicializada la variable "numUsuarios", con el número de usuarios máximos del fichero, y la estructura "usuario", con datos leídos
-//desde el fichero "usuarios.txt", y haber introducido el número correspondiente en el menú. También se necesitarán el resto de estructuras, para introducirlas en el menú.
-//Postcondición: Autenticación de las credenciales introducidas, si coinciden con alguna de la base de datos, pues se accede al programa.
-//Si el usuario es "usuario", accederá al menú de usuario, y si es "administrador", accederá al menú de admin.
+//Precondicion: Tener inicializada la variable "numUsuarios", con el numero de usuarios maximos del fichero, y la estructura "usuario", con datos leidos
+//desde el fichero "usuarios.txt", y haber introducido el numero correspondiente en el menu. Tambien se necesitaran el resto de estructuras, para introducirlas en el menu.
+//Postcondicion: Autenticacion de las credenciales introducidas, si coinciden con alguna de la base de datos, pues se accede al programa.
+//Si el usuario es "usuario", accedera al menu de usuario, y si es "administrador", accedera al menu de admin.
 
 void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2)
 {
-    int i, j=0, k=0, encontrado=0, encontrado2=0, encontrado3=3, preg=0;
-    char usua[6], contra[9], c;
+    int i, k=0, encontrado=0, encontrado2=0, encontrado3=3;
+    char usua[6], contra[9];
 
     leer_usuario(&usuario, &numUsuarios);
     system("cls");
@@ -22,34 +22,20 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
 
     for(k=0; k<numUsuarios&&encontrado2==0; k++)
     {
-        if(strcmp(usua, usuario[k].usuario)==0) //Comprueba si el usuario está en la base de datos.
+        if(strcmp(usua, usuario[k].usuario)==0) //Comprueba si el usuario esta en la base de datos.
         {
             encontrado2=1;
         }
     }
 
-    if(encontrado2==1) //Si el usuario está en la base de datos, salta aquí.
+    if(encontrado2==1) //Si el usuario esta en la base de datos, salta aqui.
     {
         while(encontrado3>0&&encontrado==0) //Sistema de 3 intentos para introducir la contraseña correctamente.
         {
             color(0, 3);
             printf("Contrasena:\n");
             color(0, 15);
-            fflush(stdin);
-            while ((c=getch())!='\r'&&j<8) //Lee el carácter, hasta 8.
-            {
-                if (c=='\b'&&j>0) //Si se borra algo, se borra un *, y se resta una posición del vector.
-                {
-                    j--;
-                    printf("\b \b");
-                }
-                else if (c != '\b') //Si se escribe algo, se imprime *, y se introduce en vector contra.
-                {
-                    contra[j++] = c;
-                    printf("*");
-                }
-            }
-            contra[j] = '\0';
+            preguntar_contrasena(contra);
 
             for(i=0; i<numUsuarios||encontrado!=0; i++) //Comprueba si el usuario y la contraseña son correctos.
             {
@@ -57,12 +43,12 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
                 {
                     if(strcmp(usuario[i].contrasena,contra)==0)
                     {
-                        if(strcmp(usuario[i].perfil,"usuario")==0) //Si el usuario, tiene perfil de "usuario", salta al menú de usuario.
+                        if(strcmp(usuario[i].perfil,"usuario")==0) //Si el usuario, tiene perfil de "usuario", salta al menu de usuario.
                         {
                             encontrado=1;
                             menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                         }
-                        else if(strcmp(usuario[i].perfil,"administrador")==0) //Si el usuario, tiene perfil de "administrador", salta al menú de admin.
+                        else if(strcmp(usuario[i].perfil,"administrador")==0) //Si el usuario, tiene perfil de "administrador", salta al menu de admin.
                         {
                             encontrado=1;
                             menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
@@ -86,9 +72,8 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
                 else if(encontrado3>0)
                 {
                     *contra=NULL;
-                    j=0;
                     color(15, 0);
-                    printf("Queda(n) %i intentos.\n", encontrado3); //Imprime un contador de intentos, para saber cuántos quedan.
+                    printf("Queda(n) %i intentos.\n", encontrado3); //Imprime un contador de intentos, para saber cuantos quedan.
                     color(0, 15);
                     system("PAUSE");
                     system("cls");
@@ -103,7 +88,7 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
     }
     else
     {
-        printf("Usuario no encontrado en nuestra base de datos.\n"); //Si el usuario no está en la base de datos.
+        printf("Usuario no encontrado en nuestra base de datos.\n"); //Si el usuario no esta en la base de datos.
         system("PAUSE");
     }
 }

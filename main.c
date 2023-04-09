@@ -8,7 +8,6 @@
 #include <time.h>
 #include "acceso.h"
 #include "colores.h"
-#include "crear_viaje.h"
 #include "eliminar.h"
 #include "encontrar.h"
 #include "estructuras.h"
@@ -18,9 +17,9 @@
 #include "listar.h"
 #include "menus.h"
 #include "modificar.h"
-#include "mostrar_reservar.h"
 #include "preguntar.h"
-#include "reservar.h"
+#include "buscar.h"
+#include "actualizar.h"
 
 int main()
 {
@@ -37,7 +36,7 @@ int main()
     setlocale(LC_ALL, "spanish");
 
     leer(&usuario, &numUsuarios, &vehiculo, &numVehiculos, &viaje, &numViajes, &pasos, &numPasos, &reservas, &numReservas, &ruta, &numRutas, &numRutas2, &localidad, &numLocalidades);
-    actualizarViajes(viaje, numViajes, reservas, numReservas, pasos, numPasos);
+    actualizarViajesEstado(viaje, numViajes, reservas, numReservas, pasos, numPasos);
 
     menuPrincipal(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
 

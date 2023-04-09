@@ -1,14 +1,14 @@
 #include "listar.h"
 
 //Prototipo: void listarUsuarios(Estr_Usuario *, int);
-//Precondición: Tener la estructura "usuario" inicializada, junto a su contador.
-//Postcondición: Dar una lista de todos los usuarios, que hay en la base de datos.
+//Precondicion: Tener la estructura "usuario" inicializada, junto a su contador.
+//Postcondicion: Dar una lista de todos los usuarios, que hay en la base de datos.
 
 void listarUsuarios(Estr_Usuario *usuario, int numUsuarios)
 {
     int counter;
 
-    leer_usuario(&usuario, &numUsuarios); //Lee la estructura "usuario", por si ha habido algún cambio.
+    leer_usuario(&usuario, &numUsuarios); //Lee la estructura "usuario", por si ha habido algun cambio.
     system("cls");
 
     if(numUsuarios!=0) //Si hay usuarios en el sistema.
@@ -51,14 +51,14 @@ system("PAUSE");
 }
 
 //Prototipo: void listarVehiculos(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
-//Precondición: Tener la estructura "usuario" y "vehiculo" inicializadas, junto a sus contadores.
-//Postcondición: Dar una lista de todos los vehiculos, de cada usuario, que hay en la base de datos.
+//Precondicion: Tener la estructura "usuario" y "vehiculo" inicializadas, junto a sus contadores.
+//Postcondicion: Dar una lista de todos los vehiculos, de cada usuario, que hay en la base de datos.
 
 void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
     int contador_veh_usuario, counter, counter2;
 
-    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algún cambio en ellas.
+    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algun cambio en ellas.
     leer_vehiculo(&vehiculo, &numVehiculos);
     system("cls");
 
@@ -82,7 +82,7 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
                     color(0,4);
                     printf(":\t");
                     color(0,3);
-                    printf("    Matrícula: ");
+                    printf("    Matricula: ");
                     color(0,15);
                     printf("%s", vehiculo[counter2].id_mat);
                     color(0,3);
@@ -113,14 +113,14 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
 }
 
 //Prototipo: void listarAdminViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int, int);
-//Precondición: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, junto a sus contadores.
-//Postcondición: Si n=0, da una lista de todos los viajes, de cada usuario, que hay en la base de datos, y si n=1, da una lista de los viajes abiertos que hay de cada usuario.
+//Precondicion: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, junto a sus contadores.
+//Postcondicion: Si n=0, da una lista de todos los viajes, de cada usuario, que hay en la base de datos, y si n=1, da una lista de los viajes abiertos que hay de cada usuario.
 
 void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i, int n, int *num)
 {
     int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter;
 
-    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algún cambio en ellas.
+    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algun cambio en ellas.
     leer_vehiculo(&vehiculo, &numVehiculos);
     leer_viaje(&viaje, &numViajes);
     system("cls");
@@ -205,19 +205,18 @@ void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
     else //Si no hay viajes abiertos en el sistema.
     {
         color(0, 15);
-        printf("Ningún usuario del sistema tiene un viaje.\n");
+        printf("Ningun usuario del sistema tiene un viaje.\n");
     }
     color(0,15);
     system("PAUSE");
 }
 
 //Prototipo: void listarAdminVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
-//Precondición: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, con sus contadores.
-//Postcondición: Dar una lista de todos los viajes que ha realizado un vehiculo.
+//Precondicion: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, con sus contadores.
+//Postcondicion: Dar una lista de todos los viajes que ha realizado un vehiculo.
 
 void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i)
 {
-    FILE *fp;
     int x=0, m=0, z=0, encontrado=0, *vec=NULL;
     char mat[8];
 
@@ -226,7 +225,7 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
         while(encontrado==0) //Hasta que no se encuentre un vehiculo existente en el sistema.
         {
             listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, i); //Listamos todos los vehiculos de cada usuario.
-            printf("Introduzca la matrícula de un vehículo para obtener los viajes que ha realizado.\n");
+            printf("Introduzca la matricula de un vehiculo para obtener los viajes que ha realizado.\n");
             pregunta(mat, 8);
 
             for(z=0;z<numVehiculos;z++) //Nos desplazamos por toda la estructura "vehiculo".
@@ -247,11 +246,11 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
 
         if(x==0) //Si el vehiculo no tiene viajes.
         {
-            printf("El vehiculo con matricula %s, no ha realizado ningún viaje.\n", mat);
+            printf("El vehiculo con matricula %s, no ha realizado ningun viaje.\n", mat);
         }
         else
         {
-            printf("Los viajes realizados por el vehículo con matrícula %s son:\n", mat);
+            printf("Los viajes realizados por el vehiculo con matricula %s son:\n", mat);
             for(m=0; m<x; m++) //Imprimimos todos los viajes realizados con ese vehiculo.
             {
                 color(15, 0);
@@ -293,4 +292,34 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
     }
 
     system("PAUSE");
+}
+
+//Prototipo: void listarLocalidades(Estr_Localidad *, int);
+//Precondicion: Tener la estructura "localidad" inicializada, con su contador.
+//Postcondicion: Imprimir una lista de 4 filas con todas las localidades.
+
+void listarLocalidades(Estr_Localidad *localidad, int numLocalidades)
+{
+    int i=0, j=0, k=0;
+
+    numLocalidades--; //Queremos quitarle la ultima linea que contiene a la Escuela Superior de Ingenieria (ESI), para que no se imprima por pantalla, junto a las localidades.
+
+    k=numLocalidades/4; //Calcular filas necesarias.
+
+    if(numLocalidades%4!=0) //Si al dividir las localidades entre 4, queda un resto, pues se aumenta una fila.
+    {
+        k++;
+    }
+
+    for(i=0; i<k; i++) //Imprimimos la lista de ciudades en 4 columnas homogeneas.
+    {
+        for(j=i; j<numLocalidades; j=j+k)
+        {
+            color(0, 3);
+            printf("%s", localidad[j].siglas);
+            color(0, 15);
+            printf("-%-20s\t", localidad[j].localidad);
+        }
+        printf("\n");
+    }
 }

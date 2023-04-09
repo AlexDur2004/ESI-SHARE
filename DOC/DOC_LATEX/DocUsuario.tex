@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%% Documentación del usuario %%%%%%%%%%%%%%%%%%%%
+
+\section{Documentación de usuario}
+
+\subsection{Descripción funcional}
+
+Este programa ha sido creado con la finalidad de brindar un servicio de compartición de coches a los miembros de la comunidad universitaria de la Escuela Superior de Ingeniería. 
+Con esto, se conseguirá una gran reducción de los costes diarios de transportes, al igual que una significante disminución de gases.
+
+\bigskip
+
+Como hemos comentado anteriormente, queremos dar un servicio de calidad, es por esto que con nuestro programa usted podrá realizar diferentes acciones, como:
+\begin{itemize}
+  \item Siendo \textbf{Pasajero} se le permitirá:
+  \begin{itemize}
+    \item Consultar y variar sus datos personales.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
+    \end{center}
+    \item Reservar y cancelar viajes.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuPasajeroViaje.png}
+    \end{center}
+  \end{itemize}
+  \item Siendo \textbf{Conductor} se le permitirá:
+  \begin{itemize}
+    \item Consultar y cambiar sus datos personales.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
+    \end{center}
+    \item Dar de alta, modificar y eliminar vehículos.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuConductorVehiculo.png}
+    \end{center}
+    \item Crear, modificar, anular y finalizar viajes.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuConductorViaje.png}
+    \end{center}
+  \end{itemize}
+  \item Siendo \textbf{Administrador} se le permitirá:
+  \begin{itemize}
+    \item Crear, descartar, cambiar y listar usuarios.
+    \begin{center}
+    \includegraphics[]{FOTOS/menuAdminUsuario.png}
+    \end{center}
+    \item Dar de alta, suprimir, variar y listar vehículos.
+    \item Establecer, anular, finalizar, cancelar, modificar y listar viajes.
+  \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection{Tecnología}
+
+Este programa lo hemos realizado con el entorno de desarrollo integrado (IDE) \href{https://www.codeblocks.org/}{Code::Blocks}, en su versión 20.03.
+A la hora de programar, hemos tenido que emplear diferentes bibliotecas, como:
+\begin{itemize}
+  \item stdio.h: Manejar la entrada y salida de datos a través de archivos, dispositivos de entrada/salida estándar, etc.
+  \item string.h: Usar cadenas de caracteres.
+  \item stdlib.h: Emplear estructuras, memoria dinámica, conversión de cadenas, etc.
+  \item wchar.h: Manipular cadenas de caracteres Unicode.
+  \item locale.h: Proporcionar el uso de caracteres especiales de un idioma.
+  \item windows.h: Incluir comandos del sistema operativo Microsoft Windows.
+  \item conio.h: Utilizar la entrada y salida de caracteres por la consola.
+  \item time.h: Trabajar con fechas y tiempos.
+\end{itemize}
+
+\bigskip
+
+Por ejemplo, se han empleado vectores con estructuras dinámicas, o incluso matrices/vector de vectores dinámicos. Esto se puede observar en el módulo reservar.
+También se ha hecho uso de ficheros temporales, para eliminar/modificar, como se puede ver en en los módulos eliminar y modificar.
+
+\subsection{Manual de instalación}
+
+Para usar el programa, sólo tiene que dirigirse a la carpeta ESI-SHARE. Ahí encontrará un archivo ejecutable, llamado ESI-SHARE.exe, con el que podrá ejecutar el programa.
+Otra forma sería instalar \href{https://www.codeblocks.org/}{Code::Blocks}, y ejecutar el archivo de proyecto ESI-SHARE.cbp.
+
+\subsection{Acceso al sistema}
+
+Tras haber iniciado el programa, se encontrará un menú, en el que encontrará dos opciones, una para acceder al sistema, si ya tiene unas credenciales, y otra para registrarse,
+que le pedirá sus datos personales, para darse de alta. Si quiere testear el acceso al sistema, puede introducir:
+\begin{itemize}
+  \item Para acceder como usuario:
+  \begin{itemize}
+    \item Usuario: \textbf{usua1}
+    \item Contraseña: \textbf{2023}
+  \end{itemize}
+  \item Para acceder como administrador:
+  \begin{itemize}
+    \item Usuario: \textbf{admin}
+    \item Contraseña: \textbf{1234}
+  \end{itemize}
+\end{itemize}
+
+A la hora de salir, se ha elaborado un mecanismo intuitivo y sencillo, ya que en todo momento podrá volver al menú anterior, introduciendo el número indicado por pantalla.
+En el caso de querer salir totalmente del programa, tendrá que cerrar sesión, volviendo al menú principal.
+\begin{center}
+\includegraphics[]{FOTOS/menuPrincipal.png}
+\label{fig:menuPrincipal}
+\end{center}
+
+\subsection{Manual de referencia}
+
+El programa le puede aportar un gran ahorro de dinero en desplazamientos, debido al óptimo sistema de reservas que desempeña, haciendo posible que cualquier estudiante, profesor o personal
+de la Escuela Superior de Ingeniería, pueda acceder a dichas ventajas.
+
+\bigskip
+
+Cuando ejecute al programa, podrá acceder con sus credenciales, o registrarse. Si accede con sus credenciales, tendrá las opciones de ser "Pasajero" ó "Conductor", 
+dependiendo de lo que quiera hacer, seleccionará uno u otro, esto se puede cambiar en cualquier momento, volviendo a dicho menú. \ref{fig:menuPrincipal}
+
+\begin{itemize}
+  \item Si elige la opción de ser \textbf{Pasajero}, podrá:
+  \begin{itemize}
+    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos.
+    \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá reservar un viaje ya existente que pase por su localidad, al igual que cancelar cualquier reserva.
+  \end{itemize}
+  \item Si elige la opción de ser \textbf{Conductor}, podrá:
+  \begin{itemize}
+    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos.
+    \item Pasar al menú de \textbf{Vehículos}, para introducir nuevos vehículos, modificarlos o incluso eliminarlos. Para esto, la matrícula del vehículo no puede existir en la base de datos.
+    \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá crear un viaje nuevo, siempre y cuando no haya dos abiertos en el mismo día, habría que acabar uno para empezar el siguiente,
+    todo esto con el objetivo de que no se solapen los viajes. Además, se pueden modificar los viajes, si estos están abiertos y sin plazas reservadas, e incluso anular ó finalizar los viajes,
+    esta selección la hará automáticamente el sistema, dependiendo del estado del viaje.
+  \end{itemize}
+\end{itemize}
+
+Asimismo, hay un menú especial, si accede con las credenciales del \textbf{Administrador}. En este menú, tendrá acceso a todo tipo de información de la base de datos, como:
+\begin{itemize}
+  \item Entrar en el menú de \textbf{Usuarios}, donde puede crear un usuario desde cero, eliminar cualquier usuario del sistema, modificar los datos personales de cualquiera,
+  e incluso obtener una lista con todos los usuarios que hay en el sistema.
+  \item Pasar al menú de \textbf{Vehículos}, para dar de alta nuevos vehículos, eliminar un vehículo, modificar los datos de un vehículo, imprimir una lista de todos los vehículos que hay registrados
+  al igual que obtener el historial de todos los viajes que ha realizado un vehículo, a partir de su matrícula.
+  \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá registrar un viaje, anular/finalizar, eliminar y modificar cualquier viaje del sistema, y obtener una lista con todos los viajes
+  que hay registrados en el sistema.
+\end{itemize}

@@ -1,8 +1,8 @@
 #include "preguntar.h"
 
 //Prototipo: void pregunta(char *, int);
-//Precondición: Tener una cadena y un entero inicializados, que nos indique el nº maximo de caracteres de la misma.
-//Postcondición: Introducir en una cadena, la información escaneada, pero cambiando el salto de linea \n por el caracter nulo \0.
+//Precondicion: Tener una cadena y un entero inicializados, que nos indique el num maximo de caracteres de la misma.
+//Postcondicion: Introducir en una cadena, la informacion escaneada, pero cambiando el salto de linea \n por el caracter nulo \0.
 
 void pregunta(char *x, int i)
 {
@@ -25,46 +25,56 @@ void pregunta(char *x, int i)
     }
 }
 
-//Prototipo: void imprimir_localidad(Estr_Localidad *, int);
-//Precondición: Tener la estructura "localidad" inicializada, con su contador.
-//Postcondición: Imprimir una lista de 4 filas con todas las localidades.
+//Prototipo: void preguntar_contrasena(char *);
+//Precondicion: Tener una cadena inicializada, donde introducir la contrasena escaneada.
+//Postcondicion: Introducir en una cadena, la contrasena escaneada, pero cambiando el salto de linea \n por el caracter nulo \0. La contrasena introducida debe tener al menos 1 caracter.
+//Se hace asi, para poder escribir * cuando se escriba una contrasena.
 
-void imprimir_localidad(Estr_Localidad *localidad, int numLocalidades)
+void preguntar_contrasena(char *contra)
 {
-    int i=0, j=0, k=0;
+    char c;
+    int encontrado=0, j=0;
 
-    numLocalidades--; //Queremos quitarle la última línea que contiene a la Escuela Superior de Ingeniería (ESI), para que no se imprima por pantalla, junto a las localidades.
-
-    k=numLocalidades/4; //Calcular filas necesarias.
-
-    if(numLocalidades%4!=0) //Si al dividir las localidades entre 4, queda un resto, pues se aumenta una fila.
+    while(!encontrado) //Bucle para que se compruebe si la contrasena tiene al menos 1 caracter.
     {
-        k++;
-    }
-
-    for(i=0; i<k; i++) //Imprimimos la lista de ciudades en 4 columnas homogéneas.
-    {
-        for(j=i; j<numLocalidades; j=j+k)
+        fflush(stdin);
+        while((c=getch())!='\r'&&j<8) //Lee el caracter, hasta 8.
         {
-            color(0, 3);
-            printf("%s", localidad[j].siglas);
-            color(0, 15);
-            printf("-%-20s\t", localidad[j].localidad);
+            if (c=='\b'&&j>0) //Si se borra algo, se borra un *, y se resta una posicion del vector.
+            {
+                j--;
+                printf("\b \b");
+            }
+            else if (c != '\b') //Si se escribe algo, se imprime *, y se introduce en vector contra.
+            {
+            contra[j++] = c;
+            printf("*");
+            }
         }
-        printf("\n");
+        if(j>0) //Si la cadena tiene mas de 1 caracter, salimos del bucle.
+        {
+            encontrado=1;
+        }
+        else
+        {
+            printf("\nLa contraseña debe tener entre 1 y 8 caracteres.\n");
+            printf("Vuelva a introducir una contrasena valida.\n");
+            j=0;
+        }
+        contra[j] = '\0';
     }
 }
 
 //Prototipo: void pregunta_localidad(Estr_Localidad *, int, char *);
-//Precondición: Tener la estructura "localidad" inicializada, con su contador. Además, necesitamos una cadena, donde introducir la localidad introducida.
-//Postcondición: Introducir en una cadena, la localidad seleccionada de la lista.
+//Precondicion: Tener la estructura "localidad" inicializada, con su contador. Ademas, necesitamos una cadena, donde introducir la localidad introducida.
+//Postcondicion: Introducir en una cadena, la localidad seleccionada de la lista.
 
 void pregunta_localidad(Estr_Localidad *localidad, int numLocalidades, char *local)
 {
     char vec_loc[4];
     int i, encontrado=0;
 
-    imprimir_localidad(localidad, numLocalidades); //Imprime una lista con todas las localicades.
+    listarLocalidades(localidad, numLocalidades); //Imprime una lista con todas las localicades.
 
     while(encontrado==0) //Hasta que no se introduzca una cadena correcta.
     {
@@ -83,16 +93,16 @@ void pregunta_localidad(Estr_Localidad *localidad, int numLocalidades, char *loc
     }
 }
 
-//Prototipo: void pregunta_localidad(Estr_Localidad *, int, char *);
-//Precondición: Tener la estructura "localidad" inicializada, con su contador. Además, necesitamos una cadena, donde introducir la localidad introducida.
-//Postcondición: Introducir en una cadena, la localidad seleccionada de la lista.
+//Prototipo: void pregunta_ruta(Estr_Localidad *, int, Estr_Rutas **, int, int, char *);
+//Precondicion: Tener la estructura "localidad" y "ruta" inicializadas, con sus contadores. Ademas, necesitamos una cadena, donde introducir la localidad introducida.
+//Postcondicion: Introducir en una cadena, la localidad seleccionada de la lista, que esté en una ruta.
 
 void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, char *rut2)
 {
     int i, j, x, encontrado=0;
     char rut[4];
 
-    imprimir_localidad(localidad, numLocalidades); //Imprime una lista con todas las localicades.
+    listarLocalidades(localidad, numLocalidades); //Imprime una lista con todas las localicades.
 
     while(encontrado==0) //Hasta que no se introduzca una cadena correcta.
     {
@@ -122,8 +132,8 @@ void pregunta_ruta(Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **r
 }
 
 //Prototipo: void preguntar_veh(Estr_Vehiculo *, int, char *, int *);
-//Precondición: Tener la estructura "vehiculo" inicializada, con su contador. Además, necesitamos una cadena, donde introducir la localidad introducida, y una variable bandera con puntero.
-//Postcondición: Preguntar una matricula, y comprobar si existe en el sistema.
+//Precondicion: Tener la estructura "vehiculo" inicializada, con su contador. Ademas, necesitamos una cadena, donde introducir la localidad introducida, y una variable bandera con puntero.
+//Postcondicion: Preguntar una matricula, y comprobar si existe en el sistema.
 
 void preguntar_veh(Estr_Vehiculo *vehiculo, int numVehiculos, char *opc, int *encontrado)
 {
@@ -132,7 +142,7 @@ void preguntar_veh(Estr_Vehiculo *vehiculo, int numVehiculos, char *opc, int *en
     pregunta(opc, 8); //Pedimos la matricula.
     for(counter=0;(counter<numVehiculos)&&((*encontrado)==0);counter++) //Nos desplazamos por toda la estructura "vehiculo", hasta encontrar la matricula.
     {
-        if(strcmp(opc,vehiculo[counter].id_mat)==0) //Si la matricula introducida está en la estructura.
+        if(strcmp(opc,vehiculo[counter].id_mat)==0) //Si la matricula introducida esta en la estructura.
         {
             (*encontrado)=1;
             printf("Has seleccionado el vehiculo con matricula %s", opc);

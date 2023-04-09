@@ -1,10 +1,9 @@
 #include "eliminar.h"
 
 //Prototipo: void eliminarVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
-//Precondición: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
-//también necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
-//Postcondición: Preguntar al usuario, qué vehículo quiere eliminar de todos los que tiene, para
-//eliminar el vehiculo, con sus viajes, pasos y reservas.
+//Precondicion: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
+//tambien necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
+//Postcondicion: Preguntar al usuario, que vehiculo quiere eliminar de todos los que tiene, para eliminar el vehiculo, con sus viajes, pasos y reservas.
 
 void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int i)
 {
@@ -13,11 +12,11 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
     leer_vehiculo(&vehiculo, &numVehiculos);
     system("cls");
 
-    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehículos del usuario, y los colocamos en un vector de enteros,
-    //con las posiciones en la estructura "vehiculo" de sus vehículos.
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehiculos del usuario, y los colocamos en un vector de enteros,
+    //con las posiciones en la estructura "vehiculo" de sus vehiculos.
 
-    if(x>0){ //Si tiene algún vehículo, le pregunta el coche que quiere eliminar, si no tiene vehículo, se imprime un aviso.
-        printf("¿Qué vehiculo quiere eliminar?\n");
+    if(x>0){ //Si tiene algun vehiculo, le pregunta el coche que quiere eliminar, si no tiene vehiculo, se imprime un aviso.
+        printf("¿Que vehiculo quiere eliminar?\n");
 
         for(m=0; m<x; m++) //Imprimimos todos los coches que tiene el usuario.
         {
@@ -25,50 +24,50 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
         }
         m++;
         printf("(%i)Salir.\n", m);
-        printf("Ingrese el número correspondiente al vehículo que desea eliminar: "); //Selección del vehículo que quiere eliminar.
+        printf("Ingrese el numero correspondiente al vehiculo que desea eliminar: "); //Seleccion del vehiculo que quiere eliminar.
         fflush(stdin);
         scanf("%d", &opc);
-        if(opc==m){ //Si introduce el número más alto "m", volverá a la función anterior, en este caso el menú.
+        if(opc==m){ //Si introduce el numero mas alto "m", volvera a la funcion anterior, en este caso el menu.
             return;
         }
-        if((opc>=1&&opc<m)&&opc!=m) //Si el número introducido no está en el rango que se representa, es decir,
-            //es menor que 1 o es mayor que m, pues se vuelva a entrar a la función, funcionando como un do-while.
+        if((opc>=1&&opc<m)&&opc!=m) //Si el numero introducido no esta en el rango que se representa, es decir,
+            //es menor que 1 o es mayor que m, pues se vuelva a entrar a la funcion, funcionando como un do-while.
         {
             h=opc-1;
             do{
                 opc2=0;
                 system("cls");
-                printf("¿Seguro que quieres eliminar el vehiculo %s, con matrícula %s?\n", vehiculo[vec[h]].desc_veh, vehiculo[vec[h]].id_mat);
-                //Si el usuario escoge el 1, se eliminará el vehículo, si escribe 2, se volverá al menú.
-                printf("(1)Sí\n");
+                printf("¿Seguro que quieres eliminar el vehiculo %s, con matricula %s?\n", vehiculo[vec[h]].desc_veh, vehiculo[vec[h]].id_mat);
+                //Si el usuario escoge el 1, se eliminara el vehiculo, si escribe 2, se volvera al menu.
+                printf("(1)Si\n");
                 printf("(2)No\n");
                 fflush(stdin);
                 scanf("%d", &opc2);
-                if(opc2==1){ //Al escoger 1, nos lleva a otra función, que eliminará los viajes, pasos y reservas del vehículo seleccionado.
+                if(opc2==1){ //Al escoger 1, nos lleva a otra funcion, que eliminara los viajes, pasos y reservas del vehiculo seleccionado.
                     system("cls");
                     eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[h]].id_mat, x);
                     system("PAUSE");
                 }
             }while((opc2<1)||(opc2>2));
         }
-        else //Si el número no está en el rango, volvemos a entrar en la función.
+        else //Si el numero no esta en el rango, volvemos a entrar en la funcion.
         {
             system("cls");
-            eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i); //Vuelva a entrar en la función.
+            eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i); //Vuelva a entrar en la funcion.
         }
     }
-    else //Se imprime un aviso, si no tiene vehículos asignados.
+    else //Se imprime un aviso, si no tiene vehiculos asignados.
     {
         system("cls");
-        printf("No posee vehículos registrados.\n");
+        printf("No posee vehiculos registrados.\n");
         system("PAUSE");
     }
 }
 
 //Prototipo: void eliminarVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, char *, int);
-//Precondición: Tener la cadena "mat", que sería la matrícula del vehículo que se quiere eliminar, y la variable "x", que representa el número
-//de vehículos que tiene el usuario, también necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
-//Postcondición: Eliminar el vehículo, a partir de la matrícula, además de todos sus viajes, pasos y reservas.
+//Precondicion: Tener la cadena "mat", que seria la matricula del vehiculo que se quiere eliminar, y la variable "x", que representa el numero
+//de vehiculos que tiene el usuario, tambien necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
+//Postcondicion: Eliminar el vehiculo, a partir de la matricula, ademas de todos sus viajes, pasos y reservas.
 
 void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, char *mat, int x)
 {
@@ -88,11 +87,11 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
     }
     else
     {
-        for(n=0; n<numVehiculos&&encontrado==0; n++) //Nos desplazamos por toda la estructura "vehiculo", hasta encontrar el vehículo con la matrícula deseada.
+        for(n=0; n<numVehiculos&&encontrado==0; n++) //Nos desplazamos por toda la estructura "vehiculo", hasta encontrar el vehiculo con la matricula deseada.
         {
-            if(strcmp(vehiculo[n].id_mat, mat)==0) //Si coincide la matrícula de la posición actual en la estructura con la matrícula deseada.
+            if(strcmp(vehiculo[n].id_mat, mat)==0) //Si coincide la matricula de la posicion actual en la estructura con la matricula deseada.
             {
-                temp=fopen("DATA/vehiculos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los vehículos que hay, menos el vehículo que se quiere eliminar.
+                temp=fopen("DATA/vehiculos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los vehiculos que hay, menos el vehiculo que se quiere eliminar.
                 if(temp==NULL)
                 {
                 printf("No se ha podido abrir el fichero vehiculos_Temp.txt.\n");
@@ -101,7 +100,7 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
                 {
                     for(counter=0; counter<numVehiculos; counter++)
                     {
-                        if(strcmp(vehiculo[counter].id_mat, mat)!=0) //Cuando el matrícula del vehículo, coincide con la matrícula deseada, se salta de línea/omite.
+                        if(strcmp(vehiculo[counter].id_mat, mat)!=0) //Cuando el matricula del vehiculo, coincide con la matricula deseada, se salta de linea/omite.
                         {
                             fprintf(temp, "%s-%s-%s-%s\n", vehiculo[counter].id_mat, vehiculo[counter].id_usuario, vehiculo[counter].num_plazas, vehiculo[counter].desc_veh);
                         }
@@ -111,13 +110,11 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
                 fclose(fp);
                 for(j=0; j<x; j++)
                 {
-                    encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehículo, para eliminarlos.
+                    encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[n].id_mat, &vec_viaje, &num_v, 0); //Encontramos todos los viajes del vehiculo, para eliminarlos.
                 }
                 for(k=0; k<num_v; k++) //Eliminamos todos los viajes, pasos y reservas.
                 {
                     eliminarSoloViaje(viaje, numViajes, pasos, numPasos, reservas, numReservas, viaje[vec_viaje[k]].id_viaje);
-                    eliminarPasos(pasos, numPasos, viaje[vec_viaje[k]].id_viaje);
-                    eliminarReservas(reservas, numReservas, viaje[vec_viaje[k]].id_viaje);
                 }
                 encontrado=1;
             }
@@ -130,9 +127,9 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
 }
 
 //Prototipo: void eliminarViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
-//Precondición: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
-//Además se necesitarán las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", y sus respectivos contadores.
-//Postcondición: Preguntar al usuario, qué viaje quiere eliminar de todos los que tiene, para eliminar el viaje, con sus pasos y reservas.
+//Precondicion: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
+//Ademas se necesitaran las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", y sus respectivos contadores.
+//Postcondicion: Preguntar al usuario, que viaje quiere eliminar de todos los que tiene, para eliminar el viaje, con sus pasos y reservas.
 
 void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int i)
 {
@@ -142,7 +139,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
     leer_viaje(&viaje, &numViajes);
     system("cls");
 
-    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, i);  //Busca los vehículos que tiene dicho usuario, para luego encontrar los viajes que tiene.
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, i);  //Busca los vehiculos que tiene dicho usuario, para luego encontrar los viajes que tiene.
 
     for(j=0;j<num_v;j++)
     {
@@ -150,7 +147,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
     }
 
     if(x>0){
-        printf("¿Qué viaje quiere eliminar?\n");
+        printf("¿Que viaje quiere eliminar?\n");
 
         for(m=0; m<x; m++) //Imprime una lista de todos los viajes que tiene el usuario.
         {
@@ -158,27 +155,27 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
         }
         x++;
         printf("(%i)Salir.\n", x);
-        printf("Ingrese el número correspondiente al viaje que desea eliminar: "); //Introduce el número del viaje.
+        printf("Ingrese el numero correspondiente al viaje que desea eliminar: "); //Introduce el numero del viaje.
         fflush(stdin);
         scanf("%d", &opc);
-        if(opc==x) //Si el número introducido coincide con el del número máximo "x", se vuelve al menú.
+        if(opc==x) //Si el numero introducido coincide con el del numero maximo "x", se vuelve al menu.
         {
             return;
         }
-        if((opc>=1&&opc<x)&&opc!=x) //Si el número introducido no está en el rango que se representa, es decir,
-            //es menor que 1 o es mayor que m, pues se vuelva a entrar a la función, funcionando como un do-while.
+        if((opc>=1&&opc<x)&&opc!=x) //Si el numero introducido no esta en el rango que se representa, es decir,
+            //es menor que 1 o es mayor que m, pues se vuelva a entrar a la funcion, funcionando como un do-while.
         {
             h=opc-1;
-            do //Imprime un mensaje de confirmación para eliminar el viaje seleccionado, se repite hasta que sea 1 o 2.
+            do //Imprime un mensaje de confirmacion para eliminar el viaje seleccionado, se repite hasta que sea 1 o 2.
             {
                 opc2=0;
                 system("cls");
-                printf("¿Seguro que quieres eliminar el viaje %s, con matrícula %s?\n", viaje[vec_viaje[h]].id_viaje, viaje[vec_viaje[h]].id_mat);
-                printf("(1)Sí\n");
+                printf("¿Seguro que quieres eliminar el viaje %s, con matricula %s?\n", viaje[vec_viaje[h]].id_viaje, viaje[vec_viaje[h]].id_mat);
+                printf("(1)Si\n");
                 printf("(2)No\n");
                 fflush(stdin);
                 scanf("%d", &opc2);
-                if(opc2==1){ //Si seleccionamos 1, se va a la función, que elimina viajes, pasos y reservas, por la id del viaje.
+                if(opc2==1){ //Si seleccionamos 1, se va a la funcion, que elimina viajes, pasos y reservas, por la id del viaje.
                     system("cls");
                     eliminarSoloViaje(viaje, numViajes, pasos, numPasos, reservas, numReservas, viaje[vec_viaje[h]].id_viaje);
                 }
@@ -187,7 +184,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
             printf("Eliminado con exito\n");
             system("PAUSE");
         }
-        else //Si el número no está en el rango, volvemos a entrar en la función.
+        else //Si el numero no esta en el rango, volvemos a entrar en la funcion.
         {
             system("cls");
             eliminarViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
@@ -201,9 +198,9 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 }
 
 //Prototipo: void eliminarSoloViaje(Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, char *);
-//Precondición: Tener la cadena "id" inicializada, que representa la id del viaje, que se quiere eliminar,
+//Precondicion: Tener la cadena "id" inicializada, que representa la id del viaje, que se quiere eliminar,
 //al igual que las estructura "viaje", "pasos" y "reservas", con sus respectivos contadores.
-//Postcondición: Eliminar un viaje, a partir de su id, junto a todos sus pasos y reservas.
+//Postcondicion: Eliminar un viaje, a partir de su id, junto a todos sus pasos y reservas.
 
 void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, char *id)
 {
@@ -224,7 +221,7 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
     {
         for(n=0; n<numViajes&&encontrado==0; n++) //Nos desplazamos por toda la estructura "viaje", hasta encontrar el viaje con la id deseada.
         {
-            if(strcmp(viaje[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
+            if(strcmp(viaje[n].id_viaje, id)==0) //Si la id del viaje de la posicion actual en la estructura coincide con la id deseada.
             {
                 temp=fopen("DATA/viajes_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los viajes que hay, menos el viaje que se quiere eliminar.
                 if(temp==NULL)
@@ -235,7 +232,7 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
                 {
                     for(counter=0; counter<numViajes;counter++)
                     {
-                        if(counter!=n) //Cuando la línea que queremos eliminar, coincide con la línea actual, se salta de línea/omite.
+                        if(counter!=n) //Cuando la linea que queremos eliminar, coincide con la linea actual, se salta de linea/omite.
                         {
                             fprintf(temp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje[counter].id_viaje, viaje[counter].id_mat, viaje[counter].f_inic, viaje[counter].h_inic, viaje[counter].h_fin, viaje[counter].plazas_libre, viaje[counter].ida_vuelta, viaje[counter].precio, viaje[counter].estado);
                         }
@@ -256,8 +253,8 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
 }
 
 //Prototipo: void eliminarPasos(Estr_Pasos *, int, char *);
-//Precondición: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "pasos", y su contador "numPasos".
-//Postcondición: Eliminar los pasos de un viaje.
+//Precondicion: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "pasos", y su contador "numPasos".
+//Postcondicion: Eliminar los pasos de un viaje.
 
 void eliminarPasos(Estr_Pasos *pasos, int numPasos, char *id)
 {
@@ -278,7 +275,7 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, char *id)
     {
         for(n=0; n<numPasos; n++) //Nos desplazamos por toda la estructura "pasos".
         {
-            if(strcmp(pasos[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
+            if(strcmp(pasos[n].id_viaje, id)==0) //Si la id del viaje de la posicion actual en la estructura coincide con la id deseada.
             {
                 temp=fopen("DATA/pasos_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los pasos que hay, menos los pasos que se quieren eliminar.
                 if(temp==NULL)
@@ -290,7 +287,7 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, char *id)
                     for(counter=0; counter<numPasos;counter++)
                     {
                         if(strcmp(pasos[counter].id_viaje, id)!=0) //Cuando la id del viaje del paso que queremos eliminar,
-                            //coincide con la línea actual, se salta de línea/omite.
+                            //coincide con la linea actual, se salta de linea/omite.
                         {
                             fprintf(temp, "%s-%s\n", pasos[counter].id_viaje, pasos[counter].poblacion);
                         }
@@ -309,8 +306,8 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, char *id)
 }
 
 //Prototipo: void eliminarReservas(Estr_Reservas *, int, char *);
-//Precondición: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "reservas", y su contador "numReservas".
-//Postcondición: Eliminar las reservas de un viaje.
+//Precondicion: Tener la cadena "id" inicializada, que representa la id del viaje, al igual que la estructura "reservas", y su contador "numReservas".
+//Postcondicion: Eliminar las reservas de un viaje.
 
 void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
 {
@@ -331,7 +328,7 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
     {
         for(n=0; n<numReservas; n++) //Nos desplazamos por toda la estructura "reservas".
         {
-            if(strcmp(reservas[n].id_viaje, id)==0) //Si la id del viaje de la posición actual en la estructura coincide con la id deseada.
+            if(strcmp(reservas[n].id_viaje, id)==0) //Si la id del viaje de la posicion actual en la estructura coincide con la id deseada.
             {
                 temp=fopen("DATA/reservas_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los reservas que hay, menos las reservas que se quieren eliminar.
                 if(temp==NULL)
@@ -343,7 +340,7 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
                     for(counter=0; counter<numReservas;counter++)
                     {
                         if(strcmp(reservas[counter].id_viaje, id)!=0) //Cuando la id del viaje de la reserva que queremos eliminar,
-                            //coincide con la línea actual, se salta de línea/omite.
+                            //coincide con la linea actual, se salta de linea/omite.
                         {
                             fprintf(temp, "%s-%s\n", reservas[counter].id_viaje, reservas[counter].id_usuario);
                         }
@@ -362,9 +359,9 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
 }
 
 //Prototipo: void eliminarAdminUsuario(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int);
-//Precondición: Tener las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
+//Precondicion: Tener las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
 //al igual que sus contadores "numUsuarios", "numVehiculos", "numViajes", "numPasos" y "numReservas".
-//Postcondición: Preguntar al admin, la id del usuario que quiere eliminar, para borrar dicho usuario, junto a todos sus vehículos, viajes, pasos y reservas.
+//Postcondicion: Preguntar al admin, la id del usuario que quiere eliminar, para borrar dicho usuario, junto a todos sus vehiculos, viajes, pasos y reservas.
 
 void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas)
 {
@@ -384,8 +381,8 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
         if(numUsuarios>1)
         {
             do{ //Se pregunta la id del usuario para eliminarlo, hasta que la id sea correcta.
-                listarUsuarios(); //Obtenemos una lista de todos los usuarios del sistema.
-                printf("¿Qué usuario quiere eliminar?\n");
+                listarUsuarios(usuario, numUsuarios); //Obtenemos una lista de todos los usuarios del sistema.
+                printf("¿Que usuario quiere eliminar?\n");
                 printf("Introduzca la ID del usuario que quiere eliminar.\n");
                 scanf("%i", &id2);
                 if(id2==1) //Si "id2" es igual a 1, se vuelve a preguntar, ya que no se puede eliminar al administrador.
@@ -396,16 +393,16 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                 else
                 {
                     sprintf(vec_id, "%04i", id2);
-                    encontrarUsuario(usuario, numUsuarios, vec_id, &j, &encontrado); //Si la id está en la base de datos, encontrado=1, y sale del bucle.
+                    encontrarUsuario(usuario, numUsuarios, vec_id, &j, &encontrado); //Si la id esta en la base de datos, encontrado=1, y sale del bucle.
                 }
             }while(encontrado==0);
 
             do //Repetir lo mismo, hasta que la opcion sea 1 o 2.
             {
                 opc2=0;
-                system("cls"); //Imprime mensaje de confirmación.
+                system("cls"); //Imprime mensaje de confirmacion.
                 printf("¿Seguro que quieres eliminar el usuario %s, con ID %s?\n", usuario[j].nomb_usuario, usuario[j].id_usuario);
-                printf("(1)Sí\n");
+                printf("(1)Si\n");
                 printf("(2)No\n");
                 fflush(stdin);
                 scanf("%d", &opc2);
@@ -415,7 +412,7 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                     encontrado=0;
                     for(n=0; n<numUsuarios&&encontrado2==0; n++) //Nos desplazamos por toda la estructura "usuario", hasta que se encuentra al usuario deseado.
                     {
-                        if(strcmp(usuario[n].id_usuario, usuario[j].id_usuario)==0) //Si la id del usuario de la posición actual
+                        if(strcmp(usuario[n].id_usuario, usuario[j].id_usuario)==0) //Si la id del usuario de la posicion actual
                             //en la estructura coincide con la id deseada.
                         {
                             temp=fopen("DATA/usuarios_Temp.txt","w+"); //Se crea un fichero temporal, donde escribir los usuarios que hay,
@@ -429,7 +426,7 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                                 for(counter=0; counter<numUsuarios;counter++)
                                 {
                                     if(strcmp(usuario[counter].id_usuario, vec_id)!=0) //Cuando la id del usuario que queremos eliminar,
-                                        //coincide con la línea actual, se salta de línea/omite.
+                                        //coincide con la linea actual, se salta de linea/omite.
                                     {
                                         fprintf(temp, "%s-%s-%s-%s-%s-%s\n", usuario[counter].id_usuario, usuario[counter].nomb_usuario, usuario[counter].localidad, usuario[counter].perfil, usuario[counter].usuario, usuario[counter].contrasena);
                                     }
@@ -437,10 +434,10 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                             }
                             fclose(temp); //Cerramos los ficheros.
                             fclose(fp);
-                            encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &o, n); //Buscamos todos los vehículos del usuario, para eliminarlos.
+                            encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &o, n); //Buscamos todos los vehiculos del usuario, para eliminarlos.
                             for(c=0; c<o; c++)
                             {
-                                eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[c]].id_mat, o); //Eliminamos los vehículos, viajes, pasos y reservas del usuario seleccionado.
+                                eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[c]].id_mat, o); //Eliminamos los vehiculos, viajes, pasos y reservas del usuario seleccionado.
                             }
                             encontrado2=1;
                         }
@@ -465,25 +462,25 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
 }
 
 //Prototipo: void eliminarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
-//Precondición: Tener las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
+//Precondicion: Tener las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
 //al igual que sus contadores "numUsuarios", "numVehiculos", "numViajes", "numPasos" y "numReservas".
-//Postcondición: Preguntar al admin, la id del usuario para saber sus vehículos, y eliminar dicho vehículo, y todos sus viajes, pasos y reservas.
+//Postcondicion: Preguntar al admin, la id del usuario para saber sus vehiculos, y eliminar dicho vehiculo, y todos sus viajes, pasos y reservas.
 
 void eliminarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int x)
 {
-    char opc2[4];
+    char opc2[5];
     int encontrado=0, i=0, counter;
 
     system("cls");
     if(numVehiculos!=0) //Si hay vehiculos en el sistema.
     {
-        listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, x, 1); //Obtenemos una lista de todos los vehiculos del sistema.
-        printf("Escriba la ID del usuario a la que se quiera eliminar un vehículo\n");
-        scanf("%4s",&opc2); //Se pregunta la id del usuario al que quiere eliminar el vehículo.
+        listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, x); //Obtenemos una lista de todos los vehiculos del sistema.
+        printf("Escriba la ID del usuario a la que se quiera eliminar un vehiculo\n");
+        scanf("%4s",&opc2); //Se pregunta la id del usuario al que quiere eliminar el vehiculo.
         for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
         {
             if(strcmp(opc2,usuario[counter].id_usuario)==0) //Cuando coincida la id del usuario de la estructura, con la id deseada,
-                //entra en la función eliminarVehiculo, y le preguntará la matrícula del vehículo a eliminar.
+                //entra en la funcion eliminarVehiculo, y le preguntara la matricula del vehiculo a eliminar.
             {
                 encontrado=1;
                 i=counter;
@@ -501,14 +498,14 @@ void eliminarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo
 }
 
 //Prototipo: void eliminarAdminViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int, int);
-//Precondición: Tener la variable "num", y las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
+//Precondicion: Tener la variable "num", y las estructuras "Usuario", "Vehiculo", "Viajes", "Pasos" y "Reservas",
 //al igual que sus contadores "numUsuarios", "numVehiculos", "numViajes", "numPasos" y "numReservas".
-//Postcondición: Preguntar al admin, la id del usuario para saber sus vehículos, y con todas sus matrículas, localizar sus viajes.
+//Postcondicion: Preguntar al admin, la id del usuario para saber sus vehiculos, y con todas sus matriculas, localizar sus viajes.
 //Si num=0, elimina un viaje, y si num=1, anula/finaliza un viaje, depende de su estado. Todo esto eliminando todos sus pasos y reservas.
 
 void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int x, int num)
 {
-    char opc2[4];
+    char opc2[5];
     int encontrado=0, i=0, counter, n=0;
 
     system("cls");
@@ -516,11 +513,11 @@ void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
     if(n!=0) //Si hay viajes con las condiciones requeridas.
     {
         printf("Escriba la ID del usuario al que quiere eliminar un viaje.\n");
-        scanf("%4s",&opc2); //Se pregunta la id del usuario al que quiere eliminar el vehículo.
+        scanf("%4s",&opc2); //Se pregunta la id del usuario al que quiere eliminar el vehiculo.
         for(counter=0;(counter<numUsuarios)&&(encontrado==0);counter++)
         {
             if(strcmp(opc2,usuario[counter].id_usuario)==0) //Cuando coincida la id del usuario de la estructura, con la id deseada,
-                //entra en la función eliminarViaje, y le preguntará la id del viaje a eliminar.
+                //entra en la funcion eliminarViaje, y le preguntara la id del viaje a eliminar.
             {
                 encontrado=1;
                 i=counter;
@@ -541,5 +538,130 @@ void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
             printf("No se ha encontrado ningun usuario con la siguiente ID: %s\n",opc2);
             system("PAUSE");
         }
+    }
+}
+
+//Prototipo:void finalizar_viaje(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
+//Precondicion:se necesitara la variable numuser que respresenta al usuario en la estructura Usuarios;
+//ademas se necesitaran las estructuras de "vehiculos", "viajes", "pasos", "reservas", con sus respectivos contadores.
+//Cabecera: esta funcion tiene una doble finalidad, que seran finalizar y anular los viajes del conductor.
+//Postcondicion: el viaje elegido por el usuario sera finalizado o anulado, modificandose el estado del viaje.
+
+void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
+{
+    int *vec=NULL, x=0, *vec_viaje=NULL, max_viaje=0, i=0, j;
+
+    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, num_user);
+
+    if(vec!=NULL)//verifica si se han encontrado vehiculos
+    {
+        for(j=0;j<x;j++)//para los vehiculos encontrados verifica si tiene asignado viajes
+        {
+            encontrarViajes(vehiculo, numVehiculos, viaje, numViajes, vehiculo[vec[j]].id_mat, &vec_viaje, &max_viaje, 1);
+        }
+        if(vec_viaje!=NULL)//verifica si se encontraron viajes para los coches encontrados
+        {
+            printf("LISTADO DE SUS VIAJES:\n");
+            for(j=0;j<max_viaje;j++)//se muetsran en pantalla esos viajes
+            {
+                printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n",j+1,viaje[vec_viaje[j]].id_viaje,viaje[vec_viaje[j]].id_mat,viaje[vec_viaje[j]].f_inic,viaje[vec_viaje[j]].h_inic,viaje[vec_viaje[j]].h_fin,viaje[vec_viaje[j]].plazas_libre,viaje[vec_viaje[j]].ida_vuelta,viaje[vec_viaje[j]].precio,viaje[vec_viaje[j]].estado);
+            }
+
+            do{//verifica que se seleccione la opcion correcta
+                printf("Seleccione el viaje que desea finalizar/anular:\n");
+                scanf("%i",&i);
+            }while(i>max_viaje||i<0);
+
+            system("cls");
+            if(strcmp(viaje[vec_viaje[i-1]].estado, "abierto")==0)//verifica si el viaje seleccionado esta abierto
+            {
+                strcpy(viaje[vec_viaje[i-1]].estado, "anulado");
+                printf("El viaje ha sido anulado\n");
+            }
+            else// caso contrario esta iniciado
+            {
+                strcpy(viaje[vec_viaje[i-1]].estado, "finalizado");
+                printf("El viaje ha sido finalizado\n");
+            }
+            system("PAUSE");
+            actualizarViaje(viaje, numViajes);
+            eliminarPasos(pasos, numPasos, viaje[vec_viaje[i-1]].id_viaje);
+            eliminarReservas(reservas, numReservas, viaje[vec_viaje[i-1]].id_viaje);
+        }
+        else//caso contrario no hay viajes registrado para los coches del usuario
+        {
+            system("cls");
+            printf("No tiene viajes registrados\n");
+            system("PAUSE");
+        }
+    }
+    else//caso contrario el usuario no tiene coches registrados
+    {
+        system("cls");
+        printf("No tiene coches registrados\n");
+        system("PAUSE");
+    }
+}
+
+//Prototipo: void cancelarReserva(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int):
+//Precondicion:esta funcion recibe las estructuras "Usuario" y "Viajes" ya inicializadas con sus contadores, y la variables num user que representa la posicion del usuario en la estructura viajes.
+//Cabecera:esta funcion permite al usuario cancelar sus viajes siempre que no esten iniciados.
+//Postcondicion:el viaje seleccionado es cancelado siendo borrado de la estructura reservas el usuario y aumentando en uno las plazas de dicho viaje.
+
+void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user)
+{
+    int *vec=NULL, *vec_viaje=NULL, x, i, sel, plazas=0;
+
+    encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x);//encuentra las reservas del usuario que pueden ser canceladas
+
+    if(vec!=NULL){ //verifica que el usuario tiene reservas
+        do{
+            printf("LISTADO DE SUS VIAJES:\n");
+            for(i=0;i<x;i++)
+            {
+                color(15, 0);
+                printf("VIAJE %i:\n",i+1);
+                color(0, 3);
+                printf("   ID del viaje: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].id_viaje);
+                color(0, 3);
+                printf("   Fecha de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].f_inic);
+                color(0, 3);
+                printf("   Hora de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].h_inic);
+                color(0, 3);
+                printf("   Hora de llegada: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].h_fin);
+                color(0, 3);
+                printf("   Tipo: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[i]].ida_vuelta);
+                color(0, 3);
+                printf("   Precio: ");
+                color(0, 15);
+                printf("%s euros\n\n", viaje[vec[i]].precio);
+            }
+
+            printf("Seleccione el viaje que desea cancelar:\n");
+            scanf("%i",&sel);
+            system("cls");
+        }while(sel>x || sel<1); //comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones
+
+        eliminarReservas(reservas, numReservas, reservas[vec[sel-1]].id_viaje);
+        leer_reservas(&reservas,&numReservas);
+        plazas=atoi(viaje[vec_viaje[sel-1]].plazas_libre); //aumenta en uno las plazas
+        plazas++;
+        sprintf(viaje[vec_viaje[sel-1]].plazas_libre,"%01d",plazas);
+        actualizarViaje(viaje, numViajes);
+    }
+    else
+    {
+        printf("No tiene viajes reservados\n");
+        system("PAUSE");
     }
 }

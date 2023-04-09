@@ -1,11 +1,11 @@
 #include "fecha.h"
 
-//Prototipo: void actualizarViajes(Estr_Viaje *, int, Estr_Reservas *, int, Estr_Pasos *, int);
-//Precondición: Tener las estructuras "viaje" y "reservas", con sus contadores.
-//Postcondición: Actualiza el estado de todos los viajes, si se ha pasado la hora de inicio, pues se pone en estado "Iniciado",
+//Prototipo: void actualizarViajesEstado(Estr_Viaje *, int, Estr_Reservas *, int, Estr_Pasos *, int);
+//Precondicion: Tener las estructuras "viaje" y "reservas", con sus contadores.
+//Postcondicion: Actualiza el estado de todos los viajes, si se ha pasado la hora de inicio, pues se pone en estado "Iniciado",
 //mientras que si se ha excedido una hora desde la hora de llegada, pues se establece en estado "Finalizado", y se eliminan sus pasos y reservas.
 
-void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Pasos *pasos, int numPasos)
+void actualizarViajesEstado(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Pasos *pasos, int numPasos)
 {
     FILE *fp;
     char *token=NULL, vec_fecha[11], vec_h_inic[6], vec_h_fin[6];
@@ -36,9 +36,9 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
             token=strtok(NULL, "\n");
             min_inic=atoi(token);
 
-            time_t ahora=time(NULL); //Esta sería la hora actual, en segundos.
+            time_t ahora=time(NULL); //Esta seria la hora actual, en segundos.
 
-            struct tm tiempo_introducido={0}; //Definimos estructura para poner años desde 2023, meses y días.
+            struct tm tiempo_introducido={0}; //Definimos estructura para poner años desde 2023, meses y dias.
             tiempo_introducido.tm_year=ano-1900; //Metemos todos los enteros de la fecha y la hora de inicio, en la estructura.
             tiempo_introducido.tm_mon=mes-1;
             tiempo_introducido.tm_mday=dia;
@@ -49,13 +49,13 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
 
             if(tiempo_introducido_segundos<ahora) //Si la fecha actual es posterior a la fecha y hora de partida del viaje.
             {
-                if(strcmp(viaje[i].estado, "abierto")==0||strcmp(viaje[i].estado, "cerrado")==0) //Si el viaje está en "abierto" o "cerrado".
+                if(strcmp(viaje[i].estado, "abierto")==0||strcmp(viaje[i].estado, "cerrado")==0) //Si el viaje esta en "abierto" o "cerrado".
                 {
                     strcpy(viaje[i].estado, "iniciado"); //Se le asigna como estado "iniciado".
                     encontrado=1;
                 }
 
-                if(strcmp(viaje[i].estado, "iniciado")==0) //Si el viaje está en "iniciado".
+                if(strcmp(viaje[i].estado, "iniciado")==0) //Si el viaje esta en "iniciado".
                 {
                     strcpy(vec_h_fin, viaje[i].h_fin); //Obtenemos la hora de llegada, y la separamos en 2 enteros.
                     token=strtok(vec_h_fin, ":");
@@ -63,8 +63,8 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
                     token=strtok(NULL, "\n");
                     hora_inic=atoi(token);
 
-                    struct tm tiempo_introducido={0}; //Definimos estructura para poner años desde 2023, meses y días.
-                    tiempo_introducido.tm_year=ano-1900; //Metemos todos los enteros de la fecha y la hora de llegada con 1 hora más, en la estructura.
+                    struct tm tiempo_introducido={0}; //Definimos estructura para poner años desde 2023, meses y dias.
+                    tiempo_introducido.tm_year=ano-1900; //Metemos todos los enteros de la fecha y la hora de llegada con 1 hora mas, en la estructura.
                     tiempo_introducido.tm_mon=mes-1;
                     tiempo_introducido.tm_mday=dia;
                     tiempo_introducido.tm_hour=hora_fin;
@@ -83,7 +83,7 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
             }
         }
 
-        if(encontrado==1) //Si ha habido algún cambio, se imprime en el fichero.
+        if(encontrado==1) //Si ha habido algun cambio, se imprime en el fichero.
         {
             do{
             fprintf(fp, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje[n].id_viaje, viaje[n].id_mat, viaje[n].f_inic, viaje[n].h_inic, viaje[n].h_fin, viaje[n].plazas_libre, viaje[n].ida_vuelta, viaje[n].precio, viaje[n].estado);
@@ -99,15 +99,15 @@ void actualizarViajes(Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas,
 }
 
 //Prototipo: void leerFecha(char *, char *, char *);
-//Precondición: Tener los cadenas "fecha", "h_inic" y "h_fin" inicializados.
-//Postcondición: Leer la fecha, hora de inicio y hora de llegada, y comprobar si son válidas, y posteriores a las actuales. Después, se introducen en su respectiva cadena.
+//Precondicion: Tener los cadenas "fecha", "h_inic" y "h_fin" inicializados.
+//Postcondicion: Leer la fecha, hora de inicio y hora de llegada, y comprobar si son validas, y posteriores a las actuales. Despues, se introducen en su respectiva cadena.
 
 void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 {
-    int min_inic=0, hora_inic=0, min_fin=0, hora_fin=0, dia=0, mes=0, ano=0, maxdia=0, encontrado=0, encontrado3=0;
+    int min_inic=0, hora_inic=0, min_fin=0, hora_fin=0, dia=0, mes=0, ano=0, encontrado=0, encontrado3=0;
     char *token=NULL;
 
-    leer_dia(fecha); //Usamos la funcion "leer_dia", para leer la fecha, y ver si es válida.
+    leer_dia(fecha); //Usamos la funcion "leer_dia", para leer la fecha, y ver si es valida.
 
     token=strtok(fecha, "/"); //Desglosamos la fecha en 3 enteros, para introducirlos en la estructura, al pedir la hora.
     dia=atoi(token);
@@ -201,9 +201,9 @@ void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 
         if(hora_fin>hora_inic||min_fin>min_inic) //Se compara si la hora y min fin son mayores a las de inicio.
         {
-            time_t ahora=time(NULL); //Esta sería la hora actual, en segundos.
+            time_t ahora=time(NULL); //Esta seria la hora actual, en segundos.
 
-            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y dias.
             tiempo_introducido.tm_year=ano-1900; //Metemos todos los enteros de la hora de inicio, en la estructura.
             tiempo_introducido.tm_mon=mes-1;
             tiempo_introducido.tm_mday=dia;
@@ -238,14 +238,14 @@ void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
 }
 
 //Prototipo: void leer_dia(char *);
-//Precondición: Tener la cadena "fecha" inicializada.
-//Postcondición: Leer la fecha, y comprobar si es válida, y posterior a las actual. Si esto se cumple, se guarda en la cadena.
+//Precondicion: Tener la cadena "fecha" inicializada.
+//Postcondicion: Leer la fecha, y comprobar si es valida, y posterior a las actual. Si esto se cumple, se guarda en la cadena.
 
 void leer_dia(char fecha[11])  //DD/MM/AAAA
 {
     int dia=0, mes=0, ano=0, maxdia=0, encontrado=0, encontrado2=0;
 
-    while(encontrado2==0) //Hacer esto hasta que se encuentre una fecha válida.
+    while(encontrado2==0) //Hacer esto hasta que se encuentre una fecha valida.
     {
         system("cls");
         printf("Introduzca la fecha (DD/MM/AAAA) en la que quiere realizar su viaje:\n");
@@ -253,7 +253,7 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
         encontrado=0;
         while(encontrado==0) //Lee el entero "dia", hasta que sea correcto.
         {
-            printf("Día:");
+            printf("Dia:");
             fflush(stdin);
             scanf("%2d", &dia);
 
@@ -300,19 +300,19 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
                 encontrado=1;
             }
         }
-        maxdia=dias_meses(mes,ano); //Llama a función maxdia, para saber si el ano es bisiesto, o si el mes tiene 28, 29, 30 o 31 dias.
+        maxdia=dias_meses(mes,ano); //Llama a funcion maxdia, para saber si el ano es bisiesto, o si el mes tiene 28, 29, 30 o 31 dias.
 
         if(dia<1||dia>maxdia||mes<1||mes>12||ano<1)
         {
-            printf("La fecha no es válida.\n");
+            printf("La fecha no es valida.\n");
             system("PAUSE");
             system("cls");
         }
         else
         {
-            time_t ahora=time(NULL); //Esta sería la hora actual, en segundos.
+            time_t ahora=time(NULL); //Esta seria la hora actual, en segundos.
 
-            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y días.
+            struct tm tiempo_introducido={0}; //definimos estructura para poner años desde 2023, meses y dias.
             tiempo_introducido.tm_year=ano-1900; //Metemos todos los enteros de la fecha, en la estructura.
             tiempo_introducido.tm_mon=mes-1;
             tiempo_introducido.tm_mday=dia+1;
@@ -338,26 +338,26 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
 }
 
 //Prototipo: int dias_meses(int, int);
-//Precondición: Tener los enteros "mes" y "ano" inicializados.
-//Postcondición: Devuelve el numero de dias que hay en cada mes del ano. También se comtemplan los anos bisiestos.
+//Precondicion: Tener los enteros "mes" y "ano" inicializados.
+//Postcondicion: Devuelve el numero de dias que hay en cada mes del ano. Tambien se comtemplan los anos bisiestos.
 
 int dias_meses(int mes, int ano)
 {
-    int dias=31; //suponemos que hay 31 días.
+    int dias=31; //suponemos que hay 31 dias.
 
     if (mes==4||mes==6||mes==9||mes==11)
     {
-        dias=30; //abril, junio, septiembre y noviembre tienen 30 días
+        dias=30; //abril, junio, septiembre y noviembre tienen 30 dias
     }
     else if (mes==2)
     {
         if ((ano%4==0&&ano%100!=0)||ano%400==0)
         {
-            dias=29; //febrero tiene 29 días en años bisiestos
+            dias=29; //febrero tiene 29 dias en años bisiestos
         }
         else
         {
-            dias=28; //febrero tiene 28 días en años no bisiestos
+            dias=28; //febrero tiene 28 dias en años no bisiestos
         }
     }
 

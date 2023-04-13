@@ -20,12 +20,16 @@ enum colores //Listado de colores
 	blanco=15,
 };
 
-void color(int fondo, int texto){ // Función para cambiar el color del fondo y/o pantalla
+//Prototipo: void color(int, int);
+//Precondicion: Necesita dos numeros asociado al color que se quiere colocar, uno para el fondo, y otro para el cuerpo del texto.
+//Postcondicion: Cambia de color, el fondo y el cuerpo del texto.
 
-	HANDLE consola=GetStdHandle(STD_OUTPUT_HANDLE);
+void color(int fondo, int texto)
+{
+	HANDLE consola=GetStdHandle(STD_OUTPUT_HANDLE); //Accedemos a la consola.
 
-	// Para cambiar el color, se utilizan números desde el 0 hasta el 255, pero para convertir los colores a un valor adecuado, se realiza el siguiente cálculo.
+	//Para cambiar el color, se utilizan numeros desde el 0 hasta el 255, pero para convertir los colores a un valor adecuado, se realiza el siguiente calculo.
 	int color_nuevo=texto+(fondo*16);
 
-	SetConsoleTextAttribute(consola, color_nuevo); // Guardamos los cambios en la Consola.
+	SetConsoleTextAttribute(consola, color_nuevo); //Guardamos los cambios en la consola.
 }

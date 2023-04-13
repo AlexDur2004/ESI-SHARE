@@ -1,0 +1,25 @@
+\hypertarget{buscar_8h_source}{}\doxysection{buscar.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BUSCAR\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BUSCAR\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}leer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}preguntar.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//Prototipo:\ void\ buscadorRutas(Estr\_Rutas\ **,\ int,\ int,\ Estr\_Localidad\ *,\ int,\ Estr\_Pasos\ *,\ int,\ char\ [7]);}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//Precondicion:\ Tener\ las\ estructuras\ "{}ruta"{},\ "{}localidad"{}\ y\ "{}pasos"{},\ con\ sus\ contadores.\ Ademas,\ debemos\ tener\ una\ cadena\ inicializada\ con\ la\ id\ de\ viaje.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//Postcondicion:\ Buscar\ todas\ las\ rutas\ posibles,\ desde\ la\ ciudad\ seleccionada\ hasta\ la\ ESI.}}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ buscadorRutas(\mbox{\hyperlink{struct_estr___rutas}{Estr\_Rutas}}\ **,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{char}\ [7]);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//Prototipo:\ void\ imprimirPasos(Estr\_Pasos\ *,\ int,\ Estr\_Localidad\ *,\ int,\ char\ *,\ char\ *);}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//Precondicion:\ Tener\ las\ estructuras\ "{}pasos"{}\ y\ "{}localidad"{},\ con\ sus\ contadores.\ Ademas,\ debemos\ tener\ una\ cadena\ inicializada\ con\ la\ id\ de\ viaje,\ y\ otra\ cadena\ con\ la\ ruta\ que\ queremos\ imprimir.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//Postcondicion:\ Imprimir\ los\ pasos\ de\ la\ ruta\ seleccionada,\ en\ el\ fichero.}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ imprimirPasos(\mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BUSCAR\_H\_INCLUDED}}
+
+\end{DoxyCode}

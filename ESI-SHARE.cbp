@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ESI-SHARE" prefix_auto="1" extension_auto="1" />
+				<Option output="ESI-SHARE" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -35,14 +35,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="acceso.h" />
+		<Unit filename="actualizar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="actualizar.h" />
+		<Unit filename="buscar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="buscar.h" />
 		<Unit filename="colores.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colores.h" />
-		<Unit filename="crear_viaje.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="crear_viaje.h" />
 		<Unit filename="eliminar.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -83,10 +87,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="preguntar.h" />
-		<Unit filename="reservar.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="reservar.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

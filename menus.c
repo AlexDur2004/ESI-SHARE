@@ -1,6 +1,10 @@
 #include "menus.h"
 
-void menuPrincipal()
+//Prototipo: void menuPrincipal(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int);
+//Precondicion: Tener las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuPrincipal(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2)
 {
     int opc;
 
@@ -8,13 +12,13 @@ void menuPrincipal()
     {
         system("cls");
         color(0, 6);
-        printf("   ______   ______   _____            ______   _    _   _____   ______   ______     \n");
-        printf("  |  ____| |  ____| |_   _|          |  ____| | |  | | |  _  | |  __  | |  ____|    \n");
-        printf("  | |__    | (____    | |    ______  | (____  | |__| | | |_| | | |__) | | |__       \n");
-        printf("  |  __|   |____  |   | |   |______| |____  | |  __  | |  _  | |  _ __| |  __|      \n");
-        printf("  | |____   ____) |  _| |_            ____) | | |  | | | | | | | ||_|_  | |____     \n");
-        printf("  |______| |______| |_____|          |______| |_|  |_| |_| |_| |_|  |_| |______|    \n");
-        printf("                                                                                    \n");
+        printf("   ______   ______   _____            ______   _    _   _____   ______   ______ \n");
+        printf("  |  ____| |  ____| |_   _|          |  ____| | |  | | |  _  | |  __  | |  ____|\n");
+        printf("  | |__    | (____    | |    ______  | (____  | |__| | | |_| | | |__) | | |__   \n");
+        printf("  |  __|   |____  |   | |   |______| |____  | |  __  | |  _  | |  _ __| |  __|  \n");
+        printf("  | |____   ____) |  _| |_            ____) | | |  | | | | | | | ||_|_  | |____ \n");
+        printf("  |______| |______| |_____|          |______| |_|  |_| |_| |_| |_|  |_| |______|\n");
+        printf("                                                                                \n");
         color(0,15);
         printf("¿Que le gustaria hacer?\n");
         color(0,4);
@@ -30,10 +34,10 @@ void menuPrincipal()
         switch(opc)
         {
             case 1:
-                acceso(usuario, numUsuarios);
+                acceso(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
             case 2:
-                altaUsuario(usuario, &numUsuarios);
+                altaUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 3:
                 exit(1);
@@ -42,15 +46,20 @@ void menuPrincipal()
     }
 }
 
-void menuUsuario(int i)
+//Prototipo: void menuUsuario(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=3)
     {
         system("cls");
-        color(15, 1);
-        printf("Hola %s,\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s\n", usuario[i].nomb_usuario);
         color(0,15);
         printf("¿Que quiere ser?\n");
         color(0, 4);
@@ -66,361 +75,542 @@ void menuUsuario(int i)
         switch(opc)
         {
             case 1:
-                menuPasajero(i);
+                menuPasajero(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 2:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuPrincipal();
+                menuPrincipal(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
         }
     }
 }
 
-void menuPasajero(int i)
+//Prototipo: void menuPasajero(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuPasajero(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=3)
     {
         system("cls");
+        color(15, 0);
         printf("Hola %s,\n", usuario[i].nomb_usuario);
+        color(0,15);
         printf("¿Que quiere ver?\n");
+        color(0, 4);
         printf("(1)Perfil.\n");
+        color(0, 3);
         printf("(2)Viajes.\n");
+        color(0,14);
         printf("(3)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                menuPasajeroPerfil(i);
+                menuPasajeroPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 2:
-                menuPasajeroViajes(i);
+                menuPasajeroViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuUsuario(i);
+                menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuPasajeroPerfil(int i)
+//Prototipo: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\n", usuario[i].id_usuario);
-        printf("Nombre completo: %s.\n", usuario[i].nomb_usuario);
-        printf("Localidad de residencia: %s.\n", usuario[i].localidad);
-        printf("Tipo de perfil: %s.\n", usuario[i].perfil);
-        printf("Usuario: %s.\n", usuario[i].usuario);
+        color(0, 3);
+        printf("ID de usuario: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].id_usuario);
+        color(0, 3);
+        printf("Nombre completo: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].nomb_usuario);
+        color(0, 3);
+        printf("Localidad de residencia: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].localidad);
+        color(0, 3);
+        printf("Tipo de perfil: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].perfil);
+        color(0, 3);
+        printf("Usuario: ");
+        color(0, 15);
+        printf("%s\n\n", usuario[i].usuario);
+        color(0,15);
         printf("¿Que quiere hacer?\n");
+        color(0, 2);
         printf("(1)Modificar nombre completo.\n");
+        color(0, 4);
         printf("(2)Modificar localidad de residencia.\n");
+        color(0, 11);
         printf("(3)Modificar usuario.\n");
+        color(0, 6);
         printf("(4)Modificar contrasena.\n");
-        printf("(5)Volver\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                modificarPerfilNombre(i);
+                modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(i);
+                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 3:
-                modificarPerfilUsuario(i);
+                modificarPerfilUsuario(usuario, numUsuarios, i);
                 break;
             case 4:
-                modificarPerfilContrasena(i);
+                modificarPerfilContrasena(usuario, numUsuarios, i);
                 break;
             case 5:
-                menuPasajero(i);
+                return;
                 break;
         }
     }
 }
 
-void menuPasajeroViajes(int i)
+//Prototipo: void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
-    int opc, x;
+    int opc;
 
     while(opc!=3)
     {
         system("cls");
-        printf("¿Que quiere hacer?\n(1)Reservar viaje.\n(2)Cancelar viaje.\n(3)Volver\n");
+        color(0,15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Reservar viaje.\n");
+        color(0, 3);
+        printf("(2)Cancelar viaje.\n");
+        color(0,14);
+        printf("(3)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                buscadorRutas();
+                altaReserva(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 2:
-                ;
+                cancelarReserva(usuario, viaje, numViajes, reservas, numReservas, i);
                 break;
             case 3:
-                menuPasajero(i);
+                menuPasajero(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductor(int i)
+//Prototipo: void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2,  int i)
 {
     int opc;
 
     while(opc!=4)
     {
         system("cls");
-        printf("Hola %s,\n¿Que quiere ver?\n(1)Perfil.\n(2)Vehiculos.\n(3)Viajes.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere ver?\n");
+        color(0, 4);
+        printf("(1)Perfil.\n");
+        color(0, 3);
+        printf("(2)Vehiculos.\n");
+        color(0, 2);
+        printf("(3)Viajes.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                menuConductorPerfil(i);
+                menuConductorPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 2:
-                menuConductorVehiculo(i);
+                menuConductorVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuConductorViajes(i);
+                menuConductorViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 4:
-                menuUsuario(i);
+                menuUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductorPerfil(int i)
+//Prototipo: void menuConductorPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
     while(opc!=5)
     {
         system("cls");
-        printf("ID de usuario: %s.\nNombre completo: %s.\nLocalidad de residencia: %s.\nTipo de perfil: %s.\nUsuario: %s.\n", usuario[i].id_usuario, usuario[i].nomb_usuario, usuario[i].localidad, usuario[i].perfil, usuario[i].usuario);
-        printf("¿Que quiere hacer?\n(1)Modificar nombre completo.\n(2)Modificar localidad de residencia.\n(3)Modificar usuario.\n(4)Modificar contrasena.\n(5)Volver\n");
+        color(0, 3);
+        printf("ID de usuario: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].id_usuario);
+        color(0, 3);
+        printf("Nombre completo: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].nomb_usuario);
+        color(0, 3);
+        printf("Localidad de residencia: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].localidad);
+        color(0, 3);
+        printf("Tipo de perfil: ");
+        color(0, 15);
+        printf("%s\n", usuario[i].perfil);
+        color(0, 3);
+        printf("Usuario: ");
+        color(0, 15);
+        printf("%s\n\n", usuario[i].usuario);
+        color(0,15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 2);
+        printf("(1)Modificar nombre completo.\n");
+        color(0, 4);
+        printf("(2)Modificar localidad de residencia.\n");
+        color(0, 11);
+        printf("(3)Modificar usuario.\n");
+        color(0, 6);
+        printf("(4)Modificar contrasena.\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                modificarPerfilNombre(i);
+                modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(i);
+                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
                 break;
             case 3:
-                modificarPerfilUsuario(i);
+                modificarPerfilUsuario(usuario, numUsuarios, i);
                 break;
             case 4:
-                modificarPerfilContrasena(i);
+                modificarPerfilContrasena(usuario, numUsuarios, i);
                 break;
             case 5:
-                menuConductor(i);
+                return;
                 break;
         }
     }
 }
 
-void menuConductorVehiculo(int i)
+//Prototipo: void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=4)
     {
         system("cls");
-        printf("¿Que quiere hacer?\n(1)Alta de vehículo.\n(2)Modificar vehículo.\n(3)Eliminar vehículo.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Alta de vehiculo.\n");
+        color(0, 3);
+        printf("(2)Modificar vehiculo.\n");
+        color(0, 2);
+        printf("(3)Eliminar vehiculo.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                altaVehiculo(i);
+                altaVehiculo(usuario, vehiculo, numVehiculos, i);
                 break;
             case 2:
-                modificarVehiculo(i);
+                modificarVehiculo(usuario, vehiculo, numVehiculos, i);
                 break;
             case 3:
-                eliminarVehiculo(i);
+                eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 4:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuConductorViajes(int i)
+//Prototipo: void menuConductorViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuConductorViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
-    int opc, x;
+    int opc;
 
     while(opc!=3)
     {
         system("cls");
-
-        printf("¿Que quiere hacer?\n(1)Crear viaje.\n(2)Modificar viaje.\n(3)Anular viaje.\n(4)Salir.\n");
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 4);
+        printf("(1)Crear viaje.\n");
+        color(0, 3);
+        printf("(2)Modificar viaje.\n");
+        color(0, 2);
+        printf("(3)Anular/Finalizar viaje.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                crear_viaje(i);
+                altaViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i, 0);
                 break;
             case 2:
-                buscadorRutas();
+                modificarViaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                eliminar_viaje(i);
+                finalizar_viaje(usuario, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 4:
-                menuConductor(i);
+                menuConductor(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
+//Prototipo: void menuAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 
-void menuAdmin(int i)
+void menuAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=4)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere ver?\n(1)Usuarios.\n(2)Vehiculos.\n(3)Viajes.\n(4)Volver.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere ver?\n");
+        color(0, 4);
+        printf("(1)Usuarios.\n");
+        color(0, 3);
+        printf("(2)Vehiculos.\n");
+        color(0, 2);
+        printf("(3)Viajes.\n");
+        color(0, 14);
+        printf("(4)Volver.\n");
+        color(0, 15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                menuAdminUsuarios(i);
+                menuAdminUsuarios(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 2:
-                menuAdminVehiculos(i);
+                menuAdminVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 3:
-                menuAdminViajes(i);
+                menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 4:
-                menuPrincipal();
+                menuPrincipal(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2);
                 break;
         }
     }
 }
 
-void menuAdminUsuarios(int i)
+//Prototipo: void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=5)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de usuario.\n(2)Baja de usuario.\n(3)Modificar usuario.\n(4)Listar usuarios.\n(5)Salir.\n", usuario[i].nomb_usuario);
+        color(15, 0);
+        printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
+        color(0, 15);
+        printf("¿Que quiere hacer?\n");
+        color(0, 2);
+        printf("(1)Alta de usuario.\n");
+        color(0, 4);
+        printf("(2)Baja de usuario.\n");
+        color(0, 11);
+        printf("(3)Modificar usuario.\n");
+        color(0, 6);
+        printf("(4)Listar usuarios.\n");
+        color(0,14);
+        printf("(5)Volver.\n");
+        color(0,15);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                altaUsuario();
+                altaUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 2:
-                ;
+                eliminarAdminUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas);
                 break;
             case 3:
-                modificarAdminUsuario();
+                modificarAdminUsuario(usuario, numUsuarios, localidad, numLocalidades);
                 break;
             case 4:
-                listarUsuarios();
+                listarUsuarios(usuario, numUsuarios);
                 break;
             case 5:
-                menuAdmin(i);
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuAdminVehiculos(int i)
+//Prototipo: void menuAdminVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
+
+void menuAdminVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
 {
     int opc;
 
     while(opc!=6)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de vehiculo.\n(2)Baja de vehiculo.\n(3)Modificar vehiculo.\n(4)Listar vehiculos.\n(5)Mostrar lista de viajes de vehiculo.\n(6)Salir.\n", usuario[i].nomb_usuario);
+        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de vehiculo.\n(2)Baja de vehiculo.\n(3)Modificar vehiculo.\n(4)Listar vehiculos.\n(5)Mostrar lista de viajes de un vehiculo.\n(6)Salir.\n", usuario[i].nomb_usuario);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                altaAdminVehiculo();
+                altaAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas, 0);
                 break;
             case 2:
-                eliminarAdminVehiculo();
+                eliminarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 3:
-                modificarAdminVehiculo();
+                modificarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, i);
                 break;
             case 4:
-                listarVehiculos();
+                listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, i);
                 break;
             case 5:
-                ;
+                listarAdminVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i);
                 break;
             case 6:
-                menuAdmin(i);
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }
 }
 
-void menuAdminViajes(int i)
-{
-    int opc;
+//Prototipo: void menuAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
+//Tambien necesitamos las estructuras inicializados, con sus contadores.
+//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 
-    while(opc!=5)
+void menuAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int i)
+{
+    int opc, n=0;
+
+    while(opc!=6)
     {
         system("cls");
-        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Alta de viaje.\n(2)Baja de viaje.\n(3)Modificar viaje.\n(4)Listar viajes.\n(5)Salir.\n", usuario[i].nomb_usuario);
+        printf("Hola %s (Administrador),\n¿Que quiere hacer?\n(1)Crear viaje.\n(2)Anular/Finalizar viaje.\n(3)Eliminar viaje.\n(4)Modificar viaje.\n(5)Listar viajes.\n(6)Salir.\n", usuario[i].nomb_usuario);
         fflush(stdin);
         scanf("%i", &opc);
         system("cls");
         switch(opc)
         {
             case 1:
-                ;
+                altaAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas, 1);
                 break;
             case 2:
-                ;
+                eliminarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i, 1);
                 break;
             case 3:
-                ;
+                eliminarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i, 0);
                 break;
             case 4:
-                ;
+                modificarAdminViaje(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
             case 5:
-                menuAdmin(i);
+                listarAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i, 0, &n);
+                break;
+            case 6:
+                menuAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
                 break;
         }
     }

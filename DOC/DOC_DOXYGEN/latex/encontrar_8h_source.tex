@@ -1,0 +1,51 @@
+\hypertarget{encontrar_8h_source}{}\doxysection{encontrar.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENCONTRAR\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENCONTRAR\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}leer.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//Prototipo:\ void\ encontrarVehiculos(Estr\_Usuario\ *,\ Estr\_Vehiculo\ *,\ int,\ int\ **,\ int\ *,\ int);}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//Precondicion:\ Introducir\ un\ vector\ de\ enteros,\ para\ introducir\ datos\ en\ el\ mismo,\ al\ igual\ que\ la\ variable\ "{}x"{},}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//para\ saber\ cuantos\ vehiculos\ tiene\ dicho\ usuario,\ y\ la\ varible\ "{}i"{},\ para\ identificar\ el\ usuario,\ es\ decir,\ la\ posicion}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//en\ la\ estructura\ de\ "{}usuario"{}.\ Ademas,\ se\ necesitan\ las\ estructuras\ "{}usuario"{}\ y\ "{}vehiculo"{}\ inicializadas,\ con\ sus\ contadores\ "{}numVehiculos"{}\ y\ "{}numUsuarios"{}.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//Postcondicion:\ Busca\ todos\ los\ vehiculos\ de\ un\ usuario\ mediante\ su\ id,\ e\ introduce\ las\ posiciones\ en\ la\ estructura\ de\ dichos\ vehiculos\ en\ un\ vector\ de\ enteros.}}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ encontrarVehiculos(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ **,\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//Prototipo:\ void\ encontrarViajes(Estr\_Vehiculo\ *,\ int,\ Estr\_Viaje\ *,\ int,\ char\ *,\ int\ **,\ int\ *,\ int);}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//Precondicion:\ Introducir\ la\ cadena\ "{}mat"{},\ que\ sera\ la\ matricula\ del\ vehiculo,\ al\ que\ queremos\ obtener\ todos\ sus\ viajes,\ un\ vector\ de\ enteros,}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//para\ introducir\ datos\ en\ el\ mismo,\ al\ igual\ que\ la\ variable\ "{}x"{},\ para\ saber\ cuantos\ viajes\ tiene\ dicho\ usuario,\ y\ la\ varible\ "{}num"{},\ que\ sera\ 0,\ 1\ o\ 2,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//dependiendo\ de\ para\ que\ queramos\ usar\ la\ funcion.\ Ademas,\ se\ necesita\ las\ estructuras\ "{}vehiculos"{}\ y\ "{}viaje"{}\ inicializadas,\ con\ sus\ contadores.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//Postcondicion:\ Busca\ todos\ los\ viajes\ de\ un\ vehiculo\ mediante\ su\ matricula,\ e\ introduce\ las\ posiciones\ en\ la\ estructura\ de\ dichos\ viajes\ en\ un\ vector\ de\ enteros.}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ encontrarViajes(\mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{int}\ **,\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//Prototipo:\ void\ encontrarUsuario(Estr\_Usuario\ *,\ int,\ char\ *,\ int\ *,\ int\ *);}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//Precondicion:\ Introducir\ la\ cadena\ "{}vec\_id"{},\ que\ sera\ la\ id\ de\ un\ usuario\ que\ queremos\ encontrar,\ junto\ a\ una\ variable\ "{}x"{},\ para\ obtener\ la\ posicion}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//del\ usuario\ en\ la\ estructura\ "{}usuario"{},\ y\ la\ variable\ "{}encontrado"{}\ incializada.\ Ademas,\ se\ necesita\ la\ estructura\ "{}usuario"{},\ con\ su\ contador\ "{}numUsuarios"{}.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//Postcondicion:\ Busca\ al\ usuario\ en\ la\ base\ de\ datos\ mediante\ su\ id,\ e\ introduce\ su\ posicion\ en\ la\ estructura\ en\ una\ variable\ "{}x"{},\ y\ "{}encontrado"{}\ pasa\ a\ ser\ 1,\ si\ se\ encuentra\ el\ usuario.}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ encontrarUsuario(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keywordtype}{int}\ *);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//Prototipo:\ void\ encontrarReservas(Estr\_Usuario\ *,\ Estr\_Viaje\ *,\ int,\ Estr\_Reservas\ *,\ int,\ int,\ int\ **,\ int\ **,\ int\ *);}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//Precondicion:\ Introducir\ la\ varible\ "{}num\_user"{},\ que\ nos\ dice\ la\ posicion\ del\ usuario\ en\ la\ estructura\ "{}usuario"{},\ junto\ a\ una\ variable\ "{}x"{},}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//para\ obtener\ el\ numero\ maximo\ de\ reservas\ que\ cumplen\ las\ condiciones,\ y\ los\ vectores\ "{}vec"{}\ y\ "{}vec\_viaje"{},\ para\ meter\ las\ posiciones\ en\ esos\ vector\ dinamicos.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//Ademas,\ se\ necesita\ las\ estructuras\ "{}usuario"{},\ "{}viaje"{}\ y\ "{}reservas"{}\ inicializadas,\ con\ sus\ contadores.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//Postcondicion:\ Busca\ todas\ las\ reservas\ abiertas\ de\ un\ usuario,\ mediante\ su\ id,\ e\ introduce\ las\ posiciones\ en\ la\ estructura\ de\ dichas\ reservas}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//en\ un\ vector\ de\ enteros,\ y\ las\ posiciones\ de\ de\ los\ viajes\ en\ los\ que\ estan\ esas\ reservas,\ en\ otro\ vector\ de\ enteros.}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ encontrarReservas(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___reservas}{Estr\_Reservas}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}\ **,\ \textcolor{keywordtype}{int}\ **,\ \textcolor{keywordtype}{int}\ *);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//Prototipo:\ void\ encontrarViajesReservas(Estr\_Usuario\ *,\ Estr\_Viaje\ *,\ int,\ Estr\_Pasos\ *,\ int,\ int,\ char\ *,\ int\ **,\ int\ *,\ int\ *);}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//Precondicion:\ Introducir\ la\ varible\ "{}num\_user"{},\ que\ nos\ dice\ la\ posicion\ del\ usuario\ en\ la\ estructura\ "{}usuario"{},\ para\ saber\ su\ localidad,\ junto\ a\ una\ variable\ "{}x"{},}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//para\ obtener\ el\ numero\ maximo\ de\ viajes\ que\ cumplen\ las\ condiciones,\ y\ la\ variable\ "{}loc"{},\ para\ saber\ si\ hay\ viajes\ por\ su\ localidad,\ pero\ en\ fechas\ distintas,}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//junto\ a\ un\ cadena\ "{}fecha"{},\ para\ saber\ en\ que\ fecha\ quiere\ buscar\ el\ viaje,\ y\ el\ vector\ "{}vec"{},\ para\ introducir\ las\ posiciones\ de\ los\ viajes}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//que\ pasan\ por\ la\ ciudad\ del\ usuario.\ Ademas,\ se\ necesita\ las\ estructuras\ "{}usuario"{},\ "{}viaje"{}\ y\ "{}pasos"{}\ inicializadas,\ con\ sus\ contadores.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//Postcondicion:\ Busca\ todas\ los\ viajes\ abiertos\ o\ iniciados,\ que\ pasen\ por\ la\ localidad\ de\ un\ usuario,\ mediante\ su\ id,\ e\ introduce\ las\ posiciones\ en\ la}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//estructura\ de\ dichos\ viajes\ en\ un\ vector\ de\ enteros.\ Si\ no\ hay\ viajes\ en\ la\ fecha\ indicada,\ entonces\ "{}loc"{}\ sera\ distinto\ de\ 0.}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ encontrarViajesReservas(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{int}\ **,\ \textcolor{keywordtype}{int}\ *,\ \textcolor{keywordtype}{int}\ *);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENCONTRAR\_H\_INCLUDED}}
+
+\end{DoxyCode}

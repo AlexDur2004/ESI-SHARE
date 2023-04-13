@@ -1,0 +1,52 @@
+\hypertarget{escribir_8h_source}{}\doxysection{escribir.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ESCRIBIR\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ESCRIBIR\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}leer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}preguntar.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}listar.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}fecha.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}buscar.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}menus.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}colores.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//Prototipo:\ void\ altaUsuario(Estr\_Usuario\ *,\ int,\ Estr\_Localidad\ *,\ int);}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//Precondicion:\ Tener\ las\ estructuras\ "{}usuario"{}\ y\ "{}localidad"{}\ inicializada,\ con\ sus\ contadores\ "{}numUsuarios"{}\ y\ "{}numLocalidades"{}.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//Postcondicion:\ Dar\ de\ alta/Registrar\ un\ usuario,\ comprobando\ que\ el\ nombre\ del\ usuario\ no\ esta\ repetido.}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ altaUsuario(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//Prototipo:\ void\ altaVehiculo(Estr\_Usuario\ *,\ Estr\_Vehiculo\ *,\ int,\ int);}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//Precondicion:\ Tener\ la\ variable\ "{}i"{},\ con\ la\ posicion\ del\ usuario\ en\ la\ estructura\ "{}usuario"{},\ y\ las\ estructuras\ "{}vehiculo"{}\ y\ "{}usuario"{}\ inicializadas,\ con\ su\ contador\ "{}numVehiculos"{}.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//Postcondicion:\ Dar\ de\ alta/Registrar\ un\ vehiculo,\ comprobando\ que\ la\ matricula\ es\ valida,\ y\ no\ esta\ en\ uso.}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ altaVehiculo(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//Prototipo:\ void\ altaAdmin(Estr\_Usuario\ *,\ int,\ Estr\_Vehiculo\ *,\ int,\ Estr\_Viaje\ *,\ int,\ Estr\_Pasos\ *,\ int,\ Estr\_Reservas\ *,\ int,\ Estr\_Localidad\ *,\ int,\ Estr\_Rutas\ **,\ int,\ int,\ int);}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//Precondicion:\ Necesario\ la\ introduccion\ de\ un\ entero,\ para\ saber\ si\ queremos\ registrar\ un\ vehiculo\ o\ un\ viaje.\ Tener\ las\ estructuras\ inicializadas,\ con\ sus\ contadores.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//Postcondicion:\ Si\ n=0,\ dar\ de\ alta/registrar\ un\ vehiculo,\ comprobando\ que\ la\ matricula\ es\ valida,\ y\ no\ esta\ en\ uso,}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//y\ si\ n=1,\ dar\ de\ alta/registrar\ un\ viaje.\ Ambos,\ introduciendo\ la\ id\ del\ usuario\ al\ que\ se\ quiere\ crear.}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ altaAdmin(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___reservas}{Estr\_Reservas}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___rutas}{Estr\_Rutas}}\ **,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//Prototipo:\ void\ altaViaje(Estr\_Usuario\ *,\ int,\ Estr\_Vehiculo\ *,\ int,\ Estr\_Viaje\ *,\ int,\ Estr\_Pasos\ *,\ int,\ Estr\_Reservas\ *,\ int,\ Estr\_Localidad\ *,\ int,\ Estr\_Rutas\ **,\ int,\ int,\ int,\ int);}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//Precondicion:se\ necesitara\ la\ variable\ numUsuarios\ que\ respresenta\ al\ usuario\ en\ la\ estructura\ Usuarios.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//Ademas\ se\ necesitaran\ las\ estructuras\ de\ "{}vehiculos"{},\ "{}viajes"{},\ "{}pasos"{},\ "{}reservas"{},\ "{}localidad"{},\ "{}rutas"{},\ con\ sus\ respectivos\ contadores.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//Cabecera:\ esta\ funcion\ se\ usa\ para\ que\ el\ conductor\ cree\ viajes\ ingresando\ valores\ como\ la\ matricula\ del\ coche\ la\ fecha,\ las\ horas\ de\ inicio\ y\ fin\ o\ el\ coste,}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//y\ asignadose\ otros\ valores\ automaticamente\ como\ el\ esatdo\ del\ viaje,\ la\ id\ del\ viaje\ o\ las\ plazas\ de\ este.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//Postcondicion:\ se\ crea\ una\ nueva\ estructura\ "{}Viajes"{}\ que\ contendra\ los\ datos\ correspondientes\ al\ nuevo\ viaje\ creado\ por\ el\ conductor\ y\ se\ habra\ añadido\ al\ fichero\ el\ nuevo\ viaje}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ altaViaje(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___reservas}{Estr\_Reservas}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___rutas}{Estr\_Rutas}}\ **,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//Prototipo:\ void\ altaReserva(Estr\_Usuario\ *,\ int,\ Estr\_Vehiculo\ *,\ int,\ Estr\_Viaje\ *,\ int,\ Estr\_Pasos\ *,\ int,\ Estr\_Reservas\ *,\ int,\ int);}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//Precondicion://Precondicion:se\ necesitara\ la\ variable\ numUsuarios\ que\ respresenta\ al\ usuario\ en\ la\ estructura\ Usuarios,}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//Ademas\ se\ necesitaran\ las\ estructuras\ de\ "{}vehiculos"{},\ "{}viajes"{},\ "{}pasos"{},\ "{}reservas"{},\ "{}localidad"{},\ "{}rutas"{},\ con\ sus\ respectivos\ contadores.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//Cabecera:\ esta\ funcion\ en\ dependencia\ de\ la\ fecha\ elegida\ por\ el\ usuario\ y\ su\ localidad\ le\ seran\ mostrados\ todos\ lo\ viajes\ disponibles\ impidiendole\ elegir\ los\ viajes\ ya\ reservados\ previamente\ o\ creados\ por\ el,\ y\ en\ caso\ de\ que}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//no\ haya\ ningun\ viaje\ que\ pase\ por\ su\ localidad\ no\ se\ le\ mostrara\ ningun\ viaje\ y\ volvera\ al\ menu.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//Postcondicion:en\ el\ fichero\ reserva\ se\ guardara\ la\ id\ del\ viaje\ que\ el\ usuario\ haya\ elegido\ y\ su\ id\ y\ se\ restara\ una\ plaza\ al\ viaje,\ dato\ que\ tambine\ se\ modidificara\ en\ el\ fichero}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ altaReserva(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___reservas}{Estr\_Reservas}}\ *,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ESCRIBIR\_H\_INCLUDED}}
+
+\end{DoxyCode}

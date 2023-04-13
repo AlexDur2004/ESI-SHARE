@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%% Documentación del sistema %%%%%%%%%%%%%%%%%%%%
+
+
+\section{Documentación de sistema}
+
+\subsection{Especificación del sistema}
+
+Esta sección debe describir el análisis y la especificación de requisitos. Cómo se descompone el problema en distintos subproblemas y los módulos asociados a cada uno de ellos, acompañados de su especificación. También debe incluir el plan de desarrollo del \textit{software}.
+
+\subsection{Módulos}
+
+Debe contener una descripción de cada módulo, su funcionalidad y la interfaz. También se podría añadir código fuente.
+
+En este proyecto, hemos empleado una descomposición por tareas, haciendo que el programa se quede dividido en 15 módulos, que son:
+
+\subsubsection{Acceso}
+
+Sirve para darle acceso a los usuarios al sistema, mediante la autenticación de las credenciales que introduzcan. Para esto se han usado algunos mecanismos interesantes,
+como, la detección automática del perfil del usuario, si el que inicia sesión es usuario ó administrador. Además, se ha implementado un sistema de seguridad,
+con el que el usuario solamente tendrá 3 intentos para introducir la contraseña.
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/acceso.c}
+
+\subsubsection{Colores}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/colores.c}
+
+\subsubsection{Crear Viaje}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/crear_viaje.c}
+
+\subsubsection{Eliminar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/eliminar.c}
+
+\subsubsection{Encontrar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/encontrar.c}
+
+\subsubsection{Escribir}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/escribir.c}
+
+\subsubsection{Fecha}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/fecha.c}
+
+\subsubsection{Leer}
+
+\bigskip
+\lstinputlisting[language=C, breaklines=true]{CODIGO/leer.c}
+
+\subsubsection{Listar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/listar.c}
+
+\subsubsection{Menús}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/menus.c}
+
+\subsubsection{Modificar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/modificar.c}
+
+\subsubsection{Mostrar Reservar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/mostrar_reservar.c}
+
+\subsubsection{Preguntar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/preguntar.c}
+
+\subsubsection{Reservar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/reservar.c}
+
+\subsection{Plan de prueba}
+
+Debe describir todo el plan de prueba que se ha llevado a cabo. Se distinguen las pruebas realizadas a cada módulo y las pruebas de integración de los distintos módulos probándolo como un todo. Por último, también se debe incluir la descripción del plan de pruebas de aceptación.  
+
+
+\subsubsection{Prueba de los módulos}
+
+Incluir toda la batería de pruebas realizadas. Pruebas de caja blanca y pruebas de caja negra.  
+
+
+\subsubsection{Prueba de integración}
+
+Incluir toda la batería de pruebas realizadas. Pruebas de caja blanca y pruebas de caja negra.  
+
+
+\subsubsection{ Plan de pruebas de aceptación}
+
+Estas pruebas deben diseñarse con el usuario del sistema. Deben describir las pruebas que son necesarias pasar para que el sistema sea aceptado por el usuario final.  
+
+\bigskip
+
+Si en algún punto del documento se quiere hacer referencia a algún documento es necesario incluir la cita donde corresponda, podemos tomar como ejemplo \cite{Ejemplo3}. 

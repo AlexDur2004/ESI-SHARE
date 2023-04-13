@@ -1,0 +1,24 @@
+\hypertarget{acceso_8h_source}{}\doxysection{acceso.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ACCESO\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ACCESO\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}leer.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}preguntar.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}menus.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}colores.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//Prototipo:\ void\ acceso(Estr\_Usuario\ *,\ int,\ Estr\_Vehiculo\ *,\ int,\ Estr\_Viaje\ *,\ int,\ Estr\_Pasos\ *,\ int,\ Estr\_Reservas\ *,\ int,\ Estr\_Localidad\ *,\ int,\ Estr\_Rutas\ **,\ int,\ int);}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//Precondicion:\ Tener\ inicializada\ la\ variable\ "{}numUsuarios"{},\ con\ el\ numero\ de\ usuarios\ maximos\ del\ fichero,\ y\ la\ estructura\ "{}usuario"{},\ con\ datos\ leidos}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//desde\ el\ fichero\ "{}usuarios.txt"{},\ y\ haber\ introducido\ el\ numero\ correspondiente\ en\ el\ menu.\ Tambien\ se\ necesitaran\ el\ resto\ de\ estructuras,\ para\ introducirlas\ en\ el\ menu.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//Postcondicion:\ Autenticacion\ de\ las\ credenciales\ introducidas,\ si\ coinciden\ con\ alguna\ de\ la\ base\ de\ datos,\ pues\ se\ accede\ al\ programa.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//Si\ el\ usuario\ es\ "{}usuario"{},\ accedera\ al\ menu\ de\ usuario,\ y\ si\ es\ "{}administrador"{},\ accedera\ al\ menu\ de\ admin.}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ acceso(\mbox{\hyperlink{struct_estr___usuario}{Estr\_Usuario}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___vehiculo}{Estr\_Vehiculo}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___viaje}{Estr\_Viaje}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___pasos}{Estr\_Pasos}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___reservas}{Estr\_Reservas}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___localidad}{Estr\_Localidad}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{struct_estr___rutas}{Estr\_Rutas}}\ **,\ \textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ACCESO\_H\_INCLUDED}}
+
+\end{DoxyCode}

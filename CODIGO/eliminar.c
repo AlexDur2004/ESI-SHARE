@@ -566,7 +566,8 @@ void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
 void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
 {
     int *vec=NULL, x=0, *vec_viaje=NULL, max_viaje=0, i=0, j;
-
+    leer_vehiculo(&vehiculo,&numVehiculos);
+    leer_viaje(&viaje,&numViajes);
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, num_user);
 
     if(vec!=NULL)//verifica si se han encontrado vehiculos
@@ -582,10 +583,13 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
             {
                 printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n",j+1,viaje[vec_viaje[j]].id_viaje,viaje[vec_viaje[j]].id_mat,viaje[vec_viaje[j]].f_inic,viaje[vec_viaje[j]].h_inic,viaje[vec_viaje[j]].h_fin,viaje[vec_viaje[j]].plazas_libre,viaje[vec_viaje[j]].ida_vuelta,viaje[vec_viaje[j]].precio,viaje[vec_viaje[j]].estado);
             }
-
+            printf("(%i)Salir\n",j+1);
             do{//verifica que se seleccione la opcion correcta
                 printf("Seleccione el viaje que desea finalizar/anular:\n");
                 scanf("%i",&i);
+                if(i==j+1){
+                    return;
+                }
             }while(i>max_viaje||i<0);
 
             system("cls");
@@ -637,9 +641,12 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
     if(vec!=NULL){ //verifica que el usuario tiene reservas
         do{
             listarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user);
-
+            printf("(%i)Salir\n",0);
             printf("Seleccione el viaje que desea cancelar:\n");
             scanf("%i",&sel);
+            if(sel==0){
+                return;
+            }
             system("cls");
         }while(sel>x || sel<1); //comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones
 

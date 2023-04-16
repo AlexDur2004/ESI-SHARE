@@ -22,3 +22,7 @@ Otra forma alternativa, sería instalar Code::Blocks, y ejecutar el archivo de p
     conflicto a la hora de usar algunas funciones.
 
 Para más información, puede visitar la documentación del proyecto que se puede encontrar en la carpeta [DOCUMENTACION](https://github.com/AlexDur2004/ESI-SHARE/tree/main/DOCUMENTACION).
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/124841782/232345274-06022610-3ced-44d6-a527-52dfa9778cba.png" width="500">
+</p>

@@ -9,9 +9,6 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
 {
     int x=0, h=0, m=0, opc=0, opc2=0, *vec=NULL;
 
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    system("cls");
-
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehiculos del usuario, y los colocamos en un vector de enteros,
     //con las posiciones en la estructura "vehiculo" de sus vehiculos.
 
@@ -20,10 +17,29 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
 
         for(m=0; m<x; m++) //Imprimimos todos los coches que tiene el usuario.
         {
-            printf("(%i)%s-%s-%s\n", m+1, vehiculo[vec[m]].id_mat, vehiculo[vec[m]].num_plazas, vehiculo[vec[m]].desc_veh);
+            color(0,4);
+            printf("    Vehiculo ");
+            color(0,15);
+            printf("%i", m+1);
+            color(0,4);
+            printf(":\t");
+            color(0,3);
+            printf("    Matricula: ");
+            color(0,15);
+            printf("%s", vehiculo[vec[m]].id_mat);
+            color(0,3);
+            printf(" | Nº de plazas: ");
+            color(0,15);
+            printf("%s", vehiculo[vec[m]].num_plazas);
+            color(0,3);
+            printf(" | Descripcion: ");
+            color(0,15);
+            printf("%s\n", vehiculo[vec[m]].desc_veh);
         }
         m++;
+        color(0,14);
         printf("(%i)Salir.\n", m);
+        color(0,15);
         printf("Ingrese el numero correspondiente al vehiculo que desea eliminar: "); //Seleccion del vehiculo que quiere eliminar.
         fflush(stdin);
         scanf("%d", &opc);
@@ -46,6 +62,7 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
                 if(opc2==1){ //Al escoger 1, nos lleva a otra funcion, que eliminara los viajes, pasos y reservas del vehiculo seleccionado.
                     system("cls");
                     eliminarVehiculoViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, vehiculo[vec[h]].id_mat, x);
+                    printf("Eliminado con exito.\n");
                     system("PAUSE");
                 }
             }while((opc2<1)||(opc2>2));
@@ -62,6 +79,7 @@ void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *veh
         printf("No posee vehiculos registrados.\n");
         system("PAUSE");
     }
+    system("cls");
 }
 
 //Prototipo: void eliminarVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, char *, int);
@@ -73,10 +91,6 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
 {
     FILE *fp, *temp;
     int n=0, j=0, k=0, num_v=0, *vec_viaje=NULL, counter, encontrado=0;
-
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    leer_viaje(&viaje, &numViajes);
-    system("cls");
 
     fp=fopen("DATA/vehiculos.txt","r+");
 
@@ -121,7 +135,6 @@ void eliminarVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
         }
         remove("DATA/vehiculos.txt"); //Borramos el fichero original.
         rename("DATA/vehiculos_Temp.txt","DATA/vehiculos.txt"); //Cambiamos de nombre el fichero temporal por el original.
-        leer_vehiculo(&vehiculo, &numVehiculos); //Volvemos a leer el fichero "vehiculos.txt", para actualizar la estructura, y el contador "numVehiculos".
     }
     fclose(fp);
 }
@@ -135,10 +148,6 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 {
     int j=0, x=0, h=0, m=0, num_v=0, opc=0, opc2=0, *vec=NULL, *vec_viaje=NULL;
 
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    leer_viaje(&viaje, &numViajes);
-    system("cls");
-
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &num_v, i);  //Busca los vehiculos que tiene dicho usuario, para luego encontrar los viajes que tiene.
 
     for(j=0;j<num_v;j++)
@@ -148,10 +157,42 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 
     if(x>0){
         printf("¿Que viaje quiere eliminar?\n");
-
-        for(m=0; m<x; m++) //Imprime una lista de todos los viajes que tiene el usuario.
+        for(m=0;m<x;m++) //Imprime una lista de todos los viajes que tiene el usuario.
         {
-            printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n", m+1, viaje[vec_viaje[m]].id_viaje, viaje[vec_viaje[m]].id_mat,viaje[vec_viaje[m]].f_inic,viaje[vec_viaje[m]].h_inic,viaje[vec_viaje[m]].h_fin,viaje[vec_viaje[m]].plazas_libre,viaje[vec_viaje[m]].ida_vuelta,viaje[vec_viaje[m]].precio,viaje[vec_viaje[m]].estado);
+            color(15, 0);
+            printf("VIAJE %i:\n",i+1);
+            color(0, 3);
+            printf("   ID del viaje: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].id_viaje);
+            color(0, 3);
+            printf("   Estado: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].estado);
+            color(0, 3);
+            printf("   Plazas libres: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].plazas_libre);
+            color(0, 3);
+            printf("   Fecha de partida: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].f_inic);
+            color(0, 3);
+            printf("   Hora de partida: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].h_inic);
+            color(0, 3);
+            printf("   Hora de llegada: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].h_fin);
+            color(0, 3);
+            printf("   Tipo: ");
+            color(0, 15);
+            printf("%s\n", viaje[vec[m]].ida_vuelta);
+            color(0, 3);
+            printf("   Precio: ");
+            color(0, 15);
+            printf("%s euros\n\n", viaje[vec[m]].precio);
         }
         x++;
         printf("(%i)Salir.\n", x);
@@ -178,11 +219,10 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
                 if(opc2==1){ //Si seleccionamos 1, se va a la funcion, que elimina viajes, pasos y reservas, por la id del viaje.
                     system("cls");
                     eliminarSoloViaje(viaje, numViajes, pasos, numPasos, reservas, numReservas, viaje[vec_viaje[h]].id_viaje);
+                    printf("Eliminado con exito.\n");
+                    system("PAUSE");
                 }
             }while((opc2<1)||(opc2>2));
-            system("cls");
-            printf("Eliminado con exito\n");
-            system("PAUSE");
         }
         else //Si el numero no esta en el rango, volvemos a entrar en la funcion.
         {
@@ -195,6 +235,7 @@ void eliminarViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
         printf("No tiene viajes registrados.\n");
         system("PAUSE");
     }
+    system("cls");
 }
 
 //Prototipo: void eliminarSoloViaje(Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, char *);
@@ -247,7 +288,6 @@ void eliminarSoloViaje(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int 
         }
         remove("DATA/viajes.txt"); //Borramos el fichero original.
         rename("DATA/viajes_Temp.txt","DATA/viajes.txt"); //Cambiamos de nombre el fichero temporal por el original.
-        leer_viaje(&viaje, &numViajes); //Volvemos a leer el fichero "viajes.txt", para actualizar la estructura, y el contador "numViajes".
     }
     fclose(fp);
 }
@@ -299,8 +339,6 @@ void eliminarPasos(Estr_Pasos *pasos, int numPasos, char *id)
         }
         remove("DATA/pasos.txt"); //Borramos el fichero original.
         rename("DATA/pasos_Temp.txt","DATA/pasos.txt"); //Cambiamos de nombre el fichero temporal por el original.
-        leer_pasos(&pasos, &numPasos); //Volvemos a leer el fichero "pasos.txt", para actualizar la estructura, y el contador "numPasos".
-        system("cls");
     }
     fclose(fp);
 }
@@ -352,8 +390,6 @@ void eliminarReservas(Estr_Reservas *reservas, int numReservas, char *id)
         }
         remove("DATA/reservas.txt"); //Borramos el fichero original.
         rename("DATA/reservas_Temp.txt","DATA/reservas.txt"); //Cambiamos de nombre el fichero temporal por el original.
-        leer_reservas(&reservas, &numReservas); //Volvemos a leer el fichero "reservas.txt", para actualizar la estructura, y el contador "numReservas".
-        system("cls");
     }
     fclose(fp);
 }
@@ -368,9 +404,6 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
     FILE *fp, *temp;
     int n=0, o=0, j=0, opc2=0, c=0, *vec=NULL, encontrado=0, encontrado2=0, id2, counter;
     char vec_id[5];
-
-    leer_usuario(&usuario, &numUsuarios);
-    system("cls");
 
     fp=fopen("DATA/usuarios.txt","r+");
 
@@ -447,7 +480,6 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
                     }
                     remove("DATA/usuarios.txt"); //Borramos el fichero original.
                     rename("DATA/usuarios_Temp.txt","DATA/usuarios.txt"); //Cambiamos de nombre el fichero temporal por el original.
-                    leer_usuario(&usuario, &numUsuarios); //Volvemos a leer el fichero "usuarios.txt", para actualizar la estructura, y el contador "numUsuarios".
                     system("cls");
                     printf("Eliminado con exito\n");
                     system("PAUSE");
@@ -462,6 +494,7 @@ void eliminarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo 
         }
     }
     fclose(fp);
+    system("cls");
 }
 
 //Prototipo: void eliminarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
@@ -473,10 +506,6 @@ void eliminarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo
 {
     char opc2[5];
     int encontrado=0, i=0, counter, id;
-
-    leer_usuario(&usuario, &numUsuarios);
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    system("cls");
 
     system("cls");
     if(numVehiculos!=0) //Si hay vehiculos en el sistema.
@@ -516,11 +545,6 @@ void eliminarAdminViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
 {
     char opc2[5];
     int encontrado=0, i=0, counter, n=0, id;
-
-    leer_usuario(&usuario, &numUsuarios);
-    leer_vehiculo(&vehiculo, &numVehiculos);
-    leer_viaje(&viaje, &numViajes);
-    system("cls");
 
     system("cls");
     listarAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, x, num, &n); //Obtenemos una lista de todos los viajes del sistema.
@@ -580,7 +604,40 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
             printf("LISTADO DE SUS VIAJES:\n");
             for(j=0;j<max_viaje;j++)//se muetsran en pantalla esos viajes
             {
-                printf("(%i)%s-%s-%s-%s-%s-%s-%s-%s-%s\n",j+1,viaje[vec_viaje[j]].id_viaje,viaje[vec_viaje[j]].id_mat,viaje[vec_viaje[j]].f_inic,viaje[vec_viaje[j]].h_inic,viaje[vec_viaje[j]].h_fin,viaje[vec_viaje[j]].plazas_libre,viaje[vec_viaje[j]].ida_vuelta,viaje[vec_viaje[j]].precio,viaje[vec_viaje[j]].estado);
+                color(15, 0);
+                printf("VIAJE %i:\n",j+1);
+                color(0, 3);
+                printf("   ID del viaje: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].id_viaje);
+                color(0, 3);
+                printf("   Estado: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].estado);
+                color(0, 3);
+                printf("   Plazas libres: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].plazas_libre);
+                color(0, 3);
+                printf("   Fecha de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].f_inic);
+                color(0, 3);
+                printf("   Hora de partida: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].h_inic);
+                color(0, 3);
+                printf("   Hora de llegada: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].h_fin);
+                color(0, 3);
+                printf("   Tipo: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].ida_vuelta);
+                color(0, 3);
+                printf("   Precio: ");
+                color(0, 15);
+                printf("%s euros\n\n", viaje[vec[j]].precio);
             }
 
             do{//verifica que se seleccione la opcion correcta
@@ -628,10 +685,6 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
 {
     int *vec=NULL, *vec_viaje=NULL, x, sel, plazas=0;
 
-    leer_viaje(&viaje, &numViajes);
-    leer_reservas(&reservas, &numReservas);
-    system("cls");
-
     encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x);//encuentra las reservas del usuario que pueden ser canceladas
 
     if(vec!=NULL){ //verifica que el usuario tiene reservas
@@ -644,7 +697,6 @@ void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Es
         }while(sel>x || sel<1); //comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones
 
         eliminarReservas(reservas, numReservas, reservas[vec[sel-1]].id_viaje);
-        leer_reservas(&reservas,&numReservas);
         plazas=atoi(viaje[vec_viaje[sel-1]].plazas_libre); //aumenta en uno las plazas
         plazas++;
         sprintf(viaje[vec_viaje[sel-1]].plazas_libre,"%01d",plazas);

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  13 APR 2023 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  16 APR 2023 02:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOC/DOC_LATEX/Doc_ESI-SHARE.tex"
-(c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOC/DOC_LATEX/Doc_ESI-SHARE.tex
+**"c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOCUMENTACION/DOC_LATEX/Doc_ESI-SHARE.tex"
+(c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOCUMENTACION/DOC_LATEX/Doc_ESI-SHARE.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28> (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -273,7 +273,10 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box55
-) (Doc_ESI-SHARE.aux)
+) (Doc_ESI-SHARE.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
 \openout1 = `Doc_ESI-SHARE.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -322,27 +325,587 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@posthook=\toks25
 )
 Package hyperref Info: Link coloring OFF on input line 36.
+ (Doc_ESI-SHARE.out) (Doc_ESI-SHARE.out)
 \@outlinefile=\write3
 \openout3 = `Doc_ESI-SHARE.out'.
 
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (Portada.tex
+<FOTOS/uca.jpg, id=183, 597.432pt x 235.8411pt>
+File: FOTOS/uca.jpg Graphic file (type jpg)
+<use FOTOS/uca.jpg>
+Package pdftex.def Info: FOTOS/uca.jpg  used on input line 8.
+(pdftex.def)             Requested size: 113.80496pt x 56.90529pt.
+<FOTOS/logo_ESI-SHARE.png, id=184, 1915.155pt x 718.685pt>
+File: FOTOS/logo_ESI-SHARE.png Graphic file (type png)
+<use FOTOS/logo_ESI-SHARE.png>
+Package pdftex.def Info: FOTOS/logo_ESI-SHARE.png  used on input line 10.
+(pdftex.def)             Requested size: 142.25694pt x 56.9038pt.
+<FOTOS/logo.jpg, id=186, 666.49pt x 521.95pt>
+File: FOTOS/logo.jpg Graphic file (type jpg)
+<use FOTOS/logo.jpg>
+Package pdftex.def Info: FOTOS/logo.jpg  used on input line 21.
+(pdftex.def)             Requested size: 219.07794pt x 170.71487pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 26.
 
-c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOC/DOC_LATEX/Doc_ESI-SHARE.tex:36: I can't write on file `Doc_ESI-SHARE.pdf'.
-(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
-Please type another file name for output
-c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOC/DOC_LATEX/Doc_ESI-SHARE.tex:36: Emergency stop.
+Overfull \hbox (25.9634pt too wide) in paragraph at lines 5--27
+[]$[]$ 
+ []
+
+[1
+
+{C:/Users/adura/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./FOTOS/uca.jpg> <./FOTOS/logo_ESI-SHARE.png> <./FOTOS/logo.jpg>]) (Doc_ESI-SHARE.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
-                   \edef 
-l.36 \begin{document}
-                     
-*** (job aborted, file error in nonstop mode)
+                   \relax 
+l.33 ... {4.1.1}Acceso}{23}{subsubsection.0.4.1.1}
+                                                  % [1
 
- 
+])
+\tf@toc=\write4
+\openout4 = `Doc_ESI-SHARE.toc'.
+
+ [2]
+\openout2 = `Introduc.aux'.
+
+ (Introduc.tex) [3
+
+]
+\openout2 = `DocUsuario.aux'.
+
+ (DocUsuario.tex
+<FOTOS/menuPasajeroPerfil.png, id=252, 255.95625pt x 184.43906pt>
+File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
+<use FOTOS/menuPasajeroPerfil.png>
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 18.
+(pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
+ [4
+
+
+
+ <./FOTOS/menuPasajeroPerfil.png>]
+<FOTOS/menuPasajeroViaje.png, id=258, 212.29312pt x 197.23688pt>
+File: FOTOS/menuPasajeroViaje.png Graphic file (type png)
+<use FOTOS/menuPasajeroViaje.png>
+Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 23.
+(pdftex.def)             Requested size: 212.2926pt x 197.23637pt.
+File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
+<use FOTOS/menuPasajeroPerfil.png>
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 30.
+(pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
+ [5 <./FOTOS/menuPasajeroViaje.png>]
+<FOTOS/menuConductorVehiculo.png, id=264, 170.13562pt x 167.87718pt>
+File: FOTOS/menuConductorVehiculo.png Graphic file (type png)
+<use FOTOS/menuConductorVehiculo.png>
+Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 35.
+(pdftex.def)             Requested size: 170.1352pt x 167.87677pt.
+<FOTOS/menuConductorViaje.png, id=265, 212.29312pt x 241.65282pt>
+File: FOTOS/menuConductorViaje.png Graphic file (type png)
+<use FOTOS/menuConductorViaje.png>
+Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 39.
+(pdftex.def)             Requested size: 212.2926pt x 241.65222pt.
+ [6 <./FOTOS/menuConductorVehiculo.png> <./FOTOS/menuConductorViaje.png>]
+<FOTOS/menuAdminUsuario.png, id=273, 210.7875pt x 110.66344pt>
+File: FOTOS/menuAdminUsuario.png Graphic file (type png)
+<use FOTOS/menuAdminUsuario.png>
+Package pdftex.def Info: FOTOS/menuAdminUsuario.png  used on input line 47.
+(pdftex.def)             Requested size: 210.78699pt x 110.66315pt.
+<FOTOS/menuAdminVehiculo.png, id=274, 286.82156pt x 121.95563pt>
+File: FOTOS/menuAdminVehiculo.png Graphic file (type png)
+<use FOTOS/menuAdminVehiculo.png>
+Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 51.
+(pdftex.def)             Requested size: 286.82085pt x 121.9553pt.
+<FOTOS/menuAdminViaje.png, id=275, 211.54031pt x 120.45pt>
+File: FOTOS/menuAdminViaje.png Graphic file (type png)
+<use FOTOS/menuAdminViaje.png>
+Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 55.
+(pdftex.def)             Requested size: 211.53978pt x 120.44969pt.
+ [7 <./FOTOS/menuAdminUsuario.png> <./FOTOS/menuAdminVehiculo.png> <./FOTOS/menuAdminViaje.png>] [8]
+<FOTOS/menuPrincipal.png, id=292, 158.84344pt x 63.98906pt>
+File: FOTOS/menuPrincipal.png Graphic file (type png)
+<use FOTOS/menuPrincipal.png>
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 121.
+(pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
+ [9 <./FOTOS/menuPrincipal.png>]
+Overfull \hbox (7.69861pt too wide) in paragraph at lines 144--145
+\OT1/cmr/m/n/12 mo-di-fi-car-los o in-clu-so eli-mi-nar-los. Pa-ra es-to, la matr^^S^^Pcu-la del veh^^S^^Pcu-
+ []
+
+[10]) [11]
+\openout2 = `DocSistema.aux'.
+
+ (DocSistema.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+[12
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+<FOTOS/descomposicion_modular.jpeg, id=359, 798.5835pt x 710.4141pt>
+File: FOTOS/descomposicion_modular.jpeg Graphic file (type jpg)
+<use FOTOS/descomposicion_modular.jpeg>
+Package pdftex.def Info: FOTOS/descomposicion_modular.jpeg  used on input line 141.
+(pdftex.def)             Requested size: 429.00238pt x 381.645pt.
+
+Overfull \hbox (39.00238pt too wide) in paragraph at lines 141--142
+ [] 
+ []
+
+[16 <./FOTOS/descomposicion_modular.jpeg>]
+File: FOTOS/menuPrincipal.png Graphic file (type png)
+<use FOTOS/menuPrincipal.png>
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 157.
+(pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
+<FOTOS/menuSeleccionUsuario.png, id=366, 109.91063pt x 76.78688pt>
+File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
+<use FOTOS/menuSeleccionUsuario.png>
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 164.
+(pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
+File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
+<use FOTOS/menuPasajeroPerfil.png>
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 167.
+(pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
+ [17 <./FOTOS/menuSeleccionUsuario.png>]
+File: FOTOS/menuPasajeroViaje.png Graphic file (type png)
+<use FOTOS/menuPasajeroViaje.png>
+Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 175.
+(pdftex.def)             Requested size: 212.2926pt x 197.23637pt.
+File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
+<use FOTOS/menuSeleccionUsuario.png>
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 181.
+(pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
+ [18]
+File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
+<use FOTOS/menuPasajeroPerfil.png>
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 184.
+(pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
+File: FOTOS/menuConductorVehiculo.png Graphic file (type png)
+<use FOTOS/menuConductorVehiculo.png>
+Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 192.
+(pdftex.def)             Requested size: 170.1352pt x 167.87677pt.
+ [19]
+File: FOTOS/menuConductorViaje.png Graphic file (type png)
+<use FOTOS/menuConductorViaje.png>
+Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 198.
+(pdftex.def)             Requested size: 212.2926pt x 241.65222pt.
+ [20]
+File: FOTOS/menuPrincipal.png Graphic file (type png)
+<use FOTOS/menuPrincipal.png>
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 205.
+(pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
+<FOTOS/menuAdmin.png, id=385, 210.03468pt x 91.09032pt>
+File: FOTOS/menuAdmin.png Graphic file (type png)
+<use FOTOS/menuAdmin.png>
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 212.
+(pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
+File: FOTOS/menuAdmin.png Graphic file (type png)
+<use FOTOS/menuAdmin.png>
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 215.
+(pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
+ [21 <./FOTOS/menuAdmin.png>]
+File: FOTOS/menuAdminVehiculo.png Graphic file (type png)
+<use FOTOS/menuAdminVehiculo.png>
+Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 224.
+(pdftex.def)             Requested size: 286.82085pt x 121.9553pt.
+File: FOTOS/menuAdminViaje.png Graphic file (type png)
+<use FOTOS/menuAdminViaje.png>
+Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 230.
+(pdftex.def)             Requested size: 211.53978pt x 120.44969pt.
+) [22]
+\openout2 = `DocCode.aux'.
+
+ (DocCode.tex (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 21.
+ (CODIGO_sin_caracteres_especiales/acceso.c [23
+
+
+
+]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 20.
+ (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
+ [24] [25] [26]) (CODIGO_sin_caracteres_especiales/actualizar.c [27] [28]) (CODIGO_sin_caracteres_especiales/buscar.c [29] [30] [31] [32] [33] [34] [35]) (CODIGO_sin_caracteres_especiales/colores.c [36]) (CODIGO_sin_caracteres_especiales/eliminar.c [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]) (CODIGO_sin_caracteres_especiales/encontrar.c [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) [78] (CODIGO_sin_caracteres_especiales/escribir.c [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]) (CODIGO_sin_caracteres_especiales/estructuras.h [106]) (CODIGO_sin_caracteres_especiales/fecha.c [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]) (CODIGO_sin_caracteres_especiales/leer.c [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]) (CODIGO_sin_caracteres_especiales/listar.c [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]) (CODIGO_sin_caracteres_especiales/menus.c [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175]) (CODIGO_sin_caracteres_especiales/modificar.c [176] [177] [178] [179]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 99--100
+[][] 
+ []
+
+
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 99--100
+[][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 100--101
+[][][][][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 101--102
+[][] 
+ []
+
+
+Overfull \hbox (45.94928pt too wide) in paragraph at lines 101--102
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 101--102
+[][] 
+ []
+
+
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 102--103
+[][] 
+ []
+
+[180]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 107--108
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 107--108
+[][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 114--115
+[][][][][] 
+ []
+
+
+Overfull \hbox (24.79932pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+
+Overfull \hbox (17.74933pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+[181]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 116--117
+[][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 123--124
+[][][][][] 
+ []
+
+
+Overfull \hbox (17.74933pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+[182]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 125--126
+[][] 
+ []
+
+[183] [184] [185]
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 165--166
+[][][][][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+
+Overfull \hbox (45.94928pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 167--168
+[][] 
+ []
+
+[186]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 171--172
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 171--172
+[][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 176--177
+[][][][][] 
+ []
+
+
+Overfull \hbox (24.79932pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+
+Overfull \hbox (17.74933pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+[187]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 178--179
+[][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 183--184
+[][][][][] 
+ []
+
+
+Overfull \hbox (17.74933pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+
+Overfull \hbox (31.8493pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+
+Overfull \hbox (10.69934pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+
+Overfull \hbox (38.89929pt too wide) in paragraph at lines 184--185
+[][] 
+ []
+
+[188]
+Overfull \hbox (3.64935pt too wide) in paragraph at lines 185--186
+[][] 
+ []
+
+[189] [190] [191] [192] [193] [194]
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 355--356
+[][][][][] 
+ []
+
+[195] [196] [197]
+Overfull \hbox (18.89929pt too wide) in paragraph at lines 407--408
+[][][][][] 
+ []
+
+[198] [199] [200] [201] [202] [203] [204] [205] [206]
+Overfull \hbox (4.79932pt too wide) in paragraph at lines 629--630
+[][][][][] 
+ []
+
+
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 635--636
+[][][][][] 
+ []
+
+
+Overfull \hbox (4.79932pt too wide) in paragraph at lines 639--640
+[][][][][] 
+ []
+
+[207]
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 641--642
+[][][][][] 
+ []
+
+[208] [209] [210]) (CODIGO_sin_caracteres_especiales/preguntar.c
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
+ [211] [212] [213] [214] [215] [216])) [217] (Doc_ESI-SHARE.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+ (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
+Package rerunfilecheck Info: File `Doc_ESI-SHARE.out' has not changed.
+(rerunfilecheck)             Checksum: 6B1E4234EFD9AEB9DAF6CBC87482B46F;5902.
+ ) 
 Here is how much of TeX's memory you used:
- 12794 strings out of 475385
- 204461 string characters out of 2776908
- 561805 words of memory out of 3000000
- 34038 multiletter control sequences out of 15000+600000
- 469557 words of font info for 29 fonts, out of 8000000 for 9000
+ 19485 strings out of 475385
+ 315152 string characters out of 2776908
+ 1096264 words of memory out of 3000000
+ 35414 multiletter control sequences out of 15000+600000
+ 475874 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,0n,77p,335b,363s stack positions out of 10000i,1000n,20000p,200000b,80000s
-c:/Users/adura/Mi unidad/UCA/MP/ESI-SHARE/DOC/DOC_LATEX/Doc_ESI-SHARE.tex:36:  ==> Fatal error occurred, no output PDF file produced!
+ 72i,6n,77p,607b,2073s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Doc_ESI-SHARE.pdf (218 pages, 2728063 bytes).
+PDF statistics:
+ 7218 PDF objects out of 7423 (max. 8388607)
+ 5174 named destinations out of 6186 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
+

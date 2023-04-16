@@ -9,7 +9,7 @@ void imprimirPasos(Estr_Pasos *, int, Estr_Localidad *, int, char *, char *);
 void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localidad *localidad, int numLocalidades, Estr_Pasos *pasos, int numPasos, char id_viaje[7])
 {
     FILE *fp;
-    char rutas[numRutas][50], partida[numLocalidades], **rutas_guard, **rutas_impr, *token=NULL, *ciudad=NULL;
+    char rutas[numRutas][50], partida[numLocalidades], **rutas_guard, **rutas_impr, *token, *ciudad;
     int i=0, j=0, encontrado=0, encontrado2=0, numGuardados=0, numImpresos=0, repetido=0, opc=0;
 
     fp=fopen("DATA/rutas.txt", "r"); //Abrimos el fichero rutas.txt
@@ -18,9 +18,9 @@ void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localida
         printf("No se pudo abrir el archivo rutas.txt.\n");
         exit(1);
     }
-    while(fgets(rutas[i], 50, fp)!=NULL) //Vamos introduciendo en la matriz rutas, todas las rutas que tiene el fichero, hasta el fin de fichero.
+    for(i=0; fgets(rutas[i], 100, fp)!=NULL ; i++) //Vamos introduciendo en la matriz rutas, todas las rutas que tiene el fichero, hasta el fin de fichero.
     {
-        i++;
+        fgets(rutas[i], 100, fp);
     }
     fclose(fp);
 
@@ -171,6 +171,9 @@ void imprimirPasos(Estr_Pasos *pasos, int numPasos, Estr_Localidad *localidad, i
 
     fclose(fp);
 
-    printf("La ruta seleccionada se ha asignado correctamente al viaje con ID %s.\n", id_viaje);
+    printf("La ruta seleccionada se ha asignado correctamente al viaje con ID %s", id_viaje);
     system("PAUSE");
+
+    leer_pasos(&pasos,&numPasos); //Actualizamos la estructura "pasos".
+    system("cls");
 }

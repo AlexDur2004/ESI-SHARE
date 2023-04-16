@@ -18,6 +18,9 @@ void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localid
     int i=0, n=1, idmax=0, k=0, encontrado=0, encontrado2=0, encontrado3=0;
     char id[5], nombre[21], loc[21], perfil[14], usuario2[6], contrasena[9];
 
+    leer_usuario(&usuario,&numUsuarios); //Volvemos a leer el fichero, para actualizar la estructura, y el contador.
+    system("cls");
+
     fp=fopen("DATA/usuarios.txt","a+");
 
     if(fp==NULL)
@@ -91,6 +94,8 @@ void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localid
         }
     }
     fclose(fp);
+
+    leer_usuario(&usuario,&numUsuarios); //Volvemos a leer el fichero, para actualizar la estructura "usuario", y el contador de usuarios, "numUsuarios".
 }
 
 //Prototipo: void altaVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
@@ -102,6 +107,9 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
     FILE *fp;
     int error_mat, counter;
     char mat[8], plazas[2], descrip[51];
+
+    leer_vehiculo(&vehiculo,&numVehiculos); //Volvemos a leer el fichero, para actualizar la estructura "vehiculo", y el contador de vehiculos, "numVehiculos".
+    system("cls");
 
     fp=fopen("DATA/vehiculos.txt","a+");
 
@@ -165,6 +173,8 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
     }
 
     fclose(fp);
+
+    leer_vehiculo(&vehiculo,&numVehiculos); //Volvemos a leer el fichero, para actualizar la estructura "vehiculo", y el contador de vehiculos, "numVehiculos".
 }
 
 //Prototipo: void altaAdmin(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
@@ -223,6 +233,13 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
     FILE *fv;
     int n=1, i, idmax=0, breakp=0, enc=0, precio=0, rp, encontrado=0;
     char viaje_id[7], id_vehiculo[8], fecha[11], hora_inic[6], hora_fin[6], plazas[2], idavuelta[7], coste[5], estado[8];
+
+    leer_usuario(&usuario,&numUsuarios); //Volvemos a leer el fichero, para actualizar la estructura, y el contador.
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje,&numViajes);
+    leer_pasos(&pasos, &numPasos);
+    leer_reservas(&reservas, &numReservas);
+    system("cls");
 
     fv=fopen("DATA/viajes.txt","a+");
     do //en este bucle se ingresan todos los datos del viaje y al final se verifica si rp, si es uno deben ingresarse los datos de nuevo
@@ -284,6 +301,7 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
             {
                 fprintf(fv, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, plazas, idavuelta, coste, estado);
                 fclose(fv);
+                leer_viaje(&viaje, &numViajes);
                 system("cls");
                 buscadorRutas(ruta, numRutas, numRutas2, localidad, numLocalidades, pasos, numPasos, viaje_id);
             }
@@ -477,6 +495,13 @@ void altaReserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo
     int *vec=NULL, x, loc, i,seleccion=0,conf1=0,conf=0,plazas;
     char fecha[11],num_plazas[2];
 
+    leer_usuario(&usuario,&numUsuarios); //Volvemos a leer el fichero, para actualizar la estructura, y el contador.
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje,&numViajes);
+    leer_pasos(&pasos, &numPasos);
+    leer_reservas(&reservas, &numReservas);
+    system("cls");
+
     do //se repite el bucle hasta que los datos ingresados esten correctos
     {
         leer_dia(fecha);
@@ -661,6 +686,7 @@ void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *re
         fprintf(fp,"%s-%s\n",viaje[vec[reserva]].id_viaje,usuario[num_user].id_usuario);
     }
     fclose(fp);
+    leer_reservas(&reservas, &numReservas); // escribe en la estructura reservas la id del viaje y del usuario
 }
 
 //Prototipo: void verificar_reserva(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, Estr_Reservas *, int, int *, int, int *, int);

@@ -2,7 +2,9 @@
 #define FECHA_H_INCLUDED
 
 #include <time.h>
+#include "leer.h"
 #include "eliminar.h"
+#include "colores.h"
 
 //Prototipo: void actualizarViajesEstado(Estr_Viaje *, int, Estr_Reservas *, int, Estr_Pasos *, int);
 //Precondicion: Tener las estructuras "viaje" y "reservas", con sus contadores.

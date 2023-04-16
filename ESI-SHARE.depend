@@ -621,13 +621,14 @@
 1681207055 source:c:\users\alejandro durán\mi unidad\uca\mp\esi-share\buscar.c
 	"buscar.h"
 
-1681569627 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\acceso.c
+1681485722 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\acceso.c
 	"acceso.h"
 
-1681594479 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\acceso.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\acceso.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
+	"leer.h"
 	"preguntar.h"
 	"menus.h"
 	"colores.h"
@@ -648,24 +649,25 @@
 	<conio.h>
 	"listar.h"
 
-1681594479 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.h
+1681487984 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"leer.h"
 	"encontrar.h"
 	"preguntar.h"
 	"colores.h"
 
-1681595970 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"estructuras.h"
+	"leer.h"
 
 1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\colores.h
 	<windows.h>
 
-1681594479 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -677,7 +679,7 @@
 	"modificar.h"
 	"colores.h"
 
-1681596234 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -687,17 +689,17 @@
 	"listar.h"
 	"actualizar.h"
 
-1681595970 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\actualizar.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\actualizar.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
-	"estructuras.h"
+	"leer.h"
 
-1681595289 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.h
+1681217559 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"actualizar.h"
+	"leer.h"
 	"preguntar.h"
 	"listar.h"
 	"fecha.h"
@@ -705,20 +707,24 @@
 	"menus.h"
 	"colores.h"
 
-1681595289 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\fecha.h
+1681076843 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\fecha.h
 	<time.h>
+	"leer.h"
 	"eliminar.h"
+	"colores.h"
 
-1681594479 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\buscar.h
+1681207055 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\buscar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"leer.h"
 	"preguntar.h"
 
-1681594479 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
+1681217559 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"leer.h"
 	"encontrar.h"
 	"preguntar.h"
 	"actualizar.h"
@@ -731,31 +737,31 @@
 1681485866 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\actualizar.c
 	"actualizar.h"
 
-1681676214 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\buscar.c
+1681207055 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\buscar.c
 	"buscar.h"
 
 1681076843 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\colores.c
 	"colores.h"
 
-1681597478 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.c
+1681488016 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.c
 	"eliminar.h"
 
-1681510164 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.c
+1681486658 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.c
 	"encontrar.h"
 
-1681569627 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.c
+1681483618 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.c
 	"escribir.h"
 
-1681569627 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\fecha.c
+1681217559 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\fecha.c
 	"fecha.h"
 
 1681217559 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\leer.c
 	"leer.h"
 
-1681569627 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.c
+1681487984 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.c
 	"listar.h"
 
-1681675103 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\main.c
+1681488403 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -765,26 +771,26 @@
 	<conio.h>
 	<time.h>
 	"acceso.h"
-	"actualizar.h"
-	"buscar.h"
 	"colores.h"
 	"eliminar.h"
 	"encontrar.h"
-	"escribir.h"
 	"estructuras.h"
+	"escribir.h"
 	"fecha.h"
 	"leer.h"
 	"listar.h"
 	"menus.h"
 	"modificar.h"
 	"preguntar.h"
+	"buscar.h"
+	"actualizar.h"
 
-1681569627 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
+1681487897 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
 	"menus.h"
 
-1681570555 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
+1681487984 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
 	"modificar.h"
 
-1681603428 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.c
+1681488054 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.c
 	"preguntar.h"
 

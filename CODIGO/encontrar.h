@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "estructuras.h"
+#include "leer.h"
 
 //Prototipo: void encontrarVehiculos(Estr_Usuario *, Estr_Vehiculo *, int, int **, int *, int);
 //Precondicion: Introducir un vector de enteros, para introducir datos en el mismo, al igual que la variable "x",

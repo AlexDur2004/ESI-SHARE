@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "leer.h"
 #include "preguntar.h"
 #include "menus.h"
 #include "colores.h"

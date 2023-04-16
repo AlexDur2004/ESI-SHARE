@@ -119,7 +119,7 @@ void encontrarViajes(Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaj
                     (*vec)[*x]=j; //Se introduce la posicion del viaje encontrado en la estructura en el vector de enteros dinamico.
                     (*x)++; //Vamos aumentando en 1, la cantidad de viajes que tiene el usuario, que al mismo tiempo servira para acceder al vector de enteros.
                 }
-                if(strcmp(viaje[j].estado, "iniciado")==0) //Si el viaje esta iniciado.
+                if(strcmp(viaje[j].estado, "iniciado")==0) //Si el viaje esta iniciado, y la matricula del coche coincide.
                 {
                     *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int)); //Asignamos un espacio de memoria mas, para introducir el viaje detectado.
                     if (*vec==NULL)

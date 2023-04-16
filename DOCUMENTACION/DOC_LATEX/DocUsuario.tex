@@ -15,49 +15,40 @@ Como hemos comentado anteriormente, queremos dar un servicio de calidad, es por 
   \begin{itemize}
     \item Consultar y variar sus datos personales.
     \begin{center}
-      \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
+    \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
     \end{center}
-    \newpage
     \item Reservar y cancelar viajes.
     \begin{center}
-      \includegraphics[]{FOTOS/menuPasajeroViaje.png}
+    \includegraphics[]{FOTOS/menuPasajeroViaje.png}
     \end{center}
   \end{itemize}
   \item Siendo \textbf{Conductor} se le permitirá:
   \begin{itemize}
     \item Consultar y cambiar sus datos personales.
     \begin{center}
-      \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
+    \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
     \end{center}
-    \newpage
     \item Dar de alta, modificar y eliminar vehículos.
     \begin{center}
-      \includegraphics[]{FOTOS/menuConductorVehiculo.png}
+    \includegraphics[]{FOTOS/menuConductorVehiculo.png}
     \end{center}
     \item Crear, modificar, anular y finalizar viajes.
     \begin{center}
-      \includegraphics[]{FOTOS/menuConductorViaje.png}
+    \includegraphics[]{FOTOS/menuConductorViaje.png}
     \end{center}
   \end{itemize}
-  \newpage
   \item Siendo \textbf{Administrador} se le permitirá:
   \begin{itemize}
     \item Crear, descartar, cambiar y listar usuarios.
     \begin{center}
-      \includegraphics[]{FOTOS/menuAdminUsuario.png}
+    \includegraphics[]{FOTOS/menuAdminUsuario.png}
     \end{center}
     \item Dar de alta, suprimir, variar y listar vehículos.
-    \begin{center}
-      \includegraphics[]{FOTOS/menuAdminVehiculo.png}
-    \end{center}
     \item Establecer, anular, finalizar, cancelar, modificar y listar viajes.
-    \begin{center}
-      \includegraphics[]{FOTOS/menuAdminViaje.png}
-    \end{center}
   \end{itemize}
 \end{itemize}
 
-\newpage
+\bigskip
 
 \subsection{Tecnología}
 
@@ -76,27 +67,13 @@ A la hora de programar, hemos tenido que emplear diferentes bibliotecas, como:
 
 \bigskip
 
-Por ejemplo, se han empleado vectores con estructuras dinámicas, o incluso matrices/vector de vectores dinámicos, esto se puede observar en el módulo Buscar \ref{fig:BuscarCod},
-hemos usado memoria dinámica en gran parte del proyecto, para reducir la carga del mismo, y hacer que todo tipo de ordenadores puedan ejecutarlo. 
-Además, hemos utilizado la función atoi, para hacer que no se tenga que introducir la ID del usuario entera, por ejemplo, "0004", con poner "4", ya funciona.
-También se ha hecho uso de ficheros temporales, para eliminar/modificar, como se puede ver en en los módulos Eliminar \ref{fig:EliminarCod} y Modificar \ref{fig:ModificarCod}.
+Por ejemplo, se han empleado vectores con estructuras dinámicas, o incluso matrices/vector de vectores dinámicos. Esto se puede observar en el módulo reservar.
+También se ha hecho uso de ficheros temporales, para eliminar/modificar, como se puede ver en en los módulos eliminar y modificar.
 
 \subsection{Manual de instalación}
 
-Para usar el programa, sólo tiene que dirigirse a la carpeta \href{run:./../../SETUP}{SETUP}, donde encontrará un acceso directo, llamado ESI-SHARE, que tiene como ruta, el archivo ejecutable del programa.
+Para usar el programa, sólo tiene que dirigirse a la carpeta ESI-SHARE. Ahí encontrará un archivo ejecutable, llamado ESI-SHARE.exe, con el que podrá ejecutar el programa.
 Otra forma sería instalar \href{https://www.codeblocks.org/}{Code::Blocks}, y ejecutar el archivo de proyecto ESI-SHARE.cbp.
-\newpage
-\begin{itemize}
-  \item Requisitos mínimos del sistema:
-  \begin{itemize}
-    \item Procesador: Intel Core i3 ó AMD Athlon II
-    \item Memoria RAM: 2GB
-    \item Espacio en disco duro: 100MB
-  \end{itemize}
-  \item Es recomendable usar cualquier versión de Windows, para que no haya conflicto a la hora de usar algunas funciones.
-\end{itemize}
-
-\bigskip
 
 \subsection{Acceso al sistema}
 
@@ -118,8 +95,8 @@ que le pedirá sus datos personales, para darse de alta. Si quiere testear el ac
 A la hora de salir, se ha elaborado un mecanismo intuitivo y sencillo, ya que en todo momento podrá volver al menú anterior, introduciendo el número indicado por pantalla.
 En el caso de querer salir totalmente del programa, tendrá que cerrar sesión, volviendo al menú principal.
 \begin{center}
-  \includegraphics[]{FOTOS/menuPrincipal.png}
-  \label{fig:menuPrincipal}
+\includegraphics[]{FOTOS/menuPrincipal.png}
+\label{fig:menuPrincipal}
 \end{center}
 
 \subsection{Manual de referencia}

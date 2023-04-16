@@ -10,7 +10,6 @@ void menuPrincipal(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
 
     while(opc!=3)
     {
-        leer_usuario(&usuario, &numUsuarios);
         system("cls");
         color(0, 6);
         printf("   ______   ______   _____            ______   _    _   _____   ______   ______ \n");
@@ -210,10 +209,6 @@ void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
 
     while(opc!=3)
     {
-        leer_vehiculo(&vehiculo, &numVehiculos);
-        leer_viaje(&viaje, &numViajes);
-        leer_pasos(&pasos, &numPasos);
-        leer_reservas(&reservas, &numReservas);
         system("cls");
         listarReservas(usuario, viaje, numViajes, reservas, numReservas, i);
         color(0,15);
@@ -370,7 +365,6 @@ void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo
 
     while(opc!=4)
     {
-        leer_vehiculo(&vehiculo, &numVehiculos);
         system("cls");
         listarVehiculosUsuario(usuario, vehiculo, numVehiculos, i);
         color(0, 15);
@@ -416,10 +410,6 @@ void menuConductorViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *
 
     while(opc!=3)
     {
-        leer_vehiculo(&vehiculo, &numVehiculos);
-        leer_viaje(&viaje, &numViajes);
-        leer_pasos(&pasos, &numPasos);
-        leer_reservas(&reservas, &numReservas);
         system("cls");
         listarViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, i);
         color(0, 15);
@@ -511,11 +501,6 @@ void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
 
     while(opc!=5)
     {
-        leer_usuario(&usuario, &numUsuarios);
-        leer_vehiculo(&vehiculo, &numVehiculos);
-        leer_viaje(&viaje, &numViajes);
-        leer_pasos(&pasos, &numPasos);
-        leer_reservas(&reservas, &numReservas);
         system("cls");
         color(15, 0);
         printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
@@ -567,10 +552,6 @@ void menuAdminVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
 
     while(opc!=6)
     {
-        leer_vehiculo(&vehiculo, &numVehiculos);
-        leer_viaje(&viaje, &numViajes);
-        leer_pasos(&pasos, &numPasos);
-        leer_reservas(&reservas, &numReservas);
         system("cls");
         color(15, 0);
         printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);
@@ -627,10 +608,6 @@ void menuAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
 
     while(opc!=6)
     {
-        leer_vehiculo(&vehiculo, &numVehiculos);
-        leer_viaje(&viaje, &numViajes);
-        leer_pasos(&pasos, &numPasos);
-        leer_reservas(&reservas, &numReservas);
         system("cls");
         color(15, 0);
         printf("Hola %s (Administrador)\n", usuario[i].nomb_usuario);

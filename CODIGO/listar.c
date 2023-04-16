@@ -8,6 +8,9 @@ void listarUsuarios(Estr_Usuario *usuario, int numUsuarios)
 {
     int counter;
 
+    leer_usuario(&usuario, &numUsuarios); //Lee la estructura "usuario", por si ha habido algun cambio.
+    system("cls");
+
     if(numUsuarios!=0) //Si hay usuarios en el sistema.
     {
         printf("LISTADO DE USUARIOS:\n");
@@ -54,6 +57,10 @@ system("PAUSE");
 void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
     int contador_veh_usuario, counter, counter2;
+
+    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algun cambio en ellas.
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    system("cls");
 
     if(numVehiculos!=0) //Si hay vehiculos en el sistema.
     {
@@ -112,6 +119,11 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
 void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i, int n, int *num)
 {
     int contador_viaje, *vec=NULL, *vec_viaje=NULL, num_v, m, j, id, counter;
+
+    leer_usuario(&usuario, &numUsuarios); //Lee las estructuras, por si ha habido algun cambio en ellas.
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje, &numViajes);
+    system("cls");
 
     if(numViajes!=0) //Si hay viajes en el sistema.
     {
@@ -320,7 +332,11 @@ void listarReservas(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Est
 {
     int *vec=NULL, *vec_viaje=NULL, x=0, i;
 
-    encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec_viaje, &vec, &x); //encuentra las reservas del usuario que estan abiertas
+    leer_viaje(&viaje, &numViajes);
+    leer_reservas(&reservas, &numReservas);
+    system("cls");
+
+    encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user, &vec, &vec_viaje, &x); //encuentra las reservas del usuario que estan abiertas
 
     if(vec!=NULL)
     { //verifica que el usuario tiene reservas
@@ -369,6 +385,9 @@ void listarVehiculosUsuario(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int 
 {
     int *vec=NULL, x=0, i;
 
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    system("cls");
+
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, num_user); //encuentra los vehiculos del usuario
 
     if(vec!=NULL)
@@ -405,6 +424,10 @@ void listarVehiculosUsuario(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int 
 void listarViajes(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int num_user)
 {
     int *vec=NULL, *vec_coche=NULL, x=0, j, i, y=0;
+
+    leer_vehiculo(&vehiculo, &numVehiculos);
+    leer_viaje(&viaje, &numViajes);
+    system("cls");
 
     encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec_coche, &x, num_user); //Encuentra todos los vehiculos del usuario.
     if(vec_coche!=NULL)

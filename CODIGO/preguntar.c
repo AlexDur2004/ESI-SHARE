@@ -145,14 +145,13 @@ void preguntar_veh(Estr_Vehiculo *vehiculo, int numVehiculos, char *opc, int *en
         if(strcmp(opc,vehiculo[counter].id_mat)==0) //Si la matricula introducida esta en la estructura.
         {
             (*encontrado)=1;
-            printf("Has seleccionado el vehiculo con matricula %s.\n", opc);
-            system("PAUSE");
+            printf("Has seleccionado el vehiculo con matricula %s", opc);
         }
     }
     if((*encontrado)==0) //Si no existe la matricula.
     {
         system("cls");
-        printf("No se ha encontrado ningun vehiculo con la siguiente matricula: %s.\n", opc);
+        printf("No se ha encontrado ningun vehiculo con la siguiente matricula: %s\n", opc);
         system("PAUSE");
     }
 }

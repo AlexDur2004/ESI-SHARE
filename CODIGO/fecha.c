@@ -96,6 +96,8 @@ void actualizarViajesEstado(Estr_Viaje *viaje, int numViajes, Estr_Reservas *res
     }
 
     fclose(fp);
+
+    leer_viaje(&viaje,&numViajes);
 }
 
 //Prototipo: void leerFecha(char *, char *, char *);

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "estructuras.h"
+#include "leer.h"
 
 //Prototipo: void actualizarUsuario(Estr_Usuario *, int);
 //Precondicion: Tener la estructura "usuario" inicializada, con sus contadores.

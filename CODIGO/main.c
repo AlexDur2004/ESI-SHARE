@@ -7,19 +7,19 @@
 #include <conio.h>
 #include <time.h>
 #include "acceso.h"
-#include "actualizar.h"
-#include "buscar.h"
 #include "colores.h"
 #include "eliminar.h"
 #include "encontrar.h"
-#include "escribir.h"
 #include "estructuras.h"
+#include "escribir.h"
 #include "fecha.h"
 #include "leer.h"
 #include "listar.h"
 #include "menus.h"
 #include "modificar.h"
 #include "preguntar.h"
+#include "buscar.h"
+#include "actualizar.h"
 
 int main()
 {

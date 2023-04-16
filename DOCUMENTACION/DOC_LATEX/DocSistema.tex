@@ -6,226 +6,105 @@
 \subsection{Especificación del sistema}
 
 Esta sección debe describir el análisis y la especificación de requisitos. Cómo se descompone el problema en distintos subproblemas y los módulos asociados a cada uno de ellos, acompañados de su especificación. También debe incluir el plan de desarrollo del \textit{software}.
-Las especificaciones de cada una de las funciones se puede encontrar en \href{DOC_DOXYGEN/index.html}{Doxygen} o en el apartado \ref{fig:CodigoModulos}.
-Además, las relaciones entre módulos se puede ver en \ref{fig:DescomposicionModular}.
 
 \subsection{Módulos}
 
-En este proyecto, se ha empleado una descomposición por tareas, por lo que el programa se ha dividido en 14 módulos, que son:
+Debe contener una descripción de cada módulo, su funcionalidad y la interfaz. También se podría añadir código fuente.
+
+En este proyecto, hemos empleado una descomposición por tareas, haciendo que el programa se quede dividido en 15 módulos, que son:
 
 \subsubsection{Acceso}
 
-Usado para darle acceso a los usuarios al sistema, mediante la autenticación de las credenciales que introduzcan.
-Para esto se han usado algunos mecanismos interesantes, como la detección automática del perfil del usuario, si el que inicia sesión es usuario ó administrador.
-Además, se ha implementado un sistema de seguridad, con el que el usuario solamente se dispone 3 intentos para introducir la contraseña.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:AccesoCod}, o entrar en \href{DOC_DOXYGEN/acceso_8h_source.html}{Doxygen}.
-\label{fig:Acceso}
-
-\subsubsection{Actualizar}
-
-Sirve para reescribir todos los datos de la estructura en el fichero, y así sincronizarlos, por si se ha producido alguna modificación.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:ActualizarCod}, o entrar en \href{DOC_DOXYGEN/actualizar_8h_source.html}{Doxygen}.
-\label{fig:Actualizar}
-
-\subsubsection{Buscar}
-
-Empleado para buscar todas las rutas posibles, que hay desde la ciudad que el usuario haya seleccionado
-hasta la ESI, para hacer que no se repitan
-todas las rutas, se usa otra matriz, donde se introduce la ruta impresa, para comprobar que no se haya escrito en pantalla anteriormente, y sólo listar las rutas no repetidas,
-y así ahorrar tiempo al usuario a la hora de crear un viaje. Una vez que el usuario selecciona la ruta, se escriben todos los pasos en el fichero correspondiente.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:BuscarCod}, o entrar en \href{DOC_DOXYGEN/buscar_8h_source.html}{Doxygen}.
-\label{fig:Buscar}
+Sirve para darle acceso a los usuarios al sistema, mediante la autenticación de las credenciales que introduzcan. Para esto se han usado algunos mecanismos interesantes,
+como, la detección automática del perfil del usuario, si el que inicia sesión es usuario ó administrador. Además, se ha implementado un sistema de seguridad,
+con el que el usuario solamente tendrá 3 intentos para introducir la contraseña.
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/acceso.c}
 
 \subsubsection{Colores}
 
-Gracias a este módulo se puede cambiar el fondo y el cuerpo del texto, dándole así algo de formato al proyecto.\\
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/colores.c}
 
-Para ver el código fuente del módulo puede ir a \ref{fig:ColoresCod}, o entrar en \href{DOC_DOXYGEN/colores_8h_source.html}{Doxygen}.
-\label{fig:Colores}
+\subsubsection{Crear Viaje}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/crear_viaje.c}
 
 \subsubsection{Eliminar}
 
-Utilizado para suprimir cualquier vehículo, viaje, paso o reserva. Cuando se le pregunta al usuario, qué vehículo quiere quitar de todos los que tiene,
-y él selecciona uno, se eliminan todos sus viajes, pasos y reservas. Algo similar ocurre con los viajes, que se eliminan sus pasos y reservas.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:EliminarCod}, o entrar en \href{DOC_DOXYGEN/eliminar_8h_source.html}{Doxygen}.
-\label{fig:Eliminar}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/eliminar.c}
 
 \subsubsection{Encontrar}
 
-Se ha usado para buscar todos los vehículos, viajes o reservas que tiene un usuario. Con esto podemos saber cuántos viajes
-tiene con un cierto estado o si se han ocupado plazas en el viaje, para así darle la posibilidad al usuario de anular, finalizar o modificar un viaje.
-Todo esto, se devuelve en un vector de enteros dinámico, que indica la posición del vehículo, viaje o reserva en su respectiva estructura.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:EncontrarCod}, o entrar en \href{DOC_DOXYGEN/encontrar_8h_source.html}{Doxygen}.
-\label{fig:Encontrar}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/encontrar.c}
 
 \subsubsection{Escribir}
 
-Sirve para registrar usuarios, vehículos, viajes o reservas. Se han hecho algunas comprobaciones para que cuando se cree un usuario, no se pueda repetir de usuario,
-o a la hora de registrar un vehículo, que se vea si la matrícula está bien introducida, con sus 4 números y 3 letras, y que no esté registrada en el sistema.
-Además, en la parte de reservar un viaje, sólo se podrá hacer si pasa algún viaje por la localidad de residencia, en la fecha establecida por el usuario,
-si hay viajes pero en otra fecha, se le avisará al usuario, si reserva, se eliminará una plaza del viaje.\\
-Se ha creado una característica interesante, que es la reutilización de IDs, cuando se quiere crear un usuario, o un viaje, con esto si se elimina un usuario,
-se podrá volver a crear otro con esa misma ID, ya que al suprimir un usuario, se quita todo el contenido que haya sobre el mismo en todos los ficheros.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:EscribirCod}, o entrar en \href{DOC_DOXYGEN/escribir_8h_source.html}{Doxygen}.
-\label{fig:Escribir}
-
-\subsubsection{Estructuras}
-
-En este módulo, se han definido las estructuras necesarias para poner en marcha el proyecto.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:EstructurasCod}, o entrar en \href{DOC_DOXYGEN/annotated.html}{Doxygen}.
-
-\label{fig:Estructuras}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/escribir.c}
 
 \subsubsection{Fecha}
 
-Gracias a este módulo se puede pedir una fecha, comprobando si la fecha y la hora es posterior a la actual, y si al introducir una hora de partida,
-esta hora es posterior a la de llegada. Asimismo, se ha creado una función que compruebe todos los viajes que hay, y si alguno ha pasado la hora de inicio, se pone en estado "Iniciado",
-mientras que si se ha excedido una hora desde la hora de llegada, se establecerá en estado "Finalizado", y se eliminarán sus pasos y reservas.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:FechaCod}, o entrar en \href{DOC_DOXYGEN/fecha_8h_source.html}{Doxygen}.
-\label{fig:Fecha}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/fecha.c}
 
 \subsubsection{Leer}
 
-Usado para leer todos los ficheros que hay en la carpeta DATA e introducir la información escaneada en las estructuras creadas. Todo esto se puede hacer gracias a la función strtok,
-que va rompiendo cada línea del fichero, hasta donde esté el carácter que queramos, en nuestro caso "-".
-También, se ha creado un contador, para usarlo como delimitador en los bucles de otras funciones.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:LeerCod}, o entrar en \href{DOC_DOXYGEN/leer_8h_source.html}{Doxygen}.
-\label{fig:Leer}
+\bigskip
+\lstinputlisting[language=C, breaklines=true]{CODIGO/leer.c}
 
 \subsubsection{Listar}
 
-Creado con el objetivo de imprimir por pantalla listas de todos los usuarios, vehículos ó viajes que hay en el sistema.
-También se ha creado para listar todas las localidades que hay en la provincia de Cádiz, al igual que puede escribir todos los vehículos, viajes o reservas que tiene un usuario.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:ListarCod}, o entrar en \href{DOC_DOXYGEN/listar_8h_source.html}{Doxygen}.
-\label{fig:Listar}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/listar.c}
 
 \subsubsection{Menús}
 
-En este módulo están todas las funciones que muestran por pantalla los menús, haciendo de puente entre las diferentes funciones de los demás módulos.
-Se han creado varias interfaces, una para los Pasajeros, otra para los Conductor, y una tercera para el Administrador.\\
-
-Para ver el código fuente del módulo puede ir a \ref{fig:MenusCod}, o entrar en \href{DOC_DOXYGEN/menus_8h_source.html}{Doxygen}.
-\label{fig:Menus}
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/menus.c}
 
 \subsubsection{Modificar}
 
-Sirve para cambiar cualquier dato de un vehículo o viaje de un usuario, e incluso para rectificar los datos personales del usuario, o actualizar la contraseña.\\
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/modificar.c}
 
-Para ver el código fuente del módulo puede ir a \ref{fig:ModificarCod}, o entrar en \href{DOC_DOXYGEN/modificar_8h_source.html}{Doxygen}.
-\label{fig:Modificar}
+\subsubsection{Mostrar Reservar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/mostrar_reservar.c}
 
 \subsubsection{Preguntar}
 
-Utilizado para escanear cadenas, cambiando el carácter de salto de línea por el carácter nulo. Además se ha usado para preguntar una contraseña,
-empleando * para ocultarla, y haciendo que si la contraseña es nula, se vuelva a preguntar. Asimismo, se usa para escanear localidades, o para comprobar si una matrícula, existe en el sistema.\\
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/preguntar.c}
 
-Para ver el código fuente del módulo puede ir a \ref{fig:PreguntarCod}, o entrar en \href{DOC_DOXYGEN/preguntar_8h_source.html}{Doxygen}.
-\label{fig:Preguntar}
+\subsubsection{Reservar}
+
+\bigskip
+%\lstinputlisting[language=C, breaklines=true]{CODIGO/reservar.c}
 
 \subsection{Plan de prueba}
 
+Debe describir todo el plan de prueba que se ha llevado a cabo. Se distinguen las pruebas realizadas a cada módulo y las pruebas de integración de los distintos módulos probándolo como un todo. Por último, también se debe incluir la descripción del plan de pruebas de aceptación.  
+
+
 \subsubsection{Prueba de los módulos}
 
-Aquí, puede ver la organización de la descomposición modular del proyecto, es decir, la forma en la que están emparejados los módulos, para que el programa funcione.\\
-\begin{center}
-  \includegraphics[width=1.1\textwidth]{FOTOS/descomposicion_modular}
-\end{center}
-\label{fig:DescomposicionModular}
+Incluir toda la batería de pruebas realizadas. Pruebas de caja blanca y pruebas de caja negra.  
 
-Todos estos módulos han sido probados a fondo, introduciendo valores aleatorios, poco a poco se han ido eliminando errores, haciendo que el programa sea infalible,
-y no crashee al entrar en alguna función, como pasaba anteriormente con la aplicación en fase de desarrollo.
 
 \subsubsection{Prueba de integración}
 
-\subsubsection{Plan de pruebas de aceptación}
+Incluir toda la batería de pruebas realizadas. Pruebas de caja blanca y pruebas de caja negra.  
 
-En esta sección, se va a definir algunas rutas con las que usted podrá probar todos los puntos del programa. No se ha establecido una serie de datos específicos, para que así pueda probar con
-todo lo que le guste, para poner a prueba el programa.
 
-Primeramente, se encontrará el menú principal, en el que podrá acceder con las credenciales sugeridas en \ref{fig:menuPrincipal}, o puede registrar un nuevo usuario.
-\begin{center}
-\includegraphics[]{FOTOS/menuPrincipal.png}
-\end{center}
-Empezaremos con el apartado de \textbf{Usuario}, introduciendo \textbf{usua1}, como usuario, y \textbf{2023}, como contraseña. 
-Tras esto, se dirigirá al menú de \textbf{Pasajero}, introduciendo 1, podrá entrar en la parte de \textbf{Perfil}, en el que puede ver todos sus datos personales,
-aquí puede modificar cualquier tipo de dato personal, verá que estos se actualizarán tanto en el fichero como en la estructura. Puede probar si estos se introducen correctamente, etc.
-\begin{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuSeleccionUsuario.png}
-    \end{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
-    \end{center}
-\end{center}
+\subsubsection{ Plan de pruebas de aceptación}
 
-Después, pulsará 2, para acceder al apartado de \textbf{Viajes}, donde podrá ver todos los viajes que tiene reservados, tras esto, puede probar las acciones del menú,
-para poner a prueba el programa. Puede ver que el usuario sólo puede reservar viajes que pasan por su localidad de residencia, al igual que
-no puede reservar dos veces en el mismo viaje, o que no le deja introducir una fecha anterior a la actual, etc.
-\begin{center}
-\includegraphics[]{FOTOS/menuPasajeroViaje.png}
-\end{center}
+Estas pruebas deben diseñarse con el usuario del sistema. Deben describir las pruebas que son necesarias pasar para que el sistema sea aceptado por el usuario final.  
 
-Habiendo probado que todo funciona, puede volver al menú de selección de puesto, para escoger la opción de \textbf{Conductor}, introduciendo 1, entrará en el menú de \textbf{Perfil}, similar al anterior. 
-\begin{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuSeleccionUsuario.png}
-    \end{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuPasajeroPerfil.png}
-    \end{center}
-\end{center}
+\bigskip
 
-Al haber probado esto, puede pulsar 2, para dirigirse al menú de \textbf{Vehículos}, donde tendrá a su vista un listado con todos los vehículos, que tiene registrados en el sistema, si lo desea,
-puede explorar los menús y realizar diferentes acciones para probar el sistema, creando nuevos vehículos, o modificando y eliminando los existentes. Aquí puede ver que al eliminar un vehículo,
-se eliminarán tanto sus viajes, reservas y pasos.
-\begin{center}
-  \includegraphics[]{FOTOS/menuConductorVehiculo.png}
-\end{center}
-Tras esto, puede dirigirse al menú de \textbf{Viajes}, introduciendo un 3, donde verá una lista de todos los viajes abiertos o iniciados que tiene en el momento, puede crear algún viaje,
-para probar el sistema de creación de los mismos, o incluso modificar o anular o eliminar cualquiera. Sólo podrá anular viajes que estén abiertos, sin ninguna plaza ocupada, o finalizar,
-viajes que ya estén iniciados.
-\begin{center}
-  \includegraphics[]{FOTOS/menuConductorViaje.png}
-\end{center}
-
-\newpage
-
-En segundo lugar, puede volver al menú principal, e introducir \textbf{admin}, como usuario, y \textbf{1234}, como contraseña. 
-\begin{center}
-    \includegraphics[]{FOTOS/menuPrincipal.png}
-\end{center}
-
-Tras esto, aparecerá un menú con 3 apartados, en \textbf{Usuarios}, podrá realizar diferentes funciones, como la creación de un usuario nuevo, o la eliminación de cualquier usuario existente,
-al igual que puede modificarlos, y ver todos los usuarios del sistema, estas funciones trabajan de forma similar a las del usuario normal. 
-\begin{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuAdmin.png}
-    \end{center}
-    \begin{center}
-      \includegraphics[]{FOTOS/menuAdmin.png}
-    \end{center}
-\end{center}
-
-\newpage
-
-Más tarde, podrá probar todo en el apartado de \textbf{Vehículos}, como la creación de nuevos vehículos al perfil de cualquier usuario, o la modificación o eliminación de vehículos existentes,
-además, podrá ver una lista con todos los vehículos que hay en el sistema, o incluso ver un historial de los viajes que ha hecho un coche. 
-\begin{center}
-  \includegraphics[]{FOTOS/menuAdminVehiculo.png}
-\end{center}
-
-Una vez haya terminado de probar todo, puede dirigirse al menú de \textbf{Viajes}, para crear un viaje con cualquier usuario del sistema, también podrá eliminar, anular o modificar
-cualquier viaje que haya en la base de datos, al igual que podrá ver una lista de todos los viajes que han hecho cada usuario del sistema.
-\begin{center}
-  \includegraphics[]{FOTOS/menuAdminViaje.png}
-\end{center}
+Si en algún punto del documento se quiere hacer referencia a algún documento es necesario incluir la cita donde corresponda, podemos tomar como ejemplo \cite{Ejemplo3}. 

@@ -11,9 +11,6 @@ void acceso(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int
     int i, k=0, encontrado=0, encontrado2=0, encontrado3=3;
     char usua[6], contra[9];
 
-    leer_usuario(&usuario, &numUsuarios);
-    system("cls");
-
     printf("Introduzca sus credenciales de acceso:\n");
     color(0, 2);
     printf("Usuario:\n");

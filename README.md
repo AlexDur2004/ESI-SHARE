@@ -1,6 +1,6 @@
 # 🚗 ESI-SHARE 🏫
 
-Este proyecto ha sido creado en el lenguaje de C, por Alejandro Durán Obregón, José Antonio Ruíz Miñán, Alejandro Ruiz del Pino y Luis Enrique Vázquez Vera.
+Este proyecto ha sido creado en el lenguaje de programación C, por [Alejandro Durán Obregón](https://github.com/AlexDur2004), [José Antonio Ruíz Miñán](https://github.com/Antonio7225), [Alejandro Ruiz del Pino](https://github.com/TempestClimm) y [Luis Enrique Vázquez Vera](https://github.com/Luisso03).
 
 Consiste en un programa para facilitarle a los miembros de la comunidad universitaria de la ESI 🏫, la tarea de compartir coches 🚗, 
 transformándola en una labor fácil y rápida ⚡, con la que pueden ahorrar en los gastos de desplazamientos diarios,

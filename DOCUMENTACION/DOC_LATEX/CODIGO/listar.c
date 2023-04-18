@@ -1,6 +1,6 @@
 #include "listar.h"
 
-//Prototipo: void listarUsuarios(Estr_Usuario *, int);
+//Cabecera: void listarUsuarios(Estr_Usuario *, int);
 //Precondicion: Tener la estructura "usuario" inicializada, junto a su contador.
 //Postcondicion: Dar una lista de todos los usuarios, que hay en la base de datos.
 
@@ -47,7 +47,7 @@ color(0,15);
 system("PAUSE");
 }
 
-//Prototipo: void listarVehiculos(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+//Cabecera: void listarVehiculos(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
 //Precondicion: Tener la estructura "usuario" y "vehiculo" inicializadas, junto a sus contadores.
 //Postcondicion: Dar una lista de todos los vehiculos, de cada usuario, que hay en la base de datos.
 
@@ -79,7 +79,7 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
                     color(0,15);
                     printf("%s", vehiculo[counter2].id_mat);
                     color(0,3);
-                    printf(" | Numero de plazas: ");
+                    printf(" | Num de plazas: ");
                     color(0,15);
                     printf("%s", vehiculo[counter2].num_plazas);
                     color(0,3);
@@ -105,7 +105,7 @@ void listarVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehi
     system("PAUSE");
 }
 
-//Prototipo: void listarAdminViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int, int);
+//Cabecera: void listarAdminViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int, int);
 //Precondicion: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, junto a sus contadores.
 //Postcondicion: Si n=0, da una lista de todos los viajes, de cada usuario, que hay en la base de datos, y si n=1, da una lista de los viajes abiertos que hay de cada usuario.
 
@@ -199,7 +199,7 @@ void listarAdminViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
     system("PAUSE");
 }
 
-//Prototipo: void listarAdminVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
+//Cabecera: void listarAdminVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener la estructura "usuario", "vehiculo" y "viaje" inicializadas, con sus contadores.
 //Postcondicion: Dar una lista de todos los viajes que ha realizado un vehiculo.
 
@@ -282,7 +282,7 @@ void listarAdminVehiculoViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehi
     system("PAUSE");
 }
 
-//Prototipo: void listarLocalidades(Estr_Localidad *, int);
+//Cabecera: void listarLocalidades(Estr_Localidad *, int);
 //Precondicion: Tener la estructura "localidad" inicializada, con su contador.
 //Postcondicion: Imprimir una lista de 4 filas con todas las localidades.
 
@@ -312,7 +312,7 @@ void listarLocalidades(Estr_Localidad *localidad, int numLocalidades)
     }
 }
 
-//Prototipo: void listarReservas(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int);
+//Cabecera: void listarReservas(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int);
 //Precondicion: Tener las estructuras inicializadas, con sus contadores. Ademas, se necesita la variable "num_user", para saber a que usuario nos referimos.
 //Postcondicion: Imprimir una lista con todos las reservas activas que tiene un usuario.
 
@@ -361,7 +361,7 @@ void listarReservas(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Est
     }
 }
 
-//Prototipo: void listarVehiculosUsuario(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Cabecera: void listarVehiculosUsuario(Estr_Usuario *, Estr_Vehiculo *, int, int);
 //Precondicion: Tener las estructuras inicializadas, con sus contadores. Ademas, se necesita la variable "num_user", para saber a que usuario nos referimos.
 //Postcondicion: Imprimir una lista con todos los vehiculos que tiene un usuario.
 
@@ -398,7 +398,7 @@ void listarVehiculosUsuario(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int 
     }
 }
 
-//Prototipo: void listarViajes(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
+//Cabecera: void listarViajes(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener las estructuras inicializadas, con sus contadores. Ademas, se necesita la variable "num_user", para saber a que usuario nos referimos.
 //Postcondicion: Imprimir una lista con todos los viajes abiertos e iniciados que tiene un usuario.
 
@@ -425,6 +425,10 @@ void listarViajes(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
                 printf("   ID del viaje: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].id_viaje);
+                color(0, 3);
+                printf("   Matricula: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].id_mat);
                 color(0, 3);
                 printf("   Estado: ");
                 color(0, 15);

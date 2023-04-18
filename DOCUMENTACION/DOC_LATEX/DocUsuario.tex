@@ -59,6 +59,22 @@ Como hemos comentado anteriormente, queremos dar un servicio de calidad, es por 
 
 \newpage
 
+\subsection{Limitaciones}
+
+El proyecto tiene algunas restricciones, las cuales han sido impuestas para que no haya fallos, aunque esto ha hecho que hagan falta más líneas de código.
+\begin{itemize}
+  \item En todos los escaneos, se tiene que introducir como mínimo 1 dígito/carácter.
+  \item Dos usuarios no pueden tener el mismo nombre de usuario en la base de datos.
+  \item Se ha realizado una lista con las siglas de todas las localidades de la provincia de Cádiz, para evitar errores a la hora de comparar las ciudades.
+  \item Al introducir una fecha y horas, tienen que ser posteriores a las actuales, el año introducido debe ser posterior a 2022.
+  \item Para darle de alta a un vehículo, su matrícula tiene que ser correcta (con 4 dígitos y 3 caracteres) y no puede estar registrada en el sistema. Además, el número de plazas debe estar entre 1 y 9.
+  \item No se puede ni modificar ni eliminar un vehículo, si tiene viajes abiertos, con plazas ocupadas, o iniciados o cerrados.
+  \item Sólo se pueden modificar o anular viajes, si no tienen ninguna plaza ocupada.
+  \item No se puede tener más de 1 viaje abierto con un vehículo en un mismo día, es decir, si quieres crear un viaje para esa fecha, primero debes acabar el que ya esté abierto.
+  \item Para finalizar un viaje, este debe estar iniciado.
+\end{itemize}
+\label{fig:Limitaciones}
+
 \subsection{Tecnología}
 
 Este programa lo hemos realizado con el entorno de desarrollo integrado (IDE) \href{https://www.codeblocks.org/}{Code::Blocks}, en su versión 20.03.
@@ -67,7 +83,6 @@ A la hora de programar, hemos tenido que emplear diferentes bibliotecas, como:
   \item stdio.h: Manejar la entrada y salida de datos a través de archivos, dispositivos de entrada/salida estándar, etc.
   \item string.h: Usar cadenas de caracteres.
   \item stdlib.h: Emplear estructuras, memoria dinámica, conversión de cadenas, etc.
-  \item wchar.h: Manipular cadenas de caracteres Unicode.
   \item locale.h: Proporcionar el uso de caracteres especiales de un idioma.
   \item windows.h: Incluir comandos del sistema operativo Microsoft Windows.
   \item conio.h: Utilizar la entrada y salida de caracteres por la consola.

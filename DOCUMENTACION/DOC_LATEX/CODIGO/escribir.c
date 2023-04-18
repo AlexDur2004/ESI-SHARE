@@ -3,12 +3,11 @@
 void elegir_coche(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, char *, int);
 void asignar_plazas(Estr_Vehiculo *, int , char *, char *);
 void ida_vuelta(char *);
-void verificar_viaje(Estr_Viaje *, int , char *, char *, char *, char *, char *, int *);
 void mostrar_poblaciones(Estr_Viaje *, int, Estr_Pasos *, int, int *, int, int *);
 void guardarPasajero(Estr_Usuario *, Estr_Viaje *, Estr_Reservas *, int, int *, int, int);
 void verificar_reserva(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, Estr_Reservas *, int, int *, int, int *, int);
 
-//Prototipo: void altaUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
+//Cabecera: void altaUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
 //Precondicion: Tener las estructuras "usuario" y "localidad" inicializada, con sus contadores "numUsuarios" y "numLocalidades".
 //Postcondicion: Dar de alta/Registrar un usuario, comprobando que el nombre del usuario no esta repetido.
 
@@ -93,14 +92,14 @@ void altaUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localid
     fclose(fp);
 }
 
-//Prototipo: void altaVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Cabecera: void altaVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
 //Precondicion: Tener la variable "i", con la posicion del usuario en la estructura "usuario", y las estructuras "vehiculo" y "usuario" inicializadas, con su contador "numVehiculos".
 //Postcondicion: Dar de alta/Registrar un vehiculo, comprobando que la matricula es valida, y no esta en uso.
 
 void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
 {
     FILE *fp;
-    int error_mat, counter;
+    int error_mat, counter, plaz=0, encontrado=0;
     char mat[8], plazas[2], descrip[51];
 
     fp=fopen("DATA/vehiculos.txt","a+");
@@ -150,7 +149,21 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
     }while((error_mat==1)||(strlen(mat)<7));
 
     printf("Numero de plazas libres (sin contar el conductor):\n");
-    pregunta(plazas, 2);
+    while(encontrado==0)
+    {
+        fflush(stdin);
+        scanf("%1i", &plaz); //Pedimos el numero de plazas.
+        if(plaz<=0)
+        {
+            printf("Introduzca un numero de plazas entre 1 y 9.\n");
+        }
+        else
+        {
+            encontrado=1;
+        }
+    }
+    sprintf(plazas, "%1i", plaz); //Pasamos de entero a cadena.
+
     printf("Descripcion del vehiculo (Marca, modelo, color, etc) (Maximo de 50 caracteres):\n");
     pregunta(descrip, 51);
 
@@ -167,7 +180,7 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
     fclose(fp);
 }
 
-//Prototipo: void altaAdmin(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
+//Cabecera: void altaAdmin(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 //Precondicion: Necesario la introduccion de un entero, para saber si queremos registrar un vehiculo o un viaje. Tener las estructuras inicializadas, con sus contadores.
 //Postcondicion: Si n=0, dar de alta/registrar un vehiculo, comprobando que la matricula es valida, y no esta en uso,
 //y si n=1, dar de alta/registrar un viaje. Ambos, introduciendo la id del usuario al que se quiere crear.
@@ -211,12 +224,11 @@ void altaAdmin(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
     }
 }
 
-//Prototipo: void altaViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, int);
+//Cabecera: void altaViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, int);
 //Precondicion:se necesitara la variable numUsuarios que respresenta al usuario en la estructura Usuarios.
 //Ademas se necesitaran las estructuras de "vehiculos", "viajes", "pasos", "reservas", "localidad", "rutas", con sus respectivos contadores.
-//Cabecera: esta funcion se usa para que el conductor cree viajes ingresando valores como la matricula del coche la fecha, las horas de inicio y fin o el coste,
+//Postcondicion: crea un nuevo viaje en el fichero, ingresando valores como la matricula del coche la fecha, las horas de inicio y fin o el coste,
 //y asignadose otros valores automaticamente como el esatdo del viaje, la id del viaje o las plazas de este.
-//Postcondicion: se crea una nueva estructura "Viajes" que contendra los datos correspondientes al nuevo viaje creado por el conductor y se habra anadido al fichero el nuevo viaje
 
 void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_usuario, int num)
 {
@@ -279,7 +291,7 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
 
             snprintf(viaje_id, sizeof(viaje_id), "%06d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
-            verificar_viaje(viaje, numViajes, viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, &rp);//se verifica si los datos corresponden con los de algun viaje creado antes
+            verificar_viaje(viaje, numViajes, id_vehiculo, fecha, hora_inic, hora_fin, &rp);//se verifica si los datos corresponden con los de algun viaje creado antes
             if(rp==0)
             {
                 fprintf(fv, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, plazas, idavuelta, coste, estado);
@@ -297,11 +309,10 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
     fclose(fv);
 }
 
-//Prototipo: void elegir_coche(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, char *, int)
+//Cabecera: void elegir_coche(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, char *, int)
 //Precondicion:se necesitara la variable numUsuarios que respresenta al usuario en la estructura Usuarios;
 //ademas se necesitaran las estructuras de "vehiculos", "viajes", "pasos", "reservas", "localidad", "rutas", con sus respectivos contadores.
-//Cabecera: Esta funcion le muestra al usuario todos los coches que tiene registrados, con los cuales podra realizar el viaje.
-//Postcondicion: devuelve un dato de tipo caracter, que es la matricula del coche que ha elegido el condcutor para realizar el viaje
+//Postcondicion: Muestra todos los coches, que tiene registrados, devolviendo un dato de tipo caracter, que es la matricula del coche que ha elegido el condcutor para realizar el viaje
 
 void elegir_coche(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, Estr_Rutas **ruta, int numRutas, int numRutas2, int num_usuario, char *id_vehiculo, int num) //0 para usuario, y 1 para admin
 {
@@ -375,7 +386,7 @@ void elegir_coche(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
                 color(0, 15);
                 printf("%s\n", vehiculo[vec_vehiculo[i]].id_mat);
                 color(0, 2);
-                printf("Numero de plazas: ");
+                printf("Num de plazas: ");
                 color(0, 15);
                 printf("%s\n",vehiculo[vec_vehiculo[i]].num_plazas);
                 color(0, 4);
@@ -390,9 +401,8 @@ void elegir_coche(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
     }
 }
 
-//Prototipo:void asignar_plazas(Estr_Vehiculo *, int , char *, char *);
+//Cabecera:void asignar_plazas(Estr_Vehiculo *, int , char *, char *);
 //Precondicion:esta funcion debe recicibir la estructura "vehiculo" y su respectivo contador, ademas debe recibir un dato de tipo entero que representa la matricula del coche elegido por el usuario anteriormente.
-//Cabecera: esta funcion devuelve el numero de plzas del coche elegido para que sean asignadas al coche.
 //Postcondicion: esta funcion devuelve a traves del puntero de tipo entero plazas el numero de plazas del coche elegido para que luegon sean asignadas al viaje.
 
 void asignar_plazas(Estr_Vehiculo *vehiculo, int numVehiculos, char *id_vehiculo, char *plazas)
@@ -409,7 +419,7 @@ void asignar_plazas(Estr_Vehiculo *vehiculo, int numVehiculos, char *id_vehiculo
     }
 }
 
-//Prototipo:void ida_vuelta(char *);
+//Cabecera:void ida_vuelta(char *);
 //Precondicion:recibe un char
 //Postcondicion:devuelve un char que indica si el viaje es de ida-vuelta
 
@@ -439,13 +449,12 @@ void ida_vuelta(char *idavuelta)
     }while(breakp==0);
 }
 
-//Prototipo: void verificar_viaje(Estr_Viaje *, int , char *, char *, char *, char *, char *, int *)
-//Precondicion:esta funcion recibe la estructura viajes inicializada y su contador,junto con datos de tipo caracter como la id del viaje que se ha creado, la matricula
-//la fecha, hora de inicio y fin
-//Cabecera:el objetivo de esta funcion es el de verificar si los datos del viaje que se esta creando no coinciden con los de un viaje creado previamente por el usuario
-//Postcondicion: devuelve un puntero de tipo entero "rp" que indica si el viaje creado ya se habia creado previamente.
+//Cabecera: void verificar_viaje(Estr_Viaje *, int , char *, char *, char *, char *, int *);
+//Precondicion:esta funcion recibe la estructura viajes inicializada y su contador,junto con datos de tipo caracter como la matricula la fecha, hora de inicio y fin.
+//Postcondicion: Verificar si los datos del viaje que se esta creando no coinciden con los de un viaje creado previamente, devuelve un puntero de tipo entero "rp"
+//que indica si el viaje creado ya se habia creado previamente.
 
-void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *id, char *mat, char *fecha, char *hor_i, char *hor_f, int *rp)
+void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *mat, char *fecha, char *hor_i, char *hor_f, int *rp)
 {
     int i, brkp=0;
 
@@ -465,12 +474,12 @@ void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *id, char *mat, char
     }
 }
 
-//Prototipo: void altaReserva(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
+//Cabecera: void altaReserva(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
 //Precondicion://Precondicion:se necesitara la variable numUsuarios que respresenta al usuario en la estructura Usuarios,
 //Ademas se necesitaran las estructuras de "vehiculos", "viajes", "pasos", "reservas", "localidad", "rutas", con sus respectivos contadores.
-//Cabecera: esta funcion en dependencia de la fecha elegida por el usuario y su localidad le seran mostrados todos lo viajes disponibles impidiendole elegir los viajes ya reservados previamente o creados por el, y en caso de que
-//no haya ningun viaje que pase por su localidad no se le mostrara ningun viaje y volvera al menu.
-//Postcondicion:en el fichero reserva se guardara la id del viaje que el usuario haya elegido y su id y se restara una plaza al viaje, dato que tambine se modidificara en el fichero
+//Postcondicion: en el fichero reserva se guardara la id del viaje que el usuario haya elegido y su id y se restara una plaza al viaje, dato que tambine se modidificara en el fichero,
+//en dependencia de la fecha elegida por el usuario y su localidad le seran mostrados todos lo viajes disponibles impidiendole elegir los viajes ya reservados previamente o creados por el,
+//y en caso de que no haya ningun viaje que pase por su localidad no se le mostrara ningun viaje y volvera al menu.
 
 void altaReserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int num_user)
 {
@@ -537,7 +546,7 @@ void altaReserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo
                     color(0, 15);
                     printf("%s\n", viaje[vec[i]].estado);
                     color(0, 3);
-                    printf("Numero de plazas: ");
+                    printf("Num de plazas: ");
                     color(0, 15);
                     printf("%s\n", viaje[vec[i]].plazas_libre);
                     color(0, 3);
@@ -574,10 +583,9 @@ void altaReserva(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo
    }while(conf==0);
 }
 
-//Prototipo: void mostrar_poblaciones(Estr_Viaje *, int, Estr_Pasos *, int, int *, int, int *);
+//Cabecera: void mostrar_poblaciones(Estr_Viaje *, int, Estr_Pasos *, int, int *, int, int *);
 //Precondicion:la funcion recibira la estructura viajes con su contador, lo mismo con la estructura pasos, ademas de un vector de tipo entero con un dato (reserva) que es una posicion del vector
-//Cabecera: esta funcion muestra las poblaciones del viaje elegido por el usuario
-//Postcondicion:devuelve un entero conf que indica si el usuario desea elegir un nuevo viaje
+//Postcondicion: muestra las poblaciones del viaje elegido por el usuario, devuelve un entero conf que indica si el usuario desea elegir un nuevo viaje
 
 void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, int *vec, int reserva, int *conf)
 {
@@ -607,7 +615,7 @@ void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, in
     color(0, 15);
     printf("%s\n", viaje[vec[reserva]].estado);
     color(0, 3);
-    printf("Numero de plazas: ");
+    printf("Num de plazas: ");
     color(0, 15);
     printf("%s\n", viaje[vec[reserva]].plazas_libre);
     color(0, 3);
@@ -641,9 +649,8 @@ void mostrar_poblaciones(Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, in
     }while(opc!=1 && opc!=2); //comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones
 }
 
-//Prototipo: void guardarPasajero(Estr_Usuario *, Estr_Viaje *, Estr_Reservas *, int, int *, int, int);
+//Cabecera: void guardarPasajero(Estr_Usuario *, Estr_Viaje *, Estr_Reservas *, int, int *, int, int);
 //Precondicion:esta funcion recibe la estructura "Usuarios" y "Reservas" con sus contadores, un vecto de tipo entero, un entero que es una posicion del vector y un entero que es el usuario en la estructura.
-//Cabecera:esta funcion guarda en el fichero reserva la id del viaje reservado y su id.
 //Postcondicion:se guarda en el fichero reserva la id del viaje reservado y el del usuario
 
 void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *reservas, int numReservas, int *vec, int reserva, int num_user)
@@ -663,10 +670,9 @@ void guardarPasajero(Estr_Usuario *usuario, Estr_Viaje *viaje, Estr_Reservas *re
     fclose(fp);
 }
 
-//Prototipo: void verificar_reserva(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, Estr_Reservas *, int, int *, int, int *, int);
+//Cabecera: void verificar_reserva(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, Estr_Reservas *, int, int *, int, int *, int);
 //Precondicion:recibe las estructuras "Usuario", "Vehiculo","Reserva","Viaje" y sus respectivos contadores, ademas de un vector de tipo entero
 //ya inicializado y una variable que inidica las posiciones en este vector, y una variable que indica la posicion del usuario en la estructura usuario.
-//Cabecera: esta funcion verifica que el usuario no haya reservado el viaje previamente o lo haya creado.
 //Postcondicion: devuelve un puntero n que indica si el usuario ha reservado anteriormete el viaje o lo ha creado.
 
 void verificar_reserva(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, Estr_Reservas *reservas, int numReservas, int *vec, int reserva, int *n, int num_user)

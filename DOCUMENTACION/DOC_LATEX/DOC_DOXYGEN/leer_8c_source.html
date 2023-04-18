@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;leer.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//Prototipo: void leer(Estr_Usuario **, int *, Estr_Vehiculo **, int *, Estr_Viaje **, int *, Estr_Pasos **, int *, Estr_Reservas **, int *, Estr_Rutas ***, int *, int *, Estr_Localidad **, int *);</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//Cabecera: void leer(Estr_Usuario **, int *, Estr_Vehiculo **, int *, Estr_Viaje **, int *, Estr_Pasos **, int *, Estr_Reservas **, int *, Estr_Rutas ***, int *, int *, Estr_Localidad **, int *);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//Precondicion: Tener todas las estructuras inicializadas, con sus respectivos contadores. Ademas todas tienen que pasarse por puntero, para introducir valores en las mismas.</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//Postcondicion: Leer todos los ficheros, e introducir la informacion en su estructura, con sus contadores.</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    system(<span class="stringliteral">&quot;PAUSE&quot;</span>);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//Prototipo: void leer_usuario(Estr_Usuario **, int *);</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//Cabecera: void leer_usuario(Estr_Usuario **, int *);</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//Postcondicion: Leer el fichero &quot;usuarios.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
@@ -171,7 +171,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    printf(<span class="stringliteral">&quot;Se han cargado %i usuarios.\n&quot;</span>, *i);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//Prototipo: void leer_vehiculo(Estr_Vehiculo **, int *);</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//Cabecera: void leer_vehiculo(Estr_Vehiculo **, int *);</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//Postcondicion: Leer el fichero &quot;vehiculos.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    printf(<span class="stringliteral">&quot;Se han cargado %i vehiculos.\n&quot;</span>, *i);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">//Prototipo: void leer_viaje(Estr_Viaje **, int *);</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">//Cabecera: void leer_viaje(Estr_Viaje **, int *);</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">//Postcondicion: Leer el fichero &quot;viajes.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
@@ -291,7 +291,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    printf(<span class="stringliteral">&quot;Se han cargado %i viajes.\n&quot;</span>, *i);</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>}</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">//Prototipo: void leer_pasos(Estr_Pasos **, int *);</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">//Cabecera: void leer_pasos(Estr_Pasos **, int *);</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">//Postcondicion: Leer el fichero &quot;pasos.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
@@ -342,7 +342,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    printf(<span class="stringliteral">&quot;Se han cargado %i pasos.\n&quot;</span>, *i);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">//Prototipo: void leer_localidad(Estr_Localidad **, int *);</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">//Cabecera: void leer_localidad(Estr_Localidad **, int *);</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">//Postcondicion: Leer el fichero &quot;localidades.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
@@ -393,7 +393,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    printf(<span class="stringliteral">&quot;Se han cargado %i localidades.\n&quot;</span>, *i);</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">//Prototipo: void leer_ruta(Estr_Rutas ***, int *, int *);</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">//Cabecera: void leer_ruta(Estr_Rutas ***, int *, int *);</span></div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="comment">//Precondicion: Tener la estructura inicializada, con sus contadores.</span></div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment">//Postcondicion: Leer el fichero &quot;rutas.txt&quot; e introducir la informacion en su estructura, aumentando el contador</span></div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment">//cada vez que se encuentra una ruta nueva, y otro que nos indique el numero de localidades maximas que hay en todas las rutas.</span></div>
@@ -468,7 +468,7 @@ $(document).ready(function(){initNavTree('leer_8c_source.html',''); initResizabl
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    printf(<span class="stringliteral">&quot;Se han cargado %i rutas, con %i ciudades como maximo.\n&quot;</span>, *i, *j);</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>}</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="comment">//Prototipo: void leer_reservas(Estr_Reservas **, int *);</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="comment">//Cabecera: void leer_reservas(Estr_Reservas **, int *);</span></div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="comment">//Precondicion: Tener la estructura inicializada, con su contador.</span></div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="comment">//Postcondicion: Leer el fichero &quot;reservas.txt&quot; e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.</span></div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>

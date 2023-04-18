@@ -426,6 +426,10 @@ void listarViajes(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].id_viaje);
                 color(0, 3);
+                printf("   Matricula: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].id_mat);
+                color(0, 3);
                 printf("   Estado: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[i]].estado);

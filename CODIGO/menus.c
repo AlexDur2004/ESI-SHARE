@@ -393,7 +393,7 @@ void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo
                 altaVehiculo(usuario, vehiculo, numVehiculos, i);
                 break;
             case 2:
-                modificarVehiculo(usuario, vehiculo, numVehiculos, i);
+                modificarVehiculo(usuario, vehiculo, numVehiculos, viaje, numViajes, i);
                 break;
             case 3:
                 eliminarVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
@@ -601,7 +601,7 @@ void menuAdminVehiculos(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *v
                 eliminarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, i);
                 break;
             case 3:
-                modificarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, i);
+                modificarAdminVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, i);
                 break;
             case 4:
                 listarVehiculos(usuario, numUsuarios, vehiculo, numVehiculos, i);

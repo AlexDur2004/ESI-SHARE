@@ -1,25 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <wchar.h>
 #include <locale.h>
-#include <windows.h>
-#include <conio.h>
-#include <time.h>
-#include "acceso.h"
-#include "actualizar.h"
-#include "buscar.h"
-#include "colores.h"
-#include "eliminar.h"
-#include "encontrar.h"
-#include "escribir.h"
-#include "estructuras.h"
 #include "fecha.h"
 #include "leer.h"
-#include "listar.h"
 #include "menus.h"
-#include "modificar.h"
-#include "preguntar.h"
 
 int main()
 {

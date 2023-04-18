@@ -13,6 +13,14 @@
 //Postcondicion: Busca todos los vehiculos de un usuario mediante su id, e introduce las posiciones en la estructura de dichos vehiculos en un vector de enteros.
 void encontrarVehiculos(Estr_Usuario *, Estr_Vehiculo *, int, int **, int *, int);
 
+//Cabecera: void encontrarVehiculosViajes(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int **, int *, int);
+//Precondicion: Introducir un vector de enteros, para introducir datos en el mismo, al igual que la variable "x",
+//para saber cuantos vehiculos, con unas restricciones, tiene dicho usuario, y la varible "i", para identificar el usuario, es decir, la posicion
+//en la estructura de "usuario". Ademas, se necesitan las estructuras "usuario, "vehiculo" y "viaje" inicializadas, con sus contadores "numVehiculos", "numUsuarios" y "numViajes".
+//Postcondicion: Busca todos los vehiculos, que no tengan viajes abiertos, con plazas ocupadas, ni iniciados ni cerrados, de un usuario mediante su id,
+//e introduce las posiciones en la estructura de dichos vehiculos en un vector de enteros.
+void encontrarVehiculosViajes(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int **, int *, int);
+
 //Cabecera: void encontrarViajes(Estr_Vehiculo *, int, Estr_Viaje *, int, char *, int **, int *, int);
 //Precondicion: Introducir la cadena "mat", que sera la matricula del vehiculo, al que queremos obtener todos sus viajes, un vector de enteros,
 //para introducir datos en el mismo, al igual que la variable "x", para saber cuantos viajes tiene dicho usuario, y la varible "num", que sera 0, 1 o 2,

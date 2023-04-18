@@ -13,7 +13,8 @@
 //Cabecera: void eliminarVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
 //Precondicion: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
 //tambien necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
-//Postcondicion: Preguntar al usuario, que vehiculo quiere eliminar de todos los que tiene, para eliminar el vehiculo, con sus viajes, pasos y reservas.
+//Postcondicion: Preguntar al usuario, que vehiculo quiere eliminar de los que no tengan viajes abiertos, con plazas ocupadas, o iniciados o cerrados,
+//para eliminar el vehiculo, con sus viajes, pasos y reservas.
 void eliminarVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
 
 //Cabecera: void eliminarVehiculoViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, char *, int);
@@ -71,7 +72,7 @@ void finalizar_viaje(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Es
 
 //Cabecera: void cancelarReserva(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int):
 //Precondicion:esta funcion recibe las estructuras "Usuario" y "Viajes" ya inicializadas con sus contadores, y la variables num user que representa la posicion del usuario en la estructura viajes.
-//Postcondicion: la reserva, que esté sin iniciar, seleccionada es cancelada siendo borrada de la estructura reservas el usuario y aumentando en uno las plazas de dicho viaje.
+//Postcondicion: la reserva, que este sin iniciar, seleccionada es cancelada siendo borrada de la estructura reservas el usuario y aumentando en uno las plazas de dicho viaje.
 void cancelarReserva(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int);
 
 #endif // ELIMINAR_H_INCLUDED

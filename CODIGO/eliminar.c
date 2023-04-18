@@ -3,14 +3,15 @@
 //Cabecera: void eliminarVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, int);
 //Precondicion: Tener la variable "i" inicializada, que representa al usuario en la estructura "Usuarios",
 //tambien necesitaremos las estructuras "Vehiculo", "Viajes", "Pasos" y "Reservas", con sus respectivos contadores.
-//Postcondicion: Preguntar al usuario, que vehiculo quiere eliminar de todos los que tiene, para eliminar el vehiculo, con sus viajes, pasos y reservas.
+//Postcondicion: Preguntar al usuario, que vehiculo quiere eliminar de los que no tengan viajes abiertos, con plazas ocupadas, o iniciados o cerrados,
+//para eliminar el vehiculo, con sus viajes, pasos y reservas.
 
 void eliminarVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, Estr_Pasos *pasos, int numPasos, Estr_Reservas *reservas, int numReservas, int i)
 {
     int x=0, h=0, m=0, opc=0, opc2=0, *vec=NULL;
 
-    encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encontramos todos los vehiculos del usuario, y los colocamos en un vector de enteros,
-    //con las posiciones en la estructura "vehiculo" de sus vehiculos.
+    encontrarVehiculosViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, &vec, &x, i); //Encontramos todos los vehiculos del usuario, que tengan no tengan viajes abiertos,
+    //con plazas ocupadas, o iniciados o cerrados, y los colocamos en un vector de enteros, con las posiciones en la estructura "vehiculo" de sus vehiculos.
 
     if(x>0){ //Si tiene algun vehiculo, le pregunta el coche que quiere eliminar, si no tiene vehiculo, se imprime un aviso.
         printf("¿Que vehiculo quiere eliminar?\n");
@@ -610,6 +611,10 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
                 color(0, 15);
                 printf("%s\n", viaje[vec[j]].id_viaje);
                 color(0, 3);
+                printf("   Matricula: ");
+                color(0, 15);
+                printf("%s\n", viaje[vec[j]].id_mat);
+                color(0, 3);
                 printf("   Estado: ");
                 color(0, 15);
                 printf("%s\n", viaje[vec[j]].estado);
@@ -638,22 +643,28 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
                 color(0, 15);
                 printf("%s euros\n\n", viaje[vec[j]].precio);
             }
-
+            color(0, 14);
+            printf("(%i)Salir.\n", max_viaje+1);
+            color(0, 15);
             do{//verifica que se seleccione la opcion correcta
                 printf("Seleccione el viaje que desea finalizar/anular:\n");
                 scanf("%i",&i);
-            }while(i>max_viaje||i<0);
+            }while(i>max_viaje+1||i<0);
+            if(i==max_viaje+1)
+            {
+                return;
+            }
 
             system("cls");
             if(strcmp(viaje[vec_viaje[i-1]].estado, "abierto")==0)//verifica si el viaje seleccionado esta abierto
             {
                 strcpy(viaje[vec_viaje[i-1]].estado, "anulado");
-                printf("El viaje ha sido anulado\n");
+                printf("El viaje ha sido anulado.\n");
             }
             else// caso contrario esta iniciado
             {
                 strcpy(viaje[vec_viaje[i-1]].estado, "finalizado");
-                printf("El viaje ha sido finalizado\n");
+                printf("El viaje ha sido finalizado.\n");
             }
             system("PAUSE");
             actualizarViaje(viaje, numViajes);
@@ -663,21 +674,21 @@ void finalizar_viaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehi
         else//caso contrario no hay viajes registrado para los coches del usuario
         {
             system("cls");
-            printf("No tiene viajes registrados\n");
+            printf("No tiene viajes registrados.\n");
             system("PAUSE");
         }
     }
     else//caso contrario el usuario no tiene coches registrados
     {
         system("cls");
-        printf("No tiene coches registrados\n");
+        printf("No tiene coches registrados.\n");
         system("PAUSE");
     }
 }
 
 //Cabecera: void cancelarReserva(Estr_Usuario *, Estr_Viaje *, int, Estr_Reservas *, int, int):
 //Precondicion:esta funcion recibe las estructuras "Usuario" y "Viajes" ya inicializadas con sus contadores, y la variables num user que representa la posicion del usuario en la estructura viajes.
-//Postcondicion: la reserva, que esté sin iniciar, seleccionada es cancelada siendo borrada de la estructura reservas el usuario y aumentando en uno las plazas de dicho viaje.
+//Postcondicion: la reserva, que este sin iniciar, seleccionada es cancelada siendo borrada de la estructura reservas el usuario y aumentando en uno las plazas de dicho viaje.
 
 void cancelarReserva(Estr_Usuario *usuario, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, int num_user)
 {

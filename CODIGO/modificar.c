@@ -1,11 +1,11 @@
 #include "modificar.h"
 
-//Cabecera: void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Cabecera: void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario",
 //y las estructuras "usuario" y "vehiculo" inicializadas, con sus contadores.
-//Postcondicion: Modificar cualquier dato de un vehiculo que tenga el usuario.
+//Postcondicion: Modificar cualquier dato de un vehiculo que tenga el usuario, pero este vehiculo no puede tener viajes abiertos, con plazas ocupadas, ni cerrados ni iniciados.
 
-void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, int i)
+void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int i)
 {
     FILE *fp;
     int x=0, h=0, m=0, aux=0, y=0, opc=0, opc2=0, *vec=NULL, encontrado=0, error_mat, counter, plaz=0;
@@ -22,7 +22,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
         }
         else
         {
-            encontrarVehiculos(usuario, vehiculo, numVehiculos, &vec, &x, i); //Encuentra todos los vehiculos del usuario.
+            encontrarVehiculosViajes(usuario, vehiculo, numVehiculos, viaje, numViajes, &vec, &x, i); //Encuentra todos los vehiculos del usuario.
             aux=x;
             if(vec!=NULL) //Si el usuario tiene vehiculos, el vector "vec" no sera nulo
             {
@@ -142,7 +142,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                                         scanf("%1i", &plaz); //Pedimos el nuevo numero de plazas.
                                         if(plaz<=0)
                                         {
-                                            printf("Introduzca un número de plazas entre 1 y 9.\n");
+                                            printf("Introduzca un numero de plazas entre 1 y 9.\n");
                                             system("PAUSE");
                                             system("cls");
                                         }
@@ -217,7 +217,7 @@ void modificarVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVe
                                         scanf("%1i", &plaz); //Pedimos el nuevo numero de plazas.
                                         if(plaz<=0)
                                         {
-                                            printf("Introduzca un número de plazas entre 1 y 9.\n");
+                                            printf("Introduzca un numero de plazas entre 1 y 9.\n");
                                         }
                                         else
                                         {
@@ -404,7 +404,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
 
                                 verificar_viaje(viaje, numViajes, viaje[vec_viaje[h]].id_mat, fecha, hora_in, hora_fin, &encontrado3);
 
-                                if(encontrado3==0) //Si el vehículo ya tiene un viaje en esa fecha.
+                                if(encontrado3==0) //Si el vehiculo ya tiene un viaje en esa fecha.
                                 {
                                     strcpy(viaje[vec_viaje[h]].f_inic, fecha); //Introducimos los datos pedidos al viaje.
                                     strcpy(viaje[vec_viaje[h]].h_inic, hora_in);
@@ -415,7 +415,7 @@ void modificarViaje(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehic
                                 }
                                 else
                                 {
-                                    printf("\nEl vehículo tiene un viaje en la fecha introducida.\n");
+                                    printf("\nEl vehiculo tiene un viaje en la fecha introducida.\n");
                                     system("PAUSE");
                                 }
                                 break;
@@ -688,11 +688,11 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
     }
 }
 
-//Cabecera: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+//Cabecera: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondicion: Modificar los datos de un vehiculo de cualquier usuario.
+//Postcondicion: Modificar los datos de un vehiculo, que no tenga viajes abiertos, con plazas ocupadas, ni iniciados ni cerrados, de cualquier usuario.
 
-void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, int x)
+void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int x)
 {
     char opc2[5];
     int encontrado=0, counter, id;
@@ -711,7 +711,7 @@ void modificarAdminVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehicul
             {
                 encontrado=1;
                 system("cls");
-                modificarVehiculo(usuario, vehiculo, numVehiculos, counter); //Vamos a la funcion "modificarVehiculo".
+                modificarVehiculo(usuario, vehiculo, numVehiculos, viaje, numViajes, counter); //Vamos a la funcion "modificarVehiculo".
             }
         }
         if(encontrado==0) //Si no existe el usuario introducido.

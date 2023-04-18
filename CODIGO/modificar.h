@@ -14,11 +14,11 @@
 #include "colores.h"
 #include "escribir.h"
 
-//Cabecera: void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Cabecera: void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario",
 //y las estructuras "usuario" y "vehiculo" inicializadas, con sus contadores.
-//Postcondicion: Modificar cualquier dato de un vehiculo que tenga el usuario.
-void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, int);
+//Postcondicion: Modificar cualquier dato de un vehiculo que tenga el usuario, pero este vehiculo no puede tener viajes abiertos, con plazas ocupadas, ni cerrados ni iniciados.
+void modificarVehiculo(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 
 //Cabecera: void modificarViaje(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
@@ -50,10 +50,10 @@ void modificarPerfilContrasena(Estr_Usuario *, int, int);
 //Postcondicion: Modificar los datos de cualquier usuario.
 void modificarAdminUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
 
-//Cabecera: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+//Cabecera: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
-//Postcondicion: Modificar los datos de un vehiculo de cualquier usuario.
-void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, int);
+//Postcondicion: Modificar los datos de un vehiculo, que no tenga viajes abiertos, con plazas ocupadas, ni iniciados ni cerrados, de cualquier usuario.
+void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 
 //Cabecera: void modificarAdminViaje(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.

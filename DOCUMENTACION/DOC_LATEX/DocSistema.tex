@@ -5,7 +5,7 @@
 
 \subsection{Especificación del sistema}
 
-\subsubsection{División de los módulos}
+\subsubsection{División del programa}
 
 Aquí, se puede ver en cuántos subproblemas, hemos dividido el programa, y los módulos que van asociados a cada uno de ellos.
 Las especificaciones de cada una de las funciones se puede encontrar en \href{DOC_DOXYGEN/index.html}{Doxygen} o en el apartado \ref{fig:CodigoModulos}.
@@ -17,21 +17,21 @@ Las especificaciones de cada una de las funciones se puede encontrar en \href{DO
 
 Puede ver la imagen completa en \href{FOTOS/Organigrama_Proyecto.jpeg}{Organigrama Proyecto}.
 
-\subsubsection{Relaciones de los módulos}
+\subsubsection{Relación de los módulos}
 
 Aquí, puede ver la organización de la descomposición modular del proyecto, es decir, la forma en la que están emparejados los módulos,
-para hacer que el programa funcione correctamente, y de la forma más óptima posible.\\
+para hacer que el programa funcione correctamente, y de la forma más óptima posible.
 \begin{center}
   \includegraphics[width=1.1\textwidth]{FOTOS/Descomposicion_Modular.jpeg}
 \end{center}
 
-Puede ver la imagen completa en \href{FOTOS/Descomposicion_Modular.jpeg}{Descomposición Modular}.\\
+Puede ver la imagen completa en \href{FOTOS/Descomposicion_Modular.jpeg}{Descomposición Modular}.
 
 \subsubsection{Plan de desarrollo del Software}
 
 \bigskip
 
-\begin{tabular}{|p{2.5cm}|p{8cm}|p{2cm}|}
+\begin{tabular}{|p{2.7cm}|p{8.2cm}|p{1.8cm}|}
   \hline
   \textbf{Fase} & \textbf{Descripción} & \textbf{Duración} \\
   \hline
@@ -183,8 +183,10 @@ Para ver el código fuente del módulo puede ir a \ref{fig:PreguntarCod}, o entr
 Todos los módulos han sido probados a fondo, introduciendo valores aleatorios, poco a poco se han ido eliminando errores, haciendo que el programa sea infalible,
 y no crashee al entrar en alguna función, como pasaba anteriormente con la aplicación en fase de desarrollo.
 
+Aquí, se pueden ver las pruebas realizadas de las funciones que necesitan una entrada de datos:
+
 \begin{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/acceso_8c_source.html}{Acceso}:
   \begin{itemize}
     \item Usuario: hola - “Usuario no encontrado en nuestra base de datos.”
     \item Usuario: usua1, Contraseña: - “La contraseña debe tener entre 1 y 8 caracteres.”
@@ -192,33 +194,33 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item Usuario: admin, Contraseña: 1234 - Accede al Menú de Administrador.
     \item Usuario: usua1, Contraseña: 2023 - Accede al Menú de Usuario.
   \end{itemize}
-  \item altaUsuario:
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaUsuario}:
   \begin{itemize}
     \item Nombre: Manolo, Localidad: JER, Usuario: manol, Contraseña: - “La contraseña debe tener entre 1 y 8 caracteres.”
     \item Nombre: Manolo, Localidad: JER, Usuario: usua1, Contraseña: 1234 - “El usuario ya está siendo usado.”
     \item Nombre: Manolo, Localidad: JER, Usuario: u4323, Contraseña: 1234 - “El usuario ha sido agregado correctamente.”
   \end{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarPerfilNombre}:
   \begin{itemize}
     \item Nombre: Federico, - “Su nombre completo se ha actualizado correctamente.”
   \end{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarPerfilLocalidad}:
   \begin{itemize}
     \item Localidad: SAN - “Has seleccionado Sanlucar. Su localidad de residencia se ha actualizado correctamente.”
   \end{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarPerfilUsuario}:
   \begin{itemize}
     \item Usuario: admin - “El nombre de usuario ya está siendo usado.”
     \item Usuario: u1234 - “El nombre de usuario es válido. Su nombre de usuario se ha actualizado correctamente.”
   \end{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarPerfilContrasena}:
   \begin{itemize}
     \item Contraseña antigua:  - “La contraseña debe tener entre 1 y 8 caracteres.”
     \item Contraseña antigua: 1111 - “La contraseña introducida es incorrecta.” Vuelve a pedir contraseña, hasta llegar a los 3 intentos.
     \item Contraseña antigua: 2023, Contraseña nueva:  - “La contraseña debe tener entre 1 y 8 caracteres.”
     \item Contraseña antigua: 2023, Contraseña nueva: 4567 - “Su contraseña se ha actualizado correctamente.”
   \end{itemize}
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaReserva}:
   \begin{itemize}
     \item Día: 10, Mes: 3, Año: 2000 - “El año debe ser posterior a 2022.”
     \item Día: 10, Mes: 1, Año: 2023 - “La fecha ingresada es anterior a la fecha actual.”
@@ -226,9 +228,9 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item Día: 20, Mes: 6, Año: 2023 - “Hay viajes en tu localidad, pero para fechas futuras."
     \item Día: 20, Mes: 6, Año: 2023 - “Si hay viajes en tu localidad para ese día se mostrarán."
   \end{itemize}
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{cancelarReserva}:\\
     Si tienes reservas, se mostrarán todas, y nos preguntará qué reserva queremos cancelar.
-  \item Acceso:
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaVehiculo}:
   \begin{itemize}
     \item Matrícula: XXX12 - “La matrícula debe tener 7 caracteres.”
     \item Matrícula: XXX1234 - “Los 4 primeros caracteres de la matrícula deben ser números.”
@@ -237,7 +239,7 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item Matrícula: 7865JTR, Nº de plazas: -1 - “Introduzca un número de plazas entre 1 y 9.”
     \item Matrícula: 7865JTR, Nº de plazas: 5, Descripción: PE - “El vehículo ha sido agregado correctamente.”
   \end{itemize}
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarVehiculo}:\\
   Si tienes algún vehículo creado, hay que seleccionar el vehículo que queremos cambiar:
   \begin{itemize}
     \item OP: 1, Matrícula: XXX12 - “La matrícula debe tener 7 caracteres.”
@@ -249,9 +251,9 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item OP: 2, Plazas: 7 - “El número de plazas del vehiculo se ha actualizado correctamente.”
     \item OP: 3, Descripción: Seat Panda - “La descripción del vehiculo se ha actualizado correctamente.”
   \end{itemize}
-  \item Acceso:\\
-  Si tienes vehículos, se mostrarán todos, y nos preguntará qué vehículo queremos cancelar.\\
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{eliminarVehiculo}:\\
+  Si tienes vehículos, se mostrarán todos, y nos preguntará qué vehículo queremos cancelar.
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaViaje}:\\
   Si tienes vehículos registrados:
   \begin{itemize}
     \item Matrícula: 1234XXX, Día: 10, Mes: 3, Año: 2000 - El año debe ser posterior a 2023.
@@ -260,7 +262,7 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item Matrícula: 1234XXX, Día: 20, Mes: 6, Año: 2023, Ida/Vuelta: 1, Precio: 3 /Ahora se verifica si el vehículo no tiene un viaje creado en ese día,
     si no tiene ninguno te pide la ruta/, Ciudad de partida/Llegada: SAN, /Hay que seleccionar la ruta que queramos/.
   \end{itemize}
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarViaje}:\\
   Si tienes algún viaje creado que no haya sido ocupado, hay que seleccionar el viaje que queremos cambiar:
   \begin{itemize}
     \item OP: 1, Seleccionar una matrícula de la lista de vehículos que tiene el usuario. 
@@ -268,47 +270,47 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
     \item OP: 3, El coste debe estar entre 0 y 9.
     \item OP: 4, Escoger una de las rutas, desde la ciudad que hayamos seleccionado.
   \end{itemize}
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{finalizarViaje}:\\
   Si tienes un viaje creado sin plazas ocupadas, puedes anularlo, y si tienes un viaje iniciado, puedes finalizarlo.\\
   Seleccionas el número que sale en la lista, del viaje que quiere finalizar/anular.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{eliminarAdminUsuario}:\\
   Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario que quiere eliminar. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarAdminUsuario}:\\
   Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario que quiere modificar. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/listar_8c_source.html}{listarUsuarios}:\\
   Se muestra una lista de todos los usuarios del sistema.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaAdmin, para vehículo}:\\
   Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario con el que quiere crear un vehículo. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{eliminarAdminVehiculo}:\\
   Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la ID del usuario al que quiere eliminar el vehículo. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarAdminVehiculo}:\\
   Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la ID del usuario al que quiere modificar el vehículo. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/listar_8c_source.html}{listarVehiculos}:\\
   Se muestra una lista de todos los usuarios, con sus vehículos, del sistema.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/listar_8c_source.html}{listarAdminVehiculoViajes}:\\
   Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la matrícula del vehículo, para ver el historial de viajes que tiene.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaAdmin, para viaje}:\\
   Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario del que quiere crear un viaje. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{eliminarAdminViaje, para anular/finalizar}:\\
   Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere finalizar un viaje. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/eliminar_8c_source.html}{eliminarAdminViaje, para eliminar}:\\
   Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere eliminar un viaje. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarAdminViaje}:\\
   Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere modificar un viaje. Se puede escribir 0002 o 2.
 
-  \item Acceso:\\
+  \item \href{DOC_DOXYGEN/listar_8c_source.html}{listarAdminViaje}:\\
   Se muestra una lista de todos los usuarios, con sus viajes, del sistema.
 \end{itemize}
 
@@ -316,14 +318,18 @@ y no crashee al entrar en alguna función, como pasaba anteriormente con la apli
 
 Ahora se exponen las pruebas de caja blanca y negra que hemos realizado cada miembro del equipo, a una de las funciones del programa.
 
-\includepdf[pages={1, 2, 3}]{FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf}
+\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf}
 
-\includepdf[pages={1, 2}]{FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf}
+\includepdf[pages=-]{FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf}
+
+\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf}
 
 \subsubsection{Plan de pruebas de aceptación}
 
 En esta sección, se va a definir algunas rutas con las que usted podrá probar todos los puntos del programa. No se ha establecido una serie de datos específicos, para que así pueda probar con
-todo lo que le guste, para poner a prueba el programa.
+todo lo que le guste, para poner a prueba el programa. Sabiendo que las limitaciones del programa están en \ref{fig:Limitaciones}, puede atacar cualquier vulnerabilidad.
+
+\bigskip
 
 Primeramente, se encontrará el menú principal, en el que podrá acceder con las credenciales sugeridas en \ref{fig:menuPrincipal}, o puede registrar un nuevo usuario.
 \begin{center}

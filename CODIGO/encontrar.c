@@ -27,6 +27,56 @@ void encontrarVehiculos(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numV
     }
 }
 
+//Cabecera: void encontrarVehiculosViajes(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, int **, int *, int);
+//Precondicion: Introducir un vector de enteros, para introducir datos en el mismo, al igual que la variable "x",
+//para saber cuantos vehiculos, con unas restricciones, tiene dicho usuario, y la varible "i", para identificar el usuario, es decir, la posicion
+//en la estructura de "usuario". Ademas, se necesitan las estructuras "usuario, "vehiculo" y "viaje" inicializadas, con sus contadores "numVehiculos", "numUsuarios" y "numViajes".
+//Postcondicion: Busca todos los vehiculos, que no tengan viajes abiertos, con plazas ocupadas, ni iniciados ni cerrados, de un usuario mediante su id,
+//e introduce las posiciones en la estructura de dichos vehiculos en un vector de enteros.
+
+void encontrarVehiculosViajes(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehiculos, Estr_Viaje *viaje, int numViajes, int **vec, int *x, int i)
+{
+    int j, h, encontrado=0;
+    *x=0;
+
+    for(j=0; j<numVehiculos; j++) //Nos desplazamos por toda la estructura "vehiculo".
+    {
+        if(strcmp(usuario[i].id_usuario, vehiculo[j].id_usuario)==0) //Si la id del usuario que hemos introducido es igual a la id del usuario de un vehiculo.
+        {
+            encontrado=0;
+            for(h=0; h<numViajes&&encontrado==0; h++) //Nos desplazamos por toda la estructura "viaje", hasta encontrar un viaje que sea abierto, con plazas ocupadas, o iniciado o cerrado.
+            {
+                if(strcmp(viaje[h].id_mat, vehiculo[j].id_mat)==0) //Si el viaje esta abierto y tiene plazas ocupadas.
+                {
+                    if(strcmp(viaje[h].estado, "abierto")==0)
+                    {
+                       if(strcmp(viaje[h].plazas_libre, vehiculo[j].num_plazas)!=0)
+                       {
+                          encontrado=1;
+                       }
+                    }
+                    if((strcmp(viaje[h].estado, "iniciado")==0)||(strcmp(viaje[h].estado, "cerrado")==0)) //Si el viaje esta cerrado o iniciado.
+                    {
+                        encontrado=1;
+                    }
+
+                }
+            }
+            if(encontrado==0) //Si el vehiculo no tiene viajes abiertos, con plazas ocupadas, ni iniciados ni cerrados.
+            {
+                *vec=(int *)realloc(*vec,((*x)+1)*sizeof(int)); //Asignamos un espacio de memoria mas, para introducir el vehiculo valido.
+                if ((*vec)==NULL)
+                {
+                    printf("Error al asignar memoria.\n");
+                    exit(1);
+                }
+                (*vec)[*x]=j; //Se introduce la posicion del vehiculo encontrado en la estructura en el vector de enteros dinamico.
+                (*x)++; //Vamos aumentando en 1, la cantidad de vehiculos que tiene el usuario, que al mismo tiempo servira para acceder al vector de enteros.
+            }
+        }
+    }
+}
+
 //Cabecera: void encontrarViajes(Estr_Vehiculo *, int, Estr_Viaje *, int, char *, int **, int *, int);
 //Precondicion: Introducir la cadena "mat", que sera la matricula del vehiculo, al que queremos obtener todos sus viajes, un vector de enteros,
 //para introducir datos en el mismo, al igual que la variable "x", para saber cuantos viajes tiene dicho usuario, y la varible "num", que sera 0, 1, 2 o 3,

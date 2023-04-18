@@ -641,7 +641,7 @@
 
 1680734066 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\estructuras.h
 
-1681839284 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.h
+1681851679 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -656,7 +656,7 @@
 	"preguntar.h"
 	"colores.h"
 
-1681839284 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.h
+1681855164 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -677,7 +677,7 @@
 	"modificar.h"
 	"colores.h"
 
-1681839284 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.h
+1681856221 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -715,7 +715,7 @@
 	<string.h>
 	"preguntar.h"
 
-1681839553 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
+1681856221 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -738,13 +738,13 @@
 1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\colores.c
 	"colores.h"
 
-1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.c
+1681856221 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\eliminar.c
 	"eliminar.h"
 
-1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.c
+1681856221 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\encontrar.c
 	"encontrar.h"
 
-1681839339 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.c
+1681856221 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\escribir.c
 	"escribir.h"
 
 1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\fecha.c
@@ -753,7 +753,7 @@
 1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\leer.c
 	"leer.h"
 
-1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.c
+1681856174 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\listar.c
 	"listar.h"
 
 1681824187 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\main.c
@@ -765,10 +765,10 @@
 	"leer.h"
 	"menus.h"
 
-1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
+1681854658 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
 	"menus.h"
 
-1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
+1681856221 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
 	"modificar.h"
 
 1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.c

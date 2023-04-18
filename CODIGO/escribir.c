@@ -155,7 +155,7 @@ void altaVehiculo(Estr_Usuario *usuario, Estr_Vehiculo *vehiculo, int numVehicul
         scanf("%1i", &plaz); //Pedimos el numero de plazas.
         if(plaz<=0)
         {
-            printf("Introduzca un número de plazas entre 1 y 9.\n");
+            printf("Introduzca un numero de plazas entre 1 y 9.\n");
         }
         else
         {

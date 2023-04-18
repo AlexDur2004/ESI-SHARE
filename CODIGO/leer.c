@@ -1,6 +1,6 @@
 #include "leer.h"
 
-//Prototipo: void leer(Estr_Usuario **, int *, Estr_Vehiculo **, int *, Estr_Viaje **, int *, Estr_Pasos **, int *, Estr_Reservas **, int *, Estr_Rutas ***, int *, int *, Estr_Localidad **, int *);
+//Cabecera: void leer(Estr_Usuario **, int *, Estr_Vehiculo **, int *, Estr_Viaje **, int *, Estr_Pasos **, int *, Estr_Reservas **, int *, Estr_Rutas ***, int *, int *, Estr_Localidad **, int *);
 //Precondicion: Tener todas las estructuras inicializadas, con sus respectivos contadores. Ademas todas tienen que pasarse por puntero, para introducir valores en las mismas.
 //Postcondicion: Leer todos los ficheros, e introducir la informacion en su estructura, con sus contadores.
 
@@ -16,7 +16,7 @@ void leer(Estr_Usuario **usuario, int *numUsuarios, Estr_Vehiculo **vehiculo, in
     system("PAUSE");
 }
 
-//Prototipo: void leer_usuario(Estr_Usuario **, int *);
+//Cabecera: void leer_usuario(Estr_Usuario **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "usuarios.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
@@ -75,7 +75,7 @@ void leer_usuario(Estr_Usuario **usuario, int *i)
     printf("Se han cargado %i usuarios.\n", *i);
 }
 
-//Prototipo: void leer_vehiculo(Estr_Vehiculo **, int *);
+//Cabecera: void leer_vehiculo(Estr_Vehiculo **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "vehiculos.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
@@ -130,7 +130,7 @@ void leer_vehiculo(Estr_Vehiculo **vehiculo, int *i)
     printf("Se han cargado %i vehiculos.\n", *i);
 }
 
-//Prototipo: void leer_viaje(Estr_Viaje **, int *);
+//Cabecera: void leer_viaje(Estr_Viaje **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "viajes.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
@@ -195,7 +195,7 @@ void leer_viaje(Estr_Viaje **viaje, int *i)
     printf("Se han cargado %i viajes.\n", *i);
 }
 
-//Prototipo: void leer_pasos(Estr_Pasos **, int *);
+//Cabecera: void leer_pasos(Estr_Pasos **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "pasos.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
@@ -246,7 +246,7 @@ void leer_pasos(Estr_Pasos **pasos, int *i)
     printf("Se han cargado %i pasos.\n", *i);
 }
 
-//Prototipo: void leer_localidad(Estr_Localidad **, int *);
+//Cabecera: void leer_localidad(Estr_Localidad **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "localidades.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 
@@ -297,7 +297,7 @@ void leer_localidad(Estr_Localidad **localidad, int *i)
     printf("Se han cargado %i localidades.\n", *i);
 }
 
-//Prototipo: void leer_ruta(Estr_Rutas ***, int *, int *);
+//Cabecera: void leer_ruta(Estr_Rutas ***, int *, int *);
 //Precondicion: Tener la estructura inicializada, con sus contadores.
 //Postcondicion: Leer el fichero "rutas.txt" e introducir la informacion en su estructura, aumentando el contador
 //cada vez que se encuentra una ruta nueva, y otro que nos indique el numero de localidades maximas que hay en todas las rutas.
@@ -372,7 +372,7 @@ void leer_ruta(Estr_Rutas ***ruta, int *i, int *j)
     printf("Se han cargado %i rutas, con %i ciudades como maximo.\n", *i, *j);
 }
 
-//Prototipo: void leer_reservas(Estr_Reservas **, int *);
+//Cabecera: void leer_reservas(Estr_Reservas **, int *);
 //Precondicion: Tener la estructura inicializada, con su contador.
 //Postcondicion: Leer el fichero "reservas.txt" e introducir la informacion en su estructura, aumentando el contador cada vez que se encuentra uno.
 

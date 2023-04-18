@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESI-SHARE: CODIGO_sin_caracteres_especiales/buscar.c Source File</title>
+<title>ESI-SHARE: buscar.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icono_ESI-SHARE.ico"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Icono_ESI-SHARE.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ESI-SHARE
    </div>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('buscar_8c_source.html',''); initResiza
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> buscadorRutas(<a class="code hl_struct" href="struct_estr___rutas.html">Estr_Rutas</a> **ruta, <span class="keywordtype">int</span> numRutas, <span class="keywordtype">int</span> numRutas2, <a class="code hl_struct" href="struct_estr___localidad.html">Estr_Localidad</a> *localidad, <span class="keywordtype">int</span> numLocalidades, <a class="code hl_struct" href="struct_estr___pasos.html">Estr_Pasos</a> *pasos, <span class="keywordtype">int</span> numPasos, <span class="keywordtype">char</span> id_viaje[7])</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    FILE *fp;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">char</span> rutas[numRutas][50], partida[numLocalidades], **rutas_guard, **rutas_impr, *token, *ciudad;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">char</span> rutas[numRutas][50], partida[numLocalidades], **rutas_guard, **rutas_impr, *token=NULL, *ciudad=NULL;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> i=0, j=0, encontrado=0, encontrado2=0, numGuardados=0, numImpresos=0, repetido=0, opc=0;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    fp=fopen(<span class="stringliteral">&quot;DATA/rutas.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>); <span class="comment">//Abrimos el fichero rutas.txt</span></div>
@@ -114,9 +114,9 @@ $(document).ready(function(){initNavTree('buscar_8c_source.html',''); initResiza
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        printf(<span class="stringliteral">&quot;No se pudo abrir el archivo rutas.txt.\n&quot;</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        exit(1);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">for</span>(i=0; fgets(rutas[i], 100, fp)!=NULL ; i++) <span class="comment">//Vamos introduciendo en la matriz rutas, todas las rutas que tiene el fichero, hasta el fin de fichero.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">while</span>(fgets(rutas[i], 50, fp)!=NULL) <span class="comment">//Vamos introduciendo en la matriz rutas, todas las rutas que tiene el fichero, hasta el fin de fichero.</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        fgets(rutas[i], 100, fp);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        i++;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    fclose(fp);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('buscar_8c_source.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3f330979380014eb19d4cf1593b79349.html">CODIGO_sin_caracteres_especiales</a></li><li class="navelem"><b>buscar.c</b></li>
+    <li class="navelem"><b>buscar.c</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

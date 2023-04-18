@@ -1,6 +1,6 @@
 #include "actualizar.h"
 
-//Prototipo: void actualizarUsuario(Estr_Usuario *, int);
+//Cabecera: void actualizarUsuario(Estr_Usuario *, int);
 //Precondicion: Tener la estructura "usuario" inicializada, con su contador.
 //Postcondicion: Reescribir todos los datos de la estructura en el fichero.
 
@@ -25,7 +25,7 @@ void actualizarUsuario(Estr_Usuario *usuario, int numUsuarios)
     fclose(fp);
 }
 
-//Prototipo: void actualizarVehiculo(Estr_Vehiculo *, int);
+//Cabecera: void actualizarVehiculo(Estr_Vehiculo *, int);
 //Precondicion: Tener la estructura "vehiculo" inicializada, con su contador.
 //Postcondicion: Reescribir todos los datos de la estructura en el fichero.
 
@@ -50,7 +50,7 @@ void actualizarVehiculo(Estr_Vehiculo *vehiculo, int numVehiculos)
     fclose(fp);
 }
 
-//Prototipo: void actualizarViaje(Estr_Viaje *, int);
+//Cabecera: void actualizarViaje(Estr_Viaje *, int);
 //Precondicion: Tener la estructura "viaje" inicializada, con su contador.
 //Postcondicion: Reescribir todos los datos de la estructura en el fichero.
 

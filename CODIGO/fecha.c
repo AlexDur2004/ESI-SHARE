@@ -2,7 +2,7 @@
 
 int dias_meses(int, int);
 
-//Prototipo: void actualizarViajesEstado(Estr_Viaje *, int, Estr_Reservas *, int, Estr_Pasos *, int);
+//Cabecera: void actualizarViajesEstado(Estr_Viaje *, int, Estr_Reservas *, int, Estr_Pasos *, int);
 //Precondicion: Tener las estructuras "viaje" y "reservas", con sus contadores.
 //Postcondicion: Actualiza el estado de todos los viajes, si se ha pasado la hora de inicio, pues se pone en estado "Iniciado",
 //mientras que si se ha excedido una hora desde la hora de llegada, pues se establece en estado "Finalizado", y se eliminan sus pasos y reservas.
@@ -98,7 +98,7 @@ void actualizarViajesEstado(Estr_Viaje *viaje, int numViajes, Estr_Reservas *res
     fclose(fp);
 }
 
-//Prototipo: void leerFecha(char *, char *, char *);
+//Cabecera: void leerFecha(char *, char *, char *);
 //Precondicion: Tener los cadenas "fecha", "h_inic" y "h_fin" inicializados.
 //Postcondicion: Leer la fecha, hora de inicio y hora de llegada, y comprobar si son validas, y posteriores a las actuales. Despues, se introducen en su respectiva cadena.
 
@@ -237,7 +237,7 @@ void leerFecha(char fecha[11], char h_inic[6], char h_fin[6])  //DD/MM/AAAA
     }
 }
 
-//Prototipo: void leer_dia(char *);
+//Cabecera: void leer_dia(char *);
 //Precondicion: Tener la cadena "fecha" inicializada.
 //Postcondicion: Leer la fecha, y comprobar si es valida, y posterior a las actual. Si esto se cumple, se guarda en la cadena.
 
@@ -294,6 +294,7 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
             if(ano<2023)
             {
                 while(getchar()!='\n');
+                printf("El ano debe ser posterior a 2022.\n");
             }
             else
             {
@@ -337,7 +338,7 @@ void leer_dia(char fecha[11])  //DD/MM/AAAA
     system("PAUSE");
 }
 
-//Prototipo: int dias_meses(int, int);
+//Cabecera: int dias_meses(int, int);
 //Precondicion: Tener los enteros "mes" y "ano" inicializados.
 //Postcondicion: Devuelve el numero de dias que hay en cada mes del ano. Tambien se comtemplan los anos bisiestos.
 

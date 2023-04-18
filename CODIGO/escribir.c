@@ -3,7 +3,7 @@
 void elegir_coche(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int, char *, int);
 void asignar_plazas(Estr_Vehiculo *, int , char *, char *);
 void ida_vuelta(char *);
-void verificar_viaje(Estr_Viaje *, int , char *, char *, char *, char *, char *, int *);
+void verificar_viaje(Estr_Viaje *, int , char *, char *, int *);
 void mostrar_poblaciones(Estr_Viaje *, int, Estr_Pasos *, int, int *, int, int *);
 void guardarPasajero(Estr_Usuario *, Estr_Viaje *, Estr_Reservas *, int, int *, int, int);
 void verificar_reserva(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, Estr_Reservas *, int, int *, int, int *, int);
@@ -279,7 +279,7 @@ void altaViaje(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehiculo, 
 
             snprintf(viaje_id, sizeof(viaje_id), "%06d", n); //pasa la id nueva a un vector limitado por 7 espacios.
 
-            verificar_viaje(viaje, numViajes, viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, &rp);//se verifica si los datos corresponden con los de algun viaje creado antes
+            verificar_viaje(viaje, numViajes, id_vehiculo, fecha, &rp);//se verifica si los datos corresponden con los de algun viaje creado antes
             if(rp==0)
             {
                 fprintf(fv, "%s-%s-%s-%s-%s-%s-%s-%s-%s\n", viaje_id, id_vehiculo, fecha, hora_inic, hora_fin, plazas, idavuelta, coste, estado);
@@ -439,13 +439,13 @@ void ida_vuelta(char *idavuelta)
     }while(breakp==0);
 }
 
-//Prototipo: void verificar_viaje(Estr_Viaje *, int , char *, char *, char *, char *, char *, int *)
+//Prototipo: void verificar_viaje(Estr_Viaje *, int , char *, char *, int *)
 //Precondicion:esta funcion recibe la estructura viajes inicializada y su contador,junto con datos de tipo caracter como la id del viaje que se ha creado, la matricula
 //la fecha, hora de inicio y fin
 //Cabecera:el objetivo de esta funcion es el de verificar si los datos del viaje que se esta creando no coinciden con los de un viaje creado previamente por el usuario
 //Postcondicion: devuelve un puntero de tipo entero "rp" que indica si el viaje creado ya se habia creado previamente.
 
-void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *id, char *mat, char *fecha, char *hor_i, char *hor_f, int *rp)
+void verificar_viaje(Estr_Viaje *viaje, int numViajes, char *mat, char *fecha, int *rp)
 {
     int i, brkp=0;
 

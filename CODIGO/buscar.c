@@ -2,7 +2,7 @@
 
 void imprimirPasos(Estr_Pasos *, int, Estr_Localidad *, int, char *, char *);
 
-//Cabecera: void buscadorRutas(Estr_Rutas **, int, int, Estr_Localidad *, int, Estr_Pasos *, int, char [7]);
+//Prototipo: void buscadorRutas(Estr_Rutas **, int, int, Estr_Localidad *, int, Estr_Pasos *, int, char [7]);
 //Precondicion: Tener las estructuras "ruta", "localidad" y "pasos", con sus contadores. Ademas, debemos tener una cadena inicializada con la id de viaje.
 //Postcondicion: Buscar todas las rutas posibles, desde la ciudad seleccionada hasta la ESI.
 
@@ -128,7 +128,7 @@ void buscadorRutas(Estr_Rutas **ruta, int numRutas, int numRutas2, Estr_Localida
     imprimirPasos(pasos, numPasos, localidad, numLocalidades, id_viaje, rutas_impr[opc-1]); //Imprimimos las localidades de la ruta seleccionada en el fichero pasos.txt
 }
 
-//Cabecera: void imprimirPasos(Estr_Pasos *, int, Estr_Localidad *, int, char *, char *);
+//Prototipo: void imprimirPasos(Estr_Pasos *, int, Estr_Localidad *, int, char *, char *);
 //Precondicion: Tener las estructuras "pasos" y "localidad", con sus contadores. Ademas, debemos tener una cadena inicializada con la id de viaje, y otra cadena con la ruta que queremos imprimir.
 //Postcondicion: Imprimir los pasos de la ruta seleccionada, en el fichero.
 

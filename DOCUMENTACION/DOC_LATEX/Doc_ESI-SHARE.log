@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  18 APR 2023 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  16 APR 2023 02:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -269,81 +269,62 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks21
 \c@AM@survey=\count288
 \AM@templatesizebox=\box54
-) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen159
-\ar@mcellbox=\box55
-\extrarowheight=\dimen160
-\NC@list=\toks22
-\extratabsurround=\skip55
-\backup@length=\skip56
-\ar@cellbox=\box56
-)
-\TX@col@width=\dimen161
-\TX@old@table=\dimen162
-\TX@old@col=\dimen163
-\TX@target=\dimen164
-\TX@delta=\dimen165
-\TX@cols=\count289
-\TX@ftn=\toks23
 ) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count289
+\l__pdf_internal_box=\box55
 ) (Doc_ESI-SHARE.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
  (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
 \openout1 = `Doc_ESI-SHARE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
  (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen166
-\scratchbox=\box58
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen167
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count290
+\scratchdimen=\dimen159
+\scratchbox=\box56
+\nofMPsegments=\count291
+\nofMParguments=\count292
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count293
+\MPscratchDim=\dimen160
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
+\everyMPtoPDFconversion=\toks23
 ) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count297
+\c@lstlisting=\count296
  (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
 )
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 36.
  (Doc_ESI-SHARE.out) (Doc_ESI-SHARE.out)
 \@outlinefile=\write3
 \openout3 = `Doc_ESI-SHARE.out'.
@@ -357,17 +338,17 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )) (Portada.tex
-<FOTOS/uca.jpg, id=195, 597.432pt x 235.8411pt>
+<FOTOS/uca.jpg, id=183, 597.432pt x 235.8411pt>
 File: FOTOS/uca.jpg Graphic file (type jpg)
 <use FOTOS/uca.jpg>
 Package pdftex.def Info: FOTOS/uca.jpg  used on input line 8.
 (pdftex.def)             Requested size: 113.80496pt x 56.90529pt.
-<FOTOS/logo_ESI-SHARE.png, id=196, 1915.155pt x 718.685pt>
+<FOTOS/logo_ESI-SHARE.png, id=184, 1915.155pt x 718.685pt>
 File: FOTOS/logo_ESI-SHARE.png Graphic file (type png)
 <use FOTOS/logo_ESI-SHARE.png>
 Package pdftex.def Info: FOTOS/logo_ESI-SHARE.png  used on input line 10.
 (pdftex.def)             Requested size: 142.25694pt x 56.9038pt.
-<FOTOS/logo.jpg, id=198, 666.49pt x 521.95pt>
+<FOTOS/logo.jpg, id=186, 666.49pt x 521.95pt>
 File: FOTOS/logo.jpg Graphic file (type jpg)
 <use FOTOS/logo.jpg>
 Package pdftex.def Info: FOTOS/logo.jpg  used on input line 21.
@@ -392,7 +373,7 @@ LaTeX Info: Redefining \% on input line 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...de aceptación}{29}{subsubsection.0.3.3.3}
+l.33 ... {4.1.1}Acceso}{23}{subsubsection.0.4.1.1}
                                                   % [1
 
 ])
@@ -408,7 +389,7 @@ l.33 ...de aceptación}{29}{subsubsection.0.3.3.3}
 \openout2 = `DocUsuario.aux'.
 
  (DocUsuario.tex
-<FOTOS/menuPasajeroPerfil.png, id=267, 255.95625pt x 184.43906pt>
+<FOTOS/menuPasajeroPerfil.png, id=252, 255.95625pt x 184.43906pt>
 File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 <use FOTOS/menuPasajeroPerfil.png>
 Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 18.
@@ -418,7 +399,7 @@ Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 18.
 
 
  <./FOTOS/menuPasajeroPerfil.png>]
-<FOTOS/menuPasajeroViaje.png, id=273, 212.29312pt x 197.23688pt>
+<FOTOS/menuPasajeroViaje.png, id=258, 212.29312pt x 197.23688pt>
 File: FOTOS/menuPasajeroViaje.png Graphic file (type png)
 <use FOTOS/menuPasajeroViaje.png>
 Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 23.
@@ -428,34 +409,34 @@ File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 30.
 (pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
  [5 <./FOTOS/menuPasajeroViaje.png>]
-<FOTOS/menuConductorVehiculo.png, id=279, 170.13562pt x 167.87718pt>
+<FOTOS/menuConductorVehiculo.png, id=264, 170.13562pt x 167.87718pt>
 File: FOTOS/menuConductorVehiculo.png Graphic file (type png)
 <use FOTOS/menuConductorVehiculo.png>
 Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 35.
 (pdftex.def)             Requested size: 170.1352pt x 167.87677pt.
-<FOTOS/menuConductorViaje.png, id=280, 212.29312pt x 241.65282pt>
+<FOTOS/menuConductorViaje.png, id=265, 212.29312pt x 241.65282pt>
 File: FOTOS/menuConductorViaje.png Graphic file (type png)
 <use FOTOS/menuConductorViaje.png>
 Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 39.
 (pdftex.def)             Requested size: 212.2926pt x 241.65222pt.
  [6 <./FOTOS/menuConductorVehiculo.png> <./FOTOS/menuConductorViaje.png>]
-<FOTOS/menuAdminUsuario.png, id=288, 210.7875pt x 110.66344pt>
+<FOTOS/menuAdminUsuario.png, id=273, 210.7875pt x 110.66344pt>
 File: FOTOS/menuAdminUsuario.png Graphic file (type png)
 <use FOTOS/menuAdminUsuario.png>
 Package pdftex.def Info: FOTOS/menuAdminUsuario.png  used on input line 47.
 (pdftex.def)             Requested size: 210.78699pt x 110.66315pt.
-<FOTOS/menuAdminVehiculo.png, id=289, 286.82156pt x 121.95563pt>
+<FOTOS/menuAdminVehiculo.png, id=274, 286.82156pt x 121.95563pt>
 File: FOTOS/menuAdminVehiculo.png Graphic file (type png)
 <use FOTOS/menuAdminVehiculo.png>
 Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 51.
 (pdftex.def)             Requested size: 286.82085pt x 121.9553pt.
-<FOTOS/menuAdminViaje.png, id=290, 211.54031pt x 120.45pt>
+<FOTOS/menuAdminViaje.png, id=275, 211.54031pt x 120.45pt>
 File: FOTOS/menuAdminViaje.png Graphic file (type png)
 <use FOTOS/menuAdminViaje.png>
 Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 55.
 (pdftex.def)             Requested size: 211.53978pt x 120.44969pt.
  [7 <./FOTOS/menuAdminUsuario.png> <./FOTOS/menuAdminVehiculo.png> <./FOTOS/menuAdminViaje.png>] [8]
-<FOTOS/menuPrincipal.png, id=307, 158.84344pt x 63.98906pt>
+<FOTOS/menuPrincipal.png, id=292, 158.84344pt x 63.98906pt>
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
 Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 121.
@@ -469,18 +450,17 @@ Overfull \hbox (7.69861pt too wide) in paragraph at lines 144--145
 \openout2 = `DocSistema.aux'.
 
  (DocSistema.tex
-<FOTOS/Organigrama_Proyecto.jpeg, id=324, 929.1513pt x 825.8052pt>
-File: FOTOS/Organigrama_Proyecto.jpeg Graphic file (type jpg)
-<use FOTOS/Organigrama_Proyecto.jpeg>
-Package pdftex.def Info: FOTOS/Organigrama_Proyecto.jpeg  used on input line 15.
-(pdftex.def)             Requested size: 448.49762pt x 398.61234pt.
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
-Overfull \hbox (58.49762pt too wide) in paragraph at lines 15--16
- [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
 
  []
 
@@ -488,326 +468,137 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
 
 
- <./FOTOS/Organigrama_Proyecto.jpeg>]
-<FOTOS/Descomposicion_Modular.jpeg, id=331, 798.5835pt x 710.4141pt>
-File: FOTOS/Descomposicion_Modular.jpeg Graphic file (type jpg)
-<use FOTOS/Descomposicion_Modular.jpeg>
-Package pdftex.def Info: FOTOS/Descomposicion_Modular.jpeg  used on input line 25.
-(pdftex.def)             Requested size: 429.00238pt x 381.645pt.
-
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 25--26
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 
-Overfull \hbox (8.34091pt too wide) in paragraph at lines 46--46
-[]|\OT1/cmr/m/n/12 Documentaci^^Son| 
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
  []
 
 
-Overfull \hbox (20.88422pt too wide) in paragraph at lines 34--49
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
  []
 
-[13 <./FOTOS/Descomposicion_Modular.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--82
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
+<FOTOS/descomposicion_modular.jpeg, id=359, 798.5835pt x 710.4141pt>
+File: FOTOS/descomposicion_modular.jpeg Graphic file (type jpg)
+<use FOTOS/descomposicion_modular.jpeg>
+Package pdftex.def Info: FOTOS/descomposicion_modular.jpeg  used on input line 141.
+(pdftex.def)             Requested size: 429.00238pt x 381.645pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--118
-
+Overfull \hbox (39.00238pt too wide) in paragraph at lines 141--142
+ [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 141--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
-
- []
-
-[18] [19]
-Overfull \hbox (0.52953pt too wide) in paragraph at lines 238--239
-[]\OT1/cmr/m/n/12 Matr^^S^^Pcu-la: 7865JTR, N\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 de pla-zas: 5, Des-crip-ci^^Son: PE - \El veh^^S^^Pcu-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
-
- []
-
-[21] [22]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=407, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 319.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 319.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 319.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 319.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=412, page=1, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 319.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[23]
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
- [24 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=437, page=2, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[25 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=522, page=3, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 319.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[26 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=590, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=594, page=1, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[27 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=610, page=2, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[28 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
+[16 <./FOTOS/descomposicion_modular.jpeg>]
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
-Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 330.
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 157.
 (pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
-<FOTOS/menuSeleccionUsuario.png, id=707, 109.91063pt x 76.78688pt>
+<FOTOS/menuSeleccionUsuario.png, id=366, 109.91063pt x 76.78688pt>
 File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
 <use FOTOS/menuSeleccionUsuario.png>
-Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 337.
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 164.
 (pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
 File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 <use FOTOS/menuPasajeroPerfil.png>
-Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 340.
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 167.
 (pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
- [29 <./FOTOS/menuSeleccionUsuario.png>]
+ [17 <./FOTOS/menuSeleccionUsuario.png>]
 File: FOTOS/menuPasajeroViaje.png Graphic file (type png)
 <use FOTOS/menuPasajeroViaje.png>
-Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 348.
+Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 175.
 (pdftex.def)             Requested size: 212.2926pt x 197.23637pt.
 File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
 <use FOTOS/menuSeleccionUsuario.png>
-Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 354.
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 181.
 (pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
+ [18]
 File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 <use FOTOS/menuPasajeroPerfil.png>
-Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 357.
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 184.
 (pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
- [30]
 File: FOTOS/menuConductorVehiculo.png Graphic file (type png)
 <use FOTOS/menuConductorVehiculo.png>
-Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 365.
+Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 192.
 (pdftex.def)             Requested size: 170.1352pt x 167.87677pt.
+ [19]
 File: FOTOS/menuConductorViaje.png Graphic file (type png)
 <use FOTOS/menuConductorViaje.png>
-Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 371.
+Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 198.
 (pdftex.def)             Requested size: 212.2926pt x 241.65222pt.
- [31] [32]
+ [20]
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
-Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 378.
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 205.
 (pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
-<FOTOS/menuAdmin.png, id=726, 210.03468pt x 91.09032pt>
+<FOTOS/menuAdmin.png, id=385, 210.03468pt x 91.09032pt>
 File: FOTOS/menuAdmin.png Graphic file (type png)
 <use FOTOS/menuAdmin.png>
-Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 385.
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 212.
 (pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
 File: FOTOS/menuAdmin.png Graphic file (type png)
 <use FOTOS/menuAdmin.png>
-Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 388.
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 215.
 (pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
- [33 <./FOTOS/menuAdmin.png>]
+ [21 <./FOTOS/menuAdmin.png>]
 File: FOTOS/menuAdminVehiculo.png Graphic file (type png)
 <use FOTOS/menuAdminVehiculo.png>
-Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 397.
+Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 224.
 (pdftex.def)             Requested size: 286.82085pt x 121.9553pt.
 File: FOTOS/menuAdminViaje.png Graphic file (type png)
 <use FOTOS/menuAdminViaje.png>
-Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 403.
+Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 230.
 (pdftex.def)             Requested size: 211.53978pt x 120.44969pt.
-) [34]
+) [22]
 \openout2 = `DocCode.aux'.
 
  (DocCode.tex (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -815,8 +606,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 19.
- (CODIGO/acceso.c [35
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 21.
+ (CODIGO_sin_caracteres_especiales/acceso.c [23
 
 
 
@@ -833,7 +624,7 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
- [36] [37] [38]) (CODIGO/actualizar.c [39] [40]) (CODIGO/buscar.c [41] [42] [43] [44] [45] [46] [47]) (CODIGO/colores.c [48]) (CODIGO/eliminar.c [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) (CODIGO/encontrar.c [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]) (CODIGO/escribir.c [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117]) (CODIGO/estructuras.h [118] [119]) (CODIGO/fecha.c [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]) (CODIGO/leer.c [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]) (CODIGO/listar.c [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162]) (CODIGO/menus.c [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187]) (CODIGO/modificar.c [188] [189] [190] [191]
+ [24] [25] [26]) (CODIGO_sin_caracteres_especiales/actualizar.c [27] [28]) (CODIGO_sin_caracteres_especiales/buscar.c [29] [30] [31] [32] [33] [34] [35]) (CODIGO_sin_caracteres_especiales/colores.c [36]) (CODIGO_sin_caracteres_especiales/eliminar.c [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]) (CODIGO_sin_caracteres_especiales/encontrar.c [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) [78] (CODIGO_sin_caracteres_especiales/escribir.c [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105]) (CODIGO_sin_caracteres_especiales/estructuras.h [106]) (CODIGO_sin_caracteres_especiales/fecha.c [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]) (CODIGO_sin_caracteres_especiales/leer.c [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]) (CODIGO_sin_caracteres_especiales/listar.c [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]) (CODIGO_sin_caracteres_especiales/menus.c [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174] [175]) (CODIGO_sin_caracteres_especiales/modificar.c [176] [177] [178] [179]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 99--100
 [][] 
  []
@@ -863,12 +654,12 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 101--102
 [][] 
  []
 
-[192]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 102--103
 [][] 
  []
 
-
+[180]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 107--108
 [][] 
  []
@@ -878,7 +669,7 @@ Overfull \hbox (10.69934pt too wide) in paragraph at lines 107--108
 [][] 
  []
 
-[193]
+
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 114--115
 [][][][][] 
  []
@@ -908,12 +699,12 @@ Overfull \hbox (17.74933pt too wide) in paragraph at lines 115--116
 [][] 
  []
 
-
+[181]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 116--117
 [][] 
  []
 
-[194]
+
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 123--124
 [][][][][] 
  []
@@ -948,12 +739,12 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 124--125
 [][] 
  []
 
-
+[182]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
-[195] [196] [197]
+[183] [184] [185]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 165--166
 [][][][][] 
  []
@@ -973,12 +764,12 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 166--167
 [][] 
  []
 
-[198]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 167--168
 [][] 
  []
 
-
+[186]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 171--172
 [][] 
  []
@@ -988,7 +779,7 @@ Overfull \hbox (10.69934pt too wide) in paragraph at lines 171--172
 [][] 
  []
 
-[199]
+
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 176--177
 [][][][][] 
  []
@@ -1018,7 +809,7 @@ Overfull \hbox (17.74933pt too wide) in paragraph at lines 177--178
 [][] 
  []
 
-
+[187]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 178--179
 [][] 
  []
@@ -1028,7 +819,7 @@ Overfull \hbox (11.8493pt too wide) in paragraph at lines 183--184
 [][][][][] 
  []
 
-[200]
+
 Overfull \hbox (17.74933pt too wide) in paragraph at lines 184--185
 [][] 
  []
@@ -1058,27 +849,27 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 184--185
 [][] 
  []
 
-
+[188]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 185--186
 [][] 
  []
 
-[201] [202] [203] [204] [205] [206]
+[189] [190] [191] [192] [193] [194]
 Overfull \hbox (18.89929pt too wide) in paragraph at lines 355--356
 [][][][][] 
  []
 
-[207] [208] [209] [210]
+[195] [196] [197]
 Overfull \hbox (18.89929pt too wide) in paragraph at lines 407--408
 [][][][][] 
  []
 
-[211] [212] [213] [214] [215] [216] [217] [218]
+[198] [199] [200] [201] [202] [203] [204] [205] [206]
 Overfull \hbox (4.79932pt too wide) in paragraph at lines 629--630
 [][][][][] 
  []
 
-[219]
+
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 635--636
 [][][][][] 
  []
@@ -1088,33 +879,33 @@ Overfull \hbox (4.79932pt too wide) in paragraph at lines 639--640
 [][][][][] 
  []
 
-
+[207]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 641--642
 [][][][][] 
  []
 
-[220] [221] [222]) (CODIGO/preguntar.c [223]
+[208] [209] [210]) (CODIGO_sin_caracteres_especiales/preguntar.c
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
- [224] [225] [226] [227] [228])) [229] (Doc_ESI-SHARE.aux
+ [211] [212] [213] [214] [215] [216])) [217] (Doc_ESI-SHARE.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
  (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
 Package rerunfilecheck Info: File `Doc_ESI-SHARE.out' has not changed.
-(rerunfilecheck)             Checksum: 01AE9A663DC80E6BAE8E88D7B5B55C93;6552.
+(rerunfilecheck)             Checksum: 6B1E4234EFD9AEB9DAF6CBC87482B46F;5902.
  ) 
 Here is how much of TeX's memory you used:
- 19668 strings out of 475385
- 317789 string characters out of 2776908
- 1003420 words of memory out of 3000000
- 35567 multiletter control sequences out of 15000+600000
+ 19485 strings out of 475385
+ 315152 string characters out of 2776908
+ 1096264 words of memory out of 3000000
+ 35414 multiletter control sequences out of 15000+600000
  475874 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,604b,2073s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,6n,77p,607b,2073s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Doc_ESI-SHARE.pdf (230 pages, 4603707 bytes).
+Output written on Doc_ESI-SHARE.pdf (218 pages, 2728063 bytes).
 PDF statistics:
- 7571 PDF objects out of 8907 (max. 8388607)
- 5195 named destinations out of 6186 (max. 500000)
- 530 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7218 PDF objects out of 7423 (max. 8388607)
+ 5174 named destinations out of 6186 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

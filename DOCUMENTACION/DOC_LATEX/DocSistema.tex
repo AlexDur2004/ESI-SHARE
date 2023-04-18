@@ -5,53 +5,9 @@
 
 \subsection{Especificación del sistema}
 
-\subsubsection{División de los módulos}
-
-Aquí, se puede ver en cuántos subproblemas, hemos dividido el programa, y los módulos que van asociados a cada uno de ellos.
+Esta sección debe describir el análisis y la especificación de requisitos. Cómo se descompone el problema en distintos subproblemas y los módulos asociados a cada uno de ellos, acompañados de su especificación. También debe incluir el plan de desarrollo del \textit{software}.
 Las especificaciones de cada una de las funciones se puede encontrar en \href{DOC_DOXYGEN/index.html}{Doxygen} o en el apartado \ref{fig:CodigoModulos}.
-
-
-\begin{center}
-  \includegraphics[width=1.15\textwidth]{FOTOS/Organigrama_Proyecto.jpeg}
-\end{center}
-
-Puede ver la imagen completa en \href{FOTOS/Organigrama_Proyecto.jpeg}{Organigrama Proyecto}.
-
-\subsubsection{Relaciones de los módulos}
-
-Aquí, puede ver la organización de la descomposición modular del proyecto, es decir, la forma en la que están emparejados los módulos,
-para hacer que el programa funcione correctamente, y de la forma más óptima posible.\\
-\begin{center}
-  \includegraphics[width=1.1\textwidth]{FOTOS/Descomposicion_Modular.jpeg}
-\end{center}
-
-Puede ver la imagen completa en \href{FOTOS/Descomposicion_Modular.jpeg}{Descomposición Modular}.\\
-
-\subsubsection{Plan de desarrollo del Software}
-
-\bigskip
-
-\begin{tabular}{|p{2.5cm}|p{8cm}|p{2cm}|}
-  \hline
-  \textbf{Fase} & \textbf{Descripción} & \textbf{Duración} \\
-  \hline
-  Análisis & Se dividen todos los problemas en subproblemas, para planificar todos los requisitos que necesita cada función para que cumpla los objetivos. & 1 semana \\
-  \hline
-  Desarrollo & Creamos todas las funciones, para que el programa haga lo que queramos. & 3 semanas \\
-  \hline
-  Optimización & Tratamos de ver si hay partes del código que se puedan sustituir por funciones ya existentes, para reusar código, y hacer que el programa sea más liviano. & 1 semana \\
-  \hline
-  Pruebas & Testeamos cada función y módulo por separado, para más tarde probarlo como un todo, y checkear si el proyecto es funcional, si no es así, hay que arreglar los errores. & 2 semanas \\
-  \hline
-  Documentación & Una vez que se ha realizado todo, se van incluyendo las especificaciones de las funciones, al igual que se agregan comentarios al código. & 1 semana \\
-  \hline
-\end{tabular}
-
-\bigskip
-
-Tras haber pasado todas estas fases, el programa está totalmente preparado para ser distribuido a los usuarios, en este caso, los miembros de la comunidad universitaria de la ESI,
-es por esto que se pasa a una fase de Mantenimiento y Actualización, en la que se arreglan los errores que pueda tener el programa en las máquinas externas,
-al igual que se van incluyendo actualizaciones para hacer que el programa tenga más funcionalidades, como por ejemplo, una creación de un sistema de valoraciones, a la hora de acabar un viaje.
+Además, las relaciones entre módulos se puede ver en \ref{fig:DescomposicionModular}.
 
 \subsection{Módulos}
 
@@ -76,9 +32,9 @@ Para ver el código fuente del módulo puede ir a \ref{fig:ActualizarCod}, o ent
 \subsubsection{Buscar}
 
 Empleado para buscar todas las rutas posibles, que hay desde la ciudad que el usuario haya seleccionado
-hasta la ESI, para hacer que no se repitan todas las rutas, se usa otra matriz, donde se introduce la ruta impresa, para comprobar que no se haya escrito en pantalla anteriormente,
-y sólo listar las rutas no repetidas, y así ahorrar tiempo al usuario a la hora de crear un viaje. Una vez que el usuario selecciona la ruta, se escriben
-todos los pasos en el fichero correspondiente.\\
+hasta la ESI, para hacer que no se repitan
+todas las rutas, se usa otra matriz, donde se introduce la ruta impresa, para comprobar que no se haya escrito en pantalla anteriormente, y sólo listar las rutas no repetidas,
+y así ahorrar tiempo al usuario a la hora de crear un viaje. Una vez que el usuario selecciona la ruta, se escriben todos los pasos en el fichero correspondiente.\\
 
 Para ver el código fuente del módulo puede ir a \ref{fig:BuscarCod}, o entrar en \href{DOC_DOXYGEN/buscar_8h_source.html}{Doxygen}.
 \label{fig:Buscar}
@@ -180,145 +136,16 @@ Para ver el código fuente del módulo puede ir a \ref{fig:PreguntarCod}, o entr
 
 \subsubsection{Prueba de los módulos}
 
-Todos los módulos han sido probados a fondo, introduciendo valores aleatorios, poco a poco se han ido eliminando errores, haciendo que el programa sea infalible,
+Aquí, puede ver la organización de la descomposición modular del proyecto, es decir, la forma en la que están emparejados los módulos, para que el programa funcione.\\
+\begin{center}
+  \includegraphics[width=1.1\textwidth]{FOTOS/descomposicion_modular}
+\end{center}
+\label{fig:DescomposicionModular}
+
+Todos estos módulos han sido probados a fondo, introduciendo valores aleatorios, poco a poco se han ido eliminando errores, haciendo que el programa sea infalible,
 y no crashee al entrar en alguna función, como pasaba anteriormente con la aplicación en fase de desarrollo.
 
-\begin{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Usuario: hola - “Usuario no encontrado en nuestra base de datos.”
-    \item Usuario: usua1, Contraseña: - “La contraseña debe tener entre 1 y 8 caracteres.”
-    \item Usuario: usua1, Contraseña: 1111 - “La contraseña introducida es incorrecta.” Vuelve a pedir contraseña, hasta llegar a los 3 intentos.
-    \item Usuario: admin, Contraseña: 1234 - Accede al Menú de Administrador.
-    \item Usuario: usua1, Contraseña: 2023 - Accede al Menú de Usuario.
-  \end{itemize}
-  \item altaUsuario:
-  \begin{itemize}
-    \item Nombre: Manolo, Localidad: JER, Usuario: manol, Contraseña: - “La contraseña debe tener entre 1 y 8 caracteres.”
-    \item Nombre: Manolo, Localidad: JER, Usuario: usua1, Contraseña: 1234 - “El usuario ya está siendo usado.”
-    \item Nombre: Manolo, Localidad: JER, Usuario: u4323, Contraseña: 1234 - “El usuario ha sido agregado correctamente.”
-  \end{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Nombre: Federico, - “Su nombre completo se ha actualizado correctamente.”
-  \end{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Localidad: SAN - “Has seleccionado Sanlucar. Su localidad de residencia se ha actualizado correctamente.”
-  \end{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Usuario: admin - “El nombre de usuario ya está siendo usado.”
-    \item Usuario: u1234 - “El nombre de usuario es válido. Su nombre de usuario se ha actualizado correctamente.”
-  \end{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Contraseña antigua:  - “La contraseña debe tener entre 1 y 8 caracteres.”
-    \item Contraseña antigua: 1111 - “La contraseña introducida es incorrecta.” Vuelve a pedir contraseña, hasta llegar a los 3 intentos.
-    \item Contraseña antigua: 2023, Contraseña nueva:  - “La contraseña debe tener entre 1 y 8 caracteres.”
-    \item Contraseña antigua: 2023, Contraseña nueva: 4567 - “Su contraseña se ha actualizado correctamente.”
-  \end{itemize}
-  \item Acceso:
-  \begin{itemize}
-    \item Día: 10, Mes: 3, Año: 2000 - “El año debe ser posterior a 2022.”
-    \item Día: 10, Mes: 1, Año: 2023 - “La fecha ingresada es anterior a la fecha actual.”
-    \item Día: 20, Mes: 6, Año: 2023 - “No hay viajes en tu localidad para fechas futuras."
-    \item Día: 20, Mes: 6, Año: 2023 - “Hay viajes en tu localidad, pero para fechas futuras."
-    \item Día: 20, Mes: 6, Año: 2023 - “Si hay viajes en tu localidad para ese día se mostrarán."
-  \end{itemize}
-  \item Acceso:\\
-    Si tienes reservas, se mostrarán todas, y nos preguntará qué reserva queremos cancelar.
-  \item Acceso:
-  \begin{itemize}
-    \item Matrícula: XXX12 - “La matrícula debe tener 7 caracteres.”
-    \item Matrícula: XXX1234 - “Los 4 primeros caracteres de la matrícula deben ser números.”
-    \item Matrícula: XXX1234 - “Los 3 últimos caracteres de la matricula tienen que ser letras mayúsculas.”
-    \item Matrícula: 1234XXX - “La matrícula ya está registrada.”
-    \item Matrícula: 7865JTR, Nº de plazas: -1 - “Introduzca un número de plazas entre 1 y 9.”
-    \item Matrícula: 7865JTR, Nº de plazas: 5, Descripción: PE - “El vehículo ha sido agregado correctamente.”
-  \end{itemize}
-  \item Acceso:\\
-  Si tienes algún vehículo creado, hay que seleccionar el vehículo que queremos cambiar:
-  \begin{itemize}
-    \item OP: 1, Matrícula: XXX12 - “La matrícula debe tener 7 caracteres.”
-    \item OP: 1, Matrícula: XXX1234 - “Los 4 primeros caracteres de la matrícula deben ser números.”
-    \item OP: 1, Matrícula: XXX1234 - “Los 3 últimos caracteres de la matricula tienen que ser letras mayúsculas.”
-    \item OP: 1, Matrícula: 1234XXX - “La matrícula ya está registrada.”
-    \item OP: 1, Matrícula: 7841DEW - “La matrícula se ha cambiado correctamente.”
-    \item OP: 2, Plazas: -1 - “Introduzca un número de plazas entre 1 y 9.”
-    \item OP: 2, Plazas: 7 - “El número de plazas del vehiculo se ha actualizado correctamente.”
-    \item OP: 3, Descripción: Seat Panda - “La descripción del vehiculo se ha actualizado correctamente.”
-  \end{itemize}
-  \item Acceso:\\
-  Si tienes vehículos, se mostrarán todos, y nos preguntará qué vehículo queremos cancelar.\\
-  \item Acceso:\\
-  Si tienes vehículos registrados:
-  \begin{itemize}
-    \item Matrícula: 1234XXX, Día: 10, Mes: 3, Año: 2000 - El año debe ser posterior a 2023.
-    \item Matrícula: 1234XXX, Día: 10, Mes: 1, Año: 2023 - “La fecha ingresada es anterior a la fecha actual.”
-    \item Matrícula: 1234XXX, Día: 20, Mes: 6, Año: 2023, Ida/Vuelta: 1, Precio: -1 - “El precio debe estar entre 0 y 10.”
-    \item Matrícula: 1234XXX, Día: 20, Mes: 6, Año: 2023, Ida/Vuelta: 1, Precio: 3 /Ahora se verifica si el vehículo no tiene un viaje creado en ese día,
-    si no tiene ninguno te pide la ruta/, Ciudad de partida/Llegada: SAN, /Hay que seleccionar la ruta que queramos/.
-  \end{itemize}
-  \item Acceso:\\
-  Si tienes algún viaje creado que no haya sido ocupado, hay que seleccionar el viaje que queremos cambiar:
-  \begin{itemize}
-    \item OP: 1, Seleccionar una matrícula de la lista de vehículos que tiene el usuario. 
-    \item OP: 2, Introducir una fecha en la que el vehículo esté sin ningún viaje, ya que sólo se puede tener un viaje abierto por día. 
-    \item OP: 3, El coste debe estar entre 0 y 9.
-    \item OP: 4, Escoger una de las rutas, desde la ciudad que hayamos seleccionado.
-  \end{itemize}
-  \item Acceso:\\
-  Si tienes un viaje creado sin plazas ocupadas, puedes anularlo, y si tienes un viaje iniciado, puedes finalizarlo.\\
-  Seleccionas el número que sale en la lista, del viaje que quiere finalizar/anular.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario que quiere eliminar. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario que quiere modificar. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios del sistema.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario con el que quiere crear un vehículo. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la ID del usuario al que quiere eliminar el vehículo. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la ID del usuario al que quiere modificar el vehículo. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus vehículos, del sistema.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus vehículos, del sistema, y se le pide la matrícula del vehículo, para ver el historial de viajes que tiene.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios del sistema, y se le pide la ID del usuario del que quiere crear un viaje. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere finalizar un viaje. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere eliminar un viaje. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus viajes, del sistema, y se le pide la ID del usuario del que quiere modificar un viaje. Se puede escribir 0002 o 2.
-
-  \item Acceso:\\
-  Se muestra una lista de todos los usuarios, con sus viajes, del sistema.
-\end{itemize}
-
 \subsubsection{Prueba de integración}
-
-Ahora se exponen las pruebas de caja blanca y negra que hemos realizado cada miembro del equipo, a una de las funciones del programa.
-
-\includepdf[pages={1, 2, 3}]{FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf}
-
-\includepdf[pages={1, 2}]{FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf}
 
 \subsubsection{Plan de pruebas de aceptación}
 

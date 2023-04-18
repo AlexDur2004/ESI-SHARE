@@ -3,7 +3,7 @@
 
 #include <windows.h>
 
-//Cabecera: void color(int, int);
+//Prototipo: void color(int, int);
 //Precondicion: Necesita dos numeros asociado al color que se quiere colocar, uno para el fondo, y otro para el cuerpo del texto.
 //Postcondicion: Cambia de color, el fondo y el cuerpo del texto.
 void color(int, int);

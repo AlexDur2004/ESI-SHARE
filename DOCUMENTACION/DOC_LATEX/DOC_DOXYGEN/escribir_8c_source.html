@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESI-SHARE: escribir.c Source File</title>
+<title>ESI-SHARE: CODIGO_sin_caracteres_especiales/escribir.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Icono_ESI-SHARE.ico"/></td>
+  <td id="projectlogo"><img alt="Logo" src="icono_ESI-SHARE.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ESI-SHARE
    </div>
@@ -445,12 +445,12 @@ $(document).ready(function(){initNavTree('escribir_8c_source.html',''); initResi
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                {</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                    <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                        breakp=1;</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        altaAdmin(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas, 0);</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, 0);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        altaVehiculo(usuario, vehiculo, numVehiculos, num_usuario);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    <span class="keywordflow">case</span> 2:</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                        breakp=1;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, 0);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                        menuAdminViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, num_usuario);</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                }</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            }<span class="keywordflow">while</span>(breakp==0);</div>
@@ -471,7 +471,7 @@ $(document).ready(function(){initNavTree('escribir_8c_source.html',''); initResi
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                color(0, 15);</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                printf(<span class="stringliteral">&quot;%s\n&quot;</span>, vehiculo[vec_vehiculo[i]].id_mat);</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                color(0, 2);</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                printf(<span class="stringliteral">&quot;Numero de plazas: &quot;</span>);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                printf(<span class="stringliteral">&quot;Num de plazas: &quot;</span>);</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                color(0, 15);</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                printf(<span class="stringliteral">&quot;%s\n&quot;</span>,vehiculo[vec_vehiculo[i]].num_plazas);</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                color(0, 4);</div>
@@ -633,7 +633,7 @@ $(document).ready(function(){initNavTree('escribir_8c_source.html',''); initResi
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                    color(0, 15);</div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, viaje[vec[i]].estado);</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                    color(0, 3);</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    printf(<span class="stringliteral">&quot;Numero de plazas: &quot;</span>);</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    printf(<span class="stringliteral">&quot;Num de plazas: &quot;</span>);</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                    color(0, 15);</div>
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, viaje[vec[i]].plazas_libre);</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                    color(0, 3);</div>
@@ -703,7 +703,7 @@ $(document).ready(function(){initNavTree('escribir_8c_source.html',''); initResi
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>    color(0, 15);</div>
 <div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, viaje[vec[reserva]].estado);</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    color(0, 3);</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    printf(<span class="stringliteral">&quot;Numero de plazas: &quot;</span>);</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    printf(<span class="stringliteral">&quot;Num de plazas: &quot;</span>);</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    color(0, 15);</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, viaje[vec[reserva]].plazas_libre);</div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    color(0, 3);</div>
@@ -805,7 +805,7 @@ $(document).ready(function(){initNavTree('escribir_8c_source.html',''); initResi
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>escribir.c</b></li>
+    <li class="navelem"><a class="el" href="dir_3f330979380014eb19d4cf1593b79349.html">CODIGO_sin_caracteres_especiales</a></li><li class="navelem"><b>escribir.c</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

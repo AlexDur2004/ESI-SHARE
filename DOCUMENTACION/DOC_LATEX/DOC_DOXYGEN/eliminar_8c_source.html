@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESI-SHARE: eliminar.c Source File</title>
+<title>ESI-SHARE: CODIGO_sin_caracteres_especiales/eliminar.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Icono_ESI-SHARE.ico"/></td>
+  <td id="projectlogo"><img alt="Logo" src="icono_ESI-SHARE.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ESI-SHARE
    </div>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('eliminar_8c_source.html',''); initResi
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            color(0,15);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            printf(<span class="stringliteral">&quot;%s&quot;</span>, vehiculo[vec[m]].id_mat);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            color(0,3);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            printf(<span class="stringliteral">&quot; | Numero de plazas: &quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            printf(<span class="stringliteral">&quot; | Num de plazas: &quot;</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            color(0,15);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            printf(<span class="stringliteral">&quot;%s&quot;</span>, vehiculo[vec[m]].num_plazas);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            color(0,3);</div>
@@ -786,30 +786,24 @@ $(document).ready(function(){initNavTree('eliminar_8c_source.html',''); initResi
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    <span class="keywordflow">if</span>(vec!=NULL){ <span class="comment">//verifica que el usuario tiene reservas</span></div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        <span class="keywordflow">do</span>{</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>            listarReservas(usuario, viaje, numViajes, reservas, numReservas, num_user);</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            color(0, 14);</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>            printf(<span class="stringliteral">&quot;(%i)Salir.\n&quot;</span>, x+1);</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>            color(0, 15);</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            printf(<span class="stringliteral">&quot;Seleccione el viaje que desea cancelar:\n&quot;</span>);</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>            scanf(<span class="stringliteral">&quot;%i&quot;</span>,&amp;sel);</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            <span class="keywordflow">if</span>(sel==x+1)</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>            {</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>            }</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>            system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        }<span class="keywordflow">while</span>(sel&gt;x || sel&lt;1); <span class="comment">//comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones</span></div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span> </div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        eliminarReservas(reservas, numReservas, reservas[vec[sel-1]].id_viaje);</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>        plazas=atoi(viaje[vec_viaje[sel-1]].plazas_libre); <span class="comment">//aumenta en uno las plazas</span></div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>        plazas++;</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        sprintf(viaje[vec_viaje[sel-1]].plazas_libre,<span class="stringliteral">&quot;%01d&quot;</span>,plazas);</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        actualizarViaje(viaje, numViajes);</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>    }</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    {</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>        printf(<span class="stringliteral">&quot;No tiene viajes reservados\n&quot;</span>);</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>        system(<span class="stringliteral">&quot;PAUSE&quot;</span>);</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    }</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>}</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>            printf(<span class="stringliteral">&quot;Seleccione el viaje que desea cancelar:\n&quot;</span>);</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>            scanf(<span class="stringliteral">&quot;%i&quot;</span>,&amp;sel);</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        }<span class="keywordflow">while</span>(sel&gt;x || sel&lt;1); <span class="comment">//comprueba que el usuario haya elegido un viaje que se encuentre en el rango de opciones</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span> </div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        eliminarReservas(reservas, numReservas, reservas[vec[sel-1]].id_viaje);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        plazas=atoi(viaje[vec_viaje[sel-1]].plazas_libre); <span class="comment">//aumenta en uno las plazas</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        plazas++;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        sprintf(viaje[vec_viaje[sel-1]].plazas_libre,<span class="stringliteral">&quot;%01d&quot;</span>,plazas);</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        actualizarViaje(viaje, numViajes);</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    }</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>    {</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>        printf(<span class="stringliteral">&quot;No tiene viajes reservados\n&quot;</span>);</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        system(<span class="stringliteral">&quot;PAUSE&quot;</span>);</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>    }</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>}</div>
 <div class="ttc" id="astruct_estr___pasos_html"><div class="ttname"><a href="struct_estr___pasos.html">Estr_Pasos</a></div><div class="ttdef"><b>Definition:</b> <a href="estructuras_8h_source.html#l00032">estructuras.h:32</a></div></div>
 <div class="ttc" id="astruct_estr___reservas_html"><div class="ttname"><a href="struct_estr___reservas.html">Estr_Reservas</a></div><div class="ttdef"><b>Definition:</b> <a href="estructuras_8h_source.html#l00046">estructuras.h:46</a></div></div>
 <div class="ttc" id="astruct_estr___usuario_html"><div class="ttname"><a href="struct_estr___usuario.html">Estr_Usuario</a></div><div class="ttdef"><b>Definition:</b> <a href="estructuras_8h_source.html#l00004">estructuras.h:4</a></div></div>
@@ -820,7 +814,7 @@ $(document).ready(function(){initNavTree('eliminar_8c_source.html',''); initResi
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>eliminar.c</b></li>
+    <li class="navelem"><a class="el" href="dir_3f330979380014eb19d4cf1593b79349.html">CODIGO_sin_caracteres_especiales</a></li><li class="navelem"><b>eliminar.c</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

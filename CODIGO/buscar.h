@@ -6,7 +6,7 @@
 #include <string.h>
 #include "preguntar.h"
 
-//Cabecera: void buscadorRutas(Estr_Rutas **, int, int, Estr_Localidad *, int, Estr_Pasos *, int, char [7]);
+//Prototipo: void buscadorRutas(Estr_Rutas **, int, int, Estr_Localidad *, int, Estr_Pasos *, int, char [7]);
 //Precondicion: Tener las estructuras "ruta", "localidad" y "pasos", con sus contadores. Ademas, debemos tener una cadena inicializada con la id de viaje.
 //Postcondicion: Buscar todas las rutas posibles, desde la ciudad seleccionada hasta la ESI.
 void buscadorRutas(Estr_Rutas **, int, int, Estr_Localidad *, int, Estr_Pasos *, int, char [7]);

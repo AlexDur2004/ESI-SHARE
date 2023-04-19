@@ -30,10 +30,10 @@ void modificarViaje(Estr_Usuario *, Estr_Vehiculo *, int, Estr_Viaje *, int, Est
 //Postcondicion: Modificar el nombre del usuario.
 void modificarPerfilNombre(Estr_Usuario *, int, int);
 
-//Cabecera: void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Localidad *, int, int);
-//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondicion: Modificar la localidad del usuario.
-void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Cabecera: void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras "usuario", "viaje", "localidad" y "reservas" inicializadas, con sus contadores.
+//Postcondicion: Modificar la localidad del usuario, si no tiene ninguna reserva activa, ya que al buscar una reserva, se selecciona si pasa por su localidad.
+void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 
 //Cabecera: void modificarPerfilUsuario(Estr_Usuario *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
@@ -45,10 +45,10 @@ void modificarPerfilUsuario(Estr_Usuario *, int, int);
 //Postcondicion: Modificar la contrasena del usuario.
 void modificarPerfilContrasena(Estr_Usuario *, int, int);
 
-//Cabecera: void modificarAdminUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
+//Cabecera: void modificarAdminUsuario(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
 //Postcondicion: Modificar los datos de cualquier usuario.
-void modificarAdminUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
+void modificarAdminUsuario(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int);
 
 //Cabecera: void modificarAdminVehiculo(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.

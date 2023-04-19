@@ -10,7 +10,6 @@
 Aquí, se puede ver en cuántos subproblemas, hemos dividido el programa, y los módulos que van asociados a cada uno de ellos.
 Las especificaciones de cada una de las funciones se puede encontrar en \href{DOC_DOXYGEN/index.html}{Doxygen} o en el apartado \ref{fig:CodigoModulos}.
 
-
 \begin{center}
   \includegraphics[width=1.15\textwidth]{FOTOS/Organigrama_Proyecto.jpeg}
 \end{center}
@@ -180,8 +179,20 @@ Para ver el código fuente del módulo puede ir a \ref{fig:PreguntarCod}, o entr
 
 \subsubsection{Prueba de los módulos}
 
+Ahora se expondrán todas las pruebas de caja blanca y negra que hemos realizado cada miembro del equipo, a una de las funciones del programa.
+
+\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf}
+
+\includepdf[pages=-]{FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf}
+
+\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf}
+
+\includepdf[pages=-]{FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf}
+
+\subsubsection{Prueba de integración}
+
 Todos los módulos han sido probados a fondo, introduciendo valores aleatorios, poco a poco se han ido eliminando errores, haciendo que el programa sea infalible,
-y no crashee al entrar en alguna función, como pasaba anteriormente con la aplicación en fase de desarrollo.
+y no crashee al entrar en alguna función, como pasaba anteriormente con la aplicación en fase de desarrollo.\\
 
 Aquí, se pueden ver las pruebas realizadas de las funciones que necesitan una entrada de datos:
 
@@ -197,7 +208,7 @@ Aquí, se pueden ver las pruebas realizadas de las funciones que necesitan una e
   \item \href{DOC_DOXYGEN/escribir_8c_source.html}{altaUsuario}:
   \begin{itemize}
     \item Nombre: Manolo, Localidad: JER, Usuario: manol, Contraseña: - “La contraseña debe tener entre 1 y 8 caracteres.”
-    \item Nombre: Manolo, Localidad: JER, Usuario: usua1, Contraseña: 1234 - “El usuario ya está siendo usado.”
+    \item Nombre: Manolo, Localidad: JER, Usuario: usua1 - “El usuario ya está siendo usado.”
     \item Nombre: Manolo, Localidad: JER, Usuario: u4323, Contraseña: 1234 - “El usuario ha sido agregado correctamente.”
   \end{itemize}
   \item \href{DOC_DOXYGEN/modificar_8c_source.html}{modificarPerfilNombre}:
@@ -314,16 +325,6 @@ Aquí, se pueden ver las pruebas realizadas de las funciones que necesitan una e
   Se muestra una lista de todos los usuarios, con sus viajes, del sistema.
 \end{itemize}
 
-\subsubsection{Prueba de integración}
-
-Ahora se exponen las pruebas de caja blanca y negra que hemos realizado cada miembro del equipo, a una de las funciones del programa.
-
-\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf}
-
-\includepdf[pages=-]{FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf}
-
-\includepdf[pages=-]{FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf}
-
 \subsubsection{Plan de pruebas de aceptación}
 
 En esta sección, se va a definir algunas rutas con las que usted podrá probar todos los puntos del programa. No se ha establecido una serie de datos específicos, para que así pueda probar con
@@ -366,7 +367,7 @@ Habiendo probado que todo funciona, puede volver al menú de selección de puest
 
 Al haber probado esto, puede pulsar 2, para dirigirse al menú de \textbf{Vehículos}, donde tendrá a su vista un listado con todos los vehículos, que tiene registrados en el sistema, si lo desea,
 puede explorar los menús y realizar diferentes acciones para probar el sistema, creando nuevos vehículos, o modificando y eliminando los existentes. Aquí puede ver que al eliminar un vehículo,
-se eliminarán tanto sus viajes, reservas y pasos.
+se eliminarán tanto sus viajes, reservas y pasos. Además, no le dejará modificar ni eliminar vehículos, que tengan viajes abiertos, con plazas ocupadas, o iniciados o cerrados.
 \begin{center}
   \includegraphics[]{FOTOS/menuConductorVehiculo.png}
 \end{center}

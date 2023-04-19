@@ -665,7 +665,7 @@
 1681839284 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\colores.h
 	<windows.h>
 
-1681839284 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.h
+1681937990 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -715,7 +715,7 @@
 	<string.h>
 	"preguntar.h"
 
-1681856221 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
+1681938333 c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -765,10 +765,10 @@
 	"leer.h"
 	"menus.h"
 
-1681854658 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
+1681938041 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\menus.c
 	"menus.h"
 
-1681856221 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
+1681938333 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\modificar.c
 	"modificar.h"
 
 1681839284 source:c:\users\adura\mi unidad\uca\mp\esi-share\codigo\preguntar.c

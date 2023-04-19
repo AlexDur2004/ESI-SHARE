@@ -29,11 +29,11 @@ void menuUsuario(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, E
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 void menuPasajero(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 
-//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
 //Tambien necesitamos las estructuras inicializados, con sus contadores.
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
-void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 
 //Cabecera: void menuPasajeroViajes(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
@@ -47,11 +47,11 @@ void menuPasajeroViajes(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *,
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 void menuConductor(Estr_Usuario *, int, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 
-//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
 //Tambien necesitamos las estructuras inicializados, con sus contadores.
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
-void menuConductorPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+void menuConductorPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 
 //Cabecera: void menuConductorVehiculo(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *, int, Estr_Viaje *, int, Estr_Pasos *, int, Estr_Reservas *, int, Estr_Localidad *, int, Estr_Rutas **, int, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".

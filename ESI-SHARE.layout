@@ -2,6 +2,81 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="CODIGO\leer.c" open="1" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15159" topLine="337" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\preguntar.h" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="142" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\modificar.h" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1865" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\actualizar.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="660" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\listar.h" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1652" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\menus.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2146" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\colores.c" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="296" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\encontrar.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3745" topLine="214" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="914" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\colores.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="84" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\escribir.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7471" topLine="155" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\acceso.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="131" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\buscar.c" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5254" topLine="134" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\estructuras.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\fecha.c" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4355" topLine="12" />
+		</Cursor>
+	</File>
 	<File name="CODIGO\eliminar.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="6409" topLine="37" />
@@ -12,69 +87,14 @@
 			<Cursor1 position="2578" topLine="56" />
 		</Cursor>
 	</File>
-	<File name="CODIGO\fecha.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="998" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\modificar.h" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="700" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\menus.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="27527" topLine="566" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\leer.c" open="1" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="15159" topLine="337" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\colores.h" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="84" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\escribir.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="210" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\colores.c" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="296" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\escribir.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7471" topLine="155" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\actualizar.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="660" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\buscar.c" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5254" topLine="134" />
-		</Cursor>
-	</File>
 	<File name="CODIGO\actualizar.c" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="873" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="CODIGO\preguntar.h" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CODIGO\modificar.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="142" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\encontrar.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="892" topLine="1" />
+			<Cursor1 position="36818" topLine="667" />
 		</Cursor>
 	</File>
 	<File name="CODIGO\acceso.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -82,34 +102,14 @@
 			<Cursor1 position="25" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="CODIGO\eliminar.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="34393" topLine="659" />
+		</Cursor>
+	</File>
 	<File name="CODIGO\listar.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="17850" topLine="402" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\encontrar.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3745" topLine="46" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="914" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\modificar.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="13291" topLine="182" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\listar.h" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1652" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\estructuras.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="CODIGO\buscar.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -117,9 +117,14 @@
 			<Cursor1 position="146" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="CODIGO\eliminar.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CODIGO\menus.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="34055" topLine="653" />
+			<Cursor1 position="25220" topLine="316" />
+		</Cursor>
+	</File>
+	<File name="CODIGO\escribir.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="210" topLine="1" />
 		</Cursor>
 	</File>
 	<File name="CODIGO\leer.h" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -127,19 +132,14 @@
 			<Cursor1 position="2850" topLine="8" />
 		</Cursor>
 	</File>
-	<File name="CODIGO\acceso.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CODIGO\encontrar.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="131" topLine="0" />
+			<Cursor1 position="892" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="CODIGO\menus.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CODIGO\fecha.h" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="8025" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="CODIGO\fecha.c" open="1" top="1" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4355" topLine="12" />
+			<Cursor1 position="869" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

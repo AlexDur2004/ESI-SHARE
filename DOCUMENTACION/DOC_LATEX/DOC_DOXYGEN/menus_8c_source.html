@@ -213,7 +213,7 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">switch</span>(opc)</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                menuPasajeroPerfil(usuario, numUsuarios, localidad, numLocalidades, i);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                menuPasajeroPerfil(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">case</span> 2:</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                menuPasajeroViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);</div>
@@ -225,12 +225,12 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">//Precondicion: Tener el entero &quot;i&quot;, que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura &quot;usuario&quot;.</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">//Tambien necesitamos las estructuras inicializados, con sus contadores.</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> menuPasajeroPerfil(<a class="code hl_struct" href="struct_estr___usuario.html">Estr_Usuario</a> *usuario, <span class="keywordtype">int</span> numUsuarios, <a class="code hl_struct" href="struct_estr___localidad.html">Estr_Localidad</a> *localidad, <span class="keywordtype">int</span> numLocalidades, <span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> menuPasajeroPerfil(<a class="code hl_struct" href="struct_estr___usuario.html">Estr_Usuario</a> *usuario, <span class="keywordtype">int</span> numUsuarios, <a class="code hl_struct" href="struct_estr___viaje.html">Estr_Viaje</a> *viaje, <span class="keywordtype">int</span> numViajes, <a class="code hl_struct" href="struct_estr___reservas.html">Estr_Reservas</a> *reservas, <span class="keywordtype">int</span> numReservas, <a class="code hl_struct" href="struct_estr___localidad.html">Estr_Localidad</a> *localidad, <span class="keywordtype">int</span> numLocalidades, <span class="keywordtype">int</span> i)</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>{</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">int</span> opc;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
@@ -280,7 +280,7 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                modificarPerfilNombre(usuario, numUsuarios, i);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                modificarPerfilUsuario(usuario, numUsuarios, i);</div>
@@ -370,7 +370,7 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">switch</span>(opc)</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        {</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                menuConductorPerfil(usuario, numUsuarios, localidad, numLocalidades, i);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                menuConductorPerfil(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">case</span> 2:</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                menuConductorVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);</div>
@@ -385,12 +385,12 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>}</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);</span></div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">//Precondicion: Tener el entero &quot;i&quot;, que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura &quot;usuario&quot;.</span></div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">//Tambien necesitamos las estructuras inicializados, con sus contadores.</span></div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">//Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.</span></div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="keywordtype">void</span> menuConductorPerfil(<a class="code hl_struct" href="struct_estr___usuario.html">Estr_Usuario</a> *usuario, <span class="keywordtype">int</span> numUsuarios, <a class="code hl_struct" href="struct_estr___localidad.html">Estr_Localidad</a> *localidad, <span class="keywordtype">int</span> numLocalidades, <span class="keywordtype">int</span> i)</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="keywordtype">void</span> menuConductorPerfil(<a class="code hl_struct" href="struct_estr___usuario.html">Estr_Usuario</a> *usuario, <span class="keywordtype">int</span> numUsuarios, <a class="code hl_struct" href="struct_estr___viaje.html">Estr_Viaje</a> *viaje, <span class="keywordtype">int</span> numViajes, <a class="code hl_struct" href="struct_estr___reservas.html">Estr_Reservas</a> *reservas, <span class="keywordtype">int</span> numReservas, <a class="code hl_struct" href="struct_estr___localidad.html">Estr_Localidad</a> *localidad, <span class="keywordtype">int</span> numLocalidades, <span class="keywordtype">int</span> i)</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>{</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordtype">int</span> opc;</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
@@ -440,7 +440,7 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                modificarPerfilNombre(usuario, numUsuarios, i);</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                modificarPerfilUsuario(usuario, numUsuarios, i);</div>
@@ -640,7 +640,7 @@ $(document).ready(function(){initNavTree('menus_8c_source.html',''); initResizab
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                eliminarAdminUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas);</div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                modificarAdminUsuario(usuario, numUsuarios, localidad, numLocalidades);</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                modificarAdminUsuario(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades);</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>            <span class="keywordflow">case</span> 4:</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                listarUsuarios(usuario, numUsuarios);</div>

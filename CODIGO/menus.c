@@ -117,7 +117,7 @@ void menuPasajero(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
         switch(opc)
         {
             case 1:
-                menuPasajeroPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
+                menuPasajeroPerfil(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);
                 break;
             case 2:
                 menuPasajeroViajes(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
@@ -129,12 +129,12 @@ void menuPasajero(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicul
     }
 }
 
-//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Cabecera: void menuPasajeroPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
 //Tambien necesitamos las estructuras inicializados, con sus contadores.
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 
-void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
+void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
@@ -184,7 +184,7 @@ void menuPasajeroPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *
                 modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
+                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);
                 break;
             case 3:
                 modificarPerfilUsuario(usuario, numUsuarios, i);
@@ -274,7 +274,7 @@ void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
         switch(opc)
         {
             case 1:
-                menuConductorPerfil(usuario, numUsuarios, localidad, numLocalidades, i);
+                menuConductorPerfil(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);
                 break;
             case 2:
                 menuConductorVehiculo(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas, localidad, numLocalidades, ruta, numRutas, numRutas2, i);
@@ -289,12 +289,12 @@ void menuConductor(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *vehicu
     }
 }
 
-//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Localidad *, int, int);
+//Cabecera: void menuConductorPerfil(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
 //Precondicion: Tener el entero "i", que nos indica la posicion del usuario que ha iniciado sesion en el sistema, en la estructura "usuario".
 //Tambien necesitamos las estructuras inicializados, con sus contadores.
 //Postcondicion: Llevarte a las diferentes funciones, a partir de la opcion que se escriba.
 
-void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
+void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     int opc;
 
@@ -344,7 +344,7 @@ void menuConductorPerfil(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad 
                 modificarPerfilNombre(usuario, numUsuarios, i);
                 break;
             case 2:
-                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, i);
+                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, i);
                 break;
             case 3:
                 modificarPerfilUsuario(usuario, numUsuarios, i);
@@ -544,7 +544,7 @@ void menuAdminUsuarios(Estr_Usuario *usuario, int numUsuarios, Estr_Vehiculo *ve
                 eliminarAdminUsuario(usuario, numUsuarios, vehiculo, numVehiculos, viaje, numViajes, pasos, numPasos, reservas, numReservas);
                 break;
             case 3:
-                modificarAdminUsuario(usuario, numUsuarios, localidad, numLocalidades);
+                modificarAdminUsuario(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades);
                 break;
             case 4:
                 listarUsuarios(usuario, numUsuarios);

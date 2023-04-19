@@ -63,10 +63,12 @@ Como hemos comentado anteriormente, queremos dar un servicio de calidad, es por 
 
 El proyecto tiene algunas restricciones, las cuales han sido impuestas para que no haya fallos, aunque esto ha hecho que hagan falta más líneas de código.
 \begin{itemize}
-  \item En todos los escaneos, se tiene que introducir como mínimo 1 dígito/carácter.
+  \item En todas las entradas de datos, se tiene que introducir como mínimo 1 dígito ó carácter.
   \item Dos usuarios no pueden tener el mismo nombre de usuario en la base de datos.
-  \item Se ha realizado una lista con las siglas de todas las localidades de la provincia de Cádiz, para evitar errores a la hora de comparar las ciudades.
-  \item Al introducir una fecha y horas, tienen que ser posteriores a las actuales, el año introducido debe ser posterior a 2022.
+  \item Para modificar la localidad de residencia del usuario, el usuario no puede tener reservas activas.
+  \item A la hora de reservar un viaje, sólo se mostrarán los viajes que transcurran durante la fecha establecida y que pasen por su localidad de residencia.
+  \item Hay que escribir en mayúsculas las siglas de la lista de localidades de la provincia de Cádiz. Esto se ha realizado para evitar errores a la hora de comparar las ciudades.
+  \item Al introducir una fechas y horas, estas tienen que ser posteriores a las actuales, el año introducido debe ser posterior a 2022.
   \item Para darle de alta a un vehículo, su matrícula tiene que ser correcta (con 4 dígitos y 3 caracteres) y no puede estar registrada en el sistema. Además, el número de plazas debe estar entre 1 y 9.
   \item No se puede ni modificar ni eliminar un vehículo, si tiene viajes abiertos, con plazas ocupadas, o iniciados o cerrados.
   \item Sólo se pueden modificar o anular viajes, si no tienen ninguna plaza ocupada.
@@ -98,9 +100,9 @@ También se ha hecho uso de ficheros temporales, para eliminar/modificar, como s
 
 \subsection{Manual de instalación}
 
-Para usar el programa, sólo tiene que dirigirse a la carpeta \href{run:./../../SETUP}{SETUP}, donde encontrará un acceso directo, llamado ESI-SHARE, que tiene como ruta, el archivo ejecutable del programa.
+Para usar el programa, sólo tiene que dirigirse a la \href{run:./../..}{carpeta principal}, donde encontrará el archivo ejecutable del programa, llamado ESI-SHARE.
 Otra forma sería instalar \href{https://www.codeblocks.org/}{Code::Blocks}, y ejecutar el archivo de proyecto ESI-SHARE.cbp.
-\newpage
+
 \begin{itemize}
   \item Requisitos mínimos del sistema:
   \begin{itemize}
@@ -108,7 +110,7 @@ Otra forma sería instalar \href{https://www.codeblocks.org/}{Code::Blocks}, y e
     \item Memoria RAM: 2GB
     \item Espacio en disco duro: 100MB
   \end{itemize}
-  \item Es recomendable usar cualquier versión de Windows, para que no haya conflicto a la hora de usar algunas funciones.
+  \item Es recomendable usar algunas de las versiones de Windows, para que no haya conflicto a la hora de usar algunas funciones.
 \end{itemize}
 
 \bigskip
@@ -150,20 +152,20 @@ dependiendo de lo que quiera hacer, seleccionará uno u otro, esto se puede camb
 \begin{itemize}
   \item Si elige la opción de ser \textbf{Pasajero}, podrá:
   \begin{itemize}
-    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos.
-    \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá reservar un viaje ya existente que pase por su localidad, al igual que cancelar cualquier reserva.
+    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos, aunque con algunas limitaciones \ref{fig:Limitaciones}.
+    \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá reservar un viaje ya existente que pase por su localidad, al igual que cancelar cualquier reserva, que cumple las condiciones de \ref{fig:Limitaciones}.
   \end{itemize}
   \item Si elige la opción de ser \textbf{Conductor}, podrá:
   \begin{itemize}
-    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos.
-    \item Pasar al menú de \textbf{Vehículos}, para introducir nuevos vehículos, modificarlos o incluso eliminarlos. Para esto, la matrícula del vehículo no puede existir en la base de datos.
+    \item Entrar en el menú de \textbf{Perfil}, donde puede ver todos sus datos personales, al igual que si selecciona una de las opciones, podrá modificar cada uno de sus datos, aunque con algunas limitaciones \ref{fig:Limitaciones}.
+    \item Pasar al menú de \textbf{Vehículos}, para introducir nuevos vehículos, modificarlos o incluso eliminarlos. Para esto, la matrícula del vehículo no puede existir en la base de datos, además de algunas restricciones que están en \ref{fig:Limitaciones}.
     \item Acceder al menú de \textbf{Viajes}, en el que se le permitirá crear un viaje nuevo, siempre y cuando no haya dos abiertos en el mismo día, habría que acabar uno para empezar el siguiente,
     todo esto con el objetivo de que no se solapen los viajes. Además, se pueden modificar los viajes, si estos están abiertos y sin plazas reservadas, e incluso anular ó finalizar los viajes,
-    esta selección la hará automáticamente el sistema, dependiendo del estado del viaje.
+    esta selección la hará automáticamente el sistema, dependiendo del estado del viaje. Todo esto está en \ref{fig:Limitaciones}.
   \end{itemize}
 \end{itemize}
 
-Asimismo, hay un menú especial, si accede con las credenciales del \textbf{Administrador}. En este menú, tendrá acceso a todo tipo de información de la base de datos, como:
+Asimismo, hay un menú especial si accede con las credenciales del \textbf{Administrador}. En este menú, tendrá acceso a todo tipo de información de la base de datos, como:
 \begin{itemize}
   \item Entrar en el menú de \textbf{Usuarios}, donde puede crear un usuario desde cero, eliminar cualquier usuario del sistema, modificar los datos personales de cualquiera,
   e incluso obtener una lista con todos los usuarios que hay en el sistema.

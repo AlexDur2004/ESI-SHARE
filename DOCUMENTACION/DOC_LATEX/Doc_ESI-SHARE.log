@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  19 APR 2023 00:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.4.3)  19 APR 2023 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,7 +392,7 @@ LaTeX Info: Redefining \% on input line 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...e integración}{24}{subsubsection.0.3.3.2}
+l.33 ...e integración}{31}{subsubsection.0.3.3.2}
                                                   % [1
 
 ])
@@ -458,10 +458,10 @@ Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 55.
 <FOTOS/menuPrincipal.png, id=316, 158.84344pt x 63.98906pt>
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
-Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 136.
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 138.
 (pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
  [10 <./FOTOS/menuPrincipal.png>]
-Overfull \hbox (7.69861pt too wide) in paragraph at lines 159--160
+Overfull \hbox (7.69861pt too wide) in paragraph at lines 161--162
 \OT1/cmr/m/n/12 mo-di-fi-car-los o in-clu-so eli-mi-nar-los. Pa-ra es-to, la matr^^S^^Pcu-la del veh^^S^^Pcu-
  []
 
@@ -469,13 +469,13 @@ Overfull \hbox (7.69861pt too wide) in paragraph at lines 159--160
 \openout2 = `DocSistema.aux'.
 
  (DocSistema.tex
-<FOTOS/Organigrama_Proyecto.jpeg, id=334, 929.1513pt x 825.8052pt>
+<FOTOS/Organigrama_Proyecto.jpeg, id=339, 933.4875pt x 827.7324pt>
 File: FOTOS/Organigrama_Proyecto.jpeg Graphic file (type jpg)
 <use FOTOS/Organigrama_Proyecto.jpeg>
-Package pdftex.def Info: FOTOS/Organigrama_Proyecto.jpeg  used on input line 15.
-(pdftex.def)             Requested size: 448.49762pt x 398.61234pt.
+Package pdftex.def Info: FOTOS/Organigrama_Proyecto.jpeg  used on input line 14.
+(pdftex.def)             Requested size: 448.49762pt x 397.68594pt.
 
-Overfull \hbox (58.49762pt too wide) in paragraph at lines 15--16
+Overfull \hbox (58.49762pt too wide) in paragraph at lines 14--15
  [] 
  []
 
@@ -484,389 +484,452 @@ Overfull \hbox (58.49762pt too wide) in paragraph at lines 15--16
 
 
  <./FOTOS/Organigrama_Proyecto.jpeg>]
-<FOTOS/Descomposicion_Modular.jpeg, id=340, 1083.5682pt x 1173.6648pt>
+<FOTOS/Descomposicion_Modular.jpeg, id=345, 1083.5682pt x 1173.6648pt>
 File: FOTOS/Descomposicion_Modular.jpeg Graphic file (type jpg)
 <use FOTOS/Descomposicion_Modular.jpeg>
-Package pdftex.def Info: FOTOS/Descomposicion_Modular.jpeg  used on input line 25.
+Package pdftex.def Info: FOTOS/Descomposicion_Modular.jpeg  used on input line 24.
 (pdftex.def)             Requested size: 429.00238pt x 464.65808pt.
 
-Overfull \hbox (39.00238pt too wide) in paragraph at lines 25--26
+Overfull \hbox (39.00238pt too wide) in paragraph at lines 24--25
  [] 
  []
 
 
-Overfull \hbox (2.70859pt too wide) in paragraph at lines 36--37
+Overfull \hbox (2.70859pt too wide) in paragraph at lines 35--36
 []|\OT1/cmr/bx/n/12 Duraci^^Son| 
  []
 
 
-Overfull \hbox (2.65045pt too wide) in paragraph at lines 46--46
+Overfull \hbox (2.65045pt too wide) in paragraph at lines 45--45
 []|\OT1/cmr/m/n/12 Documentaci^^Son| 
  []
 
 
-Overfull \hbox (26.57468pt too wide) in paragraph at lines 34--49
+Overfull \hbox (26.57468pt too wide) in paragraph at lines 33--48
 [][] 
  []
 
 [14 <./FOTOS/Descomposicion_Modular.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+Underfull \hbox (badness 10000) in paragraph at lines 61--64
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--82
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--118
+Underfull \hbox (badness 10000) in paragraph at lines 111--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 141--144
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-[19] [20]
-Overfull \hbox (0.52953pt too wide) in paragraph at lines 240--241
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=398, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 184.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 184.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=401, page=1, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 184.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[19]
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+ [20 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=428, page=2, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[21 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=545, page=3, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 184.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[22 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=613, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf  used on input line 186.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf  used on input line 186.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=616, page=1, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 186.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[23 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=632, page=2, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[24 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=640, page=3, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[25 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=648, page=4, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
+Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 186.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[26 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=725, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 188.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 188.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=728, page=1, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 188.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[27 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=744, page=2, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 188.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[28 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, id=840, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf  used on input line 190.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf  used on input line 190.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, id=843, page=1, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page1 used on input line 190.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page1 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page1 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page1 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 1>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page1 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[29 <./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf>]
+
+pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, id=854, page=2, 597.432pt x 845.07718pt>
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page2 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page2 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf Graphic file (type pdf)
+<use FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf, page 2>
+Package pdftex.def Info: FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf , page2 used on input line 190.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+[30 <./FOTOS/Pruebas_Luis_Enrique_Vazquez_Vera.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+
+ []
+
+[31]
+Overfull \hbox (0.52953pt too wide) in paragraph at lines 251--252
 []\OT1/cmr/m/n/12 Matr^^S^^Pcu-la: 7865JTR, N\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 de pla-zas: 5, Des-crip-ci^^Son: PE - \El veh^^S^^Pcu-
  []
 
-[21] [22] [23]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=443, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf  used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=446, page=1, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[24]
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page1 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
- [25 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=471, page=2, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page2 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[26 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, id=588, page=3, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf , page3 used on input line 321.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[27 <./FOTOS/Pruebas_Alejandro_Duran_Obregon.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=656, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf  used on input line 323.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf  used on input line 323.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=659, page=1, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 323.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page1 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[28 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=675, page=2, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page2 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[29 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=682, page=3, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 3>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page3 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[30 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, id=691, page=4, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf, page 4>
-Package pdftex.def Info: FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf , page4 used on input line 323.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[31 <./FOTOS/Pruebas_Jose_Antonio_Ruiz_Minan.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=768, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 325.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf  used on input line 325.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=771, page=1, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 325.
-(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 1>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page1 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[32 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
-
-pdfTeX warning: pdflatex (file ./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, id=787, page=2, 597.432pt x 845.07718pt>
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-File: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf Graphic file (type pdf)
-<use FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf, page 2>
-Package pdftex.def Info: FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf , page2 used on input line 325.
-(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
-[33 <./FOTOS/Pruebas_Alejandro_Ruiz_del_Pino.pdf>]
+[32] [33] [34] [35]
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
-Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 336.
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 337.
 (pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
-<FOTOS/menuSeleccionUsuario.png, id=885, 109.91063pt x 76.78688pt>
+<FOTOS/menuSeleccionUsuario.png, id=1046, 109.91063pt x 76.78688pt>
 File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
 <use FOTOS/menuSeleccionUsuario.png>
-Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 343.
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 344.
 (pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
 File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 <use FOTOS/menuPasajeroPerfil.png>
-Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 346.
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 347.
 (pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
- [34 <./FOTOS/menuSeleccionUsuario.png>]
 File: FOTOS/menuPasajeroViaje.png Graphic file (type png)
 <use FOTOS/menuPasajeroViaje.png>
-Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 354.
+Package pdftex.def Info: FOTOS/menuPasajeroViaje.png  used on input line 355.
 (pdftex.def)             Requested size: 212.2926pt x 197.23637pt.
+ [36 <./FOTOS/menuSeleccionUsuario.png>]
 File: FOTOS/menuSeleccionUsuario.png Graphic file (type png)
 <use FOTOS/menuSeleccionUsuario.png>
-Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 360.
+Package pdftex.def Info: FOTOS/menuSeleccionUsuario.png  used on input line 361.
 (pdftex.def)             Requested size: 109.91034pt x 76.78668pt.
 File: FOTOS/menuPasajeroPerfil.png Graphic file (type png)
 <use FOTOS/menuPasajeroPerfil.png>
-Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 363.
+Package pdftex.def Info: FOTOS/menuPasajeroPerfil.png  used on input line 364.
 (pdftex.def)             Requested size: 255.95561pt x 184.4386pt.
- [35]
+ [37]
 File: FOTOS/menuConductorVehiculo.png Graphic file (type png)
 <use FOTOS/menuConductorVehiculo.png>
-Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 371.
+Package pdftex.def Info: FOTOS/menuConductorVehiculo.png  used on input line 372.
 (pdftex.def)             Requested size: 170.1352pt x 167.87677pt.
 File: FOTOS/menuConductorViaje.png Graphic file (type png)
 <use FOTOS/menuConductorViaje.png>
-Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 377.
+Package pdftex.def Info: FOTOS/menuConductorViaje.png  used on input line 378.
 (pdftex.def)             Requested size: 212.2926pt x 241.65222pt.
- [36] [37]
+ [38]
 File: FOTOS/menuPrincipal.png Graphic file (type png)
 <use FOTOS/menuPrincipal.png>
-Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 384.
+Package pdftex.def Info: FOTOS/menuPrincipal.png  used on input line 385.
 (pdftex.def)             Requested size: 158.84305pt x 63.98889pt.
-<FOTOS/menuAdmin.png, id=904, 210.03468pt x 91.09032pt>
+<FOTOS/menuAdmin.png, id=1061, 210.03468pt x 91.09032pt>
 File: FOTOS/menuAdmin.png Graphic file (type png)
 <use FOTOS/menuAdmin.png>
-Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 391.
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 392.
 (pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
 File: FOTOS/menuAdmin.png Graphic file (type png)
 <use FOTOS/menuAdmin.png>
-Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 394.
+Package pdftex.def Info: FOTOS/menuAdmin.png  used on input line 395.
 (pdftex.def)             Requested size: 210.03416pt x 91.09007pt.
- [38 <./FOTOS/menuAdmin.png>]
+ [39 <./FOTOS/menuAdmin.png>]
 File: FOTOS/menuAdminVehiculo.png Graphic file (type png)
 <use FOTOS/menuAdminVehiculo.png>
-Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 403.
+Package pdftex.def Info: FOTOS/menuAdminVehiculo.png  used on input line 404.
 (pdftex.def)             Requested size: 286.82085pt x 121.9553pt.
 File: FOTOS/menuAdminViaje.png Graphic file (type png)
 <use FOTOS/menuAdminViaje.png>
-Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 409.
+Package pdftex.def Info: FOTOS/menuAdminViaje.png  used on input line 410.
 (pdftex.def)             Requested size: 211.53978pt x 120.44969pt.
-) [39]
+) [40]
 \openout2 = `DocCode.aux'.
 
  (DocCode.tex (C:\Users\adura\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -875,7 +938,7 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 19.
- (CODIGO/acceso.c [40
+ (CODIGO/acceso.c [41
 
 
 
@@ -892,7 +955,7 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 20.
- [41] [42] [43]) (CODIGO/actualizar.c [44] [45]) (CODIGO/buscar.c [46] [47] [48] [49] [50] [51] [52]) (CODIGO/colores.c [53]) (CODIGO/eliminar.c [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82]) (CODIGO/encontrar.c [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]) (CODIGO/escribir.c [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]) (CODIGO/estructuras.h [126]) (CODIGO/fecha.c [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139]) (CODIGO/leer.c [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154]) (CODIGO/listar.c [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169]) (CODIGO/menus.c [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195]) (CODIGO/modificar.c [196] [197] [198] [199]
+ [42] [43] [44]) (CODIGO/actualizar.c [45] [46]) (CODIGO/buscar.c [47] [48] [49] [50] [51] [52] [53]) (CODIGO/colores.c [54]) (CODIGO/eliminar.c [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]) (CODIGO/encontrar.c [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]) (CODIGO/escribir.c [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126]) (CODIGO/estructuras.h [127]) (CODIGO/fecha.c [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]) (CODIGO/leer.c [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155]) (CODIGO/listar.c [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170]) (CODIGO/menus.c [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196]) (CODIGO/modificar.c [197] [198] [199] [200]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 99--100
 [][] 
  []
@@ -922,12 +985,12 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 101--102
 [][] 
  []
 
-
+[201]
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 102--103
 [][] 
  []
 
-[200]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 107--108
 [][] 
  []
@@ -937,7 +1000,7 @@ Overfull \hbox (10.69934pt too wide) in paragraph at lines 107--108
 [][] 
  []
 
-[201]
+[202]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 114--115
 [][][][][] 
  []
@@ -972,7 +1035,7 @@ Overfull \hbox (3.64935pt too wide) in paragraph at lines 116--117
 [][] 
  []
 
-[202]
+[203]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 123--124
 [][][][][] 
  []
@@ -1012,17 +1075,17 @@ Overfull \hbox (3.64935pt too wide) in paragraph at lines 125--126
 [][] 
  []
 
-[203]
+[204] [205]
 Overfull \hbox (10.69934pt too wide) in paragraph at lines 145--146
 [][] 
  []
 
-[204] [205] [206]
+[206] [207]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 180--181
 [][][][][] 
  []
 
-
+[208]
 Overfull \hbox (31.8493pt too wide) in paragraph at lines 181--182
 [][] 
  []
@@ -1042,7 +1105,7 @@ Overfull \hbox (3.64935pt too wide) in paragraph at lines 182--183
 [][] 
  []
 
-[207]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 186--187
 [][] 
  []
@@ -1052,7 +1115,7 @@ Overfull \hbox (10.69934pt too wide) in paragraph at lines 186--187
 [][] 
  []
 
-
+[209]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 191--192
 [][][][][] 
  []
@@ -1082,12 +1145,12 @@ Overfull \hbox (17.74933pt too wide) in paragraph at lines 192--193
 [][] 
  []
 
-[208]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 193--194
 [][] 
  []
 
-
+[210]
 Overfull \hbox (11.8493pt too wide) in paragraph at lines 198--199
 [][][][][] 
  []
@@ -1122,50 +1185,50 @@ Overfull \hbox (38.89929pt too wide) in paragraph at lines 199--200
 [][] 
  []
 
-[209]
+
 Overfull \hbox (3.64935pt too wide) in paragraph at lines 200--201
 [][] 
  []
 
-[210]
+[211]
 Overfull \hbox (10.69934pt too wide) in paragraph at lines 220--221
 [][] 
  []
 
-[211] [212] [213] [214] [215] [216]
+[212] [213] [214] [215] [216] [217]
 Overfull \hbox (18.89929pt too wide) in paragraph at lines 384--385
 [][][][][] 
  []
 
-[217] [218] [219] [220]
+[218] [219] [220] [221]
 Overfull \hbox (18.89929pt too wide) in paragraph at lines 446--447
 [][][][][] 
  []
 
-[221] [222] [223] [224] [225] [226] [227] [228] [229]
-Overfull \hbox (4.79932pt too wide) in paragraph at lines 668--669
+[222] [223] [224] [225] [226] [227] [228] [229] [230] [231]
+Overfull \hbox (4.79932pt too wide) in paragraph at lines 681--682
 [][][][][] 
  []
 
 
-Overfull \hbox (11.8493pt too wide) in paragraph at lines 674--675
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 687--688
 [][][][][] 
  []
 
 
-Overfull \hbox (4.79932pt too wide) in paragraph at lines 678--679
+Overfull \hbox (4.79932pt too wide) in paragraph at lines 692--693
 [][][][][] 
  []
 
-
-Overfull \hbox (11.8493pt too wide) in paragraph at lines 680--681
+[232]
+Overfull \hbox (11.8493pt too wide) in paragraph at lines 696--697
 [][][][][] 
  []
 
-[230] [231] [232] [233]) (CODIGO/preguntar.c
+[233] [234] [235]) (CODIGO/preguntar.c
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
- [234] [235] [236] [237] [238])) [239] (Doc_ESI-SHARE.aux
+ [236] [237] [238] [239] [240] [241])) [242] (Doc_ESI-SHARE.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
  (Introduc.aux) (DocUsuario.aux) (DocSistema.aux) (DocCode.aux))
@@ -1173,17 +1236,17 @@ Package rerunfilecheck Info: File `Doc_ESI-SHARE.out' has not changed.
 (rerunfilecheck)             Checksum: 285C0E0B82E0B9698CF93B0F9FE3F9B9;6651.
  ) 
 Here is how much of TeX's memory you used:
- 19816 strings out of 475385
- 320957 string characters out of 2776908
- 1084642 words of memory out of 3000000
- 35593 multiletter control sequences out of 15000+600000
+ 19859 strings out of 475385
+ 322228 string characters out of 2776908
+ 1084759 words of memory out of 3000000
+ 35609 multiletter control sequences out of 15000+600000
  475874 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,17n,77p,581b,2073s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\adura\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/adura/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Doc_ESI-SHARE.pdf (240 pages, 5643782 bytes).
+Output written on Doc_ESI-SHARE.pdf (243 pages, 5872577 bytes).
 PDF statistics:
- 7901 PDF objects out of 8907 (max. 8388607)
- 5315 named destinations out of 6186 (max. 500000)
- 558 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8094 PDF objects out of 8907 (max. 8388607)
+ 5340 named destinations out of 6186 (max. 500000)
+ 583 words of extra memory for PDF output out of 10000 (max. 10000000)
 

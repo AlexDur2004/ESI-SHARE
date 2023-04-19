@@ -523,23 +523,35 @@ void modificarPerfilNombre(Estr_Usuario *usuario, int numUsuarios, int i)
     system("PAUSE");
 }
 
-//Cabecera: void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Localidad *, int, int);
-//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y la estructura "usuario" inicializada, con su contador.
-//Postcondicion: Modificar la localidad del usuario.
+//Cabecera: void modificarPerfilLocalidad(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int, int);
+//Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras "usuario", "viaje", "localidad" y "reservas" inicializadas, con sus contadores.
+//Postcondicion: Modificar la localidad del usuario, si no tiene ninguna reserva activa, ya que al buscar una reserva, se selecciona si pasa por su localidad.
 
-void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades, int i)
+void modificarPerfilLocalidad(Estr_Usuario *usuario, int numUsuarios, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades, int i)
 {
     char loc[21];
+    int x=0, *vec=NULL, *vec2=NULL;
 
-    printf("Introduzca su nueva localidad de residencia (3 siglas):\n");
-    fflush(stdin);
-    pregunta_localidad(localidad, numLocalidades, loc); //Pedimos la nueva localidad.
+    encontrarReservas(usuario, viaje, numViajes, reservas, numReservas, i, &vec, &vec2, &x); //Busca las reservas del usuario, para dejarle modificar la localidad.
 
-    strcpy(usuario[i].localidad, loc); //Copiamos la nueva localidad en la posicion de la estructura correspondiente.
-    actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
+    if(x!=0) //Si tiene reservas.
+    {
+        printf("No puede cambiar de localidad, ya que tiene reservas activas.\n");
+        system("PAUSE");
+        return;
+    }
+    else //Si no tiene reservas, podra cambiar su localidad.
+    {
+        printf("Introduzca su nueva localidad de residencia (3 siglas):\n");
+        fflush(stdin);
+        pregunta_localidad(localidad, numLocalidades, loc); //Pedimos la nueva localidad.
 
-    printf("Su localidad de residencia se ha actualizado correctamente.\n");
-    system("PAUSE");
+        strcpy(usuario[i].localidad, loc); //Copiamos la nueva localidad en la posicion de la estructura correspondiente.
+        actualizarUsuario(usuario, numUsuarios); //Actualizamos el fichero usuarios.txt
+
+        printf("Su localidad de residencia se ha actualizado correctamente.\n");
+        system("PAUSE");
+    }
 }
 
 //Cabecera: void modificarPerfilUsuario(Estr_Usuario *, int, int);
@@ -624,21 +636,22 @@ void modificarPerfilContrasena(Estr_Usuario *usuario, int numUsuarios, int i)
     }
 }
 
-//Cabecera: void modificarAdminUsuario(Estr_Usuario *, int, Estr_Localidad *, int);
+//Cabecera: void modificarAdminUsuario(Estr_Usuario *, int, Estr_Viaje *, int, Estr_Reservas *, int, Estr_Localidad *, int);
 //Precondicion: Tener el entero "i", para saber la posicion del usuario en la estructura "usuario", y las estructuras inicializadas, con sus contadores.
 //Postcondicion: Modificar los datos de cualquier usuario.
 
-void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localidad *localidad, int numLocalidades)
+void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Viaje *viaje, int numViajes, Estr_Reservas *reservas, int numReservas, Estr_Localidad *localidad, int numLocalidades)
 {
     int j, opc=0, encontrado=0, id=0;
     char vec_id[5];
 
-    listarUsuarios(usuario, numUsuarios); //Imprimir una lista de todos los usuarios del sistema.
+
 
     if(numUsuarios!=0) //Si hay usuarios en el sistema.
     {
         while(encontrado==0)
         {
+            listarUsuarios(usuario, numUsuarios); //Imprimir una lista de todos los usuarios del sistema.
             printf("Introduzca la ID del usuario al que quiere modificarle el usuario.\n");
             scanf("%i",&id); //Pedimos la id del usuario que queremos modificar.
             sprintf(vec_id, "%04i", id); //Introducimos el entero introducido en la cadena con formato XXXX
@@ -665,7 +678,7 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
                                 modificarPerfilNombre(usuario, numUsuarios, j);
                                 break;
                             case 2:
-                                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, j);
+                                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, j);
                                 break;
                             case 3:
                                 modificarPerfilUsuario(usuario, numUsuarios, j);
@@ -675,14 +688,23 @@ void modificarAdminUsuario(Estr_Usuario *usuario, int numUsuarios, Estr_Localida
                                 break;
                             case 5:
                                 modificarPerfilNombre(usuario, numUsuarios, j);
-                                modificarPerfilLocalidad(usuario, numUsuarios, localidad, numLocalidades, j);
+                                printf("\n");
+                                modificarPerfilLocalidad(usuario, numUsuarios, viaje, numViajes, reservas, numReservas, localidad, numLocalidades, j);
+                                printf("\n");
                                 modificarPerfilUsuario(usuario, numUsuarios, j);
+                                printf("\n");
                                 modificarPerfilContrasena(usuario, numUsuarios, j);
                                 break;
                             case 6:
                                 break;
                         }
                 }
+            }
+            else
+            {
+                printf("La ID de usuario introducida no esta en el sistema.\n");
+                system("PAUSE");
+                system("cls");
             }
         }
     }

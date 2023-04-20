@@ -8,7 +8,7 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="ESI-SHARE" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+				<Option object_output="OBJETOS" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -31,62 +31,62 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="acceso.c">
+		<Unit filename="CODIGO/acceso.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="acceso.h" />
-		<Unit filename="actualizar.c">
+		<Unit filename="CODIGO/acceso.h" />
+		<Unit filename="CODIGO/actualizar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="actualizar.h" />
-		<Unit filename="buscar.c">
+		<Unit filename="CODIGO/actualizar.h" />
+		<Unit filename="CODIGO/buscar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="buscar.h" />
-		<Unit filename="colores.c">
+		<Unit filename="CODIGO/buscar.h" />
+		<Unit filename="CODIGO/colores.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="colores.h" />
-		<Unit filename="eliminar.c">
+		<Unit filename="CODIGO/colores.h" />
+		<Unit filename="CODIGO/eliminar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="eliminar.h" />
-		<Unit filename="encontrar.c">
+		<Unit filename="CODIGO/eliminar.h" />
+		<Unit filename="CODIGO/encontrar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="encontrar.h" />
-		<Unit filename="escribir.c">
+		<Unit filename="CODIGO/encontrar.h" />
+		<Unit filename="CODIGO/escribir.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="escribir.h" />
-		<Unit filename="estructuras.h" />
-		<Unit filename="fecha.c">
+		<Unit filename="CODIGO/escribir.h" />
+		<Unit filename="CODIGO/estructuras.h" />
+		<Unit filename="CODIGO/fecha.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="fecha.h" />
-		<Unit filename="leer.c">
+		<Unit filename="CODIGO/fecha.h" />
+		<Unit filename="CODIGO/leer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="leer.h" />
-		<Unit filename="listar.c">
+		<Unit filename="CODIGO/leer.h" />
+		<Unit filename="CODIGO/listar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="listar.h" />
-		<Unit filename="main.c">
+		<Unit filename="CODIGO/listar.h" />
+		<Unit filename="CODIGO/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menus.c">
+		<Unit filename="CODIGO/menus.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menus.h" />
-		<Unit filename="modificar.c">
+		<Unit filename="CODIGO/menus.h" />
+		<Unit filename="CODIGO/modificar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="modificar.h" />
-		<Unit filename="preguntar.c">
+		<Unit filename="CODIGO/modificar.h" />
+		<Unit filename="CODIGO/preguntar.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="preguntar.h" />
+		<Unit filename="CODIGO/preguntar.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
